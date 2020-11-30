@@ -18,3 +18,16 @@ keywords: jekyll blog github
 
 - Install development tools: `./setup.sh`
 - List available tasks: `inv -l` 
+
+
+## Other Tools used
+
+- [Jekyll Docker](https://github.com/envygeeks/jekyll-docker)
+- Python Virtual Environment with `pyenv`
+```shell script
+$ pyenv virtualenv activate blog
+```
+- Ruby Virtual Environment with `rvm`
+```shell script
+$ rvm use 2.7.0
+```
