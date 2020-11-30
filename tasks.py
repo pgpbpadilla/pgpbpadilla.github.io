@@ -2,8 +2,8 @@ from invoke import task
 
 
 @task
-def build(ctx, docker=True):
-    jekyll_build = 'jekyll build'
+def build(ctx, docker=False):
+    jekyll_build = 'bundle exec jekyll build'
     docker_build = 'docker run -v `pwd`:/srv/jekyll -p "4000:4000" jekyll/jekyll jekyll build'
     build_cmd = docker_build
     if not docker:
@@ -12,7 +12,7 @@ def build(ctx, docker=True):
 
 
 @task
-def serve(ctx, docker=True):
+def serve(ctx, docker=False):
     jekyll_serve = 'bundle exec jekyll serve'
     docker_serve = 'docker run -v `pwd`:/srv/jekyll -p "4000:4000" jekyll/jekyll jekyll serve'
     serve_cmd = docker_serve if docker else jekyll_serve
@@ -20,6 +20,12 @@ def serve(ctx, docker=True):
 
 
 @task
-def run(ctx, docker=True):
+def run(ctx, docker=False):
     build(ctx, docker)
     serve(ctx, docker)
+
+
+@task
+def update_gems(ctx):
+    ctx.run('gem update bundler')
+    ctx.run('bundle update')
