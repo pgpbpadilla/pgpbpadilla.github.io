@@ -1,0 +1,19 @@
+@startuml
+
+[HopfieldNetwork] <-- [Hochreiter]: modernized
+[RNN] <-- [HopfieldNetwork]: is a
+[HopfieldNetwork] -- [IsingModel]: same as
+[JohnHopfield] -- [US]
+[1982] -- [JohnHopfield]
+[1982] -- [HopfieldNetwork]
+[Ising] -- [DE]
+[1974] -- [Ising]
+[1974] -- [IsingModel]
+[HopfieldNetwork] -- [IsingModel]: same as
+
+[Attention] <-- [Transformer]: uses
+[2019] -- [Attention]
+[GPT-3] -- [Transformer]
+[HopfieldNetwork] -- [Attention]: equivalent
+
+@enduml
