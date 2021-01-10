@@ -46,6 +46,13 @@ def run(ctx, docker=False):
 
 @task
 def update_gems(ctx):
+    """Updates bundler and reinstall all Blog dependencies"""
     ctx.run('gem update bundler')
     ctx.run('bundle update')
     ctx.run('bundle install')
+
+
+@task
+def view(ctx):
+    """Open live website in the default browser"""
+    ctx.run('open https://pgpbpadilla.github.io/')
