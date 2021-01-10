@@ -1,24 +1,40 @@
 from invoke import task
 
 
+def build_cmd(parts):
+    return ' '.join(parts)
+
+
+DOCKER_JEKYLL_CMD_PARTS = ['docker', 'run',
+                           '-v', '`pwd`:/srv/jekyll',
+                           '-p', '"4000:4000"',
+                           'jekyll/jekyll']
+
+BUNDLE_EXEC = ['bundle', 'exec']
+
+
 @task
 def build(ctx, docker=False):
     """Use Jekyll to build the Blog"""
-    jekyll_build = 'bundle exec jekyll build'
-    docker_build = 'docker run -v `pwd`:/srv/jekyll -p "4000:4000" jekyll/jekyll jekyll build'
-    build_cmd = docker_build
-    if not docker:
-        build_cmd = jekyll_build
-    ctx.run(build_cmd)
+    jekyll_build = ['jekyll', 'build']
+    if docker is True:
+        docker_build = build_cmd(DOCKER_JEKYLL_CMD_PARTS + jekyll_build)
+        ctx.run(docker_build)
+    else:
+        local_build = build_cmd(BUNDLE_EXEC + jekyll_build)
+        ctx.run(local_build)
 
 
 @task
 def serve(ctx, docker=False):
     """Serves the Blog locally"""
-    jekyll_serve = 'bundle exec jekyll serve'
-    docker_serve = 'docker run -v `pwd`:/srv/jekyll -p "4000:4000" jekyll/jekyll jekyll serve'
-    serve_cmd = docker_serve if docker else jekyll_serve
-    ctx.run(serve_cmd)
+    jekyll_serve = ['jekyll', 'serve']
+    if docker:
+        docker_serve_cmd = build_cmd(DOCKER_JEKYLL_CMD_PARTS + jekyll_serve)
+        ctx.run(docker_serve_cmd)
+    else:
+        local_serve_cmd = build_cmd(BUNDLE_EXEC + jekyll_serve)
+        ctx.run(local_serve_cmd)
 
 
 @task
