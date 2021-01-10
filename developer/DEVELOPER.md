@@ -25,7 +25,7 @@ keywords: jekyll blog github
 - [Jekyll Docker](https://github.com/envygeeks/jekyll-docker)
 - Python Virtual Environment with `pyenv`
 ```shell script
-$ pyenv virtualenv activate blog
+$ pyenv activate
 ```
 - Ruby Virtual Environment with `rvm`
 ```shell script
