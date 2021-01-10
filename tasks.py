@@ -32,3 +32,4 @@ def run(ctx, docker=False):
 def update_gems(ctx):
     ctx.run('gem update bundler')
     ctx.run('bundle update')
+    ctx.run('bundle install')
