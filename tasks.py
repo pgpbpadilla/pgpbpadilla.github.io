@@ -26,9 +26,11 @@ def build(ctx, docker=False):
 
 
 @task
-def serve(ctx, docker=False):
+def serve(ctx, drafts=True, docker=False):
     """Serves the Blog locally"""
     jekyll_serve = ['jekyll', 'serve']
+    if drafts:
+        jekyll_serve.append('--drafts')
     if docker:
         docker_serve_cmd = build_cmd(DOCKER_JEKYLL_CMD_PARTS + jekyll_serve)
         ctx.run(docker_serve_cmd)
