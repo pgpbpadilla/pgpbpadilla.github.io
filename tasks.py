@@ -14,6 +14,14 @@ BUNDLE_EXEC = ['bundle', 'exec']
 
 
 @task
+def update_gems(ctx):
+    """Updates bundler and reinstall all Blog dependencies"""
+    ctx.run('gem update bundler')
+    ctx.run('bundle update')
+    ctx.run('bundle install')
+
+
+@task(pre=[update_gems])
 def build(ctx, docker=False):
     """Use Jekyll to build the Blog"""
     jekyll_build = ['jekyll', 'build']
@@ -44,14 +52,6 @@ def run(ctx, docker=False):
     """Build+Run the Blog locally"""
     build(ctx, docker)
     serve(ctx, docker)
-
-
-@task
-def update_gems(ctx):
-    """Updates bundler and reinstall all Blog dependencies"""
-    ctx.run('gem update bundler')
-    ctx.run('bundle update')
-    ctx.run('bundle install')
 
 
 @task
