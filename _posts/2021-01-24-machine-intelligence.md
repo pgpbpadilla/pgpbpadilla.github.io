@@ -1,5 +1,5 @@
 ---
-layout: my-post
+layout: post
 title:  "Definitions of Machine Intelligence"
 date:   2021-01-24 19:00
 tags: machine-intelligence definition hutter legg chollet
