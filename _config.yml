@@ -50,6 +50,7 @@ plugins:
 exclude:
   - developer/
   - topics/
+  - .idea/
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
