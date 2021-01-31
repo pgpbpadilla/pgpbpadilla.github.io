@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page.liquid
 title: Now
 tagline: What I'm doing now
 permalink: /now.html
