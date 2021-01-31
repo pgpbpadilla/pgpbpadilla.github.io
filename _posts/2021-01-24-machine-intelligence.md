@@ -40,7 +40,7 @@ Legg & Hutter call this Universal Intelligence [Legg & Hutter].
 - relies on its builder to provide and control priors
 - the provided priors are human priors
 
-# References
+## References
 
 - [arXiv:0712.3329v1](https://arxiv.org/abs/0712.3329v1) - Shane Legg, Marcus Hutter, Universal Intelligence: A Definition of Machine Intelligence
 - [arXiv:1911.01547v2](https://arxiv.org/abs/1911.01547v2) - François Chollet, On the Measure of Intelligence
