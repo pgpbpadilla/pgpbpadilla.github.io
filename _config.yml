@@ -33,8 +33,7 @@ github_username:  pgpbpadilla
 # Find out if the theme can be used for individual posts.
 # Maybe this can be found in the docs for the minima theme. Look for how to customize it.
 # https://github.com/jekyll/minima
-#theme: jekyll-theme-cayman
-theme: minima
+theme: jekyll-theme-cayman-blog
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
