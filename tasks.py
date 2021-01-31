@@ -50,8 +50,8 @@ def serve(ctx, drafts=True, docker=False):
 @task
 def run(ctx, docker=False):
     """Build+Run the Blog locally"""
-    build(ctx, docker)
-    serve(ctx, docker)
+    build(ctx, docker=docker)
+    serve(ctx, docker=docker)
 
 
 @task
