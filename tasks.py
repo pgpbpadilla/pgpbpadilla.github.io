@@ -36,7 +36,7 @@ def build(ctx, docker=False):
 @task
 def serve(ctx, drafts=True, docker=False):
     """Serves the Blog locally"""
-    jekyll_serve = ['jekyll', 'serve']
+    jekyll_serve = ['jekyll', 'serve', '--livereload']
     if drafts:
         jekyll_serve.append('--drafts')
     if docker:
