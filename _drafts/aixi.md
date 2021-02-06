@@ -5,6 +5,12 @@ date:   2021-01-31 20:43
 tags: machine-intelligence hutter aixi agi universal
 ---
 
+## TODO
+
+- Resolve TODOs for external links
+- Link references in the article
+- Link Hutter video explaining AIXI, the one where he explains each of the Giants.
+
 [Marcus Hutter](TODO) is a researcher in many areas, including Universal Artificial Intelligence.
 The approach he and others -- [Schmidhubber](TODO), 
 [Hochreiter](TODO) -- 
@@ -61,39 +67,45 @@ defining the optimal intelligent agent, AIXI, as follows:
 \\]
 
 The <span style="color: blue">AIXI agent</span> learns via reinforcement, its goal, to 
-<span style="color: green">maximize</span>
+take the <span style="color: green">action</span> that 
+<span style="color: green">maximizes</span>
 the <span style="color: purple">total future reward</span> provided by the
 <span style="color: #B8860B">environment</span>.
 
-In order to calculate its <span style="color: purple">reward</span>, it averages
-the rewards over its history of interactions with the environment.
+In order to calculate its <span style="color: purple">total future reward</span>, it averages
+the rewards over the <span style="color: #FF007F">interaction</span>
+<span style="color: purple">history</span> with the 
+<span style="color: #B8860B">environment</span>. 
 
-The agent <span style="color: #FF007F">observes</span> the environment and reacts
-with an <span style="color: red">action</span>, for which it receives a <span style="color: purple">reward</span>.
+The agent <span style="color: #FF007F">observes</span> the 
+<span style="color: #B8860B">environment</span> and takes
+an <span style="color: green">action</span>; the 
+<span style="color: #B8860B">environment</span> in turn generates an 
+<span style="color: #FF007F">output</span> and a 
+<span style="color: purple">reward</span>.
 
-The <span style="color: #B8860B">environment</span> takes the agents 
-<span style="color: green">actions</span> as input and generates 
-<span style="color: FF007F">outputs</span> and 
-<span style="color: purple">rewards</span>. 
-
-The <span style="color: blue">agent</span>-<span style="color: #B8860B">environment</span> interactions all happen 
-in the form of an exchange
-of yes-no decisions, represented as a binary strings.
-
-
+The <span style="color: #B8860B">environment</span> is unknown to 
+<span style="color: blue">AIXI agent</span>, therefore, 
+<span style="color: blue">AIXI agent</span> has to take into consideration
+all possible <span style="color: #B8860B">environment</span>. 
+<span style="color: blue">AIXI agent</span> 
+has a bias towards simplicity; simpler
+<span style="color: #B8860B">environment</span> will have a bigger 
+contribution towards the agent's next <span style="color: green">action</span>.
 
 
-
-## TODO
-
-- formula break down
-- describe picture below
-
-![AIXI](/assets/images/aixi.png "AIXI")
+<div style="text-align: center">
+    <img src="/assets/images/aixi-environment.png">
+    <figcaption>Agent-Environment Interaction.</figcaption>
+</div>
 
 ## References
 
 - [arXiv:0712.3329v1](https://arxiv.org/abs/0712.3329v1) - Shane Legg, Marcus Hutter, Universal Intelligence: A Definition of Machine Intelligence
-- [Universal Artificial Intelligence](http://www.hutter1.net/ai/uaibook.htm)
+- Hutter's page on: [Universal Artificial Intelligence](http://www.hutter1.net/ai/uaibook.htm)
 - TODO: Link Hutter Lecture that explains step by step each part of the equation.
-- (Is AIXI a big deal in AGI research?)[https://ai.stackexchange.com/a/10377/15369]
+- [Is AIXI a big deal in AGI research?](https://ai.stackexchange.com/a/10377/15369)
+
+### Image Credit
+
+- Agent-Environment image adapted from: [Solomonoff Cartesianism](https://www.lesswrong.com/posts/AszKwKyhBPZAnCstA/solomonoff-cartesianism)
