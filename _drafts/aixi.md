@@ -34,6 +34,7 @@ defining the optimal intelligent agent, AIXI, as follows:
 \\[
     \definecolor{brightpink}{rgb}{1.0, 0.0, 0.5}
     \definecolor{goldenrod}{rgb}{0.85, 0.65, 0.13}
+    { \color{blue} AIXI }\quad 
     { \color{green} a_k } := 
         { \color{green} \arg \max_{a_k} } 
         { \color{red} \sum_{ {\color{brightpink} o_k} {\color{purple} r_k} } } 
@@ -58,6 +59,30 @@ defining the optimal intelligent agent, AIXI, as follows:
             2^{-\ell( {\color{goldenrod} q} )}
         }
 \\]
+
+The <span style="color: blue">AIXI agent</span> learns via reinforcement, its goal, to 
+<span style="color: green">maximize</span>
+the <span style="color: purple">total future reward</span> provided by the
+<span style="color: #B8860B">environment</span>.
+
+In order to calculate its <span style="color: purple">reward</span>, it averages
+the rewards over its history of interactions with the environment.
+
+The agent <span style="color: #FF007F">observes</span> the environment and reacts
+with an <span style="color: red">action</span>, for which it receives a <span style="color: purple">reward</span>.
+
+The <span style="color: #B8860B">environment</span> takes the agents 
+<span style="color: green">actions</span> as input and generates 
+<span style="color: FF007F">outputs</span> and 
+<span style="color: purple">rewards</span>. 
+
+The <span style="color: blue">agent</span>-<span style="color: #B8860B">environment</span> interactions all happen 
+in the form of an exchange
+of yes-no decisions, represented as a binary strings.
+
+
+
+
 
 ## TODO
 
