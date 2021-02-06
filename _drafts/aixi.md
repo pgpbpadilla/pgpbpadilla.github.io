@@ -5,22 +5,58 @@ date:   2021-01-31 20:43
 tags: machine-intelligence hutter aixi agi universal
 ---
 
-Marcus Hutter is a researcher in many areas, including Universal Artificial Intelligence.
-In comparison with other approaches, Hutter focuses his research in mathematically 
-rigorous proofs about properties of intelligent agents.
+[Marcus Hutter](TODO) is a researcher in many areas, including Universal Artificial Intelligence.
+The approach he and others -- [Schmidhubber](TODO), 
+[Hochreiter](TODO) -- 
+have taken is distinct from the mainstream approaches to AI, e.g., 
+Machine Learning, Big Data.
 
-The informal definition of intelligence is:
+## Top-down and Bottom-Up approaches to AI
 
-> The ability to achieve goals in a wide range of environments. 
+Hutter takes a top-down approach, that is, starts with a formal, 
+mathematically rigorous definition of Universal Intelligence and then derives properties 
+of intelligent agents via mathematical theorems and their proofs.
 
-Hutter sets out to attempt to formalize the previous definition
-in as rigorous a way as he can. The result is an equation 
+Many traditional approaches are bottom-up, that is, building agents that can 
+solve problems in a narrow domain and then attempting to generalise to more general problems.
+
+## The AIXI agent
+
+An informal definition of intelligence proposed by Hutter & Legg is:
+
+> The ability to achieve goals in a wide range of environments.
+
+This definition is general enough that can be applied to non-human agents.
+
+Hutter sets out to formalize the previous definition. The result is an equation 
 defining the optimal intelligent agent, AIXI, as follows:
 
-\\[ 
-    a_k := \arg \max_{a_k} \sum_{o_k r_k} ... 
-        \max_{a_m} \sum_{o_m r_m} [r_k + ... + r_m] 
-        \sum_{q:U(q,a_1 ... a_m) = o_1 r_1 ... o_m r_m} 2^{-\ell(q)}
+\\[
+    \definecolor{brightpink}{rgb}{1.0, 0.0, 0.5}
+    \definecolor{goldenrod}{rgb}{0.85, 0.65, 0.13}
+    { \color{green} a_k } := 
+        { \color{green} \arg \max_{a_k} } 
+        { \color{red} \sum_{ {\color{brightpink} o_k} {\color{purple} r_k} } } 
+        ... 
+        { \color{green} \max_{a_m} } 
+        { \color{red} \sum_{ 
+                {\color{brightpink} o_m} 
+                {\color{purple} r_m} 
+            } 
+        } 
+        {\color{purple} [r_k + ... + r_m]} 
+        {\color{blue} \sum_{
+                {\color{goldenrod} q}
+                :U(
+                {\color{goldenrod} q}, 
+                {\color{green} a_1 ... a_m}
+                ) = 
+                {\color{brightpink} o_1} {\color{purple} r_1} 
+                ...
+                {\color{brightpink} o_m} {\color{purple} r_m}
+            } 
+            2^{-\ell( {\color{goldenrod} q} )}
+        }
 \\]
 
 ## TODO
@@ -33,5 +69,6 @@ defining the optimal intelligent agent, AIXI, as follows:
 ## References
 
 - [arXiv:0712.3329v1](https://arxiv.org/abs/0712.3329v1) - Shane Legg, Marcus Hutter, Universal Intelligence: A Definition of Machine Intelligence
-- [Universal Artificial Intelligence @ hutter1.net](http://www.hutter1.net/ai/uai.htm)
+- [Universal Artificial Intelligence](http://www.hutter1.net/ai/uaibook.htm)
 - TODO: Link Hutter Lecture that explains step by step each part of the equation.
+- (Is AIXI a big deal in AGI research?)[https://ai.stackexchange.com/a/10377/15369]
