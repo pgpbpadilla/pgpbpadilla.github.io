@@ -17,7 +17,7 @@ to explain them to the peoples in teh interweb.
 
 ## Deutsche Sprache
 
-Dieses Jarh, möchte Ich das B2 Niveau zu erreichen.
+Dieses Jahr, möchte Ich das B2 Niveau zu erreichen.
 
 ## Learn more about Artificial Intelligence
 
