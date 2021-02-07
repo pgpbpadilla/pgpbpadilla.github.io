@@ -29,12 +29,11 @@ twitter:
 github_username:  pgpbpadilla
 
 # Build settings
-# TODO: Use theme: jekyll-theme-cayman
-# Cayman theme is not built for Blog Posts
-# Find out if the theme can be used for individual posts.
-# Maybe this can be found in the docs for the minima theme. Look for how to customize it.
-# https://github.com/jekyll/minima
 theme: jekyll-theme-cayman-blog
+# According to Github's Blog, now it's possible to use any theme
+# https://github.blog/2017-11-29-use-any-theme-with-github-pages/
+remote_theme: lorepirri/cayman-blog
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
