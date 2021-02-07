@@ -4,31 +4,23 @@ title:  "Marcus Hutter's AIXI model for Universal Artificial Intelligence"
 date:   2021-01-31 20:43
 tags: machine-intelligence hutter aixi agi universal
 ---
+[Marcus Hutter](#related) is a researcher in many areas, including Universal Artificial Intelligence.
+The approach he and others -- [Schmidthubber](#related), [Hochreiter](#related) --
+have taken is different from the other modern and not so modern approaches to AI.
 
-## TODO
-
-- Resolve TODOs for external links
-- Link references in the article
-- Link Hutter video explaining AIXI, the one where he explains each of the Giants.
-
-[Marcus Hutter](TODO) is a researcher in many areas, including Universal Artificial Intelligence.
-The approach he and others -- [Schmidhubber](TODO),
-[Hochreiter](TODO) --
-have taken is distinct from the mainstream approaches to AI, e.g.,
-Machine Learning, Big Data.
-
-## Top-down and Bottom-Up approaches to AI
+## A top-down mathematical theory
 
 Hutter takes a top-down approach, that is, starts with a formal,
-mathematically rigorous definition of Universal Intelligence and then derives properties
-of intelligent agents via mathematical theorems and their proofs.
+mathematically rigorous definition of Intelligence and derives properties
+of intelligent agents via proving mathematical theorems.
 
-Many traditional approaches are bottom-up, that is, building agents that can
-solve problems in a narrow domain and then attempting to generalise to more general problems.
+Other approaches are bottom-up, that is, they focus on defining agents that can
+solve problems in a narrow domain and then attempting make them more general so
+they can deal with previously unknown problems or problems in a different domain.
 
-## The AIXI agent
+## Defining an intelligent agent
 
-An informal definition of intelligence proposed by Hutter & Legg is:
+An informal definition of intelligence proposed by [Hutter & Legg](#references) is:
 
 > The ability to achieve goals in a wide range of environments.
 
@@ -58,30 +50,35 @@ an <span style="color: green">action</span>; the
 <span style="color: purple">reward</span>.
 
 The <span style="color: #B8860B">environment</span> is unknown to
-<span style="color: blue">AIXI agent</span>, therefore,
-<span style="color: blue">AIXI agent</span> has to take into consideration
-all possible <span style="color: #B8860B">environment</span>.
+<span style="color: blue">AIXI</span>, therefore, the
+<span style="color: blue">agent</span> has to take into consideration
+all possible <span style="color: #B8860B">environments</span>.
 <span style="color: blue">AIXI agent</span>
-has a bias towards simplicity; simpler
-<span style="color: #B8860B">environment</span> will have a bigger
-contribution towards the agent's next <span style="color: green">action</span>.
+has a bias towards simplicity; the interactions with simpler
+<span style="color: #B8860B">environments</span> will have a bigger
+contribution towards the
+<span style="color: blue">agent's</span>
+next <span style="color: green">action</span>.
 
 
 <div style="text-align: center">
     <img src="/assets/images/aixi-environment.png">
-    <figcaption>Agent-Environment Interaction.</figcaption>
+    <figcaption>Agent-environment interaction.</figcaption>
 </div>
 
 ## References
 
 - [arXiv:0712.3329v1](https://arxiv.org/abs/0712.3329v1) - Shane Legg, Marcus Hutter, Universal Intelligence: A Definition of Machine Intelligence
-- Hutter's page on: [Universal Artificial Intelligence](http://www.hutter1.net/ai/uaibook.htm)
-- Marcus Hutter - Can Intelligence Explode? - Singularity Summit Australia 2012
+- [Universal Artificial Intelligence](http://www.hutter1.net/ai/uaibook.htm) on Hutter's website.
+- Can Intelligence Explode? - Video lecture at the Singularity Summit Australia 2012
     - [@YouTube](https://youtu.be/I-vx5zbOOXI)
-    - [@Hutter's website](http://www.hutter1.net/index.htm)
+    - [@Hutter's website](http://www.hutter1.net/official/lectures.htm)
 
 
 ## Related
 
+- [Marcus Hutter](http://www.hutter1.net)
+- [Jurgen Schmidthubber](https://people.idsia.ch/~juergen/deutsch.html)
+- [Josef "Sepp" Hochreiter](https://en.wikipedia.org/wiki/Sepp_Hochreiter)
 - [Is AIXI a big deal in AGI research? @ StackExchange AI](https://ai.stackexchange.com/a/10377/15369)
 - Agent-Environment image adapted from: [Solomonoff Cartesianism](https://www.lesswrong.com/posts/AszKwKyhBPZAnCstA/solomonoff-cartesianism)
