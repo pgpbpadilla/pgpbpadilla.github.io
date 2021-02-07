@@ -29,7 +29,6 @@ twitter:
 github_username:  pgpbpadilla
 
 # Build settings
-theme: jekyll-theme-cayman-blog
 # According to Github's Blog, now it's possible to use any theme
 # https://github.blog/2017-11-29-use-any-theme-with-github-pages/
 remote_theme: lorepirri/cayman-blog
