@@ -15,11 +15,26 @@ layout: default.liquid
       {% endif %}</p>
   </header> -->
 
-  <div itemprop="articleBody" class="text-justify">
-    {{ content }}
-  </div>
+    <div class="post-categories">
+        <span>Categories:</span>
+        {% if post %}
+            {% assign categories = post.categories %}
+        {% else %}
+            {% assign categories = page.categories %}
+        {% endif %}
+        {% for category in categories %}
+            <a href="{{ site.baseurl }}/categories/#{{ category | slugize }}">
+                {{ category }}
+            </a>
+            {% unless forloop.last %}&nbsp;{% endunless %}
+        {% endfor %}
+    </div>
 
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
+    <div itemprop="articleBody" class="text-justify">
+        {{ content }}
+    </div>
+
+    {% if site.disqus.shortname %}
+        {% include disqus_comments.html %}
+    {% endif %}
 </article>

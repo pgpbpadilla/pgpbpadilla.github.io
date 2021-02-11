@@ -2,3 +2,13 @@
 ---
 
 @import 'jekyll-theme-cayman-blog';
+
+.post-categories {
+  font-size: larger;
+  display: flex;
+  justify-content: flex-end;
+  span {
+    font-weight: 600;
+    margin: 10px;
+  }
+}
