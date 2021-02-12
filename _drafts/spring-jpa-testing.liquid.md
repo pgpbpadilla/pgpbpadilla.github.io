@@ -114,6 +114,4 @@ test slice jpa site:docs.spring.io
 - link google search terms
 - run cloc on spring repo, update bash snippet
 - update class diagram image, find a better layout.
-- coloring for code snippets
-    - or remove language
 - credit code samples
