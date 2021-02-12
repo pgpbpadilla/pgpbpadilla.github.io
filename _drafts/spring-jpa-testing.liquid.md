@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post.liquid
 title:  "Simplify Spring JPA testing with Test Slices"
 date:   2021-02-12 21:27
 tags: java spring-framework spring jpa test @DataJpaTest @Repository
