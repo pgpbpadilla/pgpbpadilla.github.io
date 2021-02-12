@@ -8,9 +8,10 @@ categories: [programming, java, spring, jpa, test]
 Recently, I've been working with a Spring-based application,
 I'm quite new to many of this huge framework.
 
-    ```bash
+{% highlight shell %}
     $ cloc spring-framework
-    ```
+{% endhighlight %}
+
 ## Test Slices
 
 So while I was skimming the documentation I read about
@@ -61,25 +62,25 @@ Here's a class diagram for the `@DataJpaTest` annotation:
 
 In the end, a test that packs all that configuration can be simply written as follows
 
-    ```java
+{% highlight java %}
     @RunWith(SpringRunner.class)
     @DataJpaTest
     public class ExampleNonTransactionalTests {
-        @Autowired
-        private TestEntityManager entityManager;
+    @Autowired
+    private TestEntityManager entityManager;
 
-        @Autowired
-        private UserRepository repository;
+    @Autowired
+    private UserRepository repository;
 
-        @Test
-        public void testExample() throws Exception {
-            this.entityManager.persist(new User("sboot", "1234"));
-            User user = this.repository.findByUsername("sboot");
-            assertThat(user.getUsername()).isEqualTo("sboot");
-            assertThat(user.getVin()).isEqualTo("1234");
+    @Test
+    public void testExample() throws Exception {
+        this.entityManager.persist(new User("sboot", "1234"));
+        User user = this.repository.findByUsername("sboot");
+        assertThat(user.getUsername()).isEqualTo("sboot");
+        assertThat(user.getVin()).isEqualTo("1234");
         }
     }
-    ```
+{% endhighlight %}
 
 
 ## Take aways
