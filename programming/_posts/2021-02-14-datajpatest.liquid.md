@@ -1,6 +1,6 @@
 ---
 layout: post.liquid
-title:  "Test independence tests using application slices"
+title:  "Test independence using application slices"
 date:   2021-02-14 19:55
 permalink: datajpatest
 tags: java spring-framework spring jpa test @DataJpaTest
