@@ -4,6 +4,7 @@ title:  "Definitions of Machine Intelligence"
 date:   2021-01-24 19:00
 tags: machine-intelligence definition hutter legg chollet
 categories: [ai, aixi]
+permalink: /machine-intelligence/legg+hutter+chollet 
 ---
 
 One of the known issues in the field of Artificial Intelligence is that
