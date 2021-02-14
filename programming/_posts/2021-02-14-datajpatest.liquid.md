@@ -1,12 +1,11 @@
 ---
 layout: post.liquid
 title:  "Test independence tests using application slices"
-date:   2021-02-12 21:27
+date:   2021-02-14 19:55
+permalink: datajpatest
 tags: java spring-framework spring jpa test @DataJpaTest
-categories: [programming, java, spring, jpa, test]
+categories: [programming, java, spring-framework, jpa, test]
 ---
-## Introduction
-
 With the Spring Framework you can configure which Beans (components) are loaded
 into the Application Context in different ways.
 
@@ -19,7 +18,7 @@ at the same time:
 - keep your tests independent from each other
 - load a minimal set of components to the application context
 
-### Test dependencies
+## Test dependencies
 
 There are legitimate reasons to write test that depend on other tests. This
 article is about the case where you want test independence. Some of the associated

@@ -1,6 +1,6 @@
 ---
 layout: post.liquid
-title:  "What is a @Repository?"
+title:  "DRAFT: What is a @Repository?"
 tags: spring-framework jpa @Repository
 categories: [programming, java, spring, jpa]
 ---
