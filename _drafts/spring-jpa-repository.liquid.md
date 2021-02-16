@@ -1,11 +1,12 @@
 ---
 layout: post.liquid
 title:  "Repository?"
-tags: spring-framework jpa @Repository
-categories: [programming, java, spring, jpa]
+date: 2021-02-16 21:44
+tags: repository ddd dao
+categories: [programming, java, spring-framework]
+permalink: /spring-repository
 ---
 The Spring framework offers two a `@Repository` annotation and a `Repository` interface.
-
 Although related and a bit confusing initially, they perform distinct tasks.
 
 The Java annotation is meant only as meta-data for the annotated class and imposes
