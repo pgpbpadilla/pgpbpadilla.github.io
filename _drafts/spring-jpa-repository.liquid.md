@@ -1,8 +1,9 @@
 ---
 layout: post.liquid
-title:  "Spring repositories"
-date: 2021-02-16 21:44
-tags: repository ddd dao
+title:  "Spring Repository"
+date: 2021-02-19 22:31
+last_udpated_date: 2021-02-19 22:31
+tags: spring repository ddd dao
 categories: [programming, java, spring-framework]
 permalink: /spring-repository
 ---
