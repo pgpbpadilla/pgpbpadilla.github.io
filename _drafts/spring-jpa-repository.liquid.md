@@ -1,8 +1,8 @@
 ---
 layout: post.liquid
-title:  "Spring Repository"
-date: 2021-02-19 22:31
-last_udpated_date: 2021-02-19 22:31
+title:  "Spring Repositories"
+date: 2021-02-20 12:54
+last_udpated_date: 2021-02-20 12:54
 tags: spring repository ddd dao
 categories: [programming, java, spring-framework]
 permalink: /spring-repository
@@ -68,14 +68,14 @@ implementation, `SimpleJpaRepository`.
 <div style="text-align: center">
     <img src="/assets/images/SimpleJpaRepository.png">
     <figcaption>
-        Class diagram: Repository stereotype and interface.
+        Class diagram for SimpleJpaRepository.
     </figcaption>
 </div>
 
-It's worth noting that in the class hierarchy showing in the image above,
+It's worth noting that
 [SimpleJpaRepository](https://github.com/spring-projects/spring-data-jpa/blob/master/src/main/java/org/springframework/data/jpa/repository/support/SimpleJpaRepository.java)
-is the first class _annotated_ with `@Repository` and also
-_implementing_ the `Repository` interface:
+is _annotated_ (dotted line) with `@Repository` and also
+_implements_ (dashed arrow) -- although not directly -- the `Repository` interface:
 
 {% highlight java %}
     @Repository
@@ -84,24 +84,34 @@ _implementing_ the `Repository` interface:
     }
 {% endhighlight %}
 
-it provides many features that implement common patterns, e.g.,
+Here's a break down of the features that come with it:
 
-- built-in support CRUD operations with `CrudRepository`
-- paging & sorting with `PagingAndSortingRepository`
-- Transaction management, provided by the `@Transactional` annotation
-- support for the JPA Criteria API, provided by extending `JpaSpecificationExecutor`
+- support for CRUD operations because it _extends_ (solid arrow) the `CrudRepository`
+  interface
+- paging & sorting via extending the `PagingAndSortingRepository` interface
+- transaction management, provided by the `@Transactional` annotation
+- support for the JPA Criteria API by extending the `JpaSpecificationExecutor` interface
 
-## Repositories for everyone
+### Spring's auto-configuration will load all repositories, unless ...
 
-If you can leverage the features built in the Data Commons repositories, then
-it's a big productivity boost since you don't have to write all that logic.
+Since `@Repository` is also a `@Component`, every annotated class will be automatically
+discovered and Spring will create and load an instance into the Application Context.
+The `@NoRepositoryBean` annotation is used to stop Spring from automatically creating
+those instances, typically done to avoid loading unwanted beans
+to the Application Context.
 
-If you have to write custom data access logic, you can still make use
-of the built-in standardized exception handling and auto-configuration provided by the
-`@Repository` annotation.
+## How can a repository help?
 
-Either way, you can benefit from the infrastructure provided by the framework and spend
-more time thinking about your domain.
+If you can leverage the features provided by supporting implementations in the Data
+Commons repositories, then it's a big productivity boost since you don't have to
+write and maintain all that code.
+
+If you have to write custom data access logic, by using the `@Repository` annotation you
+will benefit from consistent exception handling and automatic loading of your
+DAO components.
+
+Either way, you benefit from the infrastructure provided by the framework and therefore
+can spend more time thinking about your domain and less about implementation details.
 
 
 ## Google search terms
@@ -118,5 +128,3 @@ more time thinking about your domain.
     - Interface (Spring Data)
         - [Spring Data](https://spring.io/projects/spring-data)
         - [JavaDoc](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/Repository.html)
-
-
