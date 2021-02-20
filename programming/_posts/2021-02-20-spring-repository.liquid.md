@@ -113,18 +113,19 @@ DAO components.
 Either way, you benefit from the infrastructure provided by the framework and therefore
 can spend more time thinking about your domain and less about implementation details.
 
+## References
 
-## Google search terms
+### Stereotype (Spring Data Access)
+
+- [DAO Annotations](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#dao-annotations)
+- [JavaDoc](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Repository.html)
+
+### Interface (Spring Data)
+
+- [Spring Data](https://spring.io/projects/spring-data)
+- [JavaDoc](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/Repository.html)
+
+### Google search terms
 
 - `repository stereotype site:docs.spring.io`
 - `repository interface site:docs.spring.io`
-
-## References
-
-- Repository
-    - Stereotype (Spring Data Access)
-        - [DAO Annotations](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#dao-annotations)
-        - [JavaDoc](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Repository.html)
-    - Interface (Spring Data)
-        - [Spring Data](https://spring.io/projects/spring-data)
-        - [JavaDoc](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/Repository.html)
