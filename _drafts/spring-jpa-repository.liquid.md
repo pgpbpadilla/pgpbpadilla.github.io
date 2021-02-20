@@ -10,8 +10,10 @@ permalink: /spring-repository
 The Spring framework provides the `@Repository` annotation and the `Repository` interface.
 Although related and a bit confusing initially, they perform distinct tasks.
 
-The Java annotation is meant only as meta-data for the annotated class and imposes
-no semantics.
+The Java annotation is meta-data and therefore does not provide any specific behaviors.
+However, using it tells Spring that the class can be automatically discovered when
+auto-configuration is enabled, the class will also be treated like a standard Spring
+component which is helpful if you want consistent error handling.
 
 The interface on the other hand defines common tasks performed
 with data sources, e.g., Create, Read, Update, and Delete.
@@ -31,8 +33,8 @@ part of [Spring Data Commons](#references). These are their fully qualified name
 
 The `@Repository` annotation is a Spring stereotype, a stereotype represents the
 architectural role an application component would typically play. It is commonly
-used in two non-interchangeable ways; one refers to a [Repository in the context of
-Domain Driven Design](#references):
+used in two non-interchangeable ways; one refers to a [Repository, in the sense described
+in Domain Driven Design](#references):
 
 > ... a mechanism for encapsulating storage, retrieval, and search behavior
 > which emulates a collection of objects.
@@ -59,8 +61,8 @@ Spring Boot Application.
 ### A repository with batteries included: Data Commons
 
 The Spring Data Commons provides some supporting implementations for
-many common use cases involving repositories. The following diagram shows one such
-supporting implementation, `SimpleJpaRepository`.
+common use cases involving repositories, the following diagram shows one such
+implementation, `SimpleJpaRepository`.
 
 
 <div style="text-align: center">
