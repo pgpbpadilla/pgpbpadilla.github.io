@@ -27,7 +27,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter:
   username: pgpbpadilla
 github_username:  pgpbpadilla
-
+disqus:
+  shortname: pgpbpadilla
 # Build settings
 # According to Github's Blog, now it's possible to use any theme
 # https://github.blog/2017-11-29-use-any-theme-with-github-pages/
