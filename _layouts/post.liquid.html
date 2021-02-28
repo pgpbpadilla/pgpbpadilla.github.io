@@ -36,6 +36,9 @@ comments: true
     </div>
 
 
-    {% include disqus_comments.liquid.html %}
+    {% if site.disqus.shortname %}
+        {% include disqus_comments.liquid.html %}
+    {% endif %}
+
 
 </article>
