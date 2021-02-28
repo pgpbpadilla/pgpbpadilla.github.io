@@ -21,7 +21,8 @@ categories: [semi-conductors, manufacturing]
 - wafer manufactoring
 - fab vs fabless
 - what is a foundry
-- AMSL, TSMC and EUV LLC
+- AMSL, TSMC and EUV LLC-
+- Carl Zeizz exclusive partnership with AMSL
 
 
 ## References
