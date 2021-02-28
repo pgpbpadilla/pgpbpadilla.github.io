@@ -1,5 +1,6 @@
 ---
 layout: default.liquid
+comments: true
 ---
 <article itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -34,7 +35,7 @@ layout: default.liquid
         {{ content }}
     </div>
 
-    {% if site.disqus.shortname %}
-        {% include disqus_comments.html %}
-    {% endif %}
+
+    {% include disqus_comments.liquid.html %}
+
 </article>
