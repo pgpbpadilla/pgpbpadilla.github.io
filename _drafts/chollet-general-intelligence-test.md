@@ -71,9 +71,9 @@ One can think of intelligence as degree of effort an agent has to exert in order
 acquire skills. Agents that can learn more skills with less effort can be said to be
 more intelligent.
 
-### Comparison to Hutter's AIXI model
+### Choosing priors
 
-Chollet emphasizes the need to control the priors and they should be 
+Chollet emphasizes the need to control the priors, and they should be 
 human priors, a practical reason for this is learning efficiency.
 
 If we provide agents with specific priors then we're giving them hints about
@@ -82,11 +82,24 @@ of making the agents acquire specific categories of abilities very efficiently.
 
 When no priors are given, the agent has to also learn the structure of the environment,
 this requires more computational resources and may result in agents that are very 
-intelligent but maybe not as efficient at learn human-centric skills. As mentioned before
-Chollet this anthropocentrism is ligitimage an necessary because it's the only scope we
-can meaningfully apporach and asses.
+intelligent but maybe not as efficient at learning skills that are relevant in a human
+context. 
 
-Hutter: Agent and Environment(#hutter-aixi)
+Chollet thinks this anthropocentrism is legitimate and necessary because it's the only 
+scope we can meaningfully approach and asses. 
+
+The relevant priors would then be, _objectness_, _agentness_, _natural numbers_, 
+_arithmetic_, _elementary geometry and topology_. _Objectness_ is about the human 
+intuitions about what objects are, their boundaries and how they interact. _Agentness_
+is the perception that certain objects behave as if they had intentions, or goals.
+The ability to count objects and the understanding of the effects of adding and 
+subtracting objects is part of the _arithmetic_ and _numeric_ priors. Orientation in 
+2- and 3-dimensional space and performing basic spatial transformation on objects
+accounts for the _geometrical_ an _topological_ priors.
+
+## Agents, skills and tasks
+
+Link to Hutter: Agent and Environment(#hutter-aixi)
 
 Chollet: Agent as a skill program syntheziser for a specific task
 
