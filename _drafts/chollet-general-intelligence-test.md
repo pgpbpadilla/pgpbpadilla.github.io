@@ -116,12 +116,6 @@ program, and the skill program generates a response. The response is evaluated a
 outputs are generated, a score for the current response and feedback to the intelligent
 system.
 
-Link to Hutter: Agent and Environment(#hutter-aixi)
-
-Chollet: Agent as a skill program syntheziser for a specific task
-
-TODO: Diagram goes here.
-
 <div style="text-align: center">
     <img src="/assets/images/chollet-system-skill-task.png">
     <figcaption>
@@ -129,11 +123,7 @@ TODO: Diagram goes here.
     </figcaption>
 </div>
 
-### Flow of interaction
-
-Agent -> Skill Program -> Task -> [chollet, p28]
-
-## Math
+## TODO: Math
 
 So, how do we actually measure the intelligence of an agent?
 
