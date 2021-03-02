@@ -46,15 +46,15 @@ It's difficult to build a test for artificial agents that cannot easily be explo
 by the use of shortcuts -- leading to a high score but in which the agent does not
 show the type of intelligence the test is set to measure. As Chollet puts it:
 
-> ... optimizing for a single metric or set of metrics often leads to tradeoffs and 
+> ... optimizing for a single metric or set of metrics often leads to tradeoffs and
 > shortcuts ... (a well-known effect on Kaggle, where winning models are often overly
-> specialized for the specific benchmark they won and cannot be deployed on rea-world 
+> specialized for the specific benchmark they won and cannot be deployed on rea-world
 > versions of the underlying problem).
 
 ## Measuring intelligence
 
 Many of the approaches used to measure intelligence focus solely in the performance of
-an agent in a single task, or a set of closely  related tasks, Chollet argues that in 
+an agent in a single task, or a set of closely  related tasks, Chollet argues that in
 order to measure general intelligence it is necessary to measure not only the _skill_
 of the agent at a particular task, but it's ability to deal properly with new unknown tasks.
 
@@ -65,15 +65,15 @@ The goal is to measure an agent's broad _abilities_ instead of task-specific _sk
     <figcaption>Hierarchy of cognitive abilities.</figcaption>
 </div>
 
-Measuring abilities has the goal to identify the agent's capacity for generalization, 
+Measuring abilities has the goal to identify the agent's capacity for generalization,
 that is, dealing with related tasks it's never seen before, or completely unrelated tasks.
-One can think of intelligence as degree of effort an agent has to exert in order to 
+One can think of intelligence as degree of effort an agent has to exert in order to
 acquire skills. Agents that can learn more skills with less effort can be said to be
 more intelligent.
 
 ### Choosing priors
 
-Chollet emphasizes the need to control the priors, and they should be 
+Chollet emphasizes the need to control the priors, and they should be
 human priors, a practical reason for this is learning efficiency.
 
 If we provide agents with specific priors then we're giving them hints about
@@ -81,29 +81,53 @@ the structure of their environment. This has the effect -- already known for hum
 of making the agents acquire specific categories of abilities very efficiently.
 
 When no priors are given, the agent has to also learn the structure of the environment,
-this requires more computational resources and may result in agents that are very 
+this requires more computational resources and may result in agents that are very
 intelligent but maybe not as efficient at learning skills that are relevant in a human
-context. 
+context.
 
-Chollet thinks this anthropocentrism is legitimate and necessary because it's the only 
-scope we can meaningfully approach and asses. 
+Chollet thinks this anthropocentrism is legitimate and necessary because it's the only
+scope we can meaningfully approach and asses.
 
-The relevant priors would then be, _objectness_, _agentness_, _natural numbers_, 
-_arithmetic_, _elementary geometry and topology_. _Objectness_ is about the human 
+The relevant priors would then be, _objectness_, _agentness_, _natural numbers_,
+_arithmetic_, _elementary geometry and topology_. _Objectness_ is about the human
 intuitions about what objects are, their boundaries and how they interact. _Agentness_
 is the perception that certain objects behave as if they had intentions, or goals.
-The ability to count objects and the understanding of the effects of adding and 
-subtracting objects is part of the _arithmetic_ and _numeric_ priors. Orientation in 
+The ability to count objects and the understanding of the effects of adding and
+subtracting objects is part of the _arithmetic_ and _numeric_ priors. Orientation in
 2- and 3-dimensional space and performing basic spatial transformation on objects
 accounts for the _geometrical_ an _topological_ priors.
 
-## Agents, skills and tasks
+## abc
+
+There are some differences in terminology between [Hutter's](hutter-aixi) and Chollet's models:
+
+- the _Agent_ becomes a _System_
+- the agent's _Actions_ becomes a _Skill program_
+- the _Environment_ becomes a _Task_
+
+Despite these differences the models  have a lot in common, e.g., they both learn via
+reinforcement, however, Chollet makes a distinction between the _Intelligent System_
+and it's output, which he calls a _Skill program_. Also, the environment is reduced
+in scope and only represents a specific task.
+
+An intelligent system is presented with multiple tasks, each time, it will try to produce
+a skill program to solve the task. The task presents different situations to the skill
+program, and the skill program generates a response. The response is evaluated and two
+outputs are generated, a score for the current response and feedback to the intelligent
+system.
 
 Link to Hutter: Agent and Environment(#hutter-aixi)
 
 Chollet: Agent as a skill program syntheziser for a specific task
 
 TODO: Diagram goes here.
+
+<div style="text-align: center">
+    <img src="/assets/images/chollet-system-skill-task.png">
+    <figcaption>
+        An intelligent system synthesizes a program to solve a specific task
+    </figcaption>
+</div>
 
 ### Flow of interaction
 
