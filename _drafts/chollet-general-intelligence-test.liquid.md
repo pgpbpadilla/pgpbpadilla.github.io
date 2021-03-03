@@ -127,7 +127,7 @@ system.
 
 So, how do we actually measure the intelligence of an agent?
 
-TODO: formulas here
+
 
 TODO: Link to part 2
 
