@@ -128,7 +128,7 @@ system.
 So, how do we actually measure the intelligence of an agent?
 
 \\[
-I^{opt}_{IS, scope} = \underset{T \in scope}{Avg}
+I^{opt}\_{IS, scope} = \underset{T \in scope}{Avg}
 \left[
     \omega_{T,\Theta} \cdot \Theta \sum_{C \in Cur_T^{opt}}
     \left[
