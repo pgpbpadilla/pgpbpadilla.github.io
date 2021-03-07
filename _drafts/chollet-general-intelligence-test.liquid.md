@@ -123,9 +123,16 @@ system.
     </figcaption>
 </div>
 
-## TODO: Math
+## Quantifying the intelligence of a system
 
 So, how do we actually measure the intelligence of an agent?
+
+Chollet introduces many concept in order to motivate the final formula that
+quantifies the intelligence of a system, here I will try to not butcher it too much
+but that's inevitable, so let's go:
+
+In the _optimal_  \\((opt)\\) case, the measure of intelligence of an Intelligent System
+over a _scope_ \\((IS, scope)\\) is given by the formula:
 
 \\[
 I^{opt}\_{IS, scope} = \underset{T \in scope}{Avg}
@@ -141,8 +148,24 @@ I^{opt}\_{IS, scope} = \underset{T \in scope}{Avg}
 \right]
 \\]
 
+The formula expresses the measure of intelligence as a weighed average over the space
+of Tasks. The \\( \omega\_{T, \Theta} \cdot \Theta \\) term is the value of reaching
+the optimal level of skill on Task \\( T \\).
 
-TODO: Link to part 2
+It's necessary to account for the contribution of each interaction between the intelligent
+system and the task, and since it's not known beforehand which interactions will happen
+a sum over all possible interactions is taken.
+
+The specific set of interactions the system will have with the task is called a
+_Curriculum_, and \\( P\_C \\) is the probability that the system will be presented
+with a specific curriculum \\( C \\).
+
+The last term of the formula expresses the ratio of _Generalization Difficulty_ to the
+_Prior_ knowledge the system has about the _Task_ and the _Experience_ it has acquired
+during the training phase.
+
+TODO:
+- introduce algorithmic complexity and explain the formula step by step
 
 ## References
 
