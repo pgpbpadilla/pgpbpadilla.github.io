@@ -133,8 +133,13 @@ length of the shortest computer program that outputs a particular string \\((s)\
 The information content of a string \\((s_1)\\) contained in another string \\((s_2)\\)
 is denoted as \\(H(s_2|s_1)\\).
 
-In the _optimal_  \\((opt)\\) case, the measure of intelligence of an Intelligent System
-over a _scope_ \\((IS, scope)\\) is given by the formula:
+Let's remember the proposed definition at the beginning of this post:
+
+> The intelligence of a system is a measure of its skill-acquisition efficiency
+> over a scope of tasks, with respect to priors, experience, and generalization difficulty.
+
+In the _optimal_  \\((opt)\\) case, the Intelligence \\((I)\\) of an
+Intelligent System \\((IS)\\) over a _scope_ \\((scope)\\) is given by the formula:
 
 \\[
 I^{opt}\_{IS, scope} = \underset{T \in scope}{Avg}
@@ -150,19 +155,16 @@ I^{opt}\_{IS, scope} = \underset{T \in scope}{Avg}
 \right]
 \\]
 
-It expresses the measure of intelligence as a weighed average over the space
-of Tasks. The \\( \omega\_{T, \Theta} \cdot \Theta \\) term is the value
-of reaching the optimal level of skill \\((\Theta)\\) on Task \\( T \\).
+In order to find an intelligent system that displays human-like intelligence, tasks
+relevant to humans will have a heavier weight \\(( \omega\_{T, \Theta} )\\).
+The weighed average over the space of Tasks accounts for the contribution of all tasks.
 
-It's necessary to account for the contribution of each interaction between the intelligent
-system and the task, and since it's not known beforehand which interactions will occur,
-a sum over all possible interactions is taken.
+The sum over all optimal curriculums for a given task \\((C \in Cur\_{T}^{opt})\\)
+will account for the possible skill programs the system may synthesize.
 
-The specific set of interactions the system will have with the task is called a
-_Curriculum_, and \\( P\_C \\) is the probability that the system will be presented
-with a specific curriculum \\( C \\).
-
-The term
+The skill-acquisition efficiency for a given task is multiplied by the probability that
+a given curriculum occurs \\( P\_C \\). The skill-acquisition efficiency for a given
+task is given by:
 
 \\[
     \dfrac{
