@@ -157,26 +157,29 @@ I^{opt}\_{IS, scope} = \underset{T \in scope}{Avg}
 
 In order to find an intelligent system that displays human-like intelligence, tasks
 relevant to humans will have a heavier weight \\(( \omega\_{T, \Theta} )\\).
-The weighed average over the space of Tasks accounts for the contribution of all tasks.
+The weighed average over the space of Tasks accounts for the contribution of each task.
 
 The sum over all optimal curriculums for a given task \\((C \in Cur\_{T}^{opt})\\)
 will account for the possible skill programs the system may synthesize.
 
-The skill-acquisition efficiency for a given task is multiplied by the probability that
-a given curriculum occurs \\( P\_C \\). The skill-acquisition efficiency for a given
-task is given by:
+The skill-acquisition efficiency is measured as the ratio of the task's generalization difficulty
+\\(GD\\) to the system's "knowledge" about the task. Here, the knowledge that the
+system \\(IS\\) possesses about a task \\(T\\) is the sum of it's prior \\(P\\) knowledge
+and the experience \\((E)\\) gained during the training phase.
 
 \\[
-    \dfrac{
+\dfrac{
         GD_{IS,T,C}^\Theta
     }{
         P_{IS,T}^{\Theta} + E_{IS,T,C}^\Theta
     }
 \\]
 
-expresses the ratio between the developer-aware _Generalization Difficulty_ \\((GD)\\),
-and the sum of the agent's \\((IS)\\) _Prior_ \\((P)\\) knowledge and the
-_Experience_ \\((E)\\) it acquired about the task \\((T)\\) during the training phase.
+How good a system will be at gaining a particular task will the particular curriculum
+presented to it by the task. Curriculums that are more likely to appear during the
+interaction between the task and the system contribute more to the overall system
+intelligence. This is taken into account by multiplying the skill-acquisition efficiency
+times the probability \\(P\_{C}\\) of observing a given curriculum \\(C\\).
 
 
 TODO:
