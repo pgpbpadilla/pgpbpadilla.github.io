@@ -125,13 +125,16 @@ system.
 
 ## Quantifying the intelligence of a system
 
-Chollet relies on [Algorithmic Information Theory](#references) in order to quantify
+Chollet uses [Algorithmic Information Theory](#references) in order to quantify
 the information content of the intelligent system, the skill program and the tasks.
 
-The [Algorithmic Complexity](#references) of a string, denoted as \\(H(s)\\), is the
-length of the shortest computer program that outputs a particular string \\((s)\\).
-The information content of a string \\((s_1)\\) contained in another string \\((s_2)\\)
-is denoted as \\(H(s_2|s_1)\\).
+The [Algorithmic Complexity](#references) \\(H(s)\\) of a string \\( s \\), is the
+length of the shortest computer program that outputs \\((s)\\). \\(H(s_2|s_1)\\)
+is the length of the shortest computer program that outputs \\( s_2 \\) when it
+receives \\( s_1 \\) as the input.
+
+TODO: Explain interpretation, I_x = H(x|y) / H(x) is the fraction of information that
+the program X knows about y, where X is a program that outputs x.
 
 Let's remember the proposed definition at the beginning of this post:
 
