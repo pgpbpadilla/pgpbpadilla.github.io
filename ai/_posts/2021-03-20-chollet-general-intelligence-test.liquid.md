@@ -1,8 +1,8 @@
 ---
 layout: post.liquid
 title:  "François Chollet's general intelligence test"
-date:   2021-02-26 20:43
-last_updated: 2021-02-26 20:43
+date: 2021-03-20 19:29
+last_updated: 2021-03-20 19:29
 tags: machine-intelligence chollet agi test
 permalink: /chollet-general-intelligence-test
 categories: [ai, machine-intelligence, benchmark]
