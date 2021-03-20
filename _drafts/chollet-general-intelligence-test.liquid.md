@@ -25,20 +25,20 @@ psychometrics to design an intelligence test for human and non-human agents.
 The field of psychometrics is now a well-established discipline,
 and its findings about the measurement of human intelligence are reliable. The
 same cannot be said for the state of the art in measuring intelligence of artificial
-agents.
+systems.
 
-## Difficulties evaluating artificial agents
+## Difficulties evaluating intelligence of systems
 
 The conditions under which intelligence tests are
-carried out on humans are not easily transferable to artificial agents.
+carried out on humans are not easily transferable to systems.
 
 When evaluating human intelligence, it's not expected that the human will train for the
-test; however, that's the current paradigm for evaluating artificial agents. Developers
-provide as many examples as possible during a "training phase" so the agent can learn and
+test; however, that's the current paradigm for evaluating systems. Developers
+provide as many examples as possible during a "training phase" so the system can learn and
 perform well in a final evaluation.
 
-It's difficult to build a test for artificial agents that cannot easily be exploited --
-by the use of shortcuts -- leading to a high score but in which the agent does not
+It's difficult to build a test for systems that cannot easily be exploited --
+by the use of shortcuts -- leading to a high score but in which the system does not
 show the type of intelligence the test is set to measure. As Chollet puts it:
 
 > ... optimizing for a single metric or set of metrics often leads to tradeoffs and
@@ -49,12 +49,12 @@ show the type of intelligence the test is set to measure. As Chollet puts it:
 ## Measuring intelligence
 
 Many of the approaches used to measure intelligence focus solely in the performance of
-an agent in a single task, or a set of closely  related tasks, Chollet argues that in
+an system in a single task, or a set of closely  related tasks, Chollet argues that in
 order to measure general intelligence it is necessary to measure not only the _skill_
-of the agent at a particular task, but it's ability to deal properly with new --
+of the system at a particular task, but it's ability to deal properly with new --
 previously unknown -- tasks.
 
-The goal is to measure an agent's broad _abilities_ instead of task-specific _skills_.
+The goal is to measure an system's broad _abilities_ instead of task-specific _skills_.
 
 <div style="text-align: center">
     <img src="/assets/images/hierarchy-cognitive-abilities.png">
@@ -63,9 +63,9 @@ The goal is to measure an agent's broad _abilities_ instead of task-specific _sk
     </figcaption>
 </div>
 
-By measuring abilities the emphasis is on the agent's capacity for generalization,
+By measuring abilities the emphasis is on the system's capacity for generalization,
 that is, the ability to deal with related tasks it's never seen before, or completely
-unrelated tasks. Agents that can learn more skills more quickly can be said to be
+unrelated tasks. systems that can learn more skills more quickly can be said to be
 more intelligent.
 
 ### Choosing priors
@@ -178,7 +178,7 @@ and the experience \\((E)\\) gained during the training phase.
 How good a system will be at gaining a particular task will the particular curriculum
 presented to it by the task. Curriculums that are more likely to appear during the
 interaction between the task and the system contribute more to the overall system
-intelligence. This is taken into account by multiplying the skill-acquisition efficiency
+intelligence. This is represented by the product of the skill-acquisition efficiency
 times the probability \\(P\_{C}\\) of observing a given curriculum \\(C\\).
 
 
