@@ -65,53 +65,36 @@ The goal is to measure an system's broad _abilities_ instead of task-specific _s
 
 By measuring abilities the emphasis is on the system's capacity for generalization,
 that is, the ability to deal with related tasks it's never seen before, or completely
-unrelated tasks. systems that can learn more skills more quickly can be said to be
+unrelated tasks. Systems that can learn new skills more efficiently can be said to be
 more intelligent.
 
-### Choosing priors
+## Priors: controlling what the system knows
 
-Chollet emphasizes the need to control the priors, and they should be
-human priors, a practical reason for this is learning efficiency.
+To get human-like intelligence, some assumptions have to be built-in. This will help
+the system learn certain skills faster. These assumption are the system's _priors_.
 
-If we provide agents with specific priors then we're giving them hints about
-the structure of their environment. This has the effect -- already known for humans --
-of making the agents acquire specific categories of abilities very efficiently.
+By controlling the priors it's possible to define what the system knows about the
+its environment. In humans, these priors allow them to acquire specific categories of
+abilities very efficiently.
 
-When no priors are given, the agent has to also learn the structure of the environment,
-this requires more computational resources and may result in agents that are very
-intelligent but maybe not as efficient at learning skills that are relevant in a human
-context.
+Controlling priors is also a way to direct what kind of skills the system should learn
+more efficiently. If no priors were given, the system would have to learn the
+structure of the environment and there's no guarantee that the skills acquired will be
+useful in a human-centric context.
 
-Chollet thinks this anthropocentrism is legitimate and necessary because it's the only
-scope we can meaningfully approach and asses.
+According to Chollet, this anthropocentrism is legitimate and necessary because it's
+the only scope we can meaningfully approach and asses.
 
-The relevant priors would then be, _objectness_, _agentness_, _natural numbers_,
-_arithmetic_, _elementary geometry and topology_. _Objectness_ is about the human
-intuitions about what objects are, their boundaries and how they interact. _Agentness_
-is the perception that certain objects behave as if they had intentions, or goals.
-The ability to count objects and the understanding of the effects of adding and
-subtracting objects is part of the _arithmetic_ and _numeric_ priors. Orientation in
-2- and 3-dimensional space and performing basic spatial transformation on objects
-accounts for the _geometrical_ an _topological_ priors.
+## Program synthesis
 
-## abc
+During it's lifetime, a system will face many situations in which it is required to
+solve a particular task, it does so by generating a skill program.
 
-There are some differences in terminology between [Hutter's](hutter-aixi) and Chollet's models:
+The system is evaluated and rewarded when it is able to produce program that
+achieves an acceptable performance solving the task.
 
-- the _Agent_ becomes a _System_
-- the agent's _Actions_ becomes a _Skill program_
-- the _Environment_ becomes a _Task_
-
-Despite these differences the models  have a lot in common, e.g., they both learn via
-reinforcement, however, Chollet makes a distinction between the _Intelligent System_
-and it's output, which he calls a _Skill program_. Also, the environment is reduced
-in scope and only represents a specific task.
-
-An intelligent system is presented with multiple tasks, each time, it will try to produce
-a skill program to solve the task. The task presents different situations to the skill
-program, and the skill program generates a response. The response is evaluated and two
-outputs are generated, a score for the current response and feedback to the intelligent
-system.
+The intelligence of the system given by its ability to generate a sufficiently good
+task-specific skill program for multiple tasks.
 
 <div style="text-align: center">
     <img src="/assets/images/chollet-system-skill-task.png">
@@ -122,24 +105,8 @@ system.
 
 ## Quantifying the intelligence of a system
 
-Chollet uses [Algorithmic Information Theory](#references) in order to quantify
-the information content of the intelligent system, the skill program and the tasks.
-
-The [Algorithmic Complexity](#references) \\(H(s)\\) of a string \\( s \\), is the
-length of the shortest computer program that outputs \\((s)\\). \\(H(s_2|s_1)\\)
-is the length of the shortest computer program that outputs \\( s_2 \\) when it
-receives \\( s_1 \\) as the input.
-
-TODO: Explain interpretation, I_x = H(x|y) / H(x) is the fraction of information that
-the program X knows about y, where X is a program that outputs x.
-
-Let's remember the proposed definition at the beginning of this post:
-
-> The intelligence of a system is a measure of its skill-acquisition efficiency
-> over a scope of tasks, with respect to priors, experience, and generalization difficulty.
-
-In the _optimal_  \\((opt)\\) case, the Intelligence \\((I)\\) of an
-Intelligent System \\((IS)\\) over a _scope_ \\((scope)\\) is given by the formula:
+In the optimal case (\\( opt \\)), the intelligence \\( I \\) of a system \\( IS \\)
+over a scope \\( scope \\) is:
 
 \\[
 I^{opt}\_{IS, scope} = \underset{T \in scope}{Avg}
@@ -153,47 +120,42 @@ I^{opt}\_{IS, scope} = \underset{T \in scope}{Avg}
         }
     \right]
 \right]
+\label{eqn:intelligence}
+\tag{1}
 \\]
 
-In order to find an intelligent system that displays human-like intelligence, tasks
-relevant to humans will have a heavier weight \\(( \omega\_{T, \Theta} )\\).
-The weighed average over the space of Tasks accounts for the contribution of each task.
+Not all tasks are equal, some are more relevant to humans, some are easier to learn,
+some are not learnable by the system.
+To reflect this a weighted average \\( \underset{T \in scope}{Avg} \\) is used to account
+for the contribution of each task \\( T \\) that is in the scope of the system.
 
-The sum over all optimal curriculums for a given task \\((C \in Cur\_{T}^{opt})\\)
-will account for the possible skill programs the system may synthesize.
+The weights \\( \omega\_{T, \Theta} \\) represent how important is to produce the skill program
+that can solve task \\( T \\) with maximum performance \\( \Theta \\).
 
-The skill-acquisition efficiency is measured as the ratio of the task's generalization difficulty
-\\(GD\\) to the system's "knowledge" about the task. Here, the knowledge that the
-system \\(IS\\) possesses about a task \\(T\\) is the sum of it's prior \\(P\\) knowledge
-and the experience \\((E)\\) gained during the training phase.
+The series of interactions the system has with a task is called a _Curriculum_.
+There may be different ways of training the system such that it results in
+optimal performance \\( \Theta \\). The set of such curricula is \\( Cur^{opt} \\).
 
-\\[
-\dfrac{
-        GD_{IS,T,C}^\Theta
-    }{
-        P_{IS,T}^{\Theta} + E_{IS,T,C}^\Theta
-    }
-\\]
+The chances to see a particular curriculum \\( C \\) during a system's lifetime is given
+by \\( P_C \\). How much a system \\( IS \\) is able to generalize and reach optimal
+performance \\( \Theta \\) depends on the Curriculum \\( C \\) for the given
+Task \\( T \\), this is called _Generalization Difficulty_, \\( GD\_{IS, T, C}^\Theta \\).
 
-How good a system will be at gaining a particular task will the particular curriculum
-presented to it by the task. Curriculums that are more likely to appear during the
-interaction between the task and the system contribute more to the overall system
-intelligence. This is represented by the product of the skill-acquisition efficiency
-times the probability \\(P\_{C}\\) of observing a given curriculum \\(C\\).
+The knowledge of the system is composed of it's priors, the assumptions built-in the
+system and the experience it acquired during training. How strongly the priors contribute
+to solving optimally task \\( T \\), is measured with \\( P_\{IS}^\Theta \\).
+Similarly, the experience gained during training is quantified by
+\\( E\_{IS, T, C}^\Theta \\).
 
-
-TODO:
-Every entity can be seen as a string (system, task, skill program, solution,
-curriculum, solution, etc), and the definitions for GD, P and E are all defined
-in terms of information content they have about X, Y Z.
-
-Give a  couple of examples and close
-
+From the ratio of generalization difficulty to the agents previous knowledge we can see
+that if the prior knowledge is big, then a system that performs optimally
+at a task would be considered less smart than another system with less prior knowledge
+that also performs optimally for the same task. Conversely, if the generalization
+difficulty is high, a system that solves the task can be said to be more intelligent
+than another system with the same prior knowledge but solving a task with
+low generalization difficulty.
 
 ## References
 
 - <a name="bib:chollet-1">[arXiv:1911.01547v2](https://arxiv.org/abs/1911.01547v2)</a>:
 François Chollet, On the Measure of Intelligence
-- [Marcus Hutter: Universal Artificial Intelligence](hutter-aixi)
-- Algorithmic Information Theory
-- Algorithmic Complexity
