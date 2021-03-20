@@ -22,9 +22,11 @@ def update_gems(ctx):
 
 
 @task(pre=[update_gems])
-def build(ctx, docker=False):
+def build(ctx, docker=False, trace=False):
     """Use Jekyll to build the Blog"""
     jekyll_build = ['jekyll', 'build']
+    if trace:
+        jekyll_build.append('--trace')
     if docker is True:
         docker_build = build_cmd(DOCKER_JEKYLL_CMD_PARTS + jekyll_build)
         ctx.run(docker_build)
@@ -34,11 +36,13 @@ def build(ctx, docker=False):
 
 
 @task
-def serve(ctx, drafts=True, docker=False):
+def serve(ctx, drafts=True, docker=False, trace=False):
     """Serves the Blog locally"""
     jekyll_serve = ['jekyll', 'serve', '--livereload']
     if drafts:
         jekyll_serve.append('--drafts')
+    if trace:
+        jekyll_serve.append('--trace')
     if docker:
         docker_serve_cmd = build_cmd(DOCKER_JEKYLL_CMD_PARTS + jekyll_serve)
         ctx.run(docker_serve_cmd)
@@ -48,10 +52,10 @@ def serve(ctx, drafts=True, docker=False):
 
 
 @task
-def run(ctx, docker=False):
+def run(ctx, docker=False, trace=False):
     """Build+Run the Blog locally"""
-    build(ctx, docker=docker)
-    serve(ctx, docker=docker)
+    build(ctx, docker=docker, trace=trace)
+    serve(ctx, docker=docker, trace=trace)
 
 
 @task

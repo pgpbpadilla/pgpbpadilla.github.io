@@ -1,0 +1,45 @@
+@startuml
+
+'left to right direction
+actor "Claude Shanon" as CS
+
+
+
+node "Information Theory" as IT {
+	[Information] as I
+	[Entropy] as E
+	I . E: TODO
+}
+
+node "Algorithmic Information Theory" as AIT {
+	[Computation] as C
+	I <--> C
+
+	node "Core Ideas" {
+		[Algorithmic Complexity] as AC
+		[Algorithmic Randomness] as AR
+		[Algorithmic Probability] as AP
+	}
+
+	node "Computably generated objects" as CGO {
+		[Strings]
+		[Data Structures]
+	}
+	[Computational Incompressibility] as CI
+
+	AC --> CI: measures
+	CI <-- CGO: have
+
+	node "Key People" {
+		actor "Ray Solomonoff" <<Founder>> as RS
+		actor "Gregory Chatin" as GC
+		actor "Andrey Kolmogorov" as AK
+	}
+}
+
+node "Stochastically generated objects" as SGO
+CGO .. SGO: complementary
+
+CS --> IT: pioneered
+
+@enduml
