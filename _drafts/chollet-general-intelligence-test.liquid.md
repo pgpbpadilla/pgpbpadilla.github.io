@@ -7,8 +7,8 @@ tags: machine-intelligence chollet agi test
 permalink: /chollet-general-intelligence-test
 categories: [ai, machine-intelligence, benchmark]
 ---
-[François Chollet](#references) is an researcher in the field of Artificial Intelligence.
-He is the creator of the Keras library for machine learning and has
+[François Chollet](#references) works in the field of Artificial Intelligence.
+He created the Keras library for machine learning and has
 launched the [ARC Challenge](#references) for measuring general intelligence.
 
 ## A definition of general intelligence
@@ -19,28 +19,23 @@ intelligence as follows:
 > The intelligence of a system is a measure of its skill-acquisition efficiency
 > over a scope of tasks, with respect to priors, experience, and generalization difficulty.
 
-In comparison with [other definitions](#references)
-for general intelligence,
-Chollet's definition  makes it clear he's mainly interested in human-like intelligence.
-The idea is to use insights from the field of psycho-metrics in order to design an
-intelligence test that can be used to test intelligence in humans and non-human agents.
+This definition focuses on human-like intelligence and uses insights from the field of
+psychometrics to design an intelligence test for human and non-human agents.
 
-Chollet argues that the goal of a measure for [Universal Intelligence](#references)
-is not sound, since we only know how to evaluate human intelligence, for example, with
-the use of IQ tests.
+The field of psychometrics is now a well-established discipline,
+and its findings about the measurement of human intelligence are reliable. The
+same cannot be said for the state of the art in measuring intelligence of artificial
+agents.
 
 ## Difficulties evaluating artificial agents
 
-Today the field of psychometrics is a well-established discipline,
-and their findings about the measurement of human intelligence are very reliable. The
-same cannot be said for the state of the art in measuring intelligence of artificial
-agents since the conditions under which intelligence tests are
+The conditions under which intelligence tests are
 carried out on humans are not easily transferable to artificial agents.
 
 When evaluating human intelligence, it's not expected that the human will train for the
-test taking as many similar tests before the final evaluation. When it comes to artificial
-agents, that's exactly the current paradigm, give as many examples -- during the training
-phase -- as possible to the agent before the final evaluation.
+test; however, that's the current paradigm for evaluating artificial agents. Developers
+provide as many examples as possible during a "training phase" so the agent can learn and
+perform well in a final evaluation.
 
 It's difficult to build a test for artificial agents that cannot easily be exploited --
 by the use of shortcuts -- leading to a high score but in which the agent does not
@@ -48,7 +43,7 @@ show the type of intelligence the test is set to measure. As Chollet puts it:
 
 > ... optimizing for a single metric or set of metrics often leads to tradeoffs and
 > shortcuts ... (a well-known effect on Kaggle, where winning models are often overly
-> specialized for the specific benchmark they won and cannot be deployed on rea-world
+> specialized for the specific benchmark they won and cannot be deployed on real-world
 > versions of the underlying problem).
 
 ## Measuring intelligence
@@ -56,19 +51,21 @@ show the type of intelligence the test is set to measure. As Chollet puts it:
 Many of the approaches used to measure intelligence focus solely in the performance of
 an agent in a single task, or a set of closely  related tasks, Chollet argues that in
 order to measure general intelligence it is necessary to measure not only the _skill_
-of the agent at a particular task, but it's ability to deal properly with new unknown tasks.
+of the agent at a particular task, but it's ability to deal properly with new --
+previously unknown -- tasks.
 
 The goal is to measure an agent's broad _abilities_ instead of task-specific _skills_.
 
 <div style="text-align: center">
     <img src="/assets/images/hierarchy-cognitive-abilities.png">
-    <figcaption>Hierarchy of cognitive abilities.</figcaption>
+    <figcaption>
+        Hierarchy of cognitive abilities [<a href="#bib:chollet-1">1</a>].
+    </figcaption>
 </div>
 
-Measuring abilities has the goal to identify the agent's capacity for generalization,
-that is, dealing with related tasks it's never seen before, or completely unrelated tasks.
-One can think of intelligence as degree of effort an agent has to exert in order to
-acquire skills. Agents that can learn more skills with less effort can be said to be
+By measuring abilities the emphasis is on the agent's capacity for generalization,
+that is, the ability to deal with related tasks it's never seen before, or completely
+unrelated tasks. Agents that can learn more skills more quickly can be said to be
 more intelligent.
 
 ### Choosing priors
@@ -195,8 +192,8 @@ Give a  couple of examples and close
 
 ## References
 
-- [arXiv:1911.01547v2](https://arxiv.org/abs/1911.01547v2) - François Chollet,
-  On the Measure of Intelligence
+- <a name="bib:chollet-1">[arXiv:1911.01547v2](https://arxiv.org/abs/1911.01547v2)</a>:
+François Chollet, On the Measure of Intelligence
 - [Marcus Hutter: Universal Artificial Intelligence](hutter-aixi)
 - Algorithmic Information Theory
 - Algorithmic Complexity
