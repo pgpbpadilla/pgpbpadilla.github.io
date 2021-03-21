@@ -99,7 +99,7 @@ sufficiently good task-specific skill programs for the given tasks.
 <div style="text-align: center">
     <img src="/assets/images/chollet-system-skill-task.png">
     <figcaption>
-        An intelligent system synthesizes a program to solve a specific task
+        An intelligent system synthesizes a program to solve a specific task.
     </figcaption>
 </div>
 
@@ -129,31 +129,37 @@ some are not learnable by the system.
 To reflect this a weighted average \\( \underset{T \in scope}{Avg} \\) is used to account
 for the contribution of each task \\( T \\) that is in the scope of the system.
 
-The weights \\( \omega\_{T, \Theta} \\) represent how important is to produce the skill program
-that can solve task \\( T \\) with maximum performance \\( \Theta \\).
+The weights \\( \omega\_{T, \Theta} \\) represent how important it is to produce
+the skill program that can solve task \\( T \\) with maximum performance \\( \Theta \\).
 
 The series of interactions the system has with a task is called a _Curriculum_.
 There may be different ways of training the system such that it results in
-optimal performance \\( \Theta \\). The set of such curricula is \\( Cur^{opt} \\).
+optimal performance; the set of such curricula is \\( Cur\_{T}^{opt} \\).
 
 The chances to see a particular curriculum \\( C \\) during a system's lifetime is given
-by \\( P_C \\). How much a system \\( IS \\) is able to generalize and reach optimal
-performance \\( \Theta \\) depends on the Curriculum \\( C \\) for the given
-Task \\( T \\), this is called _Generalization Difficulty_, \\( GD\_{IS, T, C}^\Theta \\).
+by \\( P_C \\). How much a system \\( IS \\), is able to generalize and reach optimal
+performance \\( \Theta \\) depends on the curriculum \\( C \\) for the given
+task \\( T \\), this is called _Generalization Difficulty_, \\( GD\_{IS, T, C}^\Theta \\).
 
-The knowledge of the system is composed of it's priors, the assumptions built-in the
-system and the experience it acquired during training. How strongly the priors contribute
-to solving optimally task \\( T \\), is measured with \\( P_\{IS}^\Theta \\).
+The knowledge of the system is composed of its priors -- its built-in assumptions --
+and the experience it acquired during training. How strongly the priors contribute
+to solving task \\( T \\) optimally is measured with \\( P_\{IS}^\Theta \\).
 Similarly, the experience gained during training is quantified by
 \\( E\_{IS, T, C}^\Theta \\).
 
-From the ratio of generalization difficulty to the agents previous knowledge we can see
+From the ratio of generalization difficulty to the agent's previous knowledge we can see
 that if the prior knowledge is big, then a system that performs optimally
 at a task would be considered less smart than another system with less prior knowledge
-that also performs optimally for the same task. Conversely, if the generalization
-difficulty is high, a system that solves the task can be said to be more intelligent
-than another system with the same prior knowledge but solving a task with
-low generalization difficulty.
+that also performs optimally for the same task. Also, if the generalization
+difficulty is high, a system that solves the task can be said to show more intelligence
+than another system with the same prior knowledge but solving a task with a lower
+generalization difficulty.
+
+## Task-specific intelligence
+
+An important takeaway is the idea that intelligence can only be measured
+when a system solves a task. The same system may show little or no intelligence if
+the task is too easy or out of its scope.
 
 ## References
 
