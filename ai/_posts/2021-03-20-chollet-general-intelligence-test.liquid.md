@@ -71,21 +71,21 @@ more intelligent.
 ## Priors: controlling what the system knows
 
 To get human-like intelligence, some assumptions have to be built-in. This will help
-the system learn certain skills faster. These assumption are the system's _priors_.
+the system learn certain skills faster. These assumptions are the system's _priors_.
 
 By controlling the priors it's possible to define what the system knows about the
-its environment. In humans, these priors allow them to acquire specific categories of
+environment. In humans, these priors allow them to acquire specific categories of
 abilities very efficiently.
 
 Controlling priors is also a way to direct what kind of skills the system should learn
 more efficiently. If no priors were given, the system would have to learn the
-structure of the environment and there's no guarantee that the skills acquired will be
+structure of the environment and there's no guarantee that the skills acquired would be
 useful in a human-centric context.
 
 According to Chollet, this anthropocentrism is legitimate and necessary because it's
 the only scope we can meaningfully approach and asses.
 
-## Program synthesis
+## Skill acquisition as program synthesis
 
 During it's lifetime, a system will face many situations in which it is required to
 solve a particular task, it does so by generating a skill program.
@@ -93,8 +93,8 @@ solve a particular task, it does so by generating a skill program.
 The system is evaluated and rewarded when it is able to produce program that
 achieves an acceptable performance solving the task.
 
-The intelligence of the system given by its ability to generate a sufficiently good
-task-specific skill program for multiple tasks.
+The intelligence of the system is directly connected to its ability to generate
+sufficiently good task-specific skill programs for the given tasks.
 
 <div style="text-align: center">
     <img src="/assets/images/chollet-system-skill-task.png">
