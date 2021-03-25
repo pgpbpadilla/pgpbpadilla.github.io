@@ -10,26 +10,33 @@ categories: [ai, machine-intelligence, benchmark]
 In 2019 François Chollet published ARC in the [Kaggle platform](#references) as a 
 challenge to build a system that can solve previously unknown tasks with limited examples.
 
-## The ARC benchmach
+## what are you going to say
 
-- it has been designed to
+Chollet thinks modern approaches to create intelligent systems will not lead to human-like
+intelligence. 
 
+Systems require many examples and cannot extrapolate. They can only interpolate between 
+known examples.
 
-## Baked in human priors
+Limiting the number of examples prevents the use of data-hungry techniques for machine
+learning.
 
-A key ingredient for Chollet's during the evaluation of artificial agents is that the
-agent specification must include human priors.
+The challenge is proposed as a step in the direction of building intelligent systems 
+that show greater generalization capacity.
 
-### Object-ness
+## say it
 
-An example of a human prior is, the intuition about what makes up and object,
-and how objects interact in the physical world. This is sometimes referred to as
-intuitive physics.
+### Description of the challenge
 
-### Agency
+### Example tasks
 
+### Expectations from solving the challenge
 
-### Theory of mind
+## what you said 
+
+The focus for this direction of research is in building systems that can solve multiple
+types of human-relevant tasks with a limited number of examples, therefore getting closer
+to the prime example of general intelligence, human intelligence.
 
 ## References
 
