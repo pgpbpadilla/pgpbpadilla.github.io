@@ -1,12 +1,14 @@
 ---
 layout: post.liquid
-title:  "ARC: The Abstraction and Reasoning Challenge"
-date:   2021-02-26 20:43
-last_updated: 2021-02-26 20:43
+title:  "The Abstraction and Reasoning Challenge (ARC)"
+date:   2021-03-25 20:06
+last_updated: 2021-03-25 20:06
 tags: machine-intelligence chollet agi arc-challenge
 permalink: /chollet-arc-challenge
 categories: [ai, machine-intelligence, benchmark]
 ---
+In 2019 François Chollet published ARC in the [Kaggle platform](#references) as a 
+challenge to build a system that can solve previously unknown tasks with limited examples.
 
 ## The ARC benchmach
 
