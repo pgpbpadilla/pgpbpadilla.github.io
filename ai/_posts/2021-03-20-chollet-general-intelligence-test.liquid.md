@@ -108,21 +108,7 @@ sufficiently good task-specific skill programs for the given tasks.
 In the optimal case (\\( opt \\)), the intelligence \\( I \\) of a system \\( IS \\)
 over a scope \\( scope \\) is:
 
-\\[
-I^{opt}\_{IS, scope} = \underset{T \in scope}{Avg}
-\left[
-    \omega_{T,\Theta} \cdot \Theta \sum_{C \in Cur_T^{opt}}
-    \left[
-        P_C \cdot \dfrac{
-            GD_{IS,T,C}^\Theta
-        }{
-            P_{IS,T}^{\Theta} + E_{IS,T,C}^\Theta
-        }
-    \right]
-\right]
-\label{eqn:intelligence}
-\tag{1}
-\\]
+{% include_relative chollet/system-intelligence-formula.md %}
 
 Not all tasks are equal, some are more relevant to humans, some are easier to learn,
 some are not learnable by the system.
