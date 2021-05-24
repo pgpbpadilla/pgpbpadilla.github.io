@@ -47,8 +47,26 @@ capabilities.
 
 ## Building systems with human-like intelligence
 
+Chollet's emphasizes his belief that human-like intelligence is a desirable goal for
+our artificial systems. The reasons are quite understandable; those systems are the ones
+that could improve our lives in the short and long term if we get them right. These systems
+are there with the goal of helping us humans.
+
 ### Fixing the priors
 
+The approach to develop systems with human-like intelligence seems is inspired in our
+own evolutionary history. Those priors that have enabled us to perform well at tasks
+that have been important to our survival are those that we should provide to our systems
+as a starting point. The goal is to nudge the development of those systems in directions
+that are useful to solve human-relevant tasks and perhaps more importantly to speed up
+their development.
+
+It is hoped that by explicitly specifying human priors, the comparison of the resulting
+systems with humans in terms of their intelligence will be easier and more fair. A simple
+pocket calculator today could be said to be superior to a human doing simple arithmetic,
+however this only compares them in a specific task, not in their capacity to generalize
+their intelligence to other tasks, this would be an example of an unfair comparison, one
+which is also difficult to explain and defend.
 
 ## Focus on generalization
 
