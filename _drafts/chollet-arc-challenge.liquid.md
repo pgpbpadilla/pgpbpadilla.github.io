@@ -33,6 +33,18 @@ Chollet makes the case that the kind of intelligence we should be interested is 
 where the agent can perform well even after seeing a few examples of a particular task,
 the way humans generally are able to solve this type of task.
 
+A human test taker does not need to train for solving a particular task, even when it
+has not seen it before, a system taking the ARC test still requires multiple non-intersecting
+data sets, one used during development, another for testing and the final one which is
+the actual evaluation.
+
+In that respect any system capable of achievement human-level performance in the ARC
+benchmark would necessarily be [less intelligent than a human with the same performance](
+/chollet-general-intelligence-test#quantifying-the-intelligence-of-a-system
+).
+This is a direct consequence of the fact that the human needs has greater generalization
+capabilities.
+
 ## Building systems with human-like intelligence
 
 ### Fixing the priors
