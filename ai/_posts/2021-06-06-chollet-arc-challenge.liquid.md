@@ -44,7 +44,7 @@ benchmark would necessarily be [less intelligent than a human with the same scor
 ). This is because the human is expected to perform better with less exposure to the
 test format. It is assumed that a human should be able to obtain a score very close to
 100% correct solutions. However, Chollet [has said](#references) that he does not have
-the data to claim with certainty this is the case since it would required a large-scale
+the data to claim with certainty this is the case since it would require large-scale
 psychological studies.
 
 ## Building systems with human-like intelligence
@@ -69,18 +69,18 @@ to perform well on specific tasks. By specifying human priors in artificial syst
 it is desired to nudge the development of those systems in directions that are useful to
 solve human-relevant tasks and also to speed up the acquisition of new skills.
 
-Assigning human priors has another benefit, it open the possibility to compare the
+Assigning human priors has another benefit, it opens the possibility to compare the
 intelligence between two different systems, something that remains an open problem to
 this day. Also, since the benchmark is solvable by humans, it would provide a more direct
 way to compare human and machine intelligence.
 
-ARC is a new type of challenge in the Kaggle platform and it designed that way so that
+ARC is a new type of challenge in the Kaggle platform and it's designed that way so that
 traditional Machine Learning techniques -- which are data hungry -- won't work.
 
 The suggestions from the challenge hosts are to attempt solving the tasks by hand and
 write down the programs that would solve them, then think how one could use principles of
-program synthesis and program search to find such programs. Next logical steps is to find
-ways to rank and select programs which are likely to get a higher score.
+program synthesis and program search to find such programs. The next logical step is to
+find ways to rank and select programs which are likely to get a higher score.
 
 ### Life experience a.k.a. acquired knowledge
 
@@ -91,9 +91,9 @@ be designed such that they will help the system further improve the system's per
 in a particular direction.
 
 It seems to me that the ARC data set is itself an exercise in Curriculum design,
-where the sequence of tasks the system is exposed to, are chosen in a way that will
+where the sequence of tasks the system is exposed to, is chosen in a way that will
 direct the system towards human-like intelligence. In the pessimistic case, it may only
-produce a system that's good a taking ARC-type of tests and nothing else.
+produce a system that's good at taking ARC-type of tests and nothing else.
 
 The designed curriculum limits the amount of examples the system is allowed to use for
 its learning before being able to solve new tasks, this is inline with the desired goal
@@ -106,7 +106,7 @@ to create abstractions and then to manipulate those abstractions and apply them 
 contexts, we can go from a single example to a general principle.
 
 Contemporary approaches at measuring the performance of intelligent systems is to create
-task-specific benchmarks. In comparison, intelligence test for humans measure the
+task-specific benchmarks. In comparison, intelligence tests for humans measure the
 performance over a range of distinct tasks.
 
 The [measure of intelligence proposed by Chollet](/chollet-general-intelligence-test),
