@@ -8,7 +8,7 @@ tags: language loom-of-language pronouns
 categories: [language, pronouns]
 ---
 In his book, [The Loom of Language](bodmer-lol-pronouns#references) -- LOL from now onwards --
-Bodmer gives advice on strategies for leaning a modern language.
+Bodmer gives advice on strategies for learning a modern language.
 
 Here's what Bodmer has to say about learning a modern language:
 
