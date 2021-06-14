@@ -1,13 +1,13 @@
 ---
 layout: post.liquid
-title:  "Learning a modern language: pronouns"
-date:   2021-06-14 15:42
+title:  "A bi-dimensional map of pronouns"
+date: 2021-06-14 15:42
 last_updated: 2021-06-14 15:42
 permalink: /bodmer-lol-pronouns
 tags: language loom-of-language pronouns
 categories: [language, pronouns]
 ---
-In his book, [The Loom of Language](#references) -- LOL from now onwards --
+In his book, [The Loom of Language](bodmer-lol-pronouns#references) -- LOL from now onwards --
 Bodmer gives advice on strategies for leaning a modern language.
 
 Here's what Bodmer has to say about learning a modern language:
