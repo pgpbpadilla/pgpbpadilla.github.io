@@ -130,8 +130,8 @@ system, the error is 1 otherwise.
 A perfect score using this metric would be 0, meaning the system makes no mistakes.
 As of the writing of this post, [the top solution has a score of 0.794](#references),
 this means the system produces the incorrect solutions almost 80% of the time.
-Some improvement have been submitted based on existing solutions with top scores, however
-they are marginal improvements.
+Some improvements have been submitted based on existing solutions with top scores,
+however, they offer only marginal gains.
 
 ## How close to AGI are we?
 
@@ -141,20 +141,20 @@ every possible solution to ARC has been submitted and that the benchmark is actu
 useful to measure intelligence in humans and systems.
 
 As of today I don't know if Chollet has published his own best score for ARC but it would
-be interesting to know. All I could find was his answer this very question:
+be interesting to know. All I could find was his answer to this very question:
 
 > That said, ARC is designed to be approachable right now, and I have a few approaches
 > that yield decent results. 20% is a reasonable goal today, and can likely be beaten
 > over the duration of the competition (I'd say it's 50% likely to get beaten).
 > The 2% progress we've seen in mere days on the leaderboard gives you a confirmation
-> of that. Simultaneously, I think will reaching human level will take many years.
+> of that. Simultaneously, I think reaching human level will take many years.
 [Kaggle discussion](#kaggle-discussions)
 
 The benchmark is young and much work is still to be done, some of the challenges are related
 to the ability from participants to find ways to trick the benchmark. In a way the
 publishing of the ARC challenge will help in identifying its limitations. There's already
 plenty of talk in the Kaggle platform and elsewhere on how to achieve just that, that
-is for now out my reach since they revolve around advanced concepts in the design
+is for now out of my reach since they revolve around advanced concepts in the design
 of ML benchmarks. Fortunately this is also outside the scope of this post ;)
 
 
