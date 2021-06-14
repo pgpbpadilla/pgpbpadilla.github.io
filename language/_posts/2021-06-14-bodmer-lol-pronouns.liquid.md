@@ -18,7 +18,7 @@ Here's what Bodmer has to say about learning a modern language:
 > given in a dictionary
 > - flexional derivatives which still affect the meaning of a statement
 >
-> To the first class belong the personal pronouns. It should be our fist task to memorize
+> To the first class belong the personal pronouns. It should be our first task to memorize
 > them.
 
 I personally don't enjoy rot memorization exercises, but I found it entertaining to
@@ -41,7 +41,7 @@ easy to remember.
 
 ## The dimensions of pronouns
 
-Pronouns can belong to two discrete categories along two dimensions:
+Pronouns can belong to discrete categories along two dimensions:
 
 - **Who** is being referred to
 - **How many** are being referred to
