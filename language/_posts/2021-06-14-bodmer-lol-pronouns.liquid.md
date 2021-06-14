@@ -46,16 +46,16 @@ Pronouns can belong to two discrete categories along two dimensions:
 - **Who** is being referred to
 - **How many** are being referred to
 
-For the **Who** dimension, I have the labels:
+For the **Who** dimension, I have used the labels:
 
 - **I**, to refer to the speaker itself
-- **You**, to refer directly to someone else than the speaker
-- **They**, to refer indirectly to someone else than the speaker
+- **You**, to refer _directly_ to someone other than the speaker
+- **They**, to refer _indirectly_ to someone other than the speaker
 
-For the **How many** dimension, I have the labels:
+For the **How many** dimension, I have used the labels:
 
-- **Singular form** to refer to a single individual
-- **Plural form** to refer to a group
+- **Singular form** to refer to a single individual, e.g., _I, you, he/she/it_.
+- **Plural form** to refer to a group, e.g., _we, you, they_.
 
 
 ## References
