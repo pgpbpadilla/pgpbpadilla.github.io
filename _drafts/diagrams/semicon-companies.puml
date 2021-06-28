@@ -1,38 +1,57 @@
 @startuml
 'https://plantuml.com/component-diagram
 
+left to right direction
 title Semi-conductor manufacturing: companies
 
 'sources: https://en.wikipedia.org/wiki/Semiconductor_equipment_sales_leaders_by_year
 ' https://en.wikipedia.org/wiki/Semiconductor_device_fabrication
 
-[Applied Materials] as AppMat
-[Tokyo Electron] as TEL
-[Lam Research] as Lam
-[KLA] as KLA
-[LeyBold Optics] as LB
-[Bühler AG] as Buhler
-[Carl Zeiss] as Zeiss
-[Siemens] as Siemens
-[ASML] as ASML
+package "Companies" as Co {
 
-[Intel]
-[AMD]
-[Global Foundries]
+	package "Equipment manufacturer" as EM {
+		[Applied Materials] as AppMat
+    	[Tokyo Electron] as TEL
+    	[Lam Research] as Lam
+    	[KLA] as KLA
+    	[LeyBold Optics] as LB
+    	[Bühler AG] as Buhler
+    	[Carl Zeiss] as Zeiss
+    	[Siemens] as Siemens
+    	[ASML] as ASML
+	}
 
-[Optics manufacturing equipment] as OptEq
-[Process Control] as PC
-[Deposition] as Depo
-[Thermal Processing] as ThProc
-[Polishing] as Polish
-[Ion Implantation] as IonImpl
-[Installation] as Install
-[Support] as Support
-[Maintenance] as EqMaint
-[Inspection] as Inspect
+	package "Chip manufacturer" as CM {
+		[Intel]
+		[AMD]
+		[Global Foundries]
+	}
+}
 
-PC <.. KLA
-OptEq <.. LB
-AppMat <.. E2E
+newpage
+
+left to right direction
+title Semi-conductor: Products + Services
+
+package "Products + Services" as PS {
+	package "Equipment" {
+		[Optics manufacturing equipment] as OptEq
+		[Deposition] as Depo
+		[Thermal Processing] as ThProc
+		[Polishing] as Polish
+		[Ion Implantation] as IonImpl
+		[Wafer Inspection] as Inspect
+	}
+
+	package "Software" {
+		[Process Control] as PC
+	}
+
+	package "Service" {
+		[Installation] as Install
+    	[Support] as Support
+    	[Maintenance] as EqMaint
+	}
+}
 
 @enduml
