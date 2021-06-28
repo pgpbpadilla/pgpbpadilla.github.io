@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+title Semi-conductor manufacturing: companies
+
+'sources: https://en.wikipedia.org/wiki/Semiconductor_equipment_sales_leaders_by_year
+' https://en.wikipedia.org/wiki/Semiconductor_device_fabrication
+
+[Applied Materials] as AppMat
+[Tokyo Electron] as TEL
+[Lam Research] as Lam
+[KLA] as KLA
+[LeyBold Optics] as LB
+[Bühler AG] as Buhler
+[Carl Zeiss] as Zeiss
+[Siemens] as Siemens
+[ASML] as ASML
+
+[Intel]
+[AMD]
+[Global Foundries]
+
+[Optics manufacturing equipment] as OptEq
+[Process Control] as PC
+[Deposition] as Depo
+[Thermal Processing] as ThProc
+[Polishing] as Polish
+[Ion Implantation] as IonImpl
+[Installation] as Install
+[Support] as Support
+[Maintenance] as EqMaint
+[Inspection] as Inspect
+
+PC <.. KLA
+OptEq <.. LB
+AppMat <.. E2E
+
+@enduml
