@@ -1,0 +1,122 @@
+---
+layout: post.liquid
+title:  "Learning in the future"
+date:   2021-02-26 20:43
+last_updated: 2021-02-26 20:43
+tags: knetledge education future
+categories: [ai, education, future]
+---
+Is it possible to compress the typical education curriculum? If so,
+how much smaller can it be?
+
+In 2010, I was working in Mexico City as a Quality Assurance Analyst
+for Ixe Banco. It was my first job, for some reason I could not understand
+my lunch break was 2hrs, and I could not shorten it in order to leave 
+earlier in the afternoon.
+
+In any case, during these long lunch breaks I had time to read a bit,
+at the time I was reading Paul Halmos' article _How to write mathematics_
+in which he explains a few ideas a writer of mathematics can use to 
+improve the produced text.
+
+As an enthusiast of mathematics, this was interesting for me, not so much
+because I wanted to write mathematics but because I wanted to read and 
+understand more mathematics.
+
+The typical pattern I would notice in myself is to identify an interesting topic, find some good references for it, maybe 2 or 3. I would then proceed
+to read a particular chapter on one of the references to find out it was 
+too difficult. Then I would try and read a different reference, sometimes
+I would be able to understand, but some other times I would need to reach
+out for one more reference in the hopes that one would have an explanation
+that I could understand.
+
+I asked myself: if calculus is about 300 years old, how come there isn't a 
+definitive way on how to teach it? As a student, I felt I was not in the
+position to judge which bibliography was better suited for my current
+knowledge and reviewing 3 references was a huge investment of time, which
+may in the end not pay off.
+
+The problem becomes more complicated if we also consider, not only the 
+proficiency level a student has about a subject but also whether their
+interest in the subject is only as an instrumental goal to learning something else
+or if it's the main thing they want to learn.
+
+It seemed to me that there should be an optimal -- the shortest -- path to follow in order
+to learn a particular concept, given a specific starting point and goal.
+
+This seemed so obvious an idea that I was sure someone must have already though about it.
+Indeed, there's been so many people who have stumbled upon this idea.
+
+I imagined how much better the learning experience could be if we could avoid all the time
+sink-holes that students run into. Well, at the time I was only thinking about the benefits
+for me, but I guess it's a problem that afflicts more people.
+
+Back to Halmos' article, in it, I could identify some key ideas, namely:
+
+- the material should be self-contained, as much as possible avoid referencing external
+  material, otherwise the experience is interrupted by the need to look something up
+- write using a spiral plan, write a first iteration of the material, then review from
+  the beginning, rewriting -- not editing -- each section to make the material easier to
+  understand
+- use the triptych structure, say what you're going to say, say it, then say what you said
+- linearize dependencies, arrange the material, so that it has a beginning, and an end
+
+I started toying with the idea of what the learning experience would be for a student if
+the above criteria were strictly met in all the subjects they desire to study.
+
+I thought about how much time could be saved if I didn't have to check out other references,
+or if the writing was crystal clear and adapted to my specific level of understanding, having
+enough repetition, motivating the subject, exploring it in detail and then summarizing it
+in a way that's easy to use as a reference. Also, it would be great time-saver if I could 
+avoid following self-referential loops.
+
+## What would a learning platform would look like
+
+Coming from a software engineering background, I also started imagining what a learning
+platform following these principles would look like and that's how the idea of the _Knetledge_
+came to be.
+
+_Knetledge_, a really cheesy?? name, and it comes from thinking about how to optimally
+organize knowledge into a network where the nodes are concepts, and the links are the 
+many kinds of relationships between concepts, the _Network of Knowledge_.
+
+Nothing new here, many people has tried to figure out ways to organize knowledge for 
+various purposes, sometimes the goal is to compress it, to make it easy to query, or 
+who knows what else.
+
+I was interested in a couple of things:
+
+- how to represent knowledge in a way that's easy to explore existing knowledge,
+- how to provide students of knowledge the tools to manipulate knowledge using 
+  the tools provided by computers
+    - create their own private knowledge sub-networks
+    - extend existing knowledge with their own insights
+    - let other people know your interests
+    - collaborate with people to extend the network of knowledge
+- automate knowledge discovery:
+  - write programs to analyse the network representing existing knowledge and:
+    - suggest new connections
+    - creation of new knowledge/suggest new synthesis, the creation of a new concept
+- build a semi-Oracle, a system that can suggest alternative solutions to given problems
+  e.g. :
+  - design a spaceship for inter-stellar travel
+  - find a way to stop aging
+  - design a sustainable civilization 
+
+I digress, ..., so how much could we shorten the time it takes a student on a particular
+field to be able to make a contribution to that field. Let's take the example of a student
+of mathematics, perhaps he has to complete the following:
+
+- college:
+  - the syllabus structure still mainly aiming at covering breadth and in many ways 
+    covering a classical structure
+  - perhaps the first time when they are expected to understand the general field, the 
+    fundamental questions and problems. They are expected to have a good command of 
+    well-established knowledge and perhaps use it in a way that's not necessarily creative
+    but demonstrates their command of the core concepts.
+- masters degree:
+  - lectures cover the breadth
+  - a director is needed to identify a project and for guidance
+  - perhaps solves an open problem or at least makes progress towards a solution
+- phd
+  - hopefully the student comes up with an original and legitimate question
