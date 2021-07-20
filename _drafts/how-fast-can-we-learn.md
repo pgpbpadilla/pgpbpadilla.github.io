@@ -1,40 +1,56 @@
 ---
 layout: post.liquid
-title:  "Learning in the future"
-date:   2021-02-26 20:43
-last_updated: 2021-02-26 20:43
-tags: knetledge education future
-categories: [ai, education, future]
+title:  "How fast can we learn?"
+date: 2021-07-20 20:54
+last_updated: 2021-07-20 20:54
+tags: knetledge education future learning
+permalink: /how-fast-can-we-learn
+categories: [education, learning, future]
 ---
-Is it possible to compress the typical education curriculum? If so,
-how much smaller can it be?
+How long does it take to make an original contribution to a specific field of knowledge?
+Is it possible to save time? If so, how much?
 
 In 2010, I was working in Mexico City as a Quality Assurance Analyst
-for Ixe Banco. It was my first job, for some reason I could not understand
-my lunch break was 2hrs, and I could not shorten it in order to leave 
-earlier in the afternoon.
+for Ixe Banco. It was my first job and for some reason I couldn't understand
+my lunch break had to be 2hrs, I could not shorten it in order to leave 
+earlier in the afternoon. It was a weird schedule.
 
-In any case, during these long lunch breaks I had time to read a bit,
-at the time I was reading Paul Halmos' article _How to write mathematics_
-in which he explains a few ideas a writer of mathematics can use to 
-improve the produced text.
+During these long lunch breaks I had time to read a bit and at the time I was reading 
+Paul Halmos' article [How to write mathematics](#references) in which he explains his 
+process of writing mathematics.
 
-As an enthusiast of mathematics, this was interesting for me, not so much
-because I wanted to write mathematics but because I wanted to read and 
-understand more mathematics.
+I like mathematics and for a long time I wished I could make some type of contribution
+to the field. However, I had no formal training in mathematics and only got excited about
+it when I was about 20 years old, a bit too late to start a career as a mathematician.
 
-The typical pattern I would notice in myself is to identify an interesting topic, find some good references for it, maybe 2 or 3. I would then proceed
-to read a particular chapter on one of the references to find out it was 
-too difficult. Then I would try and read a different reference, sometimes
-I would be able to understand, but some other times I would need to reach
-out for one more reference in the hopes that one would have an explanation
-that I could understand.
+I would sit during some days and try to solve problems from [Spivak's Calculus](#references)
+The process was slow, and not all of it was fun. Sometimes the material was too difficult
+for me, it takes a while to get used to the definition, theorem, proof structure of many
+texts on mathematics, specially following long proofs with steps that seem unjustified.
 
-I asked myself: if calculus is about 300 years old, how come there isn't a 
-definitive way on how to teach it? As a student, I felt I was not in the
-position to judge which bibliography was better suited for my current
-knowledge and reviewing 3 references was a huge investment of time, which
-may in the end not pay off.
+When things started to get too hard I would try to find a different reference for the same
+theorem and hope that it would somehow be easier. Sometimes I would try to focus on the 
+theorem's applications, I though, perhaps after a couple of examples, it would illuminate 
+the proof.
+
+I had a really hard time finding resources that included both a rigorous treatment, together
+with practical examples and visualisations for the key ideas. The rigorous texts tended
+to ignore the practical and visual aspects and the practical books with nice graphs tended
+to not even try to explain why the formulas worked or how to derive them.
+
+## There is no _standard_ treatment for Calculus
+
+Calculus, in the form it's taught in many colleges today, for example, using Spivak's book
+as the main reference, is about 300 years old. Of course there has been progress, but the
+core concepts taught in schools are really that old. So, how come there isn't a _standard_
+treatment which includes both the rigorous aspect and the practical and visual aspect?
+
+As a college student at the time, I could not decide, which reference to use. Some were
+too hard/abstract, some did not include the derivations of formulas, some did not include
+a step by step proof I could follow. Reviewing multiple reference texts was a big 
+investment of resources, and all that for a single subject.
+
+## TODO Rewrite from here
 
 The problem becomes more complicated if we also consider, not only the 
 proficiency level a student has about a subject but also whether their
@@ -120,3 +136,16 @@ of mathematics, perhaps he has to complete the following:
   - perhaps solves an open problem or at least makes progress towards a solution
 - phd
   - hopefully the student comes up with an original and legitimate question
+    
+A typical student that starts their primary education around 6 years of age may be able
+to complete a PhD by their late-twenties. This is if nothing gets in their way that could
+delay their progress.
+
+So, assuming we have our hypothetical learning platform based on Halmos' principles, how
+much sooner could a student make an original contribution? This is the question we will
+explore in upcoming posts.
+
+## References
+
+- Paul Halmos, How to write mathematics
+- Spivak's Calculus
