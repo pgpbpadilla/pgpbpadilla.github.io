@@ -50,25 +50,37 @@ too hard/abstract, some did not include the derivations of formulas, some did no
 a step by step proof I could follow. Reviewing multiple reference texts was a big 
 investment of resources, and all that for a single subject.
 
+## Is there an optimal learning path?
+
+Finding adequate references for study can get more complicated, maybe they are not at all
+familiar with the subject and therefore the material needs to cover their knowledge gaps. 
+Perhaps the students are looking for examples on how to apply a particular idea, and 
+therefore a focus applications will be enough. If a deep understanding is required,
+more specialized references may be necessary.
+
+Given a particular student, their base knowledge, and their goals or needs, how could we
+find the optimal learning path? One that leads them from their current starting point to
+their desired goal with the minimal investment of resources.
+
+The question/problem seemed timeless, I can imagine that it has crossed the mind of every 
+single student of any field of knowledge. In retrospect, the problem seems to be much
+harder to solve than I initially imagined, as can be appreciated by looking at the syllabus
+of some of the most prestigious undergraduate and post-graduate programs around the world.
+
+## Is it a problem of how to organize material?
+
+Why is it so hard to come up with an optimal learning path? One idea is that it has to do
+with how the material is organized and presented. Halmos' touches on these two aspects
+when he described his method for writing mathematics. Writing with a specific audience
+in mind, making the material self-contained, providing a logical sequence and reiterating 
+the important ideas were some insights that made Halmos such a popular author of
+mathematics.
+
 ## TODO Rewrite from here
-
-The problem becomes more complicated if we also consider, not only the 
-proficiency level a student has about a subject but also whether their
-interest in the subject is only as an instrumental goal to learning something else
-or if it's the main thing they want to learn.
-
-It seemed to me that there should be an optimal -- the shortest -- path to follow in order
-to learn a particular concept, given a specific starting point and goal.
-
-This seemed so obvious an idea that I was sure someone must have already though about it.
-Indeed, there's been so many people who have stumbled upon this idea.
-
-I imagined how much better the learning experience could be if we could avoid all the time
-sink-holes that students run into. Well, at the time I was only thinking about the benefits
-for me, but I guess it's a problem that afflicts more people.
 
 Back to Halmos' article, in it, I could identify some key ideas, namely:
 
+- know your audience
 - the material should be self-contained, as much as possible avoid referencing external
   material, otherwise the experience is interrupted by the need to look something up
 - write using a spiral plan, write a first iteration of the material, then review from
