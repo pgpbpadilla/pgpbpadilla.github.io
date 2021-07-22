@@ -72,64 +72,61 @@ of some of the most prestigious undergraduate and post-graduate programs around 
 Why is it so hard to come up with an optimal learning path? One idea is that it has to do
 with how the material is organized and presented. Halmos' touches on these two aspects
 when he described his method for writing mathematics. Writing with a specific audience
-in mind, making the material self-contained, providing a logical sequence and reiterating 
-the important ideas were some insights that made Halmos such a popular author of
+in mind, making the material self-contained, and providing a logical sequence and 
+reiterating the important ideas are insights that made Halmos such a popular author of
 mathematics.
 
-## TODO Rewrite from here
+What if we could build some learning platform by applying these principles? Could we
+then create personalized learning paths for students? The platform would need to:
 
-Back to Halmos' article, in it, I could identify some key ideas, namely:
+- have an understanding of the student's profile so that it only presents relevant 
+  material, 
+- facilitate access to related concepts without breaking the flow and without losing 
+  sight of the learning goal,
+- provide feedback about the progress made in order to motivate the student to continue,
+- give the student enough space to gain mastery of the subject under study
 
-- know your audience
-- the material should be self-contained, as much as possible avoid referencing external
-  material, otherwise the experience is interrupted by the need to look something up
-- write using a spiral plan, write a first iteration of the material, then review from
-  the beginning, rewriting -- not editing -- each section to make the material easier to
-  understand
-- use the triptych structure, say what you're going to say, say it, then say what you said
-- linearize dependencies, arrange the material, so that it has a beginning, and an end
+## Knowledge as a network of concepts
 
-I started toying with the idea of what the learning experience would be for a student if
-the above criteria were strictly met in all the subjects they desire to study.
+My background is in the field of computer engineering, specializing in Software, and so
+I saw the problem from that perspective. I was thinking of representing knowledge as a 
+graph, where the nodes stand for specific concepts, and the links describe the 
+relationships between them. Soon I started calling it the Network of Knowledge, 
+_Knetledge_ for short.
 
-I thought about how much time could be saved if I didn't have to check out other references,
-or if the writing was crystal clear and adapted to my specific level of understanding, having
-enough repetition, motivating the subject, exploring it in detail and then summarizing it
-in a way that's easy to use as a reference. Also, it would be great time-saver if I could 
-avoid following self-referential loops.
 
-## What would a learning platform would look like
+I should mention that this representation of knowledge as a graph was by no means new, and 
+I wasn't aware that there have been and there are many ongoing attempts to find better ways 
+to represent knowledge. The end goal imposes some constraints on the solution, some 
+representations can make it easier to query a large database of knowledge, other 
+representations could be more compact, etc.
 
-Coming from a software engineering background, I also started imagining what a learning
-platform following these principles would look like and that's how the idea of the _Knetledge_
-came to be.
+For the rest of this post, our goal will be to provide students with an optimal learning
+path, designed to allow them to make progress as fast as possible and investing as few
+resources as possible.
 
-_Knetledge_, a really cheesy?? name, and it comes from thinking about how to optimally
-organize knowledge into a network where the nodes are concepts, and the links are the 
-many kinds of relationships between concepts, the _Network of Knowledge_.
+At the time I could think of the following related goals, which I intend to explore in 
+future posts:
 
-Nothing new here, many people has tried to figure out ways to organize knowledge for 
-various purposes, sometimes the goal is to compress it, to make it easy to query, or 
-who knows what else.
+### Related goals for students 
 
-I was interested in a couple of things:
+- provide tools to make it easy for students to explore a topic of interest free-style
+- create private collections of selected topics and allow to re-organize them as they see fit
+- share private collections
+- allow others to see what topics you've worked on, and those you're interested in
+- collaborate with other students building shared collections
 
-- how to represent knowledge in a way that's easy to explore existing knowledge,
-- how to provide students of knowledge the tools to manipulate knowledge using 
-  the tools provided by computers
-    - create their own private knowledge sub-networks
-    - extend existing knowledge with their own insights
-    - let other people know your interests
-    - collaborate with people to extend the network of knowledge
-- automate knowledge discovery:
-  - write programs to analyse the network representing existing knowledge and:
-    - suggest new connections
-    - creation of new knowledge/suggest new synthesis, the creation of a new concept
-- build a semi-Oracle, a system that can suggest alternative solutions to given problems
-  e.g. :
-  - design a spaceship for inter-stellar travel
-  - find a way to stop aging
-  - design a sustainable civilization 
+### Other related goals
+
+- create computer programs to automatically find patterns in the graph and: 
+  - suggest new relationships between existing concepts
+  - synthesize new concepts
+  - answer queries about the knowledge in the graph, e.g.
+    - how to solve inter-stellar travel?
+    - how to cure aging?
+    - how to become a sustainable civilization?
+    
+# TODO: Rewrite from here
 
 I digress, ..., so how much could we shorten the time it takes a student on a particular
 field to be able to make a contribution to that field. Let's take the example of a student
@@ -161,3 +158,5 @@ explore in upcoming posts.
 
 - Paul Halmos, How to write mathematics
 - Spivak's Calculus
+- Find other people who have tried to represent knowledge as graphs
+- Some general comments about the problem of knowledge representation
