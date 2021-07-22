@@ -105,28 +105,13 @@ For the rest of this post, our goal will be to provide students with an optimal 
 path, designed to allow them to make progress as fast as possible and investing as few
 resources as possible.
 
-At the time I could think of the following related goals, which I intend to explore in 
-future posts:
-
-### Related goals for students 
-
-- provide tools to make it easy for students to explore a topic of interest free-style
-- create private collections of selected topics and allow to re-organize them as they see fit
-- share private collections
-- allow others to see what topics you've worked on, and those you're interested in
-- collaborate with other students building shared collections
-
-### Other related goals
-
-- create computer programs to automatically find patterns in the graph and: 
-  - suggest new relationships between existing concepts
-  - synthesize new concepts
-  - answer queries about the knowledge in the graph, e.g.
-    - how to solve inter-stellar travel?
-    - how to cure aging?
-    - how to become a sustainable civilization?
-    
 # TODO: Rewrite from here
+
+## A hypothetical student journey
+
+primary -> secondary -> pre-college -> graduate -> post-grad -> phd
+
+TODO: diagram with basic timeline, and an estimate of how long it takes
 
 I digress, ..., so how much could we shorten the time it takes a student on a particular
 field to be able to make a contribution to that field. Let's take the example of a student
