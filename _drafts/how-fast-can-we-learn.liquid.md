@@ -96,9 +96,9 @@ of a single real variable given that they already know how to use limits.
 
 ## The student's journey
 
-Let's imagine a hypothetical math student, it may take many years before they can
-make their first original contribution to the field, a possible journey might be
-something like:
+Let's imagine a hypothetical but more realistic learning journey. Imagine a mathematics
+student, it may take them many years before they can make their first original contribution
+to the field, a possible journey might be something like:
 
 ```
 Primary Ed. --> Secondary Ed. --> Higher Ed. --> Postgraduate studies
@@ -107,6 +107,14 @@ Primary Ed. --> Secondary Ed. --> Higher Ed. --> Postgraduate studies
 Many students that begin this journey may start their postgraduate studies around
 their 24th year of age. Would it be possible to complete this journey sooner and
 with less effort if students had access to our hypothetical optimal learning path?
+
+## Closing thoughts
+
+The shear effort to organize knowledge, create materials that present
+the knowledge according to different goals students may have, and adapts in real time
+to their needs seems to explain why we don't have such a learning system today.
+
+
 
 ## References
 
