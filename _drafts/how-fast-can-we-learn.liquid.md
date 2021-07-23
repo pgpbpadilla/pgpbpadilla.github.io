@@ -68,41 +68,31 @@ to be a problem more difficult than I initially imagined.
 ## Is it a problem of how to organize material?
 
 Why is it so hard to come up with an optimal learning path? One idea is that it has to do
-with how the material is organized and presented. Halmos' touches on these two aspects
+with how the material is organized and presented. Halmos writes about these two aspects
 when he described his method for writing mathematics. Writing with a specific audience
-in mind, making the material self-contained, and providing a logical sequence and
-reiterating the important ideas are insights that made Halmos such a popular author of
+in mind, making the material self-contained, providing a logical sequence and
+reiterating the important ideas are insights that made Halmos stand out as writer of
 mathematics.
 
-What if we could build some learning platform by applying these principles? Could we
-then create personalized learning paths for students? The platform would need to:
+Let's imagine we had a learning system built on Halmos principles. Could we
+then create better learning paths for students? Such a system would need to:
 
-- have an understanding of the student's profile so that it only presents relevant
-  material,
-- facilitate access to related concepts without breaking the flow and without losing
-  sight of the learning goal,
-- provide feedback about the progress made in order to motivate the student to continue,
+- understand the student's profile so that it only includes relevant material,
+- avoid breaking the student's flow by not requiring the student to lookup other materials,
+- provide feedback about the progress made in order to motivate the student to continue, and
 - give the student enough space to gain mastery of the subject under study
 
 ## Knowledge as a network of concepts
 
-My background is in the field of computer engineering, specializing in Software, and so
-I saw the problem from that perspective. I was thinking of representing knowledge as a
-graph, where the nodes stand for specific concepts, and the links describe the
-relationships between them. Soon I started calling it the Network of Knowledge,
+We could represent knowledge as a graph, where the nodes stand for specific concepts,
+and the links describe the relationships between them. A Network of Knowledge or
 _Knetledge_ for short.
 
-
-I should mention that this representation of knowledge as a graph was by no means new, and
-I wasn't aware that there have been and there are many ongoing attempts to find better ways
-to represent knowledge. The end goal imposes some constraints on the solution, some
-representations can make it easier to query a large database of knowledge, other
-representations could be more compact, etc.
-
-For the rest of this post, our goal will be to provide students with an optimal learning
-path, designed to allow them to make progress as fast as possible and investing as few
-resources as possible.
-
+The problem seemed to have been reduced to finding a path in this "knowledge graph". A
+path with its origin representing the knowledge the student already has, and with its
+destination being the student learning goals. For example, a goal for a student might be
+to understand how to formally derive the main formulas for the derivative of a function
+of a single real variable given that they already know how to use limits.
 
 ## The student's journey
 
