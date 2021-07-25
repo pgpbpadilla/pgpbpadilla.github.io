@@ -71,18 +71,43 @@ principles laid out in the article got stuck in my head and I keep coming back t
 Knowing who you are writing for will help you focus the material and only include the
 parts that are really relevant. An author can simplify the task of the reader by providing
 a simple linear structure and by avoiding referencing external material that would cause
-a break in the flow of the text.
+a break in the flow of the text. 
 
-Some of the problems I faced when trying to learn a particular mathematical idea can be
-describe in terms of a violation of the principles in previous paragraph. Very often I
-would feel the need to break the flow of the text to find another reference, I would also
-find myself jumping back and forth in a book trying to make the connection between two
-subjects and the worst of all, most of the time I felt that I wasn't reading the
-right book, some book was exclusively focused on the theoretical aspects, such as
-definitions, theorems and proofs, another book would focus on the practical applications
-but would not include how to derive key formulas, yet another book would contain a proof
-that was too hard to follow because it did not include any visual aid, or because it
-would skip steps that were considered trivial.
+The problems I face when trying to learn a particular mathematical idea can be
+described in terms of violations of the principles mentioned before. 
+Often I feel the need to break the flow of the text to find another reference, 
+I find myself jumping back and forth in a book trying to make the connection between two
+ideas, and a lot of the time I felt that I wasn't reading the right book.
+
+Take the example of Calculus, it is difficult to find a reference that satisfies the 
+constraints mentioned before, even when the core ideas are over three centuries old.
+There are many excellent books about Calculus, however, once the book is writen and
+published, it's content remains fixed, at least until the next edition. 
+
+Adapting the treatment of the subject in real time would improve the learning 
+experience greatly. [Adaptive learning](#references) methods achieve this through the use of 
+computerized learning systems that create a model the individual student and use it
+to generate customized curricula matching their profile. 
+
+## Knowledge as a graph as a simple model
+
+- concepts and relationships
+    - a model that allows for
+        - high level of automation in organizing, querying
+        - finding the best learning path given a goal and a student profile
+- levels of abstraction
+  - difficulty
+  - student profile
+  - student goals
+- UX challenges
+
+## Obstacles: cost, technical barriers, organizational barriers
+
+- producing the content is a massive undertaking
+- content producers gotta eat
+- access to the tools is not free
+- obstacles to changing education systems
+- providing as a supplementary
 
 ## Say what you said
 
@@ -90,3 +115,4 @@ would skip steps that were considered trivial.
 ## References
 
 - Halmos, P. R., How to Write Mathematics.
+- [Adaptive learning](https://en.wikipedia.org/wiki/Adaptive_learning)
