@@ -55,7 +55,7 @@ than I had imagined and I my motivation slowly waned away but my interest in mat
 is as strong as ever. If only I was a math genius and I could get paid to learn more
 mathematics it would be a nice life!
 
-## What good writing can do, Halmos principles to write mathematics
+## Halmos' principles
 
 Around 2010 I ran into Paul Halmos' article _[How to write mathematics](#references)_, it
 contains many interesting ideas on how to structure written works about mathematics. The
@@ -66,6 +66,8 @@ parts that are really relevant. An author can simplify the task of the reader by
 a simple linear structure and by avoiding referencing external material that would cause
 a break in the flow of the text. 
 
+## Limitations of traditional references
+
 The problems I face when trying to learn a particular mathematical idea can be
 described in terms of violations of the principles mentioned before. 
 Often I feel the need to break the flow of the text to find another reference, 
@@ -75,24 +77,70 @@ ideas, and a lot of the time I felt that I wasn't reading the right book.
 Take the example of Calculus, it is difficult to find a reference that satisfies the 
 constraints mentioned before, even when the core ideas are over three centuries old.
 There are many excellent books about Calculus, however, once the book is writen and
-published, it's content remains fixed, at least until the next edition. 
+published, it's content remains fixed, at least until the next edition.
 
-Adapting the treatment of the subject in real time would improve the learning 
-experience greatly. [Adaptive learning](#references) methods achieve this through the use of 
-computerized learning systems that create a model the individual student and use it
-to generate customized curricula matching their profile. 
+Describe typical problems students face and how they relate to the limitations of 
+traditional reference material. 
 
-## Knowledge as a graph as a simple model
+- knowledge gaps: 
+  - content is fixed, does not adapt to the student
+  - do not provide an indicator of progress, quantify the gaps in my knowledge
+- learning goals
+  - content is fixed, cannot remove material not directly relevant 
+    to the students goals
+  - cannot design an optimal curriculum to achieve the goal
+  - missing progress indicator, how close to my goal
+- skill level
+  - cannot adjust the exposition to different levels of difficulty/abstraction
+  - do not provide various angles of attack, visual, written, auditory, etc
+  - as many examples as necessary
+  - step-by-step worked out examples
+  - missing skill level indicator 
+    
+
+## Some ideas that can improve
+
+In this section I want to describe how the basic problems/limitations of traditional 
+learning references can be overcome by using current technology:
+
+- virtually infinite storage
+- self-contained materials are just a click away
+- creation of rich media on the web
+- algorithms to help students:
+    - spaced repetition
+- mastery based learning (Khan Academy)
+
+### Knowledge as a graph as a simple model
 
 - concepts and relationships
     - a model that allows for
         - high level of automation in organizing, querying
         - finding the best learning path given a goal and a student profile
 - levels of abstraction
-  - difficulty
-  - student profile
-  - student goals
+    - difficulty
+    - student profile
+    - student goals
 - UX challenges
+
+### Adaptive learning 
+
+Adapting the treatment of the subject in real time would improve the learning 
+experience greatly. [Adaptive learning](#references) methods achieve this through the use of 
+computerized learning systems that create a model the individual student and use it
+to generate customized curricula matching their profile.
+
+### Kahn academy and related projects
+
+- Virtual classrooms
+    - MIT OCW
+    - Coursera and the like
+- e-Learning platforms
+    - bad: many emulate the model of the classroom, LinkedIn learn
+    - good: interactivity is great
+- Competitive problem-solving
+    - Kaggle
+    - Euler
+    - HackerRank, Codility
 
 ## Obstacles: cost, technical barriers, organizational barriers
 
