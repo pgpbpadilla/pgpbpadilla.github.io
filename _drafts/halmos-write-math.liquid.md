@@ -96,37 +96,39 @@ Continue writing the next section, then go back and review the previous ones, re
 what needs to be rewritten, repeat this process until the text is good enough.
 
 
-### Linearizing dependencies
+### Linearize dependencies
 
-Choose the order in which you want to present the text. One way to make things easier
-for the reader is to arrange the sections in a linear order, so that they don't have
-to jump back and forth.
+Arrange the sections in a linear order, this makes for a better reading experience 
+since it's not necessary to jump back and forth.
+
 
 ## Write
 
 Start writing. Write bit by bit. Focus on the process, write a little each time. 
 Focusing on the end goal can increase anxiety and lead to procrastination.
 
-As you write, continuously review what you've written using the spiral plan to find 
+Continuously review what you've written using the spiral plan to find 
 more connections and possible improvements.
 
 Stop. Do not write more than what's necessary to communicate your message. If you 
 follow the spiral plan you will have plenty of opportunities to find gaps, mistakes or 
 other things to fix.
 
+
 ## Re-write and re-write
 
 When you find something that can be improved, or that should be fixed, try rewriting 
-it instead of just editing it. Rewriting gives you the opportunity to express it in a 
-totally different -- and hopefully better -- way. You don't get that by editing just 
-sections of the text.
- 
+it instead of just editing it. Rewriting gives you the opportunity to express an idea 
+in a totally different — and hopefully better — way. 
+
+
 ## Mechanical details matter
 
 Check your work for mistakes, orthographic problems, style issues, inconsistent use of 
 notation or terminology. Also, try to use punctuation correctly.
 
 Too many mistakes can distract your audience from what you are trying to say. 
+
 
 ## Related
 
