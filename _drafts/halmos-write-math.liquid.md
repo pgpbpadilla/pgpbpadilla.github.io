@@ -133,8 +133,9 @@ Too many mistakes can distract your audience from what you are trying to say.
 ## Related
 
 1. [Paul Halmos article in Wikipedia](https://en.wikipedia.org/wiki/Paul_Halmos)
-2. PDF links:
+2. Dieudonne, Jean, Menahem M. Schiffer and Paul R. Halmos. “How to Write Mathematics.” (1973). 
+   - [Semantic Scholar - CorpusID:18293924](https://api.semanticscholar.org/CorpusID:18293924)
    - [cse.umn.edu](https://www-users.cse.umn.edu/~cberkesc/5385/Spring2018/halmosWrite.pdf)
    - [E-periodica, ETH Zurich](https://www.e-periodica.ch/digbib/view?lang=en&pid=ens-001%3A1970%3A16%3A%3A295#278)
    - [www-fourier.ujf-grenoble.fr](https://www-fourier.ujf-grenoble.fr/~funar/Halmos-How-To-Write.pdf)
-3. Google search: "L'Enseignement Mathématique, Vol.16 (1970) seals halmos how to write math"
+4. Google search: "L'Enseignement Mathématique, Vol.16 (1970) seals halmos how to write math"
