@@ -1,22 +1,20 @@
 ---
 layout: post.liquid
-title:  "Halmos' principles for writing mathematics"
+title:  "Paul Halmos' tips for writing"
 date:   2022-06-11 14:21
 last_updated: 2022-06-11 14:21
-tags: writing math halmos knetledge
-permalink: /halmos-write-math
-categories: [math, writing]
+tags: writing halmos
+permalink: /halmos-writing
+categories: [halmos, writing]
 ---
 Paul Halmos was a mathematician who among other things was recognized by his excellent
-written mathematical exposition.
+written exposition. His article on [how to write mathematics](#related) left a lasting 
+impression on me, and this year I decided to read it one more time and capture some 
+notes for my future reference.
 
-His article on [how to write mathematics](#related) left a lasting impression on me. This
-year I
-decided to read his article one more time, and to capture some notes for my
-future reference.
-
-Fortunately many of the ideas in the article are applicable too to non-mathematical
-writing and therefore useful for anyone who wants to improve their expository skills.
+Although the title of his article has the word _mathematics_ in it, the ideas 
+presented are generally applicable and therefore useful to anyone who wants to improve 
+their skills. 
 
 <div style="text-align: center">
     <img src="/assets/images/halmos-write-math.png">
@@ -26,11 +24,11 @@ writing and therefore useful for anyone who wants to improve their expository sk
 
 ## Have something to say
 
-There are only a few things worse than someone saying a lot about nothing. So, keep it
-concise.
+Saying a lot about nothing is worse than having nothing to say.
 
-When writing, it's useful to review your text and ensure you're not mixing too many
-ideas since this will make it harder for the reader to remember what you wrote.
+If you have something to say, keep it concise.
+
+Do not introduce too many ideas, it will be harder to remember tha main one.
 
 
 ## Write for your audience
@@ -55,6 +53,9 @@ ideas of previous thinkers and the ones that will be discussed later in your tex
 
 ### Say it
 
+Make your text as self-contained as possible, do not interrupt the reader's flow by 
+making references to ideas outside the current text.
+
 Provide examples and carefully draw connections between them and the main concepts.
 Counter-examples are also useful here to delimit the scope of your text.
 
@@ -63,6 +64,54 @@ Counter-examples are also useful here to delimit the scope of your text.
 
 Remind your audience about the most important takeaways. Make them short and memorable.
 
+
+## Arrange
+
+/Organizing/ the material is about drawing the interconnections between 
+ideas, /arranging/ is about choosing the order in which they will be presented.
+
+
+### The spiral plan
+
+Once you have an outline for the text, start writing the first section, then write the 
+second one, go back and read the first section, you will often find things that 
+could be improved, now you can go back and rewrite the first section.
+
+Continue writing the next section, now go back and review the previous ones, rewrite 
+what needs to be rewritten and repeat until it's good enough.
+
+
+### Linearizing dependencies
+
+Choose the order in which you want to present the text. One way to make things easier
+for the reader is to arrange the sections in a linear order, so that they don't have
+to jump back and forth.
+
+## Write
+
+Start writing. Write bit by bit. Focus on the process, write a little each time. 
+Focusing on the end goal can increase anxiety and lead to procrastination.
+
+As you write, continuously review what you've written using the spiral plan to find 
+more connections and possible improvements.
+
+Stop. Do not write more than what's necessary to communicate your message. If you 
+follow the spiral plan you will have plenty of opportunities to find gaps, mistakes or 
+other things to fix.
+
+## Re-write and re-write
+
+When you find something that can be improved, or that should be fixed, try rewriting 
+it instead of just editing it. Rewriting gives you the opportunity to express it in a 
+totally different -- and hopefully better -- way. You don't get that by editing just 
+sections of the text.
+ 
+## Mechanical detail matter
+
+Check your work for mistakes, orthographic problems, style issues, inconsistent use of 
+notation or terminology. Also, try to use punctuation correctly.
+
+Too many mistakes can distract your audience from what you are trying to say. 
 
 ## Related
 
