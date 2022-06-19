@@ -1,20 +1,24 @@
 ---
 layout: post.liquid
-title:  "Paul Halmos' tips for writing"
+title:  "Halmos' tips for writing"
 date:   2022-06-11 14:21
 last_updated: 2022-06-11 14:21
 tags: writing halmos
 permalink: /halmos-writing
 categories: [halmos, writing]
 ---
-Paul Halmos was a mathematician who among other things was recognized by his excellent
-written exposition. His article on [how to write mathematics](#related) left a lasting 
-impression on me, and this year I decided to read it one more time and capture some 
+[Paul Halmos](https://en.wikipedia.org/wiki/Paul_Halmos) was a mathematician who among 
+other things was recognized by his excellent written exposition. 
+
+His article on [how to write mathematics](#related) left a lasting 
+impression on me, and this year I decided to read it again, and capture some 
 notes for my future reference.
 
-Although the title of his article has the word _mathematics_ in it, the ideas 
-presented are generally applicable and therefore useful to anyone who wants to improve 
-their skills. 
+Although the word _mathematics_ is in the title, some ideas 
+presented apply to all kinds of writing, which makes them potentially useful to anyone 
+wanting to improve their writing.
+
+
 
 <div style="text-align: center">
     <img src="/assets/images/halmos-write-math.png">
@@ -22,13 +26,11 @@ their skills.
 </div>
 
 
-## Have something to say
+## Say _something_ and be brief
 
-Saying a lot about nothing is worse than having nothing to say.
-
-If you have something to say, keep it concise.
-
-Do not introduce too many ideas, it will be harder to remember tha main one.
+Saying a lot about nothing is worse than having nothing to say. If you have something 
+to say, keep it concise. Do not introduce too many ideas, it will be harder to 
+remember the main one. 
 
 
 ## Write for your audience
@@ -39,19 +41,32 @@ assumptions about their shared knowledge.
 Writing for a general audience is difficult because any assumption you make will likely
 be wrong.
 
-## Organizing the text
 
-A good start is to organize the text in three sections, sometimes referred as the
+## Organize
+
+Capture your ideas and establish the connections between them. This could include 
+going over all of your notes and creating references where necessary.
+
+### Make it self-contained
+
+Include all the necessary pre-requisites so that the readers won't have to look up 
+external sources. In some cases, this also means to remove certain concepts in order 
+to keep the size of the text manageable.
+
+### Create an outline 
+
+A good start is to outline the text in three sections, sometimes referred as the
 Aristotelian triptych: _Say what you're going to say, say it, say what you said_.
 
-### Say what you're going to say
+
+#### Say what you're going to say
 
 Prepare your audience for what's coming. In this section you can motivate the topic by
 providing some historical background in a way that shows the connections between the
 ideas of previous thinkers and the ones that will be discussed later in your text.
 
 
-### Say it
+#### Say it
 
 Make your text as self-contained as possible, do not interrupt the reader's flow by 
 making references to ideas outside the current text.
@@ -60,15 +75,15 @@ Provide examples and carefully draw connections between them and the main concep
 Counter-examples are also useful here to delimit the scope of your text.
 
 
-### Say what you said
+#### Say what you said
 
 Remind your audience about the most important takeaways. Make them short and memorable.
 
 
 ## Arrange
 
-/Organizing/ the material is about drawing the interconnections between 
-ideas, /arranging/ is about choosing the order in which they will be presented.
+_Organizing_ the material is about drawing the interconnections between 
+ideas, _arranging_ is about choosing the order in which they will be laid out.
 
 
 ### The spiral plan
@@ -106,7 +121,7 @@ it instead of just editing it. Rewriting gives you the opportunity to express it
 totally different -- and hopefully better -- way. You don't get that by editing just 
 sections of the text.
  
-## Mechanical detail matter
+## Mechanical details matter
 
 Check your work for mistakes, orthographic problems, style issues, inconsistent use of 
 notation or terminology. Also, try to use punctuation correctly.
