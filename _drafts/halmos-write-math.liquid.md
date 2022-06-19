@@ -71,13 +71,13 @@ ideas of previous thinkers and the ones that will be discussed later in your tex
 Make your text as self-contained as possible, do not interrupt the reader's flow by 
 making references to ideas outside the current text.
 
-Provide examples and carefully draw connections between them and the main concepts.
-Counter-examples are also useful here to delimit the scope of your text.
+Provide examples and draw straightforward connections to the key concepts.
+Counter-examples can also help you delimit the scope.
 
 
 #### Say what you said
 
-Remind your audience about the most important takeaways. Make them short and memorable.
+Remind your audience about the takeaways. Make them short and memorable.
 
 
 ## Arrange
@@ -88,12 +88,12 @@ ideas, _arranging_ is about choosing the order in which they will be laid out.
 
 ### The spiral plan
 
-Once you have an outline for the text, start writing the first section, then write the 
-second one, go back and read the first section, you will often find things that 
-could be improved, now you can go back and rewrite the first section.
+Write the first section, then write the 
+second section, go back and read the first section. You will often find things that 
+can be fixed or improved, now you can rewrite the first section.
 
-Continue writing the next section, now go back and review the previous ones, rewrite 
-what needs to be rewritten and repeat until it's good enough.
+Continue writing the next section, then go back and review the previous ones, rewrite 
+what needs to be rewritten, repeat this process until the text is good enough.
 
 
 ### Linearizing dependencies
