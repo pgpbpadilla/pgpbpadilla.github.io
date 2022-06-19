@@ -1,8 +1,8 @@
 ---
 layout: post.liquid
 title:  "Halmos' tips for writing"
-date:   2022-06-11 14:21
-last_updated: 2022-06-11 14:21
+date:   2022-06-19 18:30
+last_updated: 2022-06-19 18:30
 tags: writing halmos
 permalink: /halmos-writing
 categories: [halmos, writing]
