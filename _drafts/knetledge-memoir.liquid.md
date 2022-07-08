@@ -26,7 +26,7 @@ After completing my bachelors, I wanted to know what would it take to continue w
 masters in mathematics, I realized almost immediately that I didn't have the 
 background or the necessary level to even pass the admission examination.
 
-I was quite upset about that, however, even I had the talent to pull it off, I could 
+I was quite upset about that, however, even if I had the talent to pull it off, I could 
 not afford to continue studying, I needed to find a job asap.
 
 
@@ -47,11 +47,11 @@ During my bachelors I had some short encounters with several topics in mathemati
 applied to engineering, e.g., Calculus, Linear Algebra, Differential Equations, 
 Probability Theory, etc.
 
-I was always annoyed by repetitive mechanical computation and mostly drawn to the more 
-abstract aspects of these mathematical tools, rather than their applications.
+I was annoyed by repetitive mechanical computation and drawn to the 
+abstract aspects of these mathematical tools more than their applications.
 
-However, part of learning many mathematical concepts works really well by first 
-mastering the mechanical skills, which in turn helped build an intuition about the 
+However, learning many mathematical concepts works really well by first 
+mastering the mechanical skills, which helps build an intuition about the 
 underlying more abstract concepts.
 
 I was particularly interested but also terrified of theorem proving, but I did 
