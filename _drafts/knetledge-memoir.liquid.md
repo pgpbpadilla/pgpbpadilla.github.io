@@ -67,21 +67,35 @@ And the best of all, once a theorem is proved, it remains true forever! Is there
 anything better than that?
 
 
-### Reading Paul Halmos 
+### Understanding mathematical texts
 
-I had this idea that in order to get better at learning mathematics, it would help to 
-read Halmos' advice on how to write mathematics for an audience who wants to learn them.
+At some point around 2008 I came across Paul Halmos' article [_How to write
+mathematics_](#related), I had the hope that in order to get better at understanding
+mathematical texts it would be useful to know how the authors think about writing them.
 
-The article left a lasting impression on me and to this day I keep going back to ideas 
-in it.
-
-You can find my notes on it in: [Halmos' tips for writing](#related).
+Halmos' article is about his personal process of organizing notes, outlining, 
+arranging each section in the text, fixing mistakes and improving the generated text. 
+It seemed to me that I could _reverse-engineer_ the process in order to 
+understand how a mathematician thinks.
 
 
 ## Automating Halmos' principles
 
-I started to develop the conviction that we could automate the process of mathematical 
-research and eventually all scientific research.
+Once each mathematical concept is described, and it's relationships to other concepts 
+is also identified, it seemed to me that it should be possible to automate the 
+generation of a mathematical text representing the shortest path between two 
+mathematical concepts. 
+
+A student that understands concept A and wishes to learn concept B could get a 
+personalized shortest learning path and that would be a real time saver.
+
+It was just a small step further to imagine that the same could be done for all 
+scientific concepts, namely that given the description of each concept and it's 
+relationships to other concepts, a personalized shortest path could be automatically 
+generated for any student.
+
+I started to think that we could automate the process of mathematical research and 
+eventually all scientific research. 
 
 
 ## Knetledge: the network of knowledge
