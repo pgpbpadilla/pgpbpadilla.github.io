@@ -3,22 +3,24 @@ layout: post.liquid
 title:  "Knowledge as a network"
 date:   2022-07-01 16:13
 last_updated: 2022-07-01 16:14
-tags: knowledge memoir knetledge
+tags: knowledge learning memoir knetledge
 permalink: /network-of-knowledge
-categories: [knowledge, memoir]
+categories: [knowledge, learning, memoir]
 ---
-Learning is hard. This is a memoir about how I used to think about the idea of 
-knowledge, it's organization and how to help myself learn efficiently.
+Learning a technical subject is hard work and finding better ways to do it is a topic 
+that's been on my mind for many years. This is a memoir about how I used to think 
+about the idea of knowledge, it's organization and how to help myself learn efficiently.
 
-## On learning mathematics
 
-As an undergraduate student of Computer Science Engineering, I discovered my liking of 
-mathematics during the first two years of my bachelors degree (2004-2005).
+## On learning a technical subject
+
+As an undergraduate student of Computer Science Engineering (CSE), I discovered my 
+liking of mathematics during the first two years of my bachelors degree (2004-2005).
 
 For a short while I 
 considered changing schools to study mathematics but after learning that it would mean 
-to start my bachelors from scratch I decided to continue studying Computer Science 
-Engineering.
+to start my bachelors from scratch, and so I decided to not switch and finish my 
+Bachelors in CSE.
 
 ### Giving up mathematics ... as a profession
 
@@ -87,7 +89,7 @@ The result is a graph or network of ideas than can later be used during the writ
 process.
 
 This intuitive way of representing _knowledge_ as a network of interconnected concepts 
-is easily represented in a computer program and various computer programs can be written 
+is easily represented in a computer program and various programs can be written 
 to analyze characterize the structure of the network.
 
 Two specific scenarios that I find interesting are:
@@ -95,18 +97,28 @@ Two specific scenarios that I find interesting are:
 1. Identifying nodes that should be connected but aren't.
 2. "Creating" a _new concept_ by labeling a subset of the network.
 
+Other possible uses for a network of knowledge could be:
 
-## Areas of application
-
-A system like that could be used in many ways, it could be consulted and answer
-complicated questions about any domain of knowledge, it could be used to shorten the
-time it takes to learn anything by generating the most efficient personalized study
-curricula for any student.
-
-And of course, why not let it just take over the whole business of scientific research.
+- to build an Oracle, a system  that can answer any question about the knowledge in 
+  the network
+- a system to generate a personalized learning curricula that could be optimized to 
+  minimize time and effort 
 
 
-### Learning efficiently: the shortest learning path
+### Automated knowledge discovery and generation
+
+The above examples of systems require a human in the loop in order
+to verify that the computer program's decisions make sense. A human is also required 
+to ask the questions in the case of the Oracle, and in order to provide the student 
+profile and learning goals.
+
+Is it possible to build an autonomous system that continuously analyzes the network of
+knowledge and can automatically perform all these tasks? Namely, identify and create
+missing connections, create new nodes in the network, formulate new questions and 
+answer them, and re-organize the knowledge in the most efficient way possible?
+
+
+## Learning efficiently: the shortest learning path
 
 I thought of using this method to find the shortest learning path between what I know
 and what I want to learn.
