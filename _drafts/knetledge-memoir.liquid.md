@@ -79,26 +79,31 @@ It seemed to me that I could _reverse-engineer_ the process in order to
 understand how a mathematician thinks.
 
 
-## Automating Halmos' principles
+## Learning efficiently: the shortest learning path 
 
-Once each mathematical concept is described, and it's relationships to other concepts 
-is also identified, it seemed to me that it should be possible to automate the 
-generation of a mathematical text representing the shortest path between two 
-mathematical concepts. 
+Halmos' describes how he organizes his ideas around a topic in some form of paper 
+slips or cards, the cards have identifiers and can also have references to other cards.
+The result is a graph or network of ideas than can later be used during the writing 
+process.
 
-A student that understands concept A and wishes to learn concept B could get a 
-personalized shortest learning path and that would be a real time saver.
+I thought of using this method to find the shortest learning path between what I know 
+and what I want to learn. 
 
-It was just a small step further to imagine that the same could be done for all 
-scientific concepts, namely that given the description of each concept and it's 
-relationships to other concepts, a personalized shortest path could be automatically 
-generated for any student.
+Given that there already exists a network of cards that 
+contains all concepts Calculus, there would be a card for the concept of a limit, one 
+for derivate, another for a function of a real variable, etc. The cards would be 
+connected such that one can find the definition of a limit when reading the card for a 
+derivative because a derivative is defined in terms of a limit of a function.
 
-I started to think that we could automate the process of mathematical research and 
-eventually all scientific research. 
+If I already know what a limit is, and I want to learn about derivatives, I could find 
+the shortest path in the network that links these two concepts. Using the shortest 
+part to learn ideally should result in the shortest time and effort learn new concepts.
+
+A computer program can be written to output the text of each card in the shortest 
+learning path between two concepts, creating a kind of personalized study curriculum.
 
 
-## Knetledge: the network of knowledge
+## Knowledge as a network
 
 Knowledge can be thought of as a network or graph, where the nodes represent concepts 
 and the links the relationships between concepts.
