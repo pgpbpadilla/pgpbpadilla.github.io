@@ -79,53 +79,50 @@ It seemed to me that I could _reverse-engineer_ the process in order to
 understand how a mathematician thinks.
 
 
-## Learning efficiently: the shortest learning path 
-
-Halmos' describes how he organizes his ideas around a topic in some form of paper 
-slips or cards, the cards have identifiers and can also have references to other cards.
-The result is a graph or network of ideas than can later be used during the writing 
-process.
-
-I thought of using this method to find the shortest learning path between what I know 
-and what I want to learn. 
-
-Given that there already exists a network of cards that 
-contains all concepts Calculus, there would be a card for the concept of a limit, one 
-for derivate, another for a function of a real variable, etc. The cards would be 
-connected such that one can find the definition of a limit when reading the card for a 
-derivative because a derivative is defined in terms of a limit of a function.
-
-If I already know what a limit is, and I want to learn about derivatives, I could find 
-the shortest path in the network that links these two concepts. Using the shortest 
-part to learn ideally should result in the shortest time and effort learn new concepts.
-
-A computer program can be written to output the text of each card in the shortest 
-learning path between two concepts, creating a kind of personalized study curriculum.
-
-
 ## Knowledge as a network
 
-Knowledge can be thought of as a network or graph, where the nodes represent concepts 
-and the links the relationships between concepts.
+Halmos' describes how he organizes his ideas around a topic in some form of paper
+slips or cards, the cards have identifiers and can also have references to other cards.
+The result is a graph or network of ideas than can later be used during the writing
+process.
 
-When modelling knowledge as a network, then it could be possible to write computer 
-programs to automatically analyze the structure of the network.
+This intuitive way of representing _knowledge_ as a network of interconnected concepts 
+is easily represented in a computer program and various computer programs can be written 
+to analyze characterize the structure of the network.
 
-From this one could identify nodes that were not connected but that would be likely to 
-be related, all automaticallyl inferred from the structure of the network.
+Two specific scenarios that I find interesting are:
 
-It could also be possible to group a subset of concepts and relationships and label it 
-as a new concept. In this way, concepts can be nested, and it's concepts all the way down.
+1. Identifying nodes that should be connected but aren't.
+2. "Creating" a _new concept_ by labeling a subset of the network.
 
 
 ## Areas of application
 
-A system like that could be used in many ways, it could be consulted and answer 
-complicated questions about any domain of knowledge, it could be used to shorten the 
-time it takes to learn anything by generating the most efficient personalized study 
-curricula for any student. 
+A system like that could be used in many ways, it could be consulted and answer
+complicated questions about any domain of knowledge, it could be used to shorten the
+time it takes to learn anything by generating the most efficient personalized study
+curricula for any student.
 
 And of course, why not let it just take over the whole business of scientific research.
+
+
+### Learning efficiently: the shortest learning path
+
+I thought of using this method to find the shortest learning path between what I know
+and what I want to learn.
+
+Given that there already exists a network of cards that
+contains all concepts Calculus, there would be a card for the concept of a limit, one
+for derivate, another for a function of a real variable, etc. The cards would be
+connected such that one can find the definition of a limit when reading the card for a
+derivative because a derivative is defined in terms of a limit of a function.
+
+If I already know what a limit is, and I want to learn about derivatives, I could find
+the shortest path in the network that links these two concepts. Using the shortest
+part to learn ideally should result in the shortest time and effort learn new concepts.
+
+A computer program can be written to output the text of each card in the shortest
+learning path between two concepts, creating a kind of personalized study curriculum.
 
 ### Personalized learning curricula
 
