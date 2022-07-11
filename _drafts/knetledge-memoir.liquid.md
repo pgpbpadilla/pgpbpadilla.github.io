@@ -95,14 +95,13 @@ to analyze characterize the structure of the network.
 Two specific scenarios that I find interesting are:
 
 1. Identifying nodes that should be connected but aren't.
-2. "Creating" a _new concept_ by labeling a subset of the network.
+2. "Creating" a _new concept_ by labeling a subnetwork.
 
 Other possible uses for a network of knowledge could be:
 
-- to build an Oracle, a system  that can answer any question about the knowledge in 
+- building an Oracle, a system  that can answer any question about the knowledge in 
   the network
-- a system to generate a personalized learning curricula that could be optimized to 
-  minimize time and effort 
+- a system to generate a personalized learning curricula that minimizes time and effort 
 
 
 ### Automated knowledge discovery and generation
@@ -112,52 +111,44 @@ to verify that the computer program's decisions make sense. A human is also requ
 to ask the questions in the case of the Oracle, and in order to provide the student 
 profile and learning goals.
 
-Is it possible to build an autonomous system that continuously analyzes the network of
-knowledge and can automatically perform all these tasks? Namely, identify and create
-missing connections, create new nodes in the network, formulate new questions and 
-answer them, and re-organize the knowledge in the most efficient way possible?
+One open question is whether it is possible to build an autonomous system that 
+continuously analyzes the network of knowledge and can automatically perform such 
+tasks? Namely, identify and create missing connections, create new nodes in the 
+network, formulate new questions and answer them, and re-organize the knowledge in the 
+most efficient way possible.
 
 
 ## Learning efficiently: the shortest learning path
 
-I thought of using this method to find the shortest learning path between what I know
-and what I want to learn.
+Computing the shortest path between two nodes in the network becomes useful for a 
+student that wants to learn a _target_ concept given a starting _concept_. The 
+starting concept represents what the student already knows, whereas the target concept 
+represents what they want to learn. 
 
-Given that there already exists a network of cards that
-contains all concepts Calculus, there would be a card for the concept of a limit, one
-for derivate, another for a function of a real variable, etc. The cards would be
-connected such that one can find the definition of a limit when reading the card for a
-derivative because a derivative is defined in terms of a limit of a function.
+Concatenating the content of each node in the shortest parth between two concepts 
+results in the smallest study curriculum that accounts for the student's 
+profile and learning goals.
 
-If I already know what a limit is, and I want to learn about derivatives, I could find
-the shortest path in the network that links these two concepts. Using the shortest
-part to learn ideally should result in the shortest time and effort learn new concepts.
+Calculating such personalized learning curricula can be done on demand to match each 
+individual student's needs, given that their starting point is known.
 
-A computer program can be written to output the text of each card in the shortest
-learning path between two concepts, creating a kind of personalized study curriculum.
 
-### Personalized learning curricula
+## Oracles: Answering difficult questions
 
-This was and still is very close to my heart. I am a junky for learning new things, 
-however I lack the discipline, time, motivation and many other things to be successful 
-at learning all the things I want.
+I think I was watching Stephen Hawking's _Into the Universe_ episode on Aliens and I 
+wondered how come we're still not able to build spaceships that can travel among the 
+stars. Is it because we don't know how? or because we know that it's not feasible to do? 
+Why isn't this a question we can just give to a computer system that holds all of human 
+knowledge and let it crunch a spaceship design?
 
-Having a system that knows exactly where I stand, what I know, and is able to 
-adapt to generate the most suitable curricula so that I can master any concept is a 
-dream that has not died.
+Other difficult questions started to pop into my mind, for example, what does it take 
+to transition to a prosperous and peaceful civilization? Building an Oracle would be a 
+really useful and beneficial thing to do.  
 
-### Oracles
-
-What does it take to build a ship for interstellar travel? What do we need to do to 
-live in a peaceful and prosperous civilization? These are difficult questions that we 
-have not been able to answer to my satisfaction.
-
-It would be amazing to have a system that can handle them. One clear gap from where we 
-are now and where we would need to be is that we don't have the ability to benefit 
-from the learnings of other societies easily.
-
-We also don't have a global inventory of our natural resources in a way that's usable 
-to such a system so that it can make good predictions or suggestions for us.
+A clear gap between today and my imaginary version of the future where a computer 
+system can basically solve all our problems is that there isn't a global inventory of 
+all of human knowledge. Even if we did have such an inventory, I'm not sure that we 
+could build an Oracle.
 
 
 ## Is this wikipedia or the world wide web?
