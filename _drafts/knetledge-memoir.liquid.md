@@ -72,8 +72,8 @@ anything better than that?
 ### Understanding mathematical texts
 
 At some point around 2008 I came across Paul Halmos' article [_How to write
-mathematics_](#related), I had the hope that in order to get better at understanding
-mathematical texts it would be useful to know how the authors think about writing them.
+mathematics_](#related), I had the idea that I could get better at understanding
+mathematical texts if I understood the author's though process.
 
 Halmos' article is about his personal process of organizing notes, outlining, 
 arranging each section in the text, fixing mistakes and improving the generated text. 
