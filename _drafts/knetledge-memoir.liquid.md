@@ -26,10 +26,11 @@ considered changing schools to study math. After learning, it would mean
 bachelors in CSE.
 
 Before giving up pursuing a math education, I did some research by trying to solve the 
-admission exams for a masters program in mathematics. Although I did not want to admit 
+[admission exams for a masters program in mathematics](#cinvestav-exam). Although I did 
+not want to admit 
 it, it became clear that I had too many gaps in my knowledge, and I would not be able 
 to catch up in time to join after my bachelors. I still think that given enough time I 
-could still learn and master many of the
+could have learned many of the
 fundamentals, however, it would probably take longer than I would care to admit.
 
 On top of that, I was in dire need for income, which forced my decision to start 
@@ -56,7 +57,7 @@ at it, but I have come across some ideas that I believe have helped me cope bett
 ### Reading about mathematics
 
 Around 2009 I remember using my spare time to learn more about mathematics, I enjoyed 
-reading history of maths, biographies of famous mathematicians, and I tried to get an 
+reading history of maths, biographies of famous mathematicians, and trying to get an 
 idea about the scope of mathematics and it's limitations.
 
 Understanding mathematics was quite a bit of work for me, I usually needed to review 
@@ -77,8 +78,7 @@ underlying more abstract concepts.
 I was particularly interested but also terrified of theorem proving, but I did 
 understand that in mathematics it's all about the theorems. One can solve a thousand 
 special cases of a problem but the really cool stuff was to be able to prove that a 
-certain property is true for a whole set of problems so that by solving the general 
-case all instances of that class of problems are also solved.
+certain property holds true for a certain kind of object.
 
 Connecting seemingly unrelated areas of mathematics via theorems was also a recurring 
 theme during my readings, and it has remained one of my favorite aspects of mathematics.
@@ -93,21 +93,21 @@ At some point around 2009 I came across Paul Halmos' article [_How to write
 mathematics_](#halmos-writing). I had a hunch that I could get better at understanding
 mathematical texts if I understood the author's though process.
 
-The article is about the process personal of organizing notes, outlining, 
-arranging each section in the text, fixing mistakes and improving the generated text. 
+The article is about the process of organizing notes, outlining, 
+arranging each section, fixing mistakes and improving the text in an iterative way. 
 It seemed to me that I could _reverse-engineer_ the process in order to 
 understand how a mathematician thinks. I have written a post about Halmos's article 
 in [Halmos' tips for writing](#halmos-writing).
 
-Halmos describes how he organizes his ideas around a topic in some form of paper
+Halmos describes how to organize the ideas around a topic in some form of paper
 slips or cards, the cards have identifiers and can also have references to other cards.
 The result is a graph or network of ideas than can later be used as an aid during the 
 writing process.
 
 
-## Knowledge as a network
+## Knowledge as a network of concepts
 
-This intuitive way of organizing _knowledge_ as a network of interconnected concepts 
+This intuitive way of organizing knowledge as a network of interconnected concepts 
 is easily represented in a computer program and various programs can be written 
 to analyze characterize the structure of the network.
 
@@ -130,7 +130,7 @@ to verify that the computer program's decisions make sense. A human is also requ
 to ask the questions in the case of the Oracle, and in order to provide the student 
 profile and learning goals. 
 
-Another interesting question is whether it is possible to build a system that 
+Automation is great but autonomy is even better. Can we build a system that 
 autonomously analyzes the network of knowledge to perform such 
 tasks? Namely, identify and create missing connections, create new nodes in the 
 network, formulate new questions and answer them, and re-organize the knowledge in the 
@@ -147,15 +147,15 @@ ways in which knowledge networks can help.
 
 ### Learning efficiently: the shortest learning path
 
-Avoiding distractions, for example, having to interrupt my flow in order to
-review other references for the same topic, as well as not
-really knowing the best sequence of topics that I need to learn in order to
-accomplish my goal are recurrent problems for me; a personalized learning path with
-minimal distractions is necessary.
+Distractions like having to interrupt my flow in order to
+review other references for the same topic, or not
+really knowing the best sequence of topics that I need to study in order to
+accomplish my learning goals, are recurrent problems for me; a personalized learning path 
+with minimal distractions is necessary.
 
 Computing the shortest path between two nodes in the network becomes useful for a 
-student that wants to learn a _target_ concept given a starting _concept_. The 
-starting concept represents what the student already knows, whereas the target concept 
+student that wants to learn a target concept/node given a starting concept/node. The 
+starting node represents what the student already knows, whereas the target node 
 represents what they want to learn. 
 
 Concatenating the content of each node in the shortest parth between two concepts 
@@ -183,38 +183,40 @@ knowledge and let it crunch a spaceship design?
 Another example of a difficult question:  what does it take 
 to transition to a prosperous and peaceful civilization? 
 
-A gap – among many others – between today and my imaginary version of the future where a 
+One gap (among many) between today and my imaginary version of the future where a 
 computer 
 system can basically solve all our problems is that there isn't a global inventory of 
-all of human knowledge. Even if we did have such an inventory, I'm not sure that we 
-could build an Oracle.
+all of human knowledge. Even if we did have such an inventory, it's not clear to me 
+that we could build an Oracle around it.
 
 
-## Examples of networks of knowledge 
+## Existing systems that use networks of knowledge 
 
 When I talked about these ideas with friends they would point out that it's very much 
 like some existing thing, for example, Wikipedia is basically a network of knowledge, 
-the Google search engine is some limited version of an Oracle.
+so is the entire web with its millions of sites and interconnecting links. 
+Modern search engines are limited versions of an all-knowing Oracle.
 
 The things that can be done today in the web are quite nice, and it keeps getting better. 
 However, there are still some limitations to what these systems can do.
 
-A search engine can already present results of two disconnected websites that contain 
+A search engine can present results of two disconnected websites that contain 
 similar keywords, so identifying missing connections is partially solved. The quality 
 of these new connections needs to be reviewed by humans in order to verify they are 
 truly relevant.
 
 It could also be argued that creating new nodes in the network is also partially 
 solved since the website crawlers can calculate some statistics and cluster sites that 
-have some specific feature(s). However, the automatic labels are not likely to be 
-useful for humans. The translation from automatic labels to human-friendly labels 
+have some specific feature(s). However, the automatic labels assigned to those new 
+concepts (clusters) are not likely to be useful for humans. The translation from 
+the automatic labels to human-friendly labels 
 would still require a human in the loop. 
 
 Systems that can answer questions in natural languages are still work in progress and 
 search engines don't actually answer questions, they simply list sites that match the 
 words in the query. In many cases an answer can be arrived at by piecing together 
 the content of a few sites. There too, the quality of the answer depends on your own 
-skill. 
+skill at putting together. 
 
 Finding useful information requires additional knowledge about the search engine, that is,
 given a search, the relevance of the results depends on how well the queries are 
@@ -234,9 +236,12 @@ articles.
 
 ## Related
 
-<a name="halmos-writing"></a>
-1. [Halmos' tips for writing](/halmos-writing): my notes on Paul Halmos' article _How 
-   to write mathematics_
-2. 
+
+1. <a name="halmos-writing"></a> [Halmos' tips for writing](/halmos-writing): my notes 
+   on Paul Halmos' article _How to write mathematics_
+2. <a name="cinvestav-exam"></a> [https://www.math.cinvestav.mx/examen](https://www.math.
+   cinvestav.mx/examen): 
+   practice admission tests for the masters 
+   program in Mathematics at the CINVESTAV (Center for Advanced Research).
 
 
