@@ -8,28 +8,37 @@ permalink: /network-of-knowledge
 categories: [knowledge, learning, memoir]
 ---
 Learning a technical subject is hard work and finding better ways to do it is a topic 
-that's been on my mind for many years. This is a memoir about how I used to think 
+that's been on my mind for many years. This is a memoir about how I think 
 about the idea of knowledge, it's organization and how to help myself learn efficiently.
 
 
-## On learning a technical subject
+## Learning and resource constraints
 
-As an undergraduate student of Computer Science Engineering (CSE), I discovered my 
-liking of mathematics during the first two years of my bachelors degree (2004-2005).
+The combination of constraints a student might
+face can force choices that are not aligned with their learning goals.
+I will use my own case as an example of typical constraints on time, money and expected 
+future reward.
 
-For a short while I 
-considered changing schools to study mathematics but after learning that it would mean 
-to start my bachelors from scratch, and so I decided to not switch and finish my 
-Bachelors in CSE.
+As an undergraduate student (2004-2005) of Computer Science Engineering (CSE), I 
+re-discovered my liking of mathematics and for a short while I 
+considered changing schools to study math. After learning, it would mean 
+ starting my bachelors from scratch, I decided to complete my 
+bachelors in CSE.
 
-### Giving up mathematics ... as a profession
+Before giving up pursuing a math education, I did some research by trying to solve the 
+admission exams for a masters program in mathematics. Although I did not want to admit 
+it, it became clear that I had too many gaps in my knowledge, and I would not be able 
+to catch up in time to join after my bachelors. I still think that given enough time I 
+could still learn and master many of the
+fundamentals, however, it would probably take longer than I would care to admit.
 
-After completing my bachelors, I wanted to know what would it take to continue with a 
-masters in mathematics, I realized almost immediately that I didn't have the 
-background or the necessary level to even pass the admission examination.
+On top of that, I was in dire need for income, which forced my decision to start 
+working right after finishing my bachelors instead of starting a masters program.
 
-I was quite upset about that, however, even if I had the talent to pull it off, I could 
-not afford to continue studying, I needed to find a job asap.
+Even if time or money were not an issue at the time of making decisions about what 
+to study, I also had to consider the future reward from working on a particular 
+field. The expected salary of a computer programmer was looking better than that 
+of a mathematician.
 
 
 ### Reading about mathematics
@@ -183,11 +192,6 @@ can do with these systems, namely:
   systems specialized in adaptive learning
 - the quality of the content is not uniformly good
 
-
-## So what's missing
-
-- automated personalized learning curricula
-- oracles
 
 ## Related
 
