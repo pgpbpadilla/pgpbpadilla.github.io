@@ -142,8 +142,8 @@ Why isn't this a question we can just give to a computer system that holds all o
 knowledge and let it crunch a spaceship design?
 
 Other difficult questions started to pop into my mind, for example, what does it take 
-to transition to a prosperous and peaceful civilization? Building an Oracle would be a 
-really useful and beneficial thing to do.  
+to transition to a prosperous and peaceful civilization? Building 
+an Oracle would be a really useful and beneficial thing to do.  
 
 A clear gap between today and my imaginary version of the future where a computer 
 system can basically solve all our problems is that there isn't a global inventory of 
@@ -151,28 +151,38 @@ all of human knowledge. Even if we did have such an inventory, I'm not sure that
 could build an Oracle.
 
 
-## Is this wikipedia or the world wide web?
+## Examples of networks of knowledge 
 
-When I talked about this with my professor Nuño, he asked me if this was not what 
-wikipedia already is.
+When I talked about these ideas with friends they would point out that it's very much 
+like some existing thing, for example, Wikipedia is basically a network of knowledge, 
+the Google search engine is some version of an Oracle.
 
+A search engine can already present results of two disconnected websites that contain 
+similar keywords, so identifying missing connections is partially solved.
 
-Wikipedia is a great start,
+It could also be argued that creating new nodes in the network is also partially 
+solved since the website crawlers can calculate some statistics and cluster sites that 
+have some specific feature(s). However, the automatic labels are not likely to be 
+useful for humans. The translation from automatic labels to human-friendly labels 
+would still require a human in the loop. 
 
-Multimedia support is amazing and, having the ability to embed different kinds of
-media (text, audio, video, etc) is definitely a good start.
-but it lacks some desireable features, for example:
+The things that can be done today in the web are quite nice, one can embed images, 
+videos and other types of multimedia but there are still some limitations to what we 
+can do with these systems, namely:
 
-- the answers that you get are as good as your ability to search and connect the dots.
-- The content does not adapt to the audience, if an article is very technical, many 
-  non-technical readers might not be able to benefit from it.
-- We cannot query it like an Oracle
-- It cannot automatically connect unrelated concepts 
-- It cannot identify new concepts by labeling subsets of the network
+- a system that can answer questions in natural languages is still not available, 
+  search engines don't actually answer questions, they simply list sites that match 
+  the words in the query
+  - in many cases an answer can be arrived at by piecing it together from the 
+    content of a few sites but even then it depends on your own skill to piece them 
+    together 
+  - the relevance of the results depends on how well the queries are written,
+    and writing better queries requires some understanding on how the search engine works
+- a personalized learning curricula cannot be easily generated from any combination of 
+  existing search engines or public encyclopedias, there are however many non-free 
+  systems specialized in adaptive learning
+- the quality of the content is not uniformly good
 
-The web and wikipedia have many cool features, and it's definitly great to have them, 
-however they still cannot replace humans for scientific research or for the design of 
-suitable learning curricula.
 
 ## So what's missing
 
