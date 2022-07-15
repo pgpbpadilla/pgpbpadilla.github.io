@@ -194,10 +194,15 @@ could build an Oracle.
 
 When I talked about these ideas with friends they would point out that it's very much 
 like some existing thing, for example, Wikipedia is basically a network of knowledge, 
-the Google search engine is some version of an Oracle.
+the Google search engine is some limited version of an Oracle.
+
+The things that can be done today in the web are quite nice, and it keeps getting better. 
+However, there are still some limitations to what these systems can do.
 
 A search engine can already present results of two disconnected websites that contain 
-similar keywords, so identifying missing connections is partially solved.
+similar keywords, so identifying missing connections is partially solved. The quality 
+of these new connections needs to be reviewed by humans in order to verify they are 
+truly relevant.
 
 It could also be argued that creating new nodes in the network is also partially 
 solved since the website crawlers can calculate some statistics and cluster sites that 
@@ -205,22 +210,26 @@ have some specific feature(s). However, the automatic labels are not likely to b
 useful for humans. The translation from automatic labels to human-friendly labels 
 would still require a human in the loop. 
 
-The things that can be done today in the web are quite nice, one can embed images, 
-videos and other types of multimedia but there are still some limitations to what we 
-can do with these systems, namely:
+Systems that can answer questions in natural languages are still work in progress and 
+search engines don't actually answer questions, they simply list sites that match the 
+words in the query. In many cases an answer can be arrived at by piecing together 
+the content of a few sites. There too, the quality of the answer depends on your own 
+skill. 
 
-- a system that can answer questions in natural languages is still not available, 
-  search engines don't actually answer questions, they simply list sites that match 
-  the words in the query
-  - in many cases an answer can be arrived at by piecing it together from the 
-    content of a few sites but even then it depends on your own skill to piece them 
-    together 
-  - the relevance of the results depends on how well the queries are written,
-    and writing better queries requires some understanding on how the search engine works
-- a personalized learning curricula cannot be easily generated from any combination of 
-  existing search engines or public encyclopedias, there are however many non-free 
-  systems specialized in adaptive learning
-- the quality of the content is not uniformly good
+Finding useful information requires additional knowledge about the search engine, that is,
+given a search, the relevance of the results depends on how well the queries are 
+written, and writing better queries requires some understanding on how the search 
+engine works. 
+
+A personalized learning curricula cannot be easily generated from a 
+combination of existing search engines and public encyclopedias. There are many 
+commercial systems that do specialize in adaptive learning, their main drawback 
+being that, for many students, money is a hard constraint.
+
+One more aspect is the quality of the content. There are no quality controls for the 
+entire internet, and the controls – as good as they are –  in systems like Wikipedia 
+or any given search engine, do not result in a consistent level of quality for all 
+articles.
 
 
 ## Related
