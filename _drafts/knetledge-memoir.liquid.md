@@ -41,29 +41,38 @@ field. The expected salary of a computer programmer was looking better than that
 of a mathematician.
 
 
+## Learning during my spare time
+
+The balancing of studying something interesting, that can be completed in time 
+before my money runs out and that has high chances of improving my quality of life had 
+remained a permanent fixture in my decisions regarding what to learn.
+
+I have a wide range of interests and different levels of motivation for each. 
+I have pondered many times how to better use my spare time to learn about particular 
+topics in a way that's enjoyable and yet efficient. Needless to say, I'm not very good 
+at it, but I have come across some ideas that I believe have helped me cope better.
+
+
 ### Reading about mathematics
 
-I got my first job as a Quality Assurance Analyst at a bank in Mexico City almost 
-right after I finished my bachelors. During my spare time, I enjoyed reading about 
-mathematics, it's history, biographies of famous mathematicians, and I tried to get an 
+Around 2009 I remember using my spare time to learn more about mathematics, I enjoyed 
+reading history of maths, biographies of famous mathematicians, and I tried to get an 
 idea about the scope of mathematics and it's limitations.
-
-
-### It's all about the theorems!
 
 Understanding mathematics was quite a bit of work for me, I usually needed to review 
 the same concepts from different references until I found one that I could understand.
 
-During my bachelors I had some short encounters with several topics in mathematics 
-applied to engineering, e.g., Calculus, Linear Algebra, Differential Equations, 
-Probability Theory, etc.
-
-I was annoyed by repetitive mechanical computation and drawn to the 
-abstract aspects of these mathematical tools more than their applications.
-
-However, learning many mathematical concepts works really well by first 
+I had some short encounters with several topics in mathematics 
+applied to engineering during my bachelors, e.g., Calculus, Linear Algebra, Differential 
+Equations, Probability Theory, etc. but I was annoyed by repetitive mechanical 
+computation.
+I was drawn to the abstract aspects of these mathematical tools more than their 
+applications. However, learning many mathematical concepts works really well by first 
 mastering the mechanical skills, which helps build an intuition about the 
 underlying more abstract concepts.
+
+
+### It's all about the theorems
 
 I was particularly interested but also terrified of theorem proving, but I did 
 understand that in mathematics it's all about the theorems. One can solve a thousand 
@@ -74,30 +83,31 @@ case all instances of that class of problems are also solved.
 Connecting seemingly unrelated areas of mathematics via theorems was also a recurring 
 theme during my readings, and it has remained one of my favorite aspects of mathematics.
 
-And the best of all, once a theorem is proved, it remains true forever! Is there 
-anything better than that?
+I still believe that the most wonderful part of mathematics is that once a theorem is 
+proved, it remains true forever!
 
 
-### Understanding mathematical texts
+### Organizing written material
 
-At some point around 2008 I came across Paul Halmos' article [_How to write
-mathematics_](#related), I had the idea that I could get better at understanding
+At some point around 2009 I came across Paul Halmos' article [_How to write
+mathematics_](#halmos-writing). I had a hunch that I could get better at understanding
 mathematical texts if I understood the author's though process.
 
-Halmos' article is about his personal process of organizing notes, outlining, 
+The article is about the process personal of organizing notes, outlining, 
 arranging each section in the text, fixing mistakes and improving the generated text. 
 It seemed to me that I could _reverse-engineer_ the process in order to 
-understand how a mathematician thinks.
+understand how a mathematician thinks. I have written a post about Halmos's article 
+in [Halmos' tips for writing](#halmos-writing).
+
+Halmos describes how he organizes his ideas around a topic in some form of paper
+slips or cards, the cards have identifiers and can also have references to other cards.
+The result is a graph or network of ideas than can later be used as an aid during the 
+writing process.
 
 
 ## Knowledge as a network
 
-Halmos' describes how he organizes his ideas around a topic in some form of paper
-slips or cards, the cards have identifiers and can also have references to other cards.
-The result is a graph or network of ideas than can later be used during the writing
-process.
-
-This intuitive way of representing _knowledge_ as a network of interconnected concepts 
+This intuitive way of organizing _knowledge_ as a network of interconnected concepts 
 is easily represented in a computer program and various programs can be written 
 to analyze characterize the structure of the network.
 
@@ -113,21 +123,35 @@ Other possible uses for a network of knowledge could be:
 - a system to generate a personalized learning curricula that minimizes time and effort 
 
 
-### Automated knowledge discovery and generation
+### Automated and autonomous knowledge discovery and generation
 
-The above examples of systems require a human in the loop in order
+The above examples of automatic systems require a human in the loop in order
 to verify that the computer program's decisions make sense. A human is also required 
 to ask the questions in the case of the Oracle, and in order to provide the student 
-profile and learning goals.
+profile and learning goals. 
 
-One open question is whether it is possible to build an autonomous system that 
-continuously analyzes the network of knowledge and can automatically perform such 
+Another interesting question is whether it is possible to build a system that 
+autonomously analyzes the network of knowledge to perform such 
 tasks? Namely, identify and create missing connections, create new nodes in the 
 network, formulate new questions and answer them, and re-organize the knowledge in the 
 most efficient way possible.
 
 
-## Learning efficiently: the shortest learning path
+## Applications of knowledge networks
+
+Building on the idea of a network of knowledge, I wondered how it could benefit me as 
+a student or more generally as someone who wants to explore new areas of knowledge. This 
+section is about a couple of 
+ways in which knowledge networks can help.
+
+
+### Learning efficiently: the shortest learning path
+
+Avoiding distractions, for example, having to interrupt my flow in order to
+review other references for the same topic, as well as not
+really knowing the best sequence of topics that I need to learn in order to
+accomplish my goal are recurrent problems for me; a personalized learning path with
+minimal distractions is necessary.
 
 Computing the shortest path between two nodes in the network becomes useful for a 
 student that wants to learn a _target_ concept given a starting _concept_. The 
@@ -142,19 +166,25 @@ Calculating such personalized learning curricula can be done on demand to match 
 individual student's needs, given that their starting point is known.
 
 
-## Oracles: Answering difficult questions
+### Oracles: Answering difficult questions
 
-I think I was watching Stephen Hawking's _Into the Universe_ episode on Aliens and I 
+There are times when I only want an answer and
+not necessarily a detailed explanation right away; in those cases an Oracle would help.
+If necessary, a detailed explanation can also be requested.
+
+Some of these questions come to me while learning about something else, for example,
+I was watching Stephen Hawking's _Into the Universe_ episode on Aliens and I 
 wondered how come we're still not able to build spaceships that can travel among the 
-stars. Is it because we don't know how? or because we know that it's not feasible to do? 
+stars. 
+
+Is it because we don't know how? or because we know that it's not feasible to do? 
 Why isn't this a question we can just give to a computer system that holds all of human 
 knowledge and let it crunch a spaceship design?
+Another example of a difficult question:  what does it take 
+to transition to a prosperous and peaceful civilization? 
 
-Other difficult questions started to pop into my mind, for example, what does it take 
-to transition to a prosperous and peaceful civilization? Building 
-an Oracle would be a really useful and beneficial thing to do.  
-
-A clear gap between today and my imaginary version of the future where a computer 
+A gap – among many others – between today and my imaginary version of the future where a 
+computer 
 system can basically solve all our problems is that there isn't a global inventory of 
 all of human knowledge. Even if we did have such an inventory, I'm not sure that we 
 could build an Oracle.
@@ -195,7 +225,9 @@ can do with these systems, namely:
 
 ## Related
 
-1. Halmos' tips for writing
+<a name="halmos-writing"></a>
+1. [Halmos' tips for writing](/halmos-writing): my notes on Paul Halmos' article _How 
+   to write mathematics_
 2. 
 
 
