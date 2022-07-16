@@ -1,8 +1,8 @@
 ---
 layout: post.liquid
-title:  "Knowledge as a network"
-date:   2022-07-01 16:13
-last_updated: 2022-07-01 16:14
+title: "Knowledge as a network"
+date: 2022-07-16 21:31
+last_updated: 2022-07-16 21:31
 tags: knowledge network graph learning memoir knetledge
 permalink: /network-of-knowledge
 categories: [knowledge, network, graph, learning, memoir]
