@@ -172,9 +172,9 @@ not necessarily a detailed explanation; an Oracle would fit this need and if nec
 a detailed explanation can also be requested.
 
 Sometimes a question comes to me while doing something else, for example,
-while watching Stephen Hawking's _Into the Universe_ episode on Aliens, I 
-wondered how come we're still not able to build spaceships that can travel among the 
-stars. 
+while watching [Stephen Hawking's _Into the Universe_](#into-the-universe) episode on
+Aliens, I wondered how come we're still not able to build spaceships that can travel 
+among the stars.
 
 Is it because we don't know how? or because we know that it's not feasible to do? 
 Why isn't this a question we can just give to a computer system that holds all of human 
@@ -231,14 +231,13 @@ One more aspect is the quality of the content. There are no quality controls for
 entire internet, the quality of content varies wildly depending on the source site. 
 
 
-## Related
-
+## <a name="related">Related links</a>
 
 1. <a name="paul-halmos" 
     href="https://en.wikipedia.org/wiki/Paul_Halmos">Paul Halmos (Wikipedia)</a>
 2. <a name="halmos-writing" href="/halmos-writing">Halmos' tips for writing.</a> My 
    personal notes on Paul Halmos' article _How to write mathematics_
-3. <a name="cinvestav-exam" href="https://www.math.cinvestav.mx/examen">Practice 
+3. <a name="cinvestav-exam" href="https://www.math.cinvestav.mx/examen">Practice
    admission tests for the masters program in Mathematics at the CINVESTAV (Center for 
    Advanced Research).</a> 
 4. <a name="knowledge-graph" 
@@ -248,3 +247,6 @@ entire internet, the quality of content varies wildly depending on the source si
 6. <a name="def-limit" 
     href="https://en.wikipedia.org/wiki/Limit_of_a_function#(%CE%B5,_%CE%B4)-definition_of_limit">
    (Epsilon, Delta)-definition of limit
+7. <a name="into-the-universe" 
+    href="https://www.imdb.com/title/tt1655078">Into the Universe with Stephen Hawking 
+   at IMDb</a>
