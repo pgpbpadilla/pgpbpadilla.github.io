@@ -2,7 +2,7 @@
 layout: post.liquid
 title: "Knowledge as a network"
 date: 2022-07-15 21:31
-last_updated: 2022-07-15 21:31
+last_updated: 2022-07-18 22:27
 tags: knowledge network graph learning memoir knetledge
 permalink: /network-of-knowledge
 categories: [knowledge, network, graph, learning, memoir]
@@ -93,7 +93,7 @@ mathematical texts if I understood the author's though process.
 The article is about the process of organizing notes, outlining, 
 arranging each section, fixing mistakes and improving the text in an iterative way. 
 It seemed to me that I could _reverse-engineer_ the process in order to 
-understand how a mathematician thinks. I have written a post about Halmos's article 
+understand how a mathematician thinks. I have written a post about Halmos' article 
 in [Halmos' tips for writing](#halmos-writing).
 
 Halmos describes how to organize the ideas around a topic in some form of paper
