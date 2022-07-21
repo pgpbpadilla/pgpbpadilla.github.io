@@ -2,10 +2,10 @@
 layout: post.liquid
 title: "Knowledge as a network"
 date: 2022-07-15 21:31
-last_updated: 2022-07-18 22:27
-tags: knowledge network graph learning memoir knetledge
+last_updated: 2022-07-20 22:27
+tags: knowledge representation network graph learning memoir knetledge
 permalink: /network-of-knowledge
-categories: [knowledge, network, graph, learning, memoir]
+categories: [knowledge, representation, network, graph, learning, memoir]
 ---
 An understanding of the structure of knowledge can help identify ways of learn 
 efficiently. 
