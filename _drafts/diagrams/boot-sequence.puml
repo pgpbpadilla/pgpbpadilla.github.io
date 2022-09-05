@@ -1,0 +1,42 @@
+@startuml
+
+title Boot sequence: task dependencies
+
+card "Version Control" as vc
+card "Gold Server" as gs
+card "Ad Hoc change tools" as ahct
+card "Host install tools" as hit
+card "Directory servers" as ds
+card "Authentication servers" as auth
+card "Time servers" as time
+card "Network file servers" as nfs
+card "File replication servers" as frs
+card "Client file access" as cfa
+card "Client OS update" as cosu
+card "Client configuration management" as ccm
+card "Mail" as mail
+card "Printing" as print
+card "Monitoring" as monitor
+card "Client application management" as cam
+
+
+vc <-- gs
+gs <-- ahct
+gs <-- hit
+ahct <-- ds
+hit <-- ds
+ds <-- auth
+ds <-- time
+auth <-- nfs
+time <-- nfs
+time <-- frs
+nfs <-- cfa
+frs <-- cfa
+cfa <-- cosu
+cosu <-- ccm
+ccm <-- mail
+ccm <-- print
+ccm <-- monitor
+ccm <-- cam
+
+@enduml
