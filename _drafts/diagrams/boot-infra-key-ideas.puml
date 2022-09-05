@@ -5,27 +5,26 @@ title Principles for building infrastructures
 left to right direction
 skinparam defaultTextAlignment center
 
+frame "Economic principles" as econ {
+	card "Cost \nEfficiency" as cost
+}
+
 frame "Operational principles" {
+	card "All changes \nare code" as acac
 	card "Evolvability" as evol
 	card "Autonomy" as autonomy
 	note bottom: Clients responsible\nto remain compliant
-	card "All changes \nare code" as acac
-}
-
-frame "Economic principles" {
-	card "Cost \nEfficiency" as cost
 }
 
 frame "Automation" as auto {
 	card "Repeatability" as repeat
-	card "Immutable infrastructure" as ii
+	card "Immutable \ninfrastructure" as ii
 	card "Cattle, not pets" as cattle
 }
 
 card "Re-usability" as reuse
 cost --> reuse
-cost --> repeat
-
+econ --> auto
 card "Pull-based" as pull
 note bottom: Clients initiate \nall interactions
 card "Version \nControl" as vc
