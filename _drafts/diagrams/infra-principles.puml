@@ -10,11 +10,11 @@ frame "Economic principles" as econ {
 }
 
 frame "Operational principles" {
-	card "All changes \nare code" as acac
 	card "Evolvability" as evol
 	card "Autonomy" as autonomy
 	note bottom: Clients responsible\nto remain compliant
 }
+
 
 frame "Automation" as auto {
 	card "Repeatability" as repeat
@@ -27,9 +27,15 @@ cost --> reuse
 econ --> auto
 card "Pull-based" as pull
 note bottom: Clients initiate \nall interactions
-card "Version \nControl" as vc
+
+frame "Infrastructure as Code" as iac {
+	card "Version \nControl" as vc
+	card "All changes \nare code" as acac
+}
+
 card "Gold server" <<Artefacts repository>> as artefacts
 
+evol --> acac
 acac --> auto
 autonomy --> pull
 evol --> vc

@@ -92,6 +92,14 @@ categories: [it, infrastructure]
 3. Although the components of an infrastructure are more or less standard, 
    professional architects tend to arrange them in radically different ways
 
+## Diagrams
+
+1. Boot sequence: [link](./diagrams/boot-sequence.puml), dependency between tasks when 
+   bootstrapping an infra
+2. Principles for building infrastructures: [link](./diagrams/infra-principles.puml)
+   The idea is to derive each of the key ideas/concepts in the article from first 
+   principles, that should be accepted as self-evident
+
 ## Related
 
 1. Traugott, S. and Joel Huddleston. “Bootstrapping an Infrastructure.” LISA (1998).
