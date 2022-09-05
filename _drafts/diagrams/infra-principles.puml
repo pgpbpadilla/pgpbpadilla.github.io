@@ -22,23 +22,21 @@ frame "Automation" as auto {
 	card "Cattle, not pets" as cattle
 }
 
-card "Re-usability" as reuse
-cost --> reuse
-econ --> auto
 card "Pull-based" as pull
 note bottom: Clients initiate \nall interactions
 
 frame "Infrastructure as Code" as iac {
 	card "Version \nControl" as vc
 	card "All changes \nare code" as acac
+	card "Re-usability" as reuse
 }
 
 card "Gold server" <<Artefacts repository>> as artefacts
 
-evol --> acac
+cost --> reuse
+evol --> iac
 acac --> auto
 autonomy --> pull
-evol --> vc
 reuse --> artefacts
 
 @enduml
