@@ -2,41 +2,40 @@
 
 title Principles for building infrastructures
 
-left to right direction
+'left to right direction
 skinparam defaultTextAlignment center
 
-frame "Economic principles" as econ {
-	card "Cost \nEfficiency" as cost
-}
-
-frame "Operational principles" {
-	card "Evolvability" as evol
-	card "Autonomy" as autonomy
-	note bottom: Clients responsible\nto remain compliant
-}
-
-
-frame "Automation" as auto {
-	card "Repeatability" as repeat
-	card "Immutable \ninfrastructure" as ii
-	card "Cattle, not pets" as cattle
-}
-
-card "Pull-based" as pull
-note bottom: Clients initiate \nall interactions
-
-frame "Infrastructure as Code" as iac {
-	card "Version \nControl" as vc
-	card "All changes \nare code" as acac
-	card "Re-usability" as reuse
-}
-
+card "Automation" as auto
+card "All changes \nare code" as code
+card "Cost reduction" as cost
+card "Cattle, not pets" as cattle
+card "Decentralization" as decenter
+card "Development\nprocess" as dev
 card "Gold server" <<Artefacts repository>> as artefacts
+card "Golden server" <<Template>> as golden
+card "Immutable \ninfrastructure" as ii
+card "Labor reduction" as labor
+card "Pull-based" as pull
+note right: Servers are passive.\nClients initiate \ninteractions
+card "Reliability" as rely
+card "Repeatability" as repeat
+card "Re-usability" as reuse
+card "Version \nControl" as vc
 
-cost --> reuse
-evol --> iac
-acac --> auto
-autonomy --> pull
-reuse --> artefacts
+artefacts --> golden: serves
+artefacts --> reuse: enables
+auto --> repeat: enables
+code --> ii: produces
+code --> auto: through
+dev --> vc: needs
+golden --> repeat: enables
+ii --> cattle: enables
+labor --> cost: implies
+pull --> artefacts: needs
+pull --> decenter: implies
+repeat --> rely: produces
+repeat --> labor: enables
+reuse --> labor: enables
+vc --> code: implies
 
 @enduml

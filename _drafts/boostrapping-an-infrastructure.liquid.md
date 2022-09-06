@@ -14,13 +14,13 @@ categories: [it, infrastructure]
    traditional management where an individual machine will run for a long time before 
    it's rebooted/replaced
 2. can I fit in Burgess diagram of the boot sequence inside the infrastructure 
-   building blocks of my new book?
+   building blocks of my new book (IT infrastructure)?
 3. diagram of the boot sequence, maybe a simplified version of it?
 4. the boot sequence can be inverted, deriving the need for each component from the 
    client needs/requirements, as opposed of building from the bottom up. This is a 
    recurring theme, whether to model the infra from the bottom up or from the top down,
    has implication in its management and the assumption around autonomy and control.
-   1. with top bottom, we focus on control, at the expense of ................
+   1. with top bottom, we focus on control, at the expense of autonomy ................
    2. with bottom up, we focus on flexibility and autonomy, at the expense of 
       duplication and drift
 5. Building infrastructure as a development process, which can benefit from software 
