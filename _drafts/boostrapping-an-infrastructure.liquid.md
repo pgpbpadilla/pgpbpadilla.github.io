@@ -82,6 +82,40 @@ categories: [it, infrastructure]
 22. gold vs golden server:
     1. golden server is a template from which all servers are created
     2. a gold server hosts important primary versions of configuration/data (gold)
+23. they only reason there's an infrastructure is to run applications that are 
+    important for the biz
+24. Very little monitoring was needed???
+    1. No monitoring at all: it’s interesting that computers are usually reliable enough that monitoring seemed not critical. 
+    2. For today’s application development /observability/ and monitoring is a key part — even if usually ignored — of any complex enough system
+25. successful applications lead to infrastructure growth
+26. generic/replaceable components make it easier to recover from disasters
+27. it's easier to replace existing components with new generic ones, than to adapt 
+    the old ones to the new way of working
+    1. retrofiting updates to old systems is more work than building a new sytem
+28. rebuilding is less effort than updating existing systems
+29. using a standby infra saved their asses one time when the productive infra went 
+    down, the infras were built from the same code base and switching from one to the 
+    other was done by redirecting traffict via a dns redirect
+30. pulling is superior to pushing, 
+    1. clients are responsible for maintain their rev level
+    2. clients know best when it's a good time to pull updates
+31. avoid ad-hoc changes. individual changes pushed to a single machine, they 
+    generate config drift, add labor
+32. always make changes through the code, put in the central/gold server and let the 
+    changes propagate
+33. pull methods scale better, the compute needed is distributed to the clients, no 
+    need for a central powerful node to push changes to however many nodes you have
+34. iac allows linearly growing team to manage exponentially growing infrastructures, 
+    reduction of labor means reduction of cost
+35. there was a time were infra archs were not a thing, many times is equated with a 
+    senior sysadmin, who can flip tapes faster
+36. Recruiters generally don’t even know what an ‘‘infrastructure architect’’ is, and far too often assume that ‘‘senior sysadmin’’ means you know how to flip tapes faster.
+37. Most of us at one time or another have been restricted from improving a broken 
+    infras- tructure, simply because it didn’t fit within our job description.
+38. Some of the most capable systems administrators we’ve known are not interested in coding
+    1. different mindsets/interests: those who want hands on work and don’t mind repetition, and those who hate repetition
+39. infrastructure architects tend to spend most of their time writing code. They are motivated by challenges and impatience – they hate doing the same thing twice
+
 
 ## Outline
 
@@ -96,7 +130,7 @@ categories: [it, infrastructure]
 
 1. Boot sequence: [link](./diagrams/boot-sequence.puml), dependency between tasks when 
    bootstrapping an infra
-2. Principles for building infrastructures: [link](./diagrams/infra-principles.puml)
+2. Principles for building infrastructures: [link](./diagrams/building-infrastructure.puml)
    The idea is to derive each of the key ideas/concepts in the article from first 
    principles, that should be accepted as self-evident
 
