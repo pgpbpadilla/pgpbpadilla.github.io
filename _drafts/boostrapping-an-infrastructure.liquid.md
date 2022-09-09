@@ -115,6 +115,14 @@ categories: [it, infrastructure]
 38. Some of the most capable systems administrators we’ve known are not interested in coding
     1. different mindsets/interests: those who want hands on work and don’t mind repetition, and those who hate repetition
 39. infrastructure architects tend to spend most of their time writing code. They are motivated by challenges and impatience – they hate doing the same thing twice
+40. version control facilitates the evolution of infrastructure
+      and also having different versions of its 
+    1. creating and destruction of entire Infrastructures becomes
+      more manageable than doing it by hand 
+    2. having a /master/ version of configuration files is good, it
+    can be used as a baseline and then adapted to satisfy the
+    needs of other infrastructures
+41. 
 
 
 ## Outline
