@@ -1,11 +1,11 @@
 ---
 layout: post.liquid
-title:  "Building 'modern' IT infrastructures"
+title:  "Building IT infrastructures"
 date: 2022-09-04 20:32
 last_updated: 2022-09-04 20:32
-tags: it infrastructure 
+tags: it infrastructure software
 permalink: /bootstrapping-infrastructure
-categories: [it, infrastructure]
+categories: [it, infrastructure, software]
 ---
 IT infrastructures are the substrate on which user applications run, without 
 the users' need to use applications, there would be no need for them.
