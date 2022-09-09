@@ -122,7 +122,39 @@ categories: [it, infrastructure]
     2. having a /master/ version of configuration files is good, it
     can be used as a baseline and then adapted to satisfy the
     needs of other infrastructures
-41. 
+41. wholistic thinking: the whole DC(s) as a single VM
+    1. this is the idea I would like to extend to multiple dcs with different 
+       operating models: IaaS, SaaS, PaaS, DBaaS, etc.
+42. convergence vs congruence, declarative vs procedural #cm-burgess
+    1. even when you write declarative code, the implementation has to start from a 
+       known state, and calculate the sequence of actions to execute, so as a user of 
+       the tool, you may not have to write declarative code but as teh developer of the 
+       tool you must definitely must
+43. centrally managed infra vs self-service infra
+    the article seems to assume that there's a single infra that
+    servres all apps, but today it's easier than ever to provision
+    certain kinds of infra, e.g., vpc, vms, containers, vmis,
+    however a central place for governance (global policies) still
+    has a place as part of the centrally controlled infrastructure
+44. the paper itself does not seem to be influential,
+    however there are alreay a few ideas that are very popular
+    today, whether or not they became popular due to the paper
+    is unclear
+45. ask questions about exending the ideas here to cover
+    operating in a multi-cloud environment, where the
+    private/on-premise DC is just one of many DCs, and in which
+    each DC has different operational models, e.g., public cloud
+    providers offer different methods of interaction, namely,
+    IaaS, PaaS, SaaS, etc.
+46. Rant about job titles
+    1. I resonate with the following quotes
+    2. add a personal commentary on each quote
+47. finding principles to determine the ownership of specific infrastructure resources
+    1. i find it difficult to tradeoff the benefits of autonomous decentralized teams 
+       and the duplication of effort it produces
+    2. i would like to find some principles that help guide the decision on when to 
+       consolidate multiple distinct solutions to the same problem into a centralized 
+       standardized approach
 
 
 ## Outline
@@ -149,5 +181,6 @@ categories: [it, infrastructure]
    - [infrastructures.org - papers](http://www.infrastructures.org/papers/bootstrap/bootstrap.html)
    - [usenix.org - Abstracts - 12th Systems Administration Conference (LISA '98)](https://www.usenix.org/legacy/publications/library/proceedings/lisa98/traugott.html)
 2. [infrastructures.org](http://www.infrastructures.org), Retrieved on 2022-09-04 20:59
-3. Burgess, Mark, [Configuration management, models and myths](http://markburgess.org/cm.html)
+3. Burgess, Mark, <a name="cm-burgess" href="http://markburgess.
+   org/cm.html">Configuration management, models and myths</a>.
    Retrieved on 2022-09-04 20:38
