@@ -7,6 +7,7 @@ skinparam defaultTextAlignment center
 
 card "All changes \nare code" as code
 card "Avoid ad-hoc\nchanges" as adhoc
+card "Autonomy" as autonomy
 card "Building Infrastructure is \na Development Process" as dev
 card "Cattle, not pets" as cattle
 note right: Components are\ngeneric/replaceable
@@ -30,6 +31,7 @@ dr --> cost: reduces
 dev --> vc: requires
 golden --> repeat: enables
 labor --> cost: reduces
+autonomy --> pull: means
 pull --> artefacts: requires
 repeat --> labor: reduces
 vc --> code: needs

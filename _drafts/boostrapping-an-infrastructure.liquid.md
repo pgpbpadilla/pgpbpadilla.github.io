@@ -10,7 +10,19 @@ categories: [it, infrastructure, software]
 IT infrastructures are the substrate on which user applications run, without
 the users' need to use applications, there would be no need for them.
 
-## Generic, replaceable components
+- in many cases, it is the success of the user applications that lead to 
+  infrastructure growth and not the other way around
+
+45. the paper itself does not seem to be influential,
+    however there are alreay a few ideas that are very popular
+    today, whether or not they became popular due to the paper
+    is unclear
+
+
+3. Although the components of an infrastructure are more or less standard,
+   professional architects tend to arrange them in radically different ways
+
+## Generic, replaceable components, disaster recovery
 
 - When each component is generic, and there's enough automation, it's easy to destroy a
   misbehaving component and recreate it from a trusted source. 
@@ -22,6 +34,14 @@ the users' need to use applications, there would be no need for them.
   is configured in a unique way
   - it's easier to fix when the configuration is code, it's hard if it was done ad-hoc
 - makes it easy for users to learn, since everything is in teh same place on every host
+- 28. it's easier to replace existing components with new generic ones, than to adapt
+      the old ones to the new way of working
+1. retrofiting updates to old systems is more work than building a new system
+2. rebuilding is less effort than updating existing systems without automation, i.
+       e., via ad-hoc changes
+3. enables building lower environments that are very close to a productive one, which 
+   may come in handy in certain disaster recovery scenarios, when the lower env is 
+   used as a hot standby for the productive infrastructure
 
 ## Dependency diagram
 
@@ -50,6 +70,13 @@ the users' need to use applications, there would be no need for them.
   learn from the past and make better decisions in the future
 - version controls fills the need to keep a historical record of all the changes
   made to the infrastructure
+- 41. version control facilitates the evolution of infrastructure
+      and also having different versions of its
+1. creating and destruction of entire Infrastructures becomes
+   more manageable than doing it by hand
+2. having a /master/ version of configuration files is good, it
+   can be used as a baseline and then adapted to satisfy the
+   needs of other infrastructures
 
 ## Avoiding manual/ad-hoc changes
 
@@ -66,6 +93,8 @@ the users' need to use applications, there would be no need for them.
 - ad-hoc changes can fix some bugs faster
 - regular use of ad-hoc changes creates more labor, labor means cost
 - ad-hoc changes generate drift
+- iac allows linearly growing team to manage exponentially growing infrastructures,
+      reduction of labor means reduction of cost
 
 ## Code is Automation
 
@@ -82,10 +111,8 @@ the users' need to use applications, there would be no need for them.
   virtualized infra components
 - it's cheaper, faster to evolve, automate, etc
 
-## Centralization and pull-based workflows
+## Centralization, pull-based workflows
 
-- having autonomous clients, and pull based workflows does not make the idea of
-  centralized artefact repositories/servers irrelevant
 - clients know when it's the best time to pull updates
 - clients are responsible for staying updated
 - having a central place (canonical name) to refer to infra resources is still very
@@ -93,6 +120,10 @@ the users' need to use applications, there would be no need for them.
     - centralized names (dns) does not mean single point of failure, the gold server 
       is not mission critical, it being down does not impact the users of the infrastructure
 - gold server is passive
+- pull methods scale better, the compute needed is distributed to the clients, no
+      need for a central powerful node to push changes to however many nodes you have
+- having autonomous clients, and pull based workflows does not make the idea of
+    centralized artefact repositories/servers irrelevant
 
 ## Gold server vs Golden Server
 
@@ -102,39 +133,24 @@ the users' need to use applications, there would be no need for them.
 - the golden server enables repeatability, reducing deviations
 
 ## Infrastructure architecture
-
+    
 - architecture: durability, utility, beauty
     - https://en.wikipedia.org/wiki/Architecture#Theory_of_architecture
 - opinion: identifying patterns of interconnection between components
 
+## Notoriously absent: monitoring
 
-## Key notes
+1. Systems infrastructure: somehow the network is taken for granted, there's almost no
+   mention of the network setup
+- the author says that somehow it was not fully implemented
+- that casts some doubts in my mind about how ready for prod this was for todays 
+  standards where auditing relies so heavily on monitoring and logging of special events
 
-25. Very little monitoring was needed???
-    1. No monitoring at all: it’s interesting that computers are usually reliable enough
-       that monitoring seemed not critical.
-    2. For today’s application development /observability/ and monitoring is a key part —
-       even if usually ignored — of any complex enough system
-26. successful applications lead to infrastructure growth
-27. generic/replaceable components make it easier to recover from disasters
-28. it's easier to replace existing components with new generic ones, than to adapt
-    the old ones to the new way of working
-    1. retrofiting updates to old systems is more work than building a new sytem
-29. rebuilding is less effort than updating existing systems
-30. using a standby infra saved their asses one time when the productive infra went
-    down, the infras were built from the same code base and switching from one to the
-    other was done by redirecting traffict via a dns redirect
-31. pulling is superior to pushing,
-    1. clients are responsible for maintain their rev level
-    2. clients know best when it's a good time to pull updates
-32. avoid ad-hoc changes. individual changes pushed to a single machine, they
-    generate config drift, add labor
-33. always make changes through the code, put in the central/gold server and let the
-    changes propagate
-34. pull methods scale better, the compute needed is distributed to the clients, no
-    need for a central powerful node to push changes to however many nodes you have
-35. iac allows linearly growing team to manage exponentially growing infrastructures,
-    reduction of labor means reduction of cost
+## Career rant
+
+47. Rant about job titles
+    1. I resonate with the following quotes
+    2. add a personal commentary on each quote
 36. there was a time were infra archs were not a thing, many times is equated with a
     senior sysadmin, who can flip tapes faster
 37. Recruiters generally don’t even know what an ‘‘infrastructure architect’’ is, and far
@@ -147,55 +163,47 @@ the users' need to use applications, there would be no need for them.
        repetition, and those who hate repetition
 40. infrastructure architects tend to spend most of their time writing code. They are
     motivated by challenges and impatience – they hate doing the same thing twice
-41. version control facilitates the evolution of infrastructure
-    and also having different versions of its
-    1. creating and destruction of entire Infrastructures becomes
-       more manageable than doing it by hand
-    2. having a /master/ version of configuration files is good, it
-       can be used as a baseline and then adapted to satisfy the
-       needs of other infrastructures
+
+## Multiple DCs: private and public
+
+2. Thinking of an infrastructure as a Virtual Machine, rather than a collection of
+   individual hosts
 42. wholistic thinking: the whole DC(s) as a single VM
     1. this is the idea I would like to extend to multiple dcs with different
        operating models: IaaS, SaaS, PaaS, DBaaS, etc.
-43. convergence vs congruence, declarative vs procedural #cm-burgess
-    1. even when you write declarative code, the implementation has to start from a
-       known state, and calculate the sequence of actions to execute, so as a user of
-       the tool, you may not have to write declarative code but as teh developer of the
-       tool you must definitely must
+
 44. centrally managed infra vs self-service infra
     the article seems to assume that there's a single infra that
     servres all apps, but today it's easier than ever to provision
     certain kinds of infra, e.g., vpc, vms, containers, vmis,
     however a central place for governance (global policies) still
     has a place as part of the centrally controlled infrastructure
-45. the paper itself does not seem to be influential,
-    however there are alreay a few ideas that are very popular
-    today, whether or not they became popular due to the paper
-    is unclear
+
 46. ask questions about exending the ideas here to cover
     operating in a multi-cloud environment, where the
     private/on-premise DC is just one of many DCs, and in which
     each DC has different operational models, e.g., public cloud
     providers offer different methods of interaction, namely,
     IaaS, PaaS, SaaS, etc.
-47. Rant about job titles
-    1. I resonate with the following quotes
-    2. add a personal commentary on each quote
+
+
+## Configuration Management
+
+43. convergence vs congruence, declarative vs procedural #cm-burgess
+    1. even when you write declarative code, the implementation has to start from a
+       known state, and calculate the sequence of actions to execute, so as a user of
+       the tool, you may not have to write declarative code but as teh developer of the
+       tool you must definitely must
+
+
+## Ownership, central teams, autonomy and duplication of effort
+
 48. finding principles to determine the ownership of specific infrastructure resources
     1. i find it difficult to tradeoff the benefits of autonomous decentralized teams
        and the duplication of effort it produces
     2. i would like to find some principles that help guide the decision on when to
        consolidate multiple distinct solutions to the same problem into a centralized
        standardized approach
-
-## Outline
-
-1. Systems infrastructure: somehow the network is taken for granted, there's almost no
-   mention of the network setup
-2. Thinking of an infrastructure as a Virtual Machine, rather than a collection of
-   individual hosts
-3. Although the components of an infrastructure are more or less standard,
-   professional architects tend to arrange them in radically different ways
 
 ## Diagrams
 
