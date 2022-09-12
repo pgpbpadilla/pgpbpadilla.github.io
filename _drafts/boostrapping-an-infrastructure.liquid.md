@@ -10,8 +10,15 @@ categories: [it, infrastructure, software]
 IT infrastructures are the substrate on which user applications run, without
 the users' need to use applications, there would be no need for them.
 
-- in many cases, it is the success of the user applications that lead to 
-  infrastructure growth and not the other way around
+In many cases, it is the success of a user applications that leads to 
+infrastructure growth. I wonder if there are examples of the converse, an application 
+ecosystem growing because of the success of successful infrastructure. 
+
+## Steve Traugott on bootstrapping an infrastructure
+
+A while back I stumbled upon Traugott's article (Bootstrapping an infrastructure)
+[#traugott98], after multiples readings I realized that many ideas that today are 
+considered good practices for building infrastructures are already present.
 
 45. the paper itself does not seem to be influential,
     however there are alreay a few ideas that are very popular
@@ -214,6 +221,7 @@ the users' need to use applications, there would be no need for them.
    infrastructures: [link](../assets/diagram/building-infrastructure.puml)
    The idea is to derive each of the key ideas/concepts in the article from first
    principles, that should be accepted as self-evident
+
 
 ## Related
 
