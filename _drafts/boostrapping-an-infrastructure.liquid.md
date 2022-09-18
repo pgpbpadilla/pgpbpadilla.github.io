@@ -7,27 +7,34 @@ tags: it infrastructure software
 permalink: /bootstrapping-infrastructure
 categories: [it, infrastructure, software]
 ---
-IT infrastructures are the substrate on which user applications run, without
-the users' need to use applications, there would be no need for them.
+IT infrastructures are the substrate on which user applications run 
+[[traugott98]](#traugott98), without the users' need to use applications, 
+there would be no need for them. In some cases, it is the success of a user application
+that leads to infrastructure growth.[^1]
 
-In many cases, it is the success of a user applications that leads to 
-infrastructure growth. I wonder if there are examples of the converse, an application 
-ecosystem growing because of the success of successful infrastructure. 
+[^1]: I wonder if there are examples of the converse, 
+    an application ecosystem growing because of the success of 
+    successful infrastructure. Keep in mind that what _infrastructure_ is a 
+    relative term, and it's usually to refer to those applications that support your 
+    work. 
+
+    ![Views on IT infrastructure](../assets/images/views-it-infra.png)
+
 
 ## Steve Traugott on bootstrapping an infrastructure
 
-A while back I stumbled upon Traugott's article (Bootstrapping an infrastructure)
-[#traugott98], after multiples readings I realized that many ideas that today are 
-considered good practices for building infrastructures are already present.
+A while back I stumbled upon Traugott's article  [Bootstrapping an infrastructure](#traugott98)
+, after multiples readings I realized that it contains many ideas that today 
+are considered good practices for building infrastructures. I was surprised that the 
+article is not more widely cited but perhaps the reason is that _enterprisey_ jargon is 
+rarely well-defined, and it changes continuously. In Traugott's words: 
 
-45. the paper itself does not seem to be influential,
-    however there are alreay a few ideas that are very popular
-    today, whether or not they became popular due to the paper
-    is unclear
+> ...although the components of an infrastructure are more or less standard,
+> professional architects tend to arrange them in radically different ways
 
+In this post I want to write about the ideas that stuck with me and how I understand 
+them using the jargon of the day.
 
-3. Although the components of an infrastructure are more or less standard,
-   professional architects tend to arrange them in radically different ways
 
 ## Generic, replaceable components, disaster recovery
 
@@ -225,11 +232,14 @@ considered good practices for building infrastructures are already present.
 
 ## Related
 
-1. Traugott, S. and Joel Huddleston. “Bootstrapping an Infrastructure.” LISA (1998).
+1. Traugott, S. and Joel Huddleston. <a name="traugott98">Bootstrapping an 
+   Infrastructure. LISA (1998).</a>
     - [Semantic Scholar - CorpusID:30764312](https://api.semanticscholar.org/CorpusID:30764312)
     - [infrastructures.org - papers](http://www.infrastructures.org/papers/bootstrap/bootstrap.html)
     - [usenix.org - Abstracts - 12th Systems Administration Conference (LISA '98)](https://www.usenix.org/legacy/publications/library/proceedings/lisa98/traugott.html)
-2. [infrastructures.org](http://www.infrastructures.org), Retrieved on 2022-09-04 20:59
-3. Burgess, Mark, <a name="cm-burgess" href="http://markburgess.
-   org/cm.html">Configuration management, models and myths</a>.
-   Retrieved on 2022-09-04 20:38
+2. [infrastructures.org](http://www.infrastructures.org) (_Retrieved on 2022-09-04 20:59_)
+3. Burgess, Mark, <a name="cm-burgess" href="http://markburgess.org/cm.html"> 
+   Configuration management, models and myths</a>.
+   (_Retrieved on 2022-09-04 20:38_)
+
+## Footnotes
