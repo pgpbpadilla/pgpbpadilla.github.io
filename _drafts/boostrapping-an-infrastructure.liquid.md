@@ -1,6 +1,6 @@
 ---
 layout: post.liquid
-title:  "Building IT infrastructures"
+title:  "On Bootstrapping an Infrastructure"
 date: 2022-09-04 20:32
 last_updated: 2022-09-04 20:32
 tags: it infrastructure software
@@ -8,8 +8,8 @@ permalink: /bootstrapping-infrastructure
 categories: [it, infrastructure, software]
 ---
 IT infrastructures are the substrate on which user applications run 
-[[traugott98]](#traugott98), without the users' need to use applications, 
-there would be no need for them. In some cases, it is the success of a user application
+[[traugott98]](#traugott98). Without the users' need for applications, we wouldn't 
+have to build them. In many cases, it is the success of a user application
 that leads to infrastructure growth.[^1]
 
 [^1]: I wonder if there are examples of the converse, 
@@ -21,22 +21,21 @@ that leads to infrastructure growth.[^1]
     ![Views on IT infrastructure](../assets/images/views-it-infra.png)
 
 
-## Steve Traugott on bootstrapping an infrastructure
+A while back I stumbled upon Traugott's article
+[Bootstrapping an infrastructure](#traugott98), the article contains many ideas that 
+are considered good practices today. I was not able to find direct connections 
+the contemporary terminology and Traugott's article, so I decided to write this post 
+and attempt to connect those ideas with their contemporary incarnations. 
 
-A while back I stumbled upon Traugott's article  [Bootstrapping an infrastructure](#traugott98)
-, after multiples readings I realized that it contains many ideas that today 
-are considered good practices for building infrastructures. I was surprised that the 
-article is not more widely cited but perhaps the reason is that _enterprisey_ jargon is 
-rarely well-defined, and it changes continuously. In Traugott's words: 
-
-> ...although the components of an infrastructure are more or less standard,
-> professional architects tend to arrange them in radically different ways
-
-In this post I want to write about the ideas that stuck with me and how I understand 
-them using the jargon of the day.
-
+![Building an infrastructure](../assets/svg/building-infrastructure-Building%20an
+%20infrastructure.svg)
 
 ## Generic, replaceable components, disaster recovery
+
+In Traugott's words:
+
+> ...although the components of an infrastructure are more or less standard,
+> professional architects tend to arrange them in radically different ways.
 
 - When each component is generic, and there's enough automation, it's easy to destroy a
   misbehaving component and recreate it from a trusted source. 
