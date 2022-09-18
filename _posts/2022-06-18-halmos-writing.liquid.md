@@ -18,12 +18,7 @@ Although the word _mathematics_ is in the title, some ideas
 presented apply to all kinds of writing, which makes them potentially useful to anyone 
 wanting to improve their writing.
 
-
-
-<div style="text-align: center">
-    <img src="/assets/images/halmos-write-math.png">
-    <figcaption>How to write mathematics.</figcaption>
-</div>
+[![How to write mathematics](assets/svg/halmos-write-math.svg)](assets/svg/halmos-write-math.svg)
 
 
 ## Say _something_ and be brief

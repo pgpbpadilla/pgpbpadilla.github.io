@@ -27,8 +27,7 @@ are considered good practices today. I was not able to find direct connections
 the contemporary terminology and Traugott's article, so I decided to write this post 
 and attempt to connect those ideas with their contemporary incarnations. 
 
-![Building an infrastructure](../assets/svg/building-infrastructure-Building%20an
-%20infrastructure.svg)
+[![Building an infrastructure](/assets/svg/traugott98-building-infrastructure.svg)](/assets/svg/traugott98-building-infrastructure.svg)
 
 ## Generic, replaceable components, disaster recovery
 
