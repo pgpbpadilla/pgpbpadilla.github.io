@@ -23,57 +23,104 @@ that leads to infrastructure growth.[^1]
 
 A while back I stumbled upon Traugott's article
 [Bootstrapping an infrastructure](#traugott98), the article contains many ideas that 
-are considered good practices today. I was not able to find direct connections 
-the contemporary terminology and Traugott's article, so I decided to write this post 
-and attempt to connect those ideas with their contemporary incarnations. 
+are considered good practices today. I was not able to find direct connections between
+the ideas in Traugott's article and other more recent terminology, so I decided to write 
+this post and attempt to connect those ideas with their contemporary incarnations. 
 
 [![Building an infrastructure](/assets/svg/traugott98-building-infrastructure.svg)](/assets/svg/traugott98-building-infrastructure.svg)
 
-## Generic, replaceable components, disaster recovery
+## Generic components
+
+Some ideas are consequences of thinking of a whole DC as a single Virtual Machine. In 
+order to make it easier for ourselves to operate, maintain and fix our 
+infrastructure, it helps to have standard, generic components.
+This is good, but it also brings about new problems, the components can be _composed_ in a 
+many ways, all of which fulfill the user's needs.
 
 In Traugott's words:
 
 > ...although the components of an infrastructure are more or less standard,
 > professional architects tend to arrange them in radically different ways.
 
-- When each component is generic, and there's enough automation, it's easy to destroy a
-  misbehaving component and recreate it from a trusted source. 
-- A benefit of this is shorter time to recover from certain types of disasters, and can
-  also protect against compromised components. 
+Benefits or generic components:
+
+- they are easy to replace
+  - When each component is generic, and there's enough automation, it's easy to destroy a
+    misbehaving component and recreate it from a trusted source.
+- improve disaster recovery
+  - A benefit of this is shorter time to recover from certain types of disasters, and can
+    also protect against compromised components. 
+
+Implications/requirements:
+
 - Applications need to support this behavior and be able to function properly after
   their host is terminated while in the middle of an operation
+
+## Use of standards improves DR
+
 - it's easier to fix machines when they fail if they are generic, it's hard when each 
   is configured in a unique way
-  - it's easier to fix when the configuration is code, it's hard if it was done ad-hoc
+- it's easier to fix when the configuration is code, it's hard if it was done ad-hoc
 - makes it easy for users to learn, since everything is in teh same place on every host
+
+## Rebuilding generic components is better/easier than refactoring them
+
+- this applies to individual components, not whole infrastructures. Replacing 
+  individual, generic components is in some sense equivalent to refactoring the 
+  infrastructure.
+
 - 28. it's easier to replace existing components with new generic ones, than to adapt
       the old ones to the new way of working
 1. retrofiting updates to old systems is more work than building a new system
 2. rebuilding is less effort than updating existing systems without automation, i.
-       e., via ad-hoc changes
-3. enables building lower environments that are very close to a productive one, which 
-   may come in handy in certain disaster recovery scenarios, when the lower env is 
-   used as a hot standby for the productive infrastructure
+       e., via ad-hoc changes 
 
-## Dependency diagram
+## iac (automation) improves dr 
 
-4. diagram of the boot sequence, maybe a simplified version of it?
-5. the boot sequence can be inverted, deriving the need for each component from the
-   client needs/requirements, as opposed of building from the bottom up. This is a
-   recurring theme, whether to model the infra from the bottom up or from the top down,
-   has implication in its management and the assumption around autonomy and control.
-    1. with top bottom, we focus on control, at the expense of autonomy ................
-    2. with bottom up, we focus on flexibility and autonomy, at the expense of
-       duplication and drift
+5. enables building lower environments that are very close 
+      to a 
+      productive one, 
+      which 
+      may come in handy in certain disaster recovery scenarios, when the lower env is 
+      used as a hot standby for the productive infrastructure
 
-## Benefits of textual representation, i.e. code
 
-- composability
+## IaC: Benefits of textual representation, i.e. code
+
+The main idea here is that it makes sense to use a textual representation of the 
+desired state of the infrastructure.
+
+> COMMENT:
+> It will be difficult to make code more attractive than the use of advanced tools, e.g. 
+> think of vmware tools, they are uis, but at the same time provide excellent 
+> functionality 
+> 
+> There seems to be a different between system administrators that spend their time 
+> configuring and managing systems that support and application, and those system admins 
+> that support a service/component that is only used by the sysadmins in the upper 
+> layers. It's sysadmins all the way down!
+> 
+> Automation: the degree ROI of automation depends on the speed at which the components 
+> evolve. Slower evolving components are safe to automate anc provide great benefits, 
+> however, achieving a good enough ROI when automating those components that evolve 
+> quickly is more difficult.
+
+Four Traugott, most of the tasks performed by the infrastructure engineers were about finding efficient ways to apply configurations to multiple components. The 
+configurations were in most cases text files.
+
 - I need to talk about the need to use code, before I can make the case that software
-  practices are relevant
-- maybe making it like this: what you care is the state, state can be captured in
-  config files, which are textual, therefore the dev tools, which are optimized for
-  text fit pretty well, after all confi files are a form of code
+- composability:
+    - copy paste, editors, etc make it super easy to compose configuration
+    - this is less effort than building a graphical ui that allows the same level of
+      composablility
+        - any ui that does it, will have as a sub-component the same underlying
+          code/configuration
+        - changes to a ui for composing generic components will require more effort
+        - ui makes more sense when the configuration does not change often
+          practices are relevant
+  - maybe making it like this: what you care is the state, state can be captured in
+    config files, which are textual, therefore the dev tools, which are optimized for
+    text fit pretty well, after all confi files are a form of code
 
 ## IT infrastructure evolves
     
@@ -125,6 +172,7 @@ In Traugott's words:
 
 ## Centralization, pull-based workflows
 
+
 - clients know when it's the best time to pull updates
 - clients are responsible for staying updated
 - having a central place (canonical name) to refer to infra resources is still very
@@ -132,10 +180,25 @@ In Traugott's words:
     - centralized names (dns) does not mean single point of failure, the gold server 
       is not mission critical, it being down does not impact the users of the infrastructure
 - gold server is passive
-- pull methods scale better, the compute needed is distributed to the clients, no
+- When pushing configuration from a central server 200s perhaps thousands of clients, 
+  the load is concentrated in the server pushing all these changes
+  - the clients must stop anything they're doing to accept the changes, or consideration 
+    of the request. When there are network issues, clients may not even get the 
+    commands from the central server.
+- By making the configuration server passive and the clients autonomous, it is 
+  possible to distribute the workload across all the different clients. Clients are 
+  more likely to choose an appropriate time to pull the updates from the central server.
+- pull methods scale better, the computation needed is distributed to the clients, no
       need for a central powerful node to push changes to however many nodes you have
 - having autonomous clients, and pull based workflows does not make the idea of
     centralized artefact repositories/servers irrelevant
+  - Even when the workload to update the clients is distributed across the clients, 
+    there is 
+    still centralization, the golden server is the central point where all clients get 
+    their configuration. 
+  - Centralization does not mean single copy, the golden server 
+    may be replicated for higher availability, improving the performance of the 
+    updates across large appointments.
 
 ## Gold server vs Golden Server
 

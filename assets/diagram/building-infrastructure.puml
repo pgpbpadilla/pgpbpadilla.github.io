@@ -6,27 +6,28 @@ title Building an infrastructure
 skinparam defaultTextAlignment center
 
 card "All changes \nare code" as code
+note left: Infrastructure as Code
 card "Avoid ad-hoc\nchanges" as adhoc
 card "Autonomy" as autonomy
 card "Building Infrastructure is \na Development Process" as dev
-card "Cattle, not pets" as cattle
-note right: Components are\ngeneric/replaceable
+card "Generic\nComponents" as generic
+note right: Cattle, not pets!
 card "Cost" as cost
 card "Disaster\nRecovery" as dr
 card "Gold server" <<Artefacts repository>> as artefacts
 card "Golden server" <<Template>> as golden
 card "Labor" as labor
-card "Pull is better\nthan Push" as pull
+card "Pull\ninstead of\n Push" as pull
 note right: Servers are passive.\nClients initiate \ninteractions
 card "Repeatability" as repeat
 card "Version \nControl" as vc
-note right: Traces the evolution\n of the infrastructure
+note left: Traces the evolution\n of the infrastructure
 
 
 artefacts --> golden: serves
-adhoc --> cattle: produces
+adhoc --> generic: produces
 adhoc --> code: means
-cattle --> dr: improves
+generic --> dr: improves
 dr --> cost: reduces
 dev --> vc: requires
 golden --> repeat: enables
