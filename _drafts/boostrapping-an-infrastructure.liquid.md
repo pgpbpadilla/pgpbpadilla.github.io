@@ -180,7 +180,8 @@ configurations were in most cases text files.
     - centralized names (dns) does not mean single point of failure, the gold server 
       is not mission critical, it being down does not impact the users of the infrastructure
 - gold server is passive
-- When pushing configuration from a central server 200s perhaps thousands of clients, 
+- When pushing configuration from a central server to hundreds, perhaps thousands of 
+  clients, 
   the load is concentrated in the server pushing all these changes
   - the clients must stop anything they're doing to accept the changes, or consideration 
     of the request. When there are network issues, clients may not even get the 
@@ -221,23 +222,6 @@ configurations were in most cases text files.
 - that casts some doubts in my mind about how ready for prod this was for todays 
   standards where auditing relies so heavily on monitoring and logging of special events
 
-## Career rant
-
-47. Rant about job titles
-    1. I resonate with the following quotes
-    2. add a personal commentary on each quote
-36. there was a time were infra archs were not a thing, many times is equated with a
-    senior sysadmin, who can flip tapes faster
-37. Recruiters generally don’t even know what an ‘‘infrastructure architect’’ is, and far
-    too often assume that ‘‘senior sysadmin’’ means you know how to flip tapes faster.
-38. Most of us at one time or another have been restricted from improving a broken
-    infras- tructure, simply because it didn’t fit within our job description.
-39. Some of the most capable systems administrators we’ve known are not interested in
-    coding
-    1. different mindsets/interests: those who want hands on work and don’t mind
-       repetition, and those who hate repetition
-40. infrastructure architects tend to spend most of their time writing code. They are
-    motivated by challenges and impatience – they hate doing the same thing twice
 
 ## Multiple DCs: private and public
 
