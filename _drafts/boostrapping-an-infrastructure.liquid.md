@@ -27,103 +27,21 @@ are considered good practices today. I was not able to find direct connections b
 the ideas in Traugott's article and other more recent terminology, so I decided to write 
 this post and attempt to connect those ideas with their contemporary incarnations. 
 
+
+## Core ideas
+
+### Building Infrastructures is a Development Process
+
 [![Building an infrastructure](/assets/svg/traugott98-building-infrastructure.svg)](/assets/svg/traugott98-building-infrastructure.svg)
 
-## Generic components
+Figure caption: Diagram sources: 
+Principles for building
+   infrastructures: [link](../assets/diagram/building-infrastructure.puml)
+   The idea is to derive each of the key ideas/concepts in the article from first
+   principles, that should be accepted as self-evident
 
-Some ideas are consequences of thinking of a whole DC as a single Virtual Machine. In 
-order to make it easier for ourselves to operate, maintain and fix our 
-infrastructure, it helps to have standard, generic components.
-This is good, but it also brings about new problems, the components can be _composed_ in a 
-many ways, all of which fulfill the user's needs.
+#### IT infrastructure evolves
 
-In Traugott's words:
-
-> ...although the components of an infrastructure are more or less standard,
-> professional architects tend to arrange them in radically different ways.
-
-Benefits or generic components:
-
-- they are easy to replace
-  - When each component is generic, and there's enough automation, it's easy to destroy a
-    misbehaving component and recreate it from a trusted source.
-- improve disaster recovery
-  - A benefit of this is shorter time to recover from certain types of disasters, and can
-    also protect against compromised components. 
-
-Implications/requirements:
-
-- Applications need to support this behavior and be able to function properly after
-  their host is terminated while in the middle of an operation
-
-## Use of standards improves DR
-
-- it's easier to fix machines when they fail if they are generic, it's hard when each 
-  is configured in a unique way
-- it's easier to fix when the configuration is code, it's hard if it was done ad-hoc
-- makes it easy for users to learn, since everything is in teh same place on every host
-
-## Rebuilding generic components is better/easier than refactoring them
-
-- this applies to individual components, not whole infrastructures. Replacing 
-  individual, generic components is in some sense equivalent to refactoring the 
-  infrastructure.
-
-- 28. it's easier to replace existing components with new generic ones, than to adapt
-      the old ones to the new way of working
-1. retrofiting updates to old systems is more work than building a new system
-2. rebuilding is less effort than updating existing systems without automation, i.
-       e., via ad-hoc changes 
-
-## iac (automation) improves dr 
-
-5. enables building lower environments that are very close 
-      to a 
-      productive one, 
-      which 
-      may come in handy in certain disaster recovery scenarios, when the lower env is 
-      used as a hot standby for the productive infrastructure
-
-
-## IaC: Benefits of textual representation, i.e. code
-
-The main idea here is that it makes sense to use a textual representation of the 
-desired state of the infrastructure.
-
-> COMMENT:
-> It will be difficult to make code more attractive than the use of advanced tools, e.g. 
-> think of vmware tools, they are uis, but at the same time provide excellent 
-> functionality 
-> 
-> There seems to be a different between system administrators that spend their time 
-> configuring and managing systems that support and application, and those system admins 
-> that support a service/component that is only used by the sysadmins in the upper 
-> layers. It's sysadmins all the way down!
-> 
-> Automation: the degree ROI of automation depends on the speed at which the components 
-> evolve. Slower evolving components are safe to automate anc provide great benefits, 
-> however, achieving a good enough ROI when automating those components that evolve 
-> quickly is more difficult.
-
-Four Traugott, most of the tasks performed by the infrastructure engineers were about finding efficient ways to apply configurations to multiple components. The 
-configurations were in most cases text files.
-
-- I need to talk about the need to use code, before I can make the case that software
-- composability:
-    - copy paste, editors, etc make it super easy to compose configuration
-    - this is less effort than building a graphical ui that allows the same level of
-      composablility
-        - any ui that does it, will have as a sub-component the same underlying
-          code/configuration
-        - changes to a ui for composing generic components will require more effort
-        - ui makes more sense when the configuration does not change often
-          practices are relevant
-  - maybe making it like this: what you care is the state, state can be captured in
-    config files, which are textual, therefore the dev tools, which are optimized for
-    text fit pretty well, after all confi files are a form of code
-
-## IT infrastructure evolves
-    
 - Infrastructure will change, it needs to constantly adapt to the needs of its users
 - the ability to trace the evolution of an infrastructure gives you the possibility to
   learn from the past and make better decisions in the future
@@ -137,14 +55,55 @@ configurations were in most cases text files.
    can be used as a baseline and then adapted to satisfy the
    needs of other infrastructures
 
-## Avoiding manual/ad-hoc changes
+#### Version control
 
-- avoid making ad-hoc changes and prefer updating the template/golden server, then let 
+### All changes are code 
+
+#### IaC: Benefits of textual representation, i.e. code
+
+The main idea here is that it makes sense to use a textual representation of the
+desired state of the infrastructure.
+
+> COMMENT:
+> It will be difficult to make code more attractive than the use of advanced tools, e.g.
+> think of vmware tools, they are uis, but at the same time provide excellent
+> functionality
+>
+> There seems to be a different between system administrators that spend their time
+> configuring and managing systems that support and application, and those system admins
+> that support a service/component that is only used by the sysadmins in the upper
+> layers. It's sysadmins all the way down!
+>
+> Automation: the degree ROI of automation depends on the speed at which the components
+> evolve. Slower evolving components are safe to automate anc provide great benefits,
+> however, achieving a good enough ROI when automating those components that evolve
+> quickly is more difficult.
+
+Four Traugott, most of the tasks performed by the infrastructure engineers were about finding efficient ways to apply configurations to multiple components. The
+configurations were in most cases text files.
+
+- I need to talk about the need to use code, before I can make the case that software
+- composability:
+    - copy paste, editors, etc make it super easy to compose configuration
+    - this is less effort than building a graphical ui that allows the same level of
+      composablility
+        - any ui that does it, will have as a sub-component the same underlying
+          code/configuration
+        - changes to a ui for composing generic components will require more effort
+        - ui makes more sense when the configuration does not change often
+          practices are relevant
+    - maybe making it like this: what you care is the state, state can be captured in
+      config files, which are textual, therefore the dev tools, which are optimized for
+      text fit pretty well, after all confi files are a form of code
+
+#### Avoiding manual/ad-hoc changes
+
+- avoid making ad-hoc changes and prefer updating the template/golden server, then let
   changes propagate
-  - you can help yourself by creating **immutable components**, making it harder to 
-    change running components than updating the source code
-  - writing and debugging a script is less than the time it takes to change hundreds of 
-    clients manually
+    - you can help yourself by creating **immutable components**, making it harder to
+      change running components than updating the source code
+    - writing and debugging a script is less than the time it takes to change hundreds of
+      clients manually
 - it forces you to make all changes to the code that generates the infra, therefore
   pushes you in the direction of All changes are code
 - if you have no custom/ad-hoc changes in any of your components then you can
@@ -153,9 +112,20 @@ configurations were in most cases text files.
 - regular use of ad-hoc changes creates more labor, labor means cost
 - ad-hoc changes generate drift
 - iac allows linearly growing team to manage exponentially growing infrastructures,
-      reduction of labor means reduction of cost
+  reduction of labor means reduction of cost
 
-## Code is Automation
+
+
+#### Software Defined XXX
+
+- software is increasingly being used to do more things, including the creation of
+  virtualized infra components
+- it's cheaper, faster to evolve, automate, etc
+
+#### Automation
+
+
+##### Code is Automation
 
 - encoding desired state/behaviour is a form of automation
 - automatation enables to execute tasks in a repeatable manner, reducing human effort
@@ -164,66 +134,126 @@ configurations were in most cases text files.
     - it changes a lot
     - the effects of drift are too heavy
 
-## Software Defined XXX
+#### Infrastructure as Code
+#### Immutable infrastructure
 
-- software is increasingly being used to do more things, including the creation of
-  virtualized infra components
-- it's cheaper, faster to evolve, automate, etc
+### Artefacts: re-use, re-peat
 
-## Centralization, pull-based workflows
+#### Generic components
 
+Some ideas are consequences of thinking of a whole DC as a single Virtual Machine. In
+order to make it easier for ourselves to operate, maintain and fix our
+infrastructure, it helps to have standard, generic components.
+This is good, but it also brings about new problems, the components can be _composed_ in a
+many ways, all of which fulfill the user's needs.
 
-- clients know when it's the best time to pull updates
-- clients are responsible for staying updated
-- having a central place (canonical name) to refer to infra resources is still very
-  much beneficial
-    - centralized names (dns) does not mean single point of failure, the gold server 
-      is not mission critical, it being down does not impact the users of the infrastructure
-- gold server is passive
-- When pushing configuration from a central server to hundreds, perhaps thousands of 
-  clients, 
-  the load is concentrated in the server pushing all these changes
-  - the clients must stop anything they're doing to accept the changes, or consideration 
-    of the request. When there are network issues, clients may not even get the 
-    commands from the central server.
-- By making the configuration server passive and the clients autonomous, it is 
-  possible to distribute the workload across all the different clients. Clients are 
-  more likely to choose an appropriate time to pull the updates from the central server.
-- pull methods scale better, the computation needed is distributed to the clients, no
-      need for a central powerful node to push changes to however many nodes you have
-- having autonomous clients, and pull based workflows does not make the idea of
-    centralized artefact repositories/servers irrelevant
-  - Even when the workload to update the clients is distributed across the clients, 
-    there is 
-    still centralization, the golden server is the central point where all clients get 
-    their configuration. 
-  - Centralization does not mean single copy, the golden server 
-    may be replicated for higher availability, improving the performance of the 
-    updates across large appointments.
+In Traugott's words:
 
-## Gold server vs Golden Server
+> ...although the components of an infrastructure are more or less standard,
+> professional architects tend to arrange them in radically different ways.
+
+Benefits or generic components:
+
+- they are easy to replace
+    - When each component is generic, and there's enough automation, it's easy to destroy a
+      misbehaving component and recreate it from a trusted source.
+- improve disaster recovery
+    - A benefit of this is shorter time to recover from certain types of disasters, and can
+      also protect against compromised components.
+
+Implications/requirements:
+
+- Applications need to support this behavior and be able to function properly after
+  their host is terminated while in the middle of an operation
+
+#### Re-use: Gold Server, Golden Server
+#### Gold server vs Golden Server
 
 - one is a repository of artefacts, code, configurations, etc
 - the gold server enables re-use, by hosting re-usable components, such as templates
 - the other represent a code/conf template to create a specific component
 - the golden server enables repeatability, reducing deviations
 
-## Infrastructure architecture
-    
-- architecture: durability, utility, beauty
-    - https://en.wikipedia.org/wiki/Architecture#Theory_of_architecture
-- opinion: identifying patterns of interconnection between components
+#### Repeatability: deterministic builds
 
-## Notoriously absent: monitoring
-
-1. Systems infrastructure: somehow the network is taken for granted, there's almost no
-   mention of the network setup
-- the author says that somehow it was not fully implemented
-- that casts some doubts in my mind about how ready for prod this was for todays 
-  standards where auditing relies so heavily on monitoring and logging of special events
+### Autonomy
 
 
-## Multiple DCs: private and public
+#### Ownership, central teams, autonomy and duplication of effort
+
+48. finding principles to determine the ownership of specific infrastructure resources
+    1. i find it difficult to tradeoff the benefits of autonomous decentralized teams
+       and the duplication of effort it produces
+    2. i would like to find some principles that help guide the decision on when to
+       consolidate multiple distinct solutions to the same problem into a centralized
+       standardized approach
+
+
+#### Centralization, pull-based workflows
+
+
+- clients know when it's the best time to pull updates
+- clients are responsible for staying updated
+- having a central place (canonical name) to refer to infra resources is still very
+  much beneficial
+    - centralized names (dns) does not mean single point of failure, the gold server
+      is not mission critical, it being down does not impact the users of the infrastructure
+- gold server is passive
+- When pushing configuration from a central server to hundreds, perhaps thousands of
+  clients,
+  the load is concentrated in the server pushing all these changes
+    - the clients must stop anything they're doing to accept the changes, or consideration
+      of the request. When there are network issues, clients may not even get the
+      commands from the central server.
+- By making the configuration server passive and the clients autonomous, it is
+  possible to distribute the workload across all the different clients. Clients are
+  more likely to choose an appropriate time to pull the updates from the central server.
+- pull methods scale better, the computation needed is distributed to the clients, no
+  need for a central powerful node to push changes to however many nodes you have
+- having autonomous clients, and pull based workflows does not make the idea of
+  centralized artefact repositories/servers irrelevant
+    - Even when the workload to update the clients is distributed across the clients,
+      there is
+      still centralization, the golden server is the central point where all clients get
+      their configuration.
+    - Centralization does not mean single copy, the golden server
+      may be replicated for higher availability, improving the performance of the
+      updates across large appointments.
+
+
+#### Pull is better than Push
+
+### Cost optimisation
+
+#### Use of standards improves DR
+
+- it's easier to fix machines when they fail if they are generic, it's hard when each
+  is configured in a unique way
+- it's easier to fix when the configuration is code, it's hard if it was done ad-hoc
+- makes it easy for users to learn, since everything is in teh same place on every host
+
+
+#### iac (automation) improves dr
+
+5. enables building lower environments that are very close
+   to a
+   productive one,
+   which
+   may come in handy in certain disaster recovery scenarios, when the lower env is
+   used as a hot standby for the productive infrastructure
+
+#### Reduction of labor equals cost reduction
+
+### Wholistic thinking
+
+
+#### Boot sequence: diagram 
+
+[link](../assets/diagram/boot-sequence.puml), dependency between tasks
+   when
+   bootstrapping an infra
+
+#### Multiple DCs: private and public
 
 2. Thinking of an infrastructure as a Virtual Machine, rather than a collection of
    individual hosts
@@ -246,34 +276,46 @@ configurations were in most cases text files.
     IaaS, PaaS, SaaS, etc.
 
 
-## Configuration Management
+## Modern terminology
+
+- IaC: all changes are code
+- Continuous Delivery: gated pipelines, automation
+- Immutable infrastructure: read-only artefacts
+- Cattle, not pets: repeatability, automation (iac), no ad-hoc changes
+- Artefact repository: re-use
+- Deterministic builds: repeatability, automation
+- GitOps:  IaC + (Quality) Gated pipelines (CI/CD)
+
+
+## Other topics
+### Rebuilding generic components is better/easier than refactoring them
+
+- this applies to individual components, not whole infrastructures. Replacing 
+  individual, generic components is in some sense equivalent to refactoring the 
+  infrastructure.
+
+- 28. it's easier to replace existing components with new generic ones, than to adapt
+      the old ones to the new way of working
+1. retrofiting updates to old systems is more work than building a new system
+2. rebuilding is less effort than updating existing systems without automation, i.
+       e., via ad-hoc changes 
+
+   
+### Notoriously absent: networking, monitoring
+
+1. Systems infrastructure: somehow the network is taken for granted, there's almost no
+   mention of the network setup
+- the author says that somehow it was not fully implemented
+- that casts some doubts in my mind about how ready for prod this was for todays 
+  standards where auditing relies so heavily on monitoring and logging of special events
+
+### Configuration Management: convergence vs congruence
 
 43. convergence vs congruence, declarative vs procedural #cm-burgess
     1. even when you write declarative code, the implementation has to start from a
        known state, and calculate the sequence of actions to execute, so as a user of
        the tool, you may not have to write declarative code but as teh developer of the
        tool you must definitely must
-
-
-## Ownership, central teams, autonomy and duplication of effort
-
-48. finding principles to determine the ownership of specific infrastructure resources
-    1. i find it difficult to tradeoff the benefits of autonomous decentralized teams
-       and the duplication of effort it produces
-    2. i would like to find some principles that help guide the decision on when to
-       consolidate multiple distinct solutions to the same problem into a centralized
-       standardized approach
-
-## Diagrams
-
-1. Boot sequence: [link](../assets/diagram/boot-sequence.puml), dependency between tasks
-   when
-   bootstrapping an infra
-2. Principles for building
-   infrastructures: [link](../assets/diagram/building-infrastructure.puml)
-   The idea is to derive each of the key ideas/concepts in the article from first
-   principles, that should be accepted as self-evident
-
 
 ## Related
 
@@ -283,8 +325,11 @@ configurations were in most cases text files.
     - [infrastructures.org - papers](http://www.infrastructures.org/papers/bootstrap/bootstrap.html)
     - [usenix.org - Abstracts - 12th Systems Administration Conference (LISA '98)](https://www.usenix.org/legacy/publications/library/proceedings/lisa98/traugott.html)
 2. [infrastructures.org](http://www.infrastructures.org) (_Retrieved on 2022-09-04 20:59_)
-3. Burgess, Mark, <a name="cm-burgess" href="http://markburgess.org/cm.html"> 
+3. Burgess, Mark, <a id="cm-burgess" href="http://markburgess.org/cm.html"> 
    Configuration management, models and myths</a>.
    (_Retrieved on 2022-09-04 20:38_)
+4. <a id="gitops" href="https://about.gitlab.com/topics/gitops/">
+   What is GitOps? | GitLab
+   </a>
 
 ## Footnotes

@@ -1,4 +1,8 @@
+## Infrastructure architecture
 
+- architecture: durability, utility, beauty
+    - https://en.wikipedia.org/wiki/Architecture#Theory_of_architecture
+- opinion: identifying patterns of interconnection between components
 
 ## Dependency diagram
 
