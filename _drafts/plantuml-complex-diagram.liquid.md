@@ -5,7 +5,7 @@ date: 2022-12-28 12:20
 last_updated: 2022-12-28 12:20
 tags: journal plantuml diagram layout
 permalink: /plantuml-diagram-layout
-categories: [journal]
+categories: [journal, plantuml, diagram, graph, layout]
 ---
 I use [PlantUML](https://plantuml.com/) to visualize software components or ideas for 
 blog posts. Often, the layout becomes unwieldy and a lot of time goes into 
