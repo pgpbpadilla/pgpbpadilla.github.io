@@ -7,43 +7,48 @@ tags: journal plantuml diagram layout
 permalink: /plantuml-diagram-layout
 categories: [journal]
 ---
-I use [PlantUML](#puml-site) regularly to visualize software components or ideas for 
-Blog entries. Often the layout becomes unwieldy and a lot of time goes into tweaking it.
-
-This entry is just to write down my thoughts about the current state of diagram 
+I use [PlantUML](https://plantuml.com/) to visualize software components or ideas for 
+blog posts. Often, the layout becomes unwieldy and a lot of time goes into 
+tweaking it. This post is about the current state of diagram 
 layouts when using PlantUML.
 
 
-# Bad layouts make diagrams unusable 
+# Bad layouts can make diagrams unusable 
 
-The fact that producing good-looking diagrams using PlantUML is notoriously difficult 
-is known for a while, e.g.,
+Producing good-looking diagrams using PlantUML is notoriously difficult; this has been 
+known for a while, e.g.,
 
 1. [Graphviz is not good enough](https://forum.plantuml.net/4842/graphviz-is-not-good-enough):
    the original poster seems to think that the issue lies in the underlying graph 
-   drawing tool, namely [Graphviz](#gv-site), a mature (30+ years old) graph 
+   drawing tool, namely [Graphviz](https://graphviz.org/), a mature (30+ years old) graph 
    visualization package. He suggests that by using the
-   [Open Graph Drawing Framework](#ogdf-site) PlantUML could generate better layouts.
+   [Open Graph Drawing Framework](https://ogdf.uos.de/) PlantUML could generate better 
+   layouts. 
 
 2. [Diagrams are a mess](https://github.com/plantuml/plantuml/issues/13): shows an 
-   example of how the diagram becomes utterly unreadable due to the 
-   terrible layout of the diagram. It seems noteworthy to me that this happens more 
-   often for diagrams where the number edge crossings is high, which are also known as 
-   non-planar graphs since they cannot be drawn on a plane without edge crossings.
+   example of how the diagram becomes a _mess_ due to the 
+   terrible layout. It seems that this happens more 
+   often for diagrams with edge crossings, sometimes referred to as 
+   [_non-planar graphs_](https://en.wikipedia.org/wiki/Planar_graph), that just means 
+   that they cannot be drawn on a plane without edge crossings.
 
 
-I have tried to understand how difficult it would be to improve this
-situation, and I expected that it would not be trivial, otherwise it would have been
+## What is the problem with PlantUML's layouts?
+
+I have tried to understand the problem and see how hard it would be to improve the
+situation. I expected that it would not be trivial, otherwise it would have been
 done already.
 
-At the moment, it seems to me that the issue could arise due to the default layout
-options that PlantUML uses, at least that's what I understood from reading the forum
-post, however, it's not super clear to me how this happens. I can think of at least
-two possibilities:
+It seems that the issue could arise due to the layout
+options that PlantUML uses when interacting with Graphviz, however, it's not super clear 
+to me how this happens. I can think of the following possibilities:
 
-1. Graphviz does not have better layout algorithms
-2. PlantUML instructs Graphviz to use an algorithm that does not produce the
-   best layout
+1. Graphviz itself cannot produce better layout. Somehow I doubt that this is the case 
+   given the maturity of the library. However, it remains a possibility that more 
+   modern -- and better -- layout algorithms are not part of Graphviz.
+2. Graphviz can produce better layouts but PlantUML instructs Graphviz to draw the 
+   diagram using options that result in a suboptimal layout. This seems plausible 
+   given that diagrams created with OGDF can be [drawn using Graphviz](#draw-ogdf-gv). 
 
 
 ## The Open Graph Drawing Framework
@@ -58,6 +63,9 @@ result in the layouts for complex graphs.
 When using the OGDF C++ framework, graphs are defined via building the required data 
 structures (Graph, GraphAttributes), then it's possible to apply different types of 
 [layouts](https://ogdf.github.io/doc/ogdf/classogdf_1_1_layout_module.html).
+
+
+### Drawing an OGDF diagram with Graphviz <a id="draw-ogdf-gv"></a>
 
 The OGDF is able to generate output in GML and SVG formats. SVG files can be opened by 
 any modern web browser. For GML files I needed to use the 
@@ -140,8 +148,8 @@ think of on how to leverage OGDF to improve layout of PlantUML diagrams.
 1. <a name="puml-site" href="https://plantuml.com/en/">PlantUML website</a>
 2. Existing forum discussion
 2. Existing Github issue showing the layout mess
-2. OGDF pre-print
-2. OGDF github repo
+2. <a id="ogdf-site" href="https://ogdf.uos.de/">Open Graph Drawing Framework</a>
+2. <a id="ogdf-gh-repo" href="https://github.com/ogdf/ogdf">OGDF GitHub repo</a>
 3. PlantUML output formats: https://plantuml.com/de/command-line
 4. <a id="gv-site" href="https://graphviz.org">Graphviz</a>
 5. DOT - https://graphviz.org/doc/info/command.html
