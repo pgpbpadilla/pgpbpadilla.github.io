@@ -18,7 +18,9 @@ layouts when using PlantUML.
 Producing good-looking diagrams using PlantUML is notoriously difficult; this has been 
 known for a while, e.g.,
 
-1. [Graphviz is not good enough](https://forum.plantuml.net/4842/graphviz-is-not-good-enough):
+1. <a id="gv-not-good" href="https://forum.plantuml.net/4842/graphviz-is-not-good-enough">
+    Graphviz is not good enough:
+   </a>
    the original poster seems to think that the issue lies in the underlying graph 
    drawing tool, namely [Graphviz](https://graphviz.org/), a mature (30+ years old) graph 
    visualization package. He suggests that by using the
@@ -103,83 +105,151 @@ gml2gv -o graph.dot graph.gml
 dot -Tsvg graph.dot > graph.svg
 ```
 
-<a name="gotchas" href=""></a>
-**GOTCHAs**: TODO: These seem like good candidates for footnotes.
+This is what makes me think that the issues with PlantUML layouts may not be due to 
+Graphviz.
 
-1. it seems that not all GML files can be converted to DOT files and I don't know why
-2. sometimes OGDF will refuse to create an SVG files from a graph data structure if 
-   some conditions are not met, I need to investigate this further
+<a name="gotchas" href=""></a>
+#### GOTCHAs generating SVG files
+
+I didn't spend much time investigating this, but I ran into two problems while playing 
+around with OGDF trying to generate SVG files from the code examples:
+
+1. not all GML files can be converted to DOT files, some syntax error
+2. sometimes OGDF will refuse to create an SVG file if 
+   some conditions are not met, e.g., there are edge crossings
 
 
 ### Loading GML files to customize the layout
 
-The OGDG sources have examples on how it's possible to load a GML file,  
-customize the graph layout and other attributes and then regenrate a GML or SVG file.
-
-This could be useful if PlantUML were able to generate GML as an output format. See 
-[GOTCHAS](#gotchas).
+The OGDF sources have examples showing how to load a GML file, customize the layout 
+and then generate a GML or SVG file for the updated diagram. This is roughly the 
+approach suggested in [Graphviz is not good enough](#gv-not-good), namely, to extend 
+PlantUML so that it can generate GML files as output and use OGDF to 
+improve the layout afterwards. Just a reminder here that not all GML files can be 
+converted to DOT files, see [GOTCHAS](#gotchas).
 
 
 ## PlantUML layout hints
 
-PlantUML does provide some degree of control by means of hints on how to layout the
-arrows/elements in a diagram [link to PlantUML] docs, however, even then, there are
-times where the hints are ignored, or the results are not very good, and sometimes
-they behaviour is quite counter-intuitive.
-
-I have mixed feeling about the PlantUML syntax mixing what is connected to what and
-also providing layout options, it seems to me that these two should be separate, in
-the same way that writing a document can be split into different phases, e.g., writing
-Latex and Typesetting.
+PlantUML does provide 
+[specific syntax to control the layout](https://crashedmind.github.io/PlantUMLHitchhikersGuide/layout/layout.html) 
+for some elements in a diagram, however, there are
+times when these layout _hints_ are ignored, others where the result is not very good, 
+and sometimes their effects are not intuitive.
 
 
 ## How I deal with PlantUML's layout limitations
 
-There are a few ways to deal the current these limitations. The first one that I'm
-currently using is to avoid creating diagrams with too many elements and connections.
-This usually means that I have to create multiple diagrams, each one showing different
-aspects of what I'm working on.
+In my experience, making multiple smaller focused diagrams plus 
+tweaking the layout pays off quicker than creating a 
+more complex diagram and then tweaking its layout. The time spent tweaking the layout 
+of a diagram grows faster than linearly with respect to the number of elements shown.
 
-This is a good exercise in diagram making, since it forces me to really refine the
-diagram and only draw elements that are really relevant to what I'm trying to show.
-The same goes for drawing connections, I end up removing those connections that don't
-really emphasize the message of the diagram.
-
-Recently I try to be more concious about what type of diagram I'm making: am I trying
-to show an accurate picture, or to emphasize one particular thing?
-
-Some diagrams are only really useful if they are accurate, but in other cases,
-sacrificing accuracy to bring attention to the really important parts really pays off.
+This is a nice exercise in diagram making, since it forces me to really refine it and 
+only show those elements that are truly relevant.
 
 
-## Technical alternatives
+### Accuracy and simplicity: a diagram's goal
 
-Given my limited knowledge of all the tools involved, there are a couple options I can
-think of on how to leverage OGDF to improve layout of PlantUML diagrams.
-
-1. Extend PlantUML so that it instructs GraphViz to a better layout algorithm.
-2. Extend PlantUML and allow interaction with OGDF, sort of like an adapter that takes
-   in the data structures parsed from the PlantUML code into OGDF data structures,
-   then use OGDF's layout algorithms.
-3. Extend PlantUML so that it can output GML files, then load the GML with OGDF and
-   apply a custom layout. The resulting graph can be again exported to GML or SVG format.
+I also try to be more conscious about my goals: am I trying
+to show an accurate picture, or to emphasize one important thing? Some diagrams are 
+only really useful if they are accurate, but in other cases, sacrificing accuracy to 
+bring attention to the really important stuff really pays off. When in doubt, make 
+multiple versions of the diagram, PlantUML makes this super easy. 
 
 
-## References
+## Possible paths to improve diagram layouts
 
-1. <a name="puml-site" href="https://plantuml.com/en/">PlantUML website</a>
-2. Existing forum discussion
-2. Existing Github issue showing the layout mess
-2. <a id="ogdf-site" href="https://ogdf.uos.de/">Open Graph Drawing Framework</a>
-2. <a id="ogdf-gh-repo" href="https://github.com/ogdf/ogdf">OGDF GitHub repo</a>
-3. PlantUML output formats: https://plantuml.com/de/command-line
-4. <a id="gv-site" href="https://graphviz.org">Graphviz</a>
-5. DOT - https://graphviz.org/doc/info/command.html
-6. DOT Language https://graphviz.org/doc/info/lang.html
-6. gml2gv  https://graphviz.org/docs/cli/gml2gv/
-7. https://en.wikipedia.org/wiki/Planar_graph
+Given my limited knowledge of the tools involved, there are a couple options I can
+think of on how to improve the layouts generated by PlantUML:
+
+1. Extend PlantUML so that Graphviz uses better layout options [^1]
+2. Integrate PlantUML and OGDF [^2], that is, use the PlantUML syntax but create the 
+   Graph using OGDF and let Graphviz draw the diagram, or OGDF export the GML/SVG files 
+3. Extend PlantUML to generate GML files [^3] that can be post-processed with OGDF to 
+   improve the layout and generate an updated GML/SVG file 
+
+[^1]: Some investigation is required to learn when Graphviz can generate better layouts
+
+[^2]: Requires knowledge on how to integrate a C++ library with the Java-based 
+    PlantUML code base
+
+[^3]: This is the approach suggested in [Graphviz is not good enough](#gv-not-good)
 
 
+## Related links
+
+<ol>
+    <li>
+        <a id="puml-site" 
+            href="https://plantuml.com/en/">PlantUML website</a>
+    </li> 
+    
+    <li>
+    <a id="ref:gv-not-good"
+        href="https://forum.plantuml.net/4842/graphviz-is-not-good-enough">
+        PlantUML forum: Graphviz is not good enough
+    </a>
+    </li>
+    
+    <li>
+    <a id="gh-puml-mess"
+        href="https://github.com/plantuml/plantuml/issues/13">
+        PlantUML GitHub issues: Diagrams are a mess
+    </a>
+    </li>
+    
+    <li>
+    <a id="wiki-planar" 
+        href="https://en.wikipedia.org/wiki/Planar_graph">
+        Wikipedia: Planar graph
+    </a>
+    </li>
+    
+    <li>
+    <a id="ogdf-site" 
+        href="https://ogdf.uos.de/">Open Graph Drawing Framework</a>
+    </li>
+    
+    <li>
+    <a id="ogdf-gh-repo" 
+        href="https://github.com/ogdf/ogdf">OGDF GitHub repo</a>
+    </li>
+    
+    <li>
+    <a id="puml-cli" 
+        href="https://plantuml.com/de/command-line">
+        PlantUML output formats
+    </a>
+    </li>
+    
+    <li>
+    <a id="gv-site" 
+        href="https://graphviz.org">Graphviz</a>
+    </li>
+    
+    <li>
+    <a id="dot-lang" 
+        href="https://graphviz.org/doc/info/lang.html">DOT language</a>
+    </li>
+    
+    <li>
+    <a id="dot-cli" 
+        href="https://graphviz.org/doc/info/command.html">dot command</a>
+    </li>
+    
+    <li>
+    <a id="gml2gv" 
+        href="https://graphviz.org/docs/cli/gml2gv/">gml2gv command</a>
+    </li>
+    
+    <li>
+    <a id="puml-guide"
+        href="https://crashedmind.github.io/PlantUMLHitchhikersGuide/layout/layout.html">
+        PlantUML Hitchhiker's guide
+    </a>
+    </li>
+</ol>
 
 
-
+## Footnotes
