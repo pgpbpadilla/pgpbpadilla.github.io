@@ -22,8 +22,8 @@ known for a while, e.g.,
    the original poster seems to think that the issue lies in the underlying graph 
    drawing tool, namely [Graphviz](https://graphviz.org/), a mature (30+ years old) graph 
    visualization package. He suggests that by using the
-   [Open Graph Drawing Framework](https://ogdf.uos.de/) PlantUML could generate better 
-   layouts. 
+   [Open Graph Drawing Framework (OGDF)](https://ogdf.uos.de/), PlantUML could generate 
+   better layouts. 
 
 2. [Diagrams are a mess](https://github.com/plantuml/plantuml/issues/13): shows an 
    example of how the diagram becomes a _mess_ due to the 
@@ -43,35 +43,57 @@ It seems that the issue could arise due to the layout
 options that PlantUML uses when interacting with Graphviz, however, it's not super clear 
 to me how this happens. I can think of the following possibilities:
 
-1. Graphviz itself cannot produce better layout. Somehow I doubt that this is the case 
-   given the maturity of the library. However, it remains a possibility that more 
-   modern -- and better -- layout algorithms are not part of Graphviz.
+1. Graphviz itself cannot produce better layouts. Somehow I doubt that this is the case 
+   given the maturity of the library. However, it remains a possibility that 
+   modern layout algorithms are not part of Graphviz.
 2. Graphviz can produce better layouts but PlantUML instructs Graphviz to draw the 
    diagram using options that result in a suboptimal layout. This seems plausible 
    given that diagrams created with OGDF can be [drawn using Graphviz](#draw-ogdf-gv). 
 
 
-## The Open Graph Drawing Framework
+## The Open Graph Drawing Framework (OGDF) 
 
-The idea of [planarization](link to wiki) comes up multiple times when reading about
-graph drawing, so I spend some time reading about the
-[Open Graph Drawing Framework](https://ogdf.uos.de/). I was quite impressed with the
-result in the layouts for complex graphs.
+The layout examples in the [OGDF pre-print](../assets/pdf/ogdf-pre-preprint.pdf) are 
+quite impressive: 
 
 ![Sample graphs](../assets/images/ogdf-sample-graphs.png)
 
 When using the OGDF C++ framework, graphs are defined via building the required data 
-structures (Graph, GraphAttributes), then it's possible to apply different types of 
-[layouts](https://ogdf.github.io/doc/ogdf/classogdf_1_1_layout_module.html).
+structures like a [Graph](https://ogdf.github.io/doc/ogdf/classogdf_1_1_graph.html), 
+[GraphAttributes](https://ogdf.github.io/doc/ogdf/classogdf_1_1_graph_attributes.html), 
+then it's possible to apply different types of 
+[layouts](https://ogdf.github.io/doc/ogdf/classogdf_1_1_layout_module.html). Here's a 
+simplified example of what the process of building a graph 
+([full example](https://ogdf.github.io/doc/ogdf/ex-layout.html)):
+
+{% highlight c++ %}
+Graph G;
+GraphAttributes GA(G, 
+    GraphAttributes::nodeGraphics | 
+    GraphAttributes::nodeTemplate);
+
+SugiyamaLayout SL;
+SL.setRanking(new OptimalRanking);
+SL.setCrossMin(new MedianHeuristic);
+
+OptimalHierarchyLayout *ohl = new OptimalHierarchyLayout;
+SL.setLayout(ohl);
+
+SL.call(GA);
+
+GraphIO::write(GA, "output.gml", GraphIO::writeGML);
+GraphIO::write(GA, "output.svg", GraphIO::drawSVG);
+{% endhighlight %}
 
 
 ### Drawing an OGDF diagram with Graphviz <a id="draw-ogdf-gv"></a>
 
-The OGDF is able to generate output in GML and SVG formats. SVG files can be opened by 
-any modern web browser. For GML files I needed to use the 
-[gml2gv](https://graphviz.org/docs/cli/gml2gv/) utility (part of 
-Graphviz) to convert them in to [DOT](https://graphviz.org/doc/info/lang.html) 
-files and eventually into SVG files:
+OGDF can generate output in GML and SVG formats. SVG files can be opened by 
+any modern web browser, for GML files I needed to use 
+[gml2gv](https://graphviz.org/docs/cli/gml2gv/) to convert them to 
+[DOT](https://graphviz.org/doc/info/lang.html) 
+files and eventually into SVG files using 
+[dot](https://graphviz.org/doc/info/command.html), both utilities are part of Graphviz:
 
 ```shell
 # Convert GML into DOT 
@@ -153,7 +175,8 @@ think of on how to leverage OGDF to improve layout of PlantUML diagrams.
 3. PlantUML output formats: https://plantuml.com/de/command-line
 4. <a id="gv-site" href="https://graphviz.org">Graphviz</a>
 5. DOT - https://graphviz.org/doc/info/command.html
-6. gml2gv
+6. DOT Language https://graphviz.org/doc/info/lang.html
+6. gml2gv  https://graphviz.org/docs/cli/gml2gv/
 7. https://en.wikipedia.org/wiki/Planar_graph
 
 
