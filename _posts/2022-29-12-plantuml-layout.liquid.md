@@ -13,7 +13,7 @@ tweaking it. This post is about the current state of diagram
 layouts when using PlantUML.
 
 
-# Bad layouts can make diagrams unusable 
+## Bad layouts can make diagrams unusable 
 
 Producing good-looking diagrams using PlantUML is notoriously difficult; this has been 
 known for a while, e.g.,
