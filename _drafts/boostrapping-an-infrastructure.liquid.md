@@ -225,6 +225,16 @@ Implications/requirements:
 
 ### Cost optimisation
 
+#### Incentives
+
+- when building applications reducing cost is an incentive to operate more efficiently
+- of key importance is the length of the feedback cycle, that is the time it takes for 
+  costs to reflect the efficiency of your operations
+- long feedback cycles make it harder to relate changes in cost to specific 
+  changes made to the infrastructure
+- short cycles allow for higher resolution, narrowing down what actions had 
+  positive/negative cost implications
+
 #### Use of standards improves DR
 
 - it's easier to fix machines when they fail if they are generic, it's hard when each
@@ -249,7 +259,7 @@ Implications/requirements:
 
 #### Boot sequence: diagram 
 
-[link](../assets/diagram/boot-sequence.puml), dependency between tasks
+[link](../assets/diagram/infra-boot-sequence.puml), dependency between tasks
    when
    bootstrapping an infra
 
@@ -286,36 +296,6 @@ Implications/requirements:
 - Deterministic builds: repeatability, automation
 - GitOps:  IaC + (Quality) Gated pipelines (CI/CD)
 
-
-## Other topics
-### Rebuilding generic components is better/easier than refactoring them
-
-- this applies to individual components, not whole infrastructures. Replacing 
-  individual, generic components is in some sense equivalent to refactoring the 
-  infrastructure.
-
-- 28. it's easier to replace existing components with new generic ones, than to adapt
-      the old ones to the new way of working
-1. retrofiting updates to old systems is more work than building a new system
-2. rebuilding is less effort than updating existing systems without automation, i.
-       e., via ad-hoc changes 
-
-   
-### Notoriously absent: networking, monitoring
-
-1. Systems infrastructure: somehow the network is taken for granted, there's almost no
-   mention of the network setup
-- the author says that somehow it was not fully implemented
-- that casts some doubts in my mind about how ready for prod this was for todays 
-  standards where auditing relies so heavily on monitoring and logging of special events
-
-### Configuration Management: convergence vs congruence
-
-43. convergence vs congruence, declarative vs procedural #cm-burgess
-    1. even when you write declarative code, the implementation has to start from a
-       known state, and calculate the sequence of actions to execute, so as a user of
-       the tool, you may not have to write declarative code but as teh developer of the
-       tool you must definitely must
 
 ## Related
 

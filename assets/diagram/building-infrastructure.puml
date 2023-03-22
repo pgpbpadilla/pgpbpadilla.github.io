@@ -4,6 +4,7 @@ title Building an infrastructure
 
 'left to right direction
 skinparam defaultTextAlignment center
+'skinparam linetype polyline
 
 card "All changes \nare code" as code
 note left: Infrastructure as Code
