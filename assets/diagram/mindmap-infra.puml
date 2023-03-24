@@ -1,0 +1,70 @@
+@startmindmap
+
+skinparam defaultTextAlignment center
+
+* Building IT\nInfrastructure
+
+** Development process
+***[#DarkSeaGreen] Code
+*** Evolving infrastructure
+*** Version Control
+**** GitOps
+*****[#Lavender] IaC
+*****[#MediumSpringGreen] CI/CD
+***[#MediumSpringGreen] Continuous Delivery
+***[#MediumSpringGreen] Continuous Integration
+
+
+**[#DarkSeaGreen] All changes are\nCode
+***[#SkyBlue] Automation
+*** Software Defined ...
+**** Data Center
+*****[#Lavender] Infrastructure
+**** Operations
+***** Pipelines
+
+*** Textual\nrepresentation
+****[#Wheat] Composability
+**** Explicit\nknowledge
+***** Knowledge\nmanagement
+
+***[#Plum] Immutable\ninfrastructure
+
+** Avoiding ad-hoc changes
+***[#Plum] Immutable components
+**** Cattle, not pets
+**** Stateless applications
+*** Faster Disaster Recovery
+*** Slower to fix certain bugs
+
+-- Standards
+--- Generic components
+---[#Wheat] Composability
+--- Easy to learn
+--- Easy to fix
+----[#LightPink] Easy Disaster Recovery
+
+-- Reusable
+--- Gold Server
+---- Artefacts repository
+--- Golden Server\n[image]
+---- Template Server
+--- Repeatable
+----[#SkyBlue] Automation
+---- Deterministic
+--- Efficiency
+---- Labor reduction
+---- Cost reduction
+---[#LightPink] Easier Disaster Recovery
+
+
+-- Autonomy
+--- Pull > Push
+--- Autonomous clients
+---- Decentralization
+---- No bottlenecks
+---- Horizontally scalable
+--- Passive [artefact] servers
+
+
+@endmindmap

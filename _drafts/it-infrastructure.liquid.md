@@ -54,3 +54,37 @@ Different methods to implement configuration management for infrastructure:
        known state, and calculate the sequence of actions to execute, so as a user of
        the tool, you may not have to write declarative code but as teh developer of the
        tool you must definitely must
+
+
+### Wholistic thinking
+
+
+#### Boot sequence: diagram
+
+[link](../assets/diagram/infra-boot-sequence.puml), dependency between tasks
+when
+bootstrapping an infra
+
+#### Multiple DCs: private and public
+
+2. Thinking of an infrastructure as a Virtual Machine, rather than a collection of
+   individual hosts
+42. wholistic thinking: the whole DC(s) as a single VM
+    1. this is the idea I would like to extend to multiple dcs with different
+       operating models: IaaS, SaaS, PaaS, DBaaS, etc.
+
+44. centrally managed infra vs self-service infra
+    the article seems to assume that there's a single infra that
+    servres all apps, but today it's easier than ever to provision
+    certain kinds of infra, e.g., vpc, vms, containers, vmis,
+    however a central place for governance (global policies) still
+    has a place as part of the centrally controlled infrastructure
+
+46. ask questions about exending the ideas here to cover
+    operating in a multi-cloud environment, where the
+    private/on-premise DC is just one of many DCs, and in which
+    each DC has different operational models, e.g., public cloud
+    providers offer different methods of interaction, namely,
+    IaaS, PaaS, SaaS, etc.
+
+
