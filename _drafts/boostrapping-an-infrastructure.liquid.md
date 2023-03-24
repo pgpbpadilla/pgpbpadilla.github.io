@@ -179,16 +179,6 @@ Implications/requirements:
 ### Autonomy
 
 
-#### Ownership, central teams, autonomy and duplication of effort
-
-48. finding principles to determine the ownership of specific infrastructure resources
-    1. i find it difficult to tradeoff the benefits of autonomous decentralized teams
-       and the duplication of effort it produces
-    2. i would like to find some principles that help guide the decision on when to
-       consolidate multiple distinct solutions to the same problem into a centralized
-       standardized approach
-
-
 #### Centralization, pull-based workflows
 
 
@@ -223,17 +213,6 @@ Implications/requirements:
 
 #### Pull is better than Push
 
-### Cost optimisation
-
-#### Incentives
-
-- when building applications reducing cost is an incentive to operate more efficiently
-- of key importance is the length of the feedback cycle, that is the time it takes for 
-  costs to reflect the efficiency of your operations
-- long feedback cycles make it harder to relate changes in cost to specific 
-  changes made to the infrastructure
-- short cycles allow for higher resolution, narrowing down what actions had 
-  positive/negative cost implications
 
 #### Use of standards improves DR
 
