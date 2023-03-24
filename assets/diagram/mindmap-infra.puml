@@ -4,20 +4,20 @@ skinparam defaultTextAlignment center
 
 * Building IT\nInfrastructure
 
-** Development process
+** Development\nprocess
 ***[#DarkSeaGreen] Code
 *** Evolving infrastructure
 *** Version Control
 **** GitOps
-*****[#Lavender] IaC
-*****[#MediumSpringGreen] CI/CD
+*****[#Lavender] Infrastructure\nas Code
+*****[#MediumSpringGreen] Quality Gated\nPipelines
 ***[#MediumSpringGreen] Continuous Delivery
 ***[#MediumSpringGreen] Continuous Integration
 
 
-**[#DarkSeaGreen] All changes are\nCode
+**[#DarkSeaGreen] All changes\nare Code
 ***[#SkyBlue] Automation
-*** Software Defined ...
+*** Software\nDefined ...
 **** Data Center
 *****[#Lavender] Infrastructure
 **** Operations
@@ -30,10 +30,10 @@ skinparam defaultTextAlignment center
 
 ***[#Plum] Immutable\ninfrastructure
 
-** Avoiding ad-hoc changes
+** Avoiding\nAd-hoc changes
 ***[#Plum] Immutable components
 **** Cattle, not pets
-**** Stateless applications
+**** Stateless\nApplications
 *** Faster Disaster Recovery
 *** Slower to fix certain bugs
 
@@ -44,9 +44,9 @@ skinparam defaultTextAlignment center
 --- Easy to fix
 ----[#LightPink] Easy Disaster Recovery
 
--- Reusable
+-- Re-use
 --- Gold Server
----- Artefacts repository
+----[#LightCyan] Artefacts repository
 --- Golden Server\n[image]
 ---- Template Server
 --- Repeatable
@@ -60,11 +60,11 @@ skinparam defaultTextAlignment center
 
 -- Autonomy
 --- Pull > Push
---- Autonomous clients
+--- Autonomous\nclients
 ---- Decentralization
 ---- No bottlenecks
 ---- Horizontally scalable
---- Passive [artefact] servers
+---[#LightCyan] Passive [artefact] servers
 
 
 @endmindmap
