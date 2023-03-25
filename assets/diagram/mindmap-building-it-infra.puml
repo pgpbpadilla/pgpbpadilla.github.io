@@ -17,7 +17,7 @@ skinparam defaultTextAlignment center
 
 **[#DarkSeaGreen] All changes\nare Code
 ***[#SkyBlue] Automation
-*** Software\nDefined ...
+*** Software\nDefined...
 **** Data Center
 *****[#Lavender] Infrastructure
 **** Operations
@@ -34,7 +34,7 @@ skinparam defaultTextAlignment center
 ***[#Plum] Immutable components
 **** Cattle, not pets
 **** Stateless\nApplications
-*** Faster Disaster Recovery
+***[#LightPink] Faster Disaster Recovery
 *** Slower to fix certain bugs
 
 -- Standards

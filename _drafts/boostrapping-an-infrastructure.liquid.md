@@ -1,6 +1,6 @@
 ---
 layout: post.liquid
-title:  "On Bootstrapping an Infrastructure"
+title:  "Building IT infrastructure"
 date: 2022-09-04 20:32
 last_updated: 2022-09-04 20:32
 tags: it infrastructure software
@@ -34,19 +34,12 @@ the ideas in Traugott's article and other more recent terminology, so I decided 
 this post and attempt to connect those ideas with their contemporary incarnations. 
 
 
-## Core ideas
+## Development Process
 
 ### Building Infrastructures is a Development Process
 
-[![Building an infrastructure](/assets/svg/traugott98-building-infrastructure.svg)](/assets/svg/traugott98-building-infrastructure.svg)
 
-Figure caption: Diagram sources: 
-Principles for building
-   infrastructures: [link](../assets/diagram/building-infrastructure.puml)
-   The idea is to derive each of the key ideas/concepts in the article from first
-   principles, that should be accepted as self-evident
-
-#### IT infrastructure evolves
+### IT infrastructure evolves
 
 - Infrastructure will change, it needs to constantly adapt to the needs of its users
 - the ability to trace the evolution of an infrastructure gives you the possibility to
@@ -61,11 +54,14 @@ Principles for building
    can be used as a baseline and then adapted to satisfy the
    needs of other infrastructures
 
-#### Version control
+   
+### Version control
 
-### All changes are code 
+#### Infrastructure as Code
 
-#### IaC: Benefits of textual representation, i.e. code
+## All changes are code
+
+### Textual representation
 
 The main idea here is that it makes sense to use a textual representation of the
 desired state of the infrastructure.
@@ -89,6 +85,7 @@ Four Traugott, most of the tasks performed by the infrastructure engineers were 
 configurations were in most cases text files.
 
 - I need to talk about the need to use code, before I can make the case that software
+
 - composability:
     - copy paste, editors, etc make it super easy to compose configuration
     - this is less effort than building a graphical ui that allows the same level of
@@ -102,7 +99,35 @@ configurations were in most cases text files.
       config files, which are textual, therefore the dev tools, which are optimized for
       text fit pretty well, after all confi files are a form of code
 
-#### Avoiding manual/ad-hoc changes
+### Software Defined XXX
+
+- software is increasingly being used to do more things, including the creation of
+  virtualized infra components
+- it's cheaper, faster to evolve, automate, etc
+
+
+### Code is Automation
+
+- encoding desired state/behaviour is a form of automation
+- automatation enables to execute tasks in a repeatable manner, reducing human effort
+- automation is more expensive for smaller infras, but it pays off when:
+    - the infra is big
+    - it changes a lot
+    - the effects of drift are too heavy
+
+#### iac (automation) improves dr
+
+5. enables building lower environments that are very close
+   to a
+   productive one,
+   which
+   may come in handy in certain disaster recovery scenarios, when the lower env is
+   used as a hot standby for the productive infrastructure
+
+### Immutable infrastructure
+
+
+## Avoiding ad-hoc changes
 
 - avoid making ad-hoc changes and prefer updating the template/golden server, then let
   changes propagate
@@ -121,31 +146,9 @@ configurations were in most cases text files.
   reduction of labor means reduction of cost
 
 
+## Standards
 
-#### Software Defined XXX
-
-- software is increasingly being used to do more things, including the creation of
-  virtualized infra components
-- it's cheaper, faster to evolve, automate, etc
-
-#### Automation
-
-
-##### Code is Automation
-
-- encoding desired state/behaviour is a form of automation
-- automatation enables to execute tasks in a repeatable manner, reducing human effort
-- automation is more expensive for smaller infras, but it pays off when:
-    - the infra is big
-    - it changes a lot
-    - the effects of drift are too heavy
-
-#### Infrastructure as Code
-#### Immutable infrastructure
-
-### Artefacts: re-use, re-peat
-
-#### Generic components
+### Generic components
 
 Some ideas are consequences of thinking of a whole DC as a single Virtual Machine. In
 order to make it easier for ourselves to operate, maintain and fix our
@@ -172,20 +175,38 @@ Implications/requirements:
 - Applications need to support this behavior and be able to function properly after
   their host is terminated while in the middle of an operation
 
-#### Re-use: Gold Server, Golden Server
-#### Gold server vs Golden Server
+
+### Use of standards improves DR
+
+- it's easier to fix machines when they fail if they are generic, it's hard when each
+  is configured in a unique way
+- it's easier to fix when the configuration is code, it's hard if it was done ad-hoc
+- makes it easy for users to learn, since everything is in teh same place on every host
+
+
+
+## Re-use
+
+### Artefacts: re-use, re-peat
+### Re-use: Gold Server, Golden Server
+### Gold server vs Golden Server
 
 - one is a repository of artefacts, code, configurations, etc
 - the gold server enables re-use, by hosting re-usable components, such as templates
 - the other represent a code/conf template to create a specific component
 - the golden server enables repeatability, reducing deviations
 
-#### Repeatability: deterministic builds
-
-### Autonomy
+### Repeatability: deterministic builds
 
 
-#### Centralization, pull-based workflows
+#### Automation
+
+### Reduction of labor equals cost reduction
+
+
+## Autonomy
+
+### Centralization, pull-based workflows
 
 
 - clients know when it's the best time to pull updates
@@ -217,38 +238,29 @@ Implications/requirements:
       updates across large appointments.
 
 
-#### Pull is better than Push
+### Pull is better than Push
 
 
-#### Use of standards improves DR
-
-- it's easier to fix machines when they fail if they are generic, it's hard when each
-  is configured in a unique way
-- it's easier to fix when the configuration is code, it's hard if it was done ad-hoc
-- makes it easy for users to learn, since everything is in teh same place on every host
 
 
-#### iac (automation) improves dr
 
-5. enables building lower environments that are very close
-   to a
-   productive one,
-   which
-   may come in handy in certain disaster recovery scenarios, when the lower env is
-   used as a hot standby for the productive infrastructure
 
-#### Reduction of labor equals cost reduction
 
-## Modern terminology
+## Bringing it all together
 
-- IaC: all changes are code
-- Continuous Delivery: gated pipelines, automation
-- Immutable infrastructure: read-only artefacts
-- Cattle, not pets: repeatability, automation (iac), no ad-hoc changes
-- Artefact repository: re-use
-- Deterministic builds: repeatability, automation
-- GitOps:  IaC + (Quality) Gated pipelines (CI/CD)
+[![Building IT infrastructure](/assets/svg/mindmap-building-it-infra.svg)](/assets/svg/mindmap-building-it-infra.svg)
 
+<div style="text-align: center">
+    <figcaption></figcaption>
+</div>
+
+[![Building IT infrastructure](/assets/svg/uml-building-it-infra.svg)](/assets/svg/uml-building-it-infra.svg)
+
+Figure caption: Diagram sources:
+Principles for building
+infrastructures: [link](../assets/diagram/uml-building-it-infra.puml)
+The idea is to derive each of the key ideas/concepts in the article from first
+principles, that should be accepted as self-evident
 
 ## Related
 

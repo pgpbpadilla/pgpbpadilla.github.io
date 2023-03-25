@@ -61,7 +61,7 @@ Different methods to implement configuration management for infrastructure:
 
 #### Boot sequence: diagram
 
-[link](../assets/diagram/infra-boot-sequence.puml), dependency between tasks
+[link](../assets/diagram/traugott98-boot-sequence.puml), dependency between tasks
 when
 bootstrapping an infra
 
