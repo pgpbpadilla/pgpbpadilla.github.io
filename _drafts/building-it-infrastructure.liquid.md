@@ -69,9 +69,9 @@ control tells us that they had the need to trace the evolution of computer progr
 and even whole infrastructures.
 
 Today we harness the power of version control not only to record the history of all 
-changes made to computer software also to plan ahead its future evolution. We can 
+changes made to computer software but also to plan its future evolution. We can 
 develop multiple versions simultaneously and choose the one that fits our needs 
-best, an exercise in artificial selection or sorts. 
+best, an exercise in artificial selection. 
 
 Once a good (sometimes called a "_master_") version has been built, it can be used as the 
 baseline or starting point for future experimentation.
