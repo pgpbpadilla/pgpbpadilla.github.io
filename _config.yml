@@ -73,3 +73,10 @@ toc:
   sublist_class: ''
   item_class: toc-entry
   item_prefix: toc-
+
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      toc: true
