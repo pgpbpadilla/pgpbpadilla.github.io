@@ -34,28 +34,56 @@ the ideas in Traugott's article and other more recent terminology, so I decided 
 this post and attempt to connect those ideas with their contemporary incarnations. 
 
 
-## Development Process
+## Building IT infrastructure is a development process
 
-### Building Infrastructures is a Development Process
+IT infrastructures are built to solve problems that have been identified. A first 
+approach at a solution and implementation provides additional information about the 
+problem, corner cases are identified and a new attempt can be then made to improve the 
+solution.
+
+Most of the time progress is made in incremental steps, building on previous success.
+The process is iterative and rarely the problems or solutions are so completely new 
+that they deserve to be called revolutionary or innovative. 
+
+The pattern of making observations, generating hypotheses, building prototypes, testing 
+hypotheses and measurement the difference between the desired state and the 
+current state is well established in other domains of knowledge.
 
 
-### IT infrastructure evolves
+### IT infrastructures evolve
 
-- Infrastructure will change, it needs to constantly adapt to the needs of its users
-- the ability to trace the evolution of an infrastructure gives you the possibility to
-  learn from the past and make better decisions in the future
-- version controls fills the need to keep a historical record of all the changes
-  made to the infrastructure
-- 41. version control facilitates the evolution of infrastructure
-      and also having different versions of its
-1. creating and destruction of entire Infrastructures becomes
-   more manageable than doing it by hand
-2. having a /master/ version of configuration files is good, it
-   can be used as a baseline and then adapted to satisfy the
-   needs of other infrastructures
+The needs of infrastructure users change and so the infrastructure has to be developed 
+further to solve the new problems. A good accounting of all activities required to 
+build infrastructure can help identify and avoid repeating mistakes. 
 
-   
+Building the next version of the infrastructure requires a bit of _archaeological_ work,
+digging into the past to understand what decisions were made and their effects in the 
+implementation.
+
+
 ### Version control
+
+Contemporary implementations of version control tools teaches us about the things that 
+were important to our predecessors. The fact that there's such a thing as version 
+control tells us that they had the need to trace the evolution of computer programs 
+and even whole infrastructures.
+
+Today we harness the power of version control not only to record the history of all 
+changes made to computer software also to plan ahead its future evolution. We can 
+develop multiple versions simultaneously and choose the one that fits our needs 
+best, an exercise in artificial selection or sorts. 
+
+Once a good (sometimes called a "_master_") version has been built, it can be used as the 
+baseline or starting point for future experimentation.
+
+With the help of [automation](#automation) it's possible to restore a particular state 
+with relative ease. This is useful when it's necessary to change to a version 
+that was more stable, or more performant or that had a different set of behaviors.
+
+The lack of automation puts a limit to how fast we can experiment with different 
+versions, as well as to how complex the infrastructure can be while still being 
+manageable.
+   
 
 #### Infrastructure as Code
 
@@ -239,9 +267,6 @@ Implications/requirements:
 
 
 ### Pull is better than Push
-
-
-
 
 
 
