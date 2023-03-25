@@ -76,6 +76,9 @@ best, an exercise in artificial selection.
 Once a good (sometimes called a "_master_") version has been built, it can be used as the 
 baseline or starting point for future experimentation.
 
+
+#### Automation
+
 With the help of [automation](#automation) it's possible to restore a particular state 
 with relative ease. This is useful when it's necessary to change to a version 
 that was more stable, or more performant or that had a different set of behaviors.
@@ -83,9 +86,32 @@ that was more stable, or more performant or that had a different set of behavior
 The lack of automation puts a limit to how fast we can experiment with different 
 versions, as well as to how complex the infrastructure can be while still being 
 manageable.
-   
 
-#### Infrastructure as Code
+
+#### Integration and Delivery pipelines
+
+Once the code is written and submitted to the code repository, almost every step in 
+the process of delivery working software can be built into an  
+automated pipeline, reducing manual labor and the length of the feedback cycle.
+The remaining manual steps usually consists of integrating human judgment to allow or 
+reject a particular change; the pipelines are gated. 
+
+
+#### Infrastructure as code
+
+Management of infrastructure was and still is a mix of manual work supplemented with 
+automation. As the scale and complexity of infrastructures grows the automated approach 
+becomes more and more relevant, to the point of taking the extreme position of 
+encoding every aspect of managing infrastructure to enable machines to fully operate 
+the infrastructure (semi-)autonomously.
+
+
+#### GitOps
+
+When the infrastructure is coded and the gated pipelines are put to work together...
+
+
+
 
 ## All changes are code
 
