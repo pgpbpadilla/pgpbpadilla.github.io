@@ -2,6 +2,24 @@
 layout: default.liquid
 comments: true
 ---
+<script>
+    (function () {
+        window.addEventListener("DOMContentLoaded", (_) => {
+            let tocTitle = document.querySelector('nav.toc h2');
+            let toc = document.querySelector('nav.toc ul');
+
+            // Hide TOC contents when the TOC title is clicked
+            tocTitle.addEventListener("click", (_) => {
+                if (toc.style.display === 'block') {
+                    toc.style.display = 'none';
+                } else {
+                    toc.style.display = 'block';
+                }
+            });
+        });
+
+    })();
+</script>
 <article itemscope itemtype="http://schema.org/BlogPosting">
 
   <!-- <header class="post-header">
