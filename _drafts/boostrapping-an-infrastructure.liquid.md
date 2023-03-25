@@ -10,15 +10,21 @@ categories: [it, infrastructure, software]
 IT infrastructures are the substrate on which user applications run 
 [[traugott98]](#traugott98). Without the users' need for applications, we wouldn't 
 have to build them. In many cases, it is the success of a user application
-that leads to infrastructure growth.[^1]
+that leads to infrastructure[^1] growth.[^2]  
 
-[^1]: I wonder if there are examples of the converse, 
-    an application ecosystem growing because of the success of 
-    successful infrastructure. Keep in mind that what _infrastructure_ is a 
+[^1]: _Infrastructure_ is a 
     relative term, and it's usually to refer to those applications that support your 
     work. 
 
-    ![Views on IT infrastructure](../assets/images/views-it-infra.png)
+    <div style="text-align: center">
+        <img width="500" 
+            src="/assets/images/views-it-infra.png">
+        <figcaption>Views on IT infrastructure</figcaption>
+    </div>
+
+[^2]: Are examples of the opposite? namely, 
+    an application ecosystem growing because of the success of 
+    successful infrastructure. 
 
 
 A while back I stumbled upon Traugott's article
