@@ -4,8 +4,9 @@ title:  "Building IT infrastructure"
 date: 2022-09-04 20:32
 last_updated: 2022-09-04 20:32
 tags: it infrastructure software
-permalink: /bootstrapping-infrastructure
+permalink: /building-it-infrastructure
 categories: [it, infrastructure, software]
+toc: true
 ---
 IT infrastructures are the substrate on which user applications run 
 [[traugott98]](#traugott98). Without the users' need for applications, we wouldn't 

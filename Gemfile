@@ -4,6 +4,7 @@ gem "jekyll-theme-cayman-blog"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  gem 'jekyll-toc'
   gem "github-pages"
   gem 'jekyll-feed'
   gem 'jekyll-seo-tag'

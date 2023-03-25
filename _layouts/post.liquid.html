@@ -32,7 +32,15 @@ comments: true
     </div>
 
     <div itemprop="articleBody" class="text-justify">
-        {{ content }}
+        <div>
+            <nav id="table-of-contents" class="toc">
+                <h2>Table of contents</h2>
+                {% toc %}
+            </nav>
+            <div id="markdown-content">
+                {{ content }}
+            </div>
+        </div>
     </div>
 
 
