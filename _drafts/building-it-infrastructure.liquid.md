@@ -91,7 +91,7 @@ manageable.
 #### Integration and Delivery pipelines
 
 Once the code is written and submitted to the code repository, almost every step in 
-the process of delivery working software can be built into an  
+the process of delivery working software can be built into an
 automated pipeline, reducing manual labor and the length of the feedback cycle.
 The remaining manual steps usually consists of integrating human judgment to allow or 
 reject a particular change; the pipelines are gated. 
@@ -108,8 +108,11 @@ the infrastructure (semi-)autonomously.
 
 #### GitOps
 
-When the infrastructure is coded and the gated pipelines are put to work together...
-
+When the infrastructure and the delivery pipelines are coded, the work of an 
+engineer is confined to the operation of a version control repository and making a 
+decision when a quality gate in the delivery pipelines requires human 
+intervention. Git is presently a popular version control system, hence this approach 
+is sometimes dubbed [GitOps](#gitops). 
 
 
 
