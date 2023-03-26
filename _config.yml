@@ -52,6 +52,7 @@ exclude:
   - developer/
   - topics/
   - .idea/
+  - vendor
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
