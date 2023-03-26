@@ -7,8 +7,10 @@ comments: true
         window.addEventListener("DOMContentLoaded", (_) => {
             let tocTitle = document.querySelector('nav.toc h2');
             let toc = document.querySelector('nav.toc ul');
+            // hide TOC contents by default
+            toc.style.display = 'none';
 
-            // Hide TOC contents when the TOC title is clicked
+            // toggle TOC contents visibility when the title is clicked
             tocTitle.addEventListener("click", (_) => {
                 if (toc.style.display === 'block') {
                     toc.style.display = 'none';
