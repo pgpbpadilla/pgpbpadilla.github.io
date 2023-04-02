@@ -6,7 +6,6 @@ last_updated: 2022-09-04 20:32
 tags: it infrastructure software
 permalink: /building-it-infrastructure
 categories: [it, infrastructure, software]
-toc: true
 ---
 IT infrastructures are the substrate on which user applications run 
 [[traugott98]](#traugott98). Without the users' need for applications, we wouldn't 
@@ -78,7 +77,7 @@ Once a good (sometimes called a "_master_") version has been built, it can be us
 baseline or starting point for future experimentation.
 
 
-#### Automation
+### Automation
 
 With the help of [automation](#automation) it's possible to restore a particular state 
 with relative ease. This is useful when it's necessary to change to a version 
@@ -89,7 +88,7 @@ versions, as well as to how complex the infrastructure can be while still being
 manageable.
 
 
-#### Integration and Delivery pipelines
+### Integration and delivery pipelines
 
 Once the code is written and submitted to the code repository, almost every step in 
 the process of delivery working software can be built into an
@@ -98,7 +97,7 @@ The remaining manual steps usually consists of integrating human judgment to all
 reject a particular change; the pipelines are gated. 
 
 
-#### Infrastructure as code
+### <a id="iac" href="#iac">Infrastructure as code</a>
 
 Management of infrastructure was and still is a mix of manual work supplemented with 
 automation. As the scale and complexity of infrastructures grows the automated approach 
@@ -107,7 +106,7 @@ encoding every aspect of managing infrastructure to enable machines to fully ope
 the infrastructure (semi-)autonomously.
 
 
-#### GitOps
+### GitOps
 
 When the infrastructure and the delivery pipelines are coded, the work of an 
 engineer is confined to the operation of a version control repository and making a 
@@ -116,92 +115,58 @@ intervention. Git is presently a popular version control system, hence this appr
 is sometimes dubbed [GitOps](#gitops). 
 
 
+## Avoid ad-hoc changes
 
-## All changes are code
+Avoiding ad-hoc (manual) changes results in infrastructure and operations as code.
 
-### Textual representation
+Having central code repositories where desired infrastructure state is defined. It's 
+easier to manage code changes in a single place than it is to manually make the 
+equivalent changes to every component that is already running. 
 
-The main idea here is that it makes sense to use a textual representation of the
-desired state of the infrastructure.
-
-> COMMENT:
-> It will be difficult to make code more attractive than the use of advanced tools, e.g.
-> think of vmware tools, they are uis, but at the same time provide excellent
-> functionality
->
-> There seems to be a different between system administrators that spend their time
-> configuring and managing systems that support and application, and those system admins
-> that support a service/component that is only used by the sysadmins in the upper
-> layers. It's sysadmins all the way down!
->
-> Automation: the degree ROI of automation depends on the speed at which the components
-> evolve. Slower evolving components are safe to automate anc provide great benefits,
-> however, achieving a good enough ROI when automating those components that evolve
-> quickly is more difficult.
-
-Four Traugott, most of the tasks performed by the infrastructure engineers were about finding efficient ways to apply configurations to multiple components. The
-configurations were in most cases text files.
-
-- I need to talk about the need to use code, before I can make the case that software
-
-- composability:
-    - copy paste, editors, etc make it super easy to compose configuration
-    - this is less effort than building a graphical ui that allows the same level of
-      composablility
-        - any ui that does it, will have as a sub-component the same underlying
-          code/configuration
-        - changes to a ui for composing generic components will require more effort
-        - ui makes more sense when the configuration does not change often
-          practices are relevant
-    - maybe making it like this: what you care is the state, state can be captured in
-      config files, which are textual, therefore the dev tools, which are optimized for
-      text fit pretty well, after all confi files are a form of code
-
-### Software Defined XXX
-
-- software is increasingly being used to do more things, including the creation of
-  virtualized infra components
-- it's cheaper, faster to evolve, automate, etc
+If configuration and operations is controlled by code changes, we can 
+forbid ad-hoc changes to running infrastructure. Immutable infrastructure grants an 
+extra layer of protection against configuration drift.
 
 
-### Code is Automation
+### Making all changes code changes or _Infrastructure as Code_
 
-- encoding desired state/behaviour is a form of automation
-- automatation enables to execute tasks in a repeatable manner, reducing human effort
-- automation is more expensive for smaller infras, but it pays off when:
-    - the infra is big
-    - it changes a lot
-    - the effects of drift are too heavy
+Managing infrastructures involves not only physically moving hardware and cabling, 
+but also significant effort in the form of writing or customizing configuration files. 
+Applying configuration to multiple components efficiently is a key task in 
+infrastructure management.  
 
-#### iac (automation) improves dr
-
-5. enables building lower environments that are very close
-   to a
-   productive one,
-   which
-   may come in handy in certain disaster recovery scenarios, when the lower env is
-   used as a hot standby for the productive infrastructure
-
-### Immutable infrastructure
+Configuration files are typically text files with rigid syntax rules, a form of 
+computer programming. It makes sense that infrastructure management practitioners have 
+widely adopted software development practices, treating infrastructure as code. 
 
 
-## Avoiding ad-hoc changes
+### Operations as Code
 
-- avoid making ad-hoc changes and prefer updating the template/golden server, then let
-  changes propagate
-    - you can help yourself by creating **immutable components**, making it harder to
-      change running components than updating the source code
-    - writing and debugging a script is less than the time it takes to change hundreds of
-      clients manually
-- it forces you to make all changes to the code that generates the infra, therefore
-  pushes you in the direction of All changes are code
-- if you have no custom/ad-hoc changes in any of your components then you can
-  destroy them and recreate without losing valuable work
-- ad-hoc changes can fix some bugs faster
-- regular use of ad-hoc changes creates more labor, labor means cost
-- ad-hoc changes generate drift
-- iac allows linearly growing team to manage exponentially growing infrastructures,
-  reduction of labor means reduction of cost
+More and more infrastructure components are also available in virtual form, 
+e.g., Software Defined Networking virtualizes all networking components making 
+it easier to build whole data centers by writing code alone.
+
+This approach is cheaper and makes it easier to evolve whole infrastructures. Not only 
+hardware components can be codified, also the processes associated to their 
+operation can be automated with code, it's not only Infrastructure as Code but 
+Operations as Code.
+
+Automation is expensive, but it's application pays off when the infrastructure is 
+sufficiently large; changes often; or the negative effects of configuration drift are
+significant.
+
+The reduction of human effort as a result of avoiding ad-hoc changes means that labor
+costs also go down. The use of Operations as Code allows a linearly growing team to manage
+exponentially growing infrastructures.
+
+
+### Immutable infrastructure and Disaster Recovery
+
+Automated replacement of components can become a routine task, so long as the replaced
+components are stateless. Since they don't store state they can be treated as immutable.
+
+The easier it is to re-create a given environment, the easier it is to recover from a 
+disaster. Having immutable components means they can be replaced with impunity. 
 
 
 ## Standards
