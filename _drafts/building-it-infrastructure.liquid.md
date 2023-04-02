@@ -169,34 +169,21 @@ The easier it is to re-create a given environment, the easier it is to recover f
 disaster. Having immutable components means they can be replaced with impunity. 
 
 
-## Standards
+## Standardisation
 
-### Generic components
+The use of standard, generic components enables teams to learn more easily how to 
+operate them. Generic components are also easier to fix by simply replacing the 
+misbehaving component for a new one from a trusted source. 
 
-Some ideas are consequences of thinking of a whole DC as a single Virtual Machine. In
-order to make it easier for ourselves to operate, maintain and fix our
-infrastructure, it helps to have standard, generic components.
-This is good, but it also brings about new problems, the components can be _composed_ in a
-many ways, all of which fulfill the user's needs.
+If used in conjunction with automation, standardization makes Disaster Recovery easier 
+and faster. 
 
-In Traugott's words:
+Use of generic components allows for many ways to compose them, in Traugott's words:
 
 > ...although the components of an infrastructure are more or less standard,
 > professional architects tend to arrange them in radically different ways.
 
-Benefits or generic components:
-
-- they are easy to replace
-    - When each component is generic, and there's enough automation, it's easy to destroy a
-      misbehaving component and recreate it from a trusted source.
-- improve disaster recovery
-    - A benefit of this is shorter time to recover from certain types of disasters, and can
-      also protect against compromised components.
-
-Implications/requirements:
-
-- Applications need to support this behavior and be able to function properly after
-  their host is terminated while in the middle of an operation
+to mitigate this effect, standardisation of processes/operations can be of big help.
 
 
 ### Use of standards improves DR
