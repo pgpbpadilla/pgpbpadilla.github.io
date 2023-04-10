@@ -124,8 +124,8 @@ easier to manage code changes in a single place than it is to manually make the
 equivalent changes to every component that is already running. 
 
 If configuration and operations is controlled by code changes, we can 
-forbid ad-hoc changes to running infrastructure. Immutable infrastructure grants an 
-extra layer of protection against configuration drift.
+forbid ad-hoc changes to running infrastructure. [Immutable infrastructure](#immutable) 
+grants an extra layer of protection against configuration drift.
 
 
 ### Making all changes code changes or _Infrastructure as Code_
@@ -160,13 +160,16 @@ costs also go down. The use of Operations as Code allows a linearly growing team
 exponentially growing infrastructures.
 
 
+<a id="immutable"></a>
 ### Immutable infrastructure and Disaster Recovery
 
 Automated replacement of components can become a routine task, so long as the replaced
 components are stateless. Since they don't store state they can be treated as immutable.
 
 The easier it is to re-create a given environment, the easier it is to recover from a 
-disaster. Having immutable components means they can be replaced with impunity. 
+disaster. Having immutable components means they can be replaced with impunity; the 
+motto is _Cattle, not pets!_, where strong attachment to specific instances of our 
+components is discouraged, making replacement less painful. 
 
 
 ## Standardisation
@@ -189,16 +192,33 @@ It's also possible to standardise the way in which generic components are used
 together. However, we must find the balance between making it easy to build quickly 
 and having enough room for experimentation. 
 
-## Re-use
 
-### Artefacts: re-use, re-peat
-### Re-use: Gold Server, Golden Server
-### Gold server vs Golden Server
+## Component reuse
 
-- one is a repository of artefacts, code, configurations, etc
-- the gold server enables re-use, by hosting re-usable components, such as templates
-- the other represent a code/conf template to create a specific component
-- the golden server enables repeatability, reducing deviations
+One of the biggest productivity boosters is the ability to re-use existing components, 
+or solutions for common problems. Having a central repository for reusable components 
+or solution templates is a time-tested approach.
+
+
+### Artefact repository: storing reusable components
+
+Another word for _components_ is _artefacts_ and which makes the purpose of an 
+_Artefacts repository_ self-explanatory, it's a central place to store reusable 
+components. 
+
+Traugott refers to the central artefacts repository as the Gold Server, probably 
+because that's where the golden versions of reusable components are stored.
+
+
+### Gold and Golden servers
+
+The Gold Server is not to be confused with a Golden Server. A Golden Server is 
+one of many components stored in an artefact repository (Gold Server) and typically 
+represents a configuration template for a virtual machine. 
+
+The Golden Server enables clients to easily find and create copies of standard 
+reusable components, including Gold Servers.
+
 
 ### Repeatability: deterministic builds
 
