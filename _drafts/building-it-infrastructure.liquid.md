@@ -97,7 +97,7 @@ The remaining manual steps usually consists of integrating human judgment to all
 reject a particular change; the pipelines are gated. 
 
 
-### <a id="iac" href="#iac">Infrastructure as code</a>
+### Infrastructure as code
 
 Management of infrastructure was and still is a mix of manual work supplemented with 
 automation. As the scale and complexity of infrastructures grows the automated approach 
@@ -173,27 +173,21 @@ disaster. Having immutable components means they can be replaced with impunity.
 
 The use of standard, generic components enables teams to learn more easily how to 
 operate them. Generic components are also easier to fix by simply replacing the 
-misbehaving component for a new one from a trusted source. 
+components using a trusted source; this kind of replacement 
+is not be possible if components are configured in unique ways. 
 
-If used in conjunction with automation, standardization makes Disaster Recovery easier 
-and faster. 
+If used in conjunction with automation, standardisation makes Disaster Recovery easier 
+and faster. Realising the benefits is made easier when infrastructure configuration is 
+managed as code and ad-hoc changes are avoided.  
 
-Use of generic components allows for many ways to compose them, in Traugott's words:
+Standardisation of components brings with it its own downsides:
 
 > ...although the components of an infrastructure are more or less standard,
 > professional architects tend to arrange them in radically different ways.
 
-to mitigate this effect, standardisation of processes/operations can be of big help.
-
-
-### Use of standards improves DR
-
-- it's easier to fix machines when they fail if they are generic, it's hard when each
-  is configured in a unique way
-- it's easier to fix when the configuration is code, it's hard if it was done ad-hoc
-- makes it easy for users to learn, since everything is in teh same place on every host
-
-
+It's also possible to standardise the way in which generic components are used 
+together. However, we must find the balance between making it easy to build quickly 
+and having enough room for experimentation. 
 
 ## Re-use
 
