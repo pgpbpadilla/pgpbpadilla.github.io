@@ -187,6 +187,7 @@ Standardisation of components brings with it its own downsides:
 
 > ...although the components of an infrastructure are more or less standard,
 > professional architects tend to arrange them in radically different ways.
+> -- [[traugott98](#traugott98)]
 
 It's also possible to standardise the way in which generic components are used 
 together. However, we must find the balance between making it easy to build quickly 
