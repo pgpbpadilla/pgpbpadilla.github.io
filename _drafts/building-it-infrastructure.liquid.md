@@ -221,12 +221,31 @@ The Golden Server enables clients to easily find and create copies of standard
 reusable components, including Gold Servers.
 
 
-### Repeatability: deterministic builds
+### Repeatability through component reuse and automation
+
+Repeatability means being able to reproduce a desired state consistently, and it's 
+easier to achieve when there is a library of reusable components and automated processes. 
 
 
-#### Automation
+### Automation makes errors easier to fix
 
-### Reduction of labor equals cost reduction
+Automation reduces the rate of error, or at least ensure that errors are systematic, 
+making them easier to identify and fix.
+
+
+### Reuse brings some costs down
+
+Being able to build using existing standardised components and automated processes has 
+the potential to reduce human labor and has the effect of bringing down the cost of 
+building the next copy of a standard component. 
+
+### Reuse is not always cheap
+
+Automating processes and standardising components is expensive, but it  
+pays off when the frequency of usage is high. Components that are used 
+rarely and obscure processes may not always have cost benefits due to 
+standardisation or automation. However, a complex process can still benefit from use 
+of standards and automation if mistakes are frequent and expensive.
 
 
 ## Autonomy
