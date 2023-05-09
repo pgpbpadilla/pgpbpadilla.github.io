@@ -19,6 +19,8 @@ to explain them to the peoples in teh interweb.
 
 Dieses Jahr, möchte Ich das B2 Niveau zu erreichen.
 
+Um eine meine Posts auf Deutsch zu lesen, click hier: [deutsch](/categories/#deutsch)
+
 ## Learn more about Artificial Intelligence
 
 I have been wanting to get deeper into the topic for many years,
