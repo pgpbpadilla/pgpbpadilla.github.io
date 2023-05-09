@@ -15,9 +15,9 @@ This Blog, which I want to use to practice my writing
 and use as a tool to learn about interesting ideas by trying
 to explain them to the peoples in teh interweb.
 
-## Deutsche Sprache
+## Mein Deutsch verbessern
 
-Dieses Jahr, möchte Ich das B2 Niveau zu erreichen.
+Ich möchte dieses Jahr (2023) das Niveau B2 erreichen.
 
 Um eine meine Posts auf Deutsch zu lesen, click hier: [deutsch](/categories/#deutsch)
 

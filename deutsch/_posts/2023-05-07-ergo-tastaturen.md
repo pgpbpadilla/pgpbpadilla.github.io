@@ -7,6 +7,8 @@ tags: deutsch tagebuch tastatur ergo
 categories: [deutsch, tagebuch, tastatur, ergo]
 toc: false
 ---
+> Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now) 
+
 Seit ein paar Jahren bin ich interessiert an ergonomische
 Tastaturen.
 
