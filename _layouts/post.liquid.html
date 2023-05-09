@@ -58,10 +58,12 @@ comments: true
 
     <div itemprop="articleBody" class="text-justify">
         <div>
-            <nav id="table-of-contents" class="toc">
-                <h2>Table of contents</h2>
-                {% toc %}
-            </nav>
+            {% if page.toc %}
+                <nav id="table-of-contents" class="toc">
+                    <h2>Table of contents</h2>
+                    {% toc %}
+                </nav>
+            {% endif %}
             <div id="markdown-content">
                 {{ content }}
             </div>
