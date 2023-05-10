@@ -2,7 +2,7 @@
 layout: post.liquid
 title:  "Ergonomische Tastaturen"
 date: 2023-05-07 22:00
-last_updated: 2023-05-07 22:00
+last_updated: 2023-05-08 22:00
 tags: deutsch tagebuch tastatur ergo
 categories: [deutsch, tagebuch, tastatur, ergo]
 toc: false
