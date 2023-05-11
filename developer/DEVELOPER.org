@@ -1,0 +1,43 @@
+* Developer tools required to edit the Blog
+
+  This repository contains all sources necessary to publish
+  a Jekyll Blog using Github Pages.
+
+
+  keywords: jekyll blog github
+
+
+** Requirements
+
+   - Docker
+   - [Jekyll 4.1.1+](https://jekyllrb.com/)
+   - Python 3.8.5+
+     - (Optional) - Python Virtual environment, checkout: 
+       [pyenv](https://github.com/pyenv/pyenv) 
+
+
+** Quick Start
+
+   1) Install development tools: `./setup.sh`
+   2) List available tasks: `inv -l` 
+
+
+** Publishing to Github Pages
+
+   1) https://github.com/marketplace/actions/jekyll-deploy-action
+      This Github action is the key ingredient that allows the use of
+      any Gem, and not just the ones whitelisted by Github.
+
+      
+
+** Other Tools used
+
+   1) [Jekyll Docker](https://github.com/envygeeks/jekyll-docker)
+   2) Python Virtual Environment with `pyenv`
+      ```shell script
+      $ pyenv activate
+      ```
+   3) Ruby Virtual Environment with `rvm`
+      ```shell script
+      $ rvm use 2.7.0
+      ```
