@@ -24,9 +24,16 @@
 
 ** Publishing to Github Pages
 
-   1) https://github.com/marketplace/actions/jekyll-deploy-action
-      This Github action is the key ingredient that allows the use of
-      any Gem, and not just the ones whitelisted by Github.
+   1) Site is published to:
+      https://pgpbpadilla.github.io/
+   2) Repo configuration:
+      https://github.com/pgpbpadilla/pgpbpadilla.github.io/settings/pages 
+   3) Published using Github Actions
+      https://github.com/pgpbpadilla/pgpbpadilla.github.io/actions
+      
+      - https://github.com/marketplace/actions/jekyll-deploy-action
+        This Github action is the key ingredient that allows the use of
+        any Gem, and not just the ones whitelisted by Github.
 
       
 
