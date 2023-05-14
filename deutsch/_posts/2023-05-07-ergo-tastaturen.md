@@ -14,16 +14,15 @@ Seit ein paar Jahren bin ich interessiert an ergonomische
 Tastaturen.
 
 Zwölf Jahre habe ich als Programmierer gearbeitet, das bedeutet ich
-musste viel Code schreiben. Code ist einfach text, nur ein
+musste viel Code schreiben. Code ist einfach Text, nur ein
 bisschen anders.
 
-Am Anfang meine Karriere war ich, wie viele andere, ein *hunt and
-peck* Schreiber. Viele meine Kollegen könnten mit Zehn finger
-schreiben, das fande ich sehr Toll. Also, ich habe ein paar Monate
-gebraucht und die Zehnfingermethode gelernt, bis auch ich mit
-jeder Finger schreiben konnte.
+Am Anfang meiner Karriere war ich, wie viele andere, ein *hunt and
+peck* Schreiber. Viele meiner Kollegen könnten mit zehn Finger
+schreiben, das fand ich sehr toll. Innerhalb von ein paar Monate habe ich die 
+Zehnfingermethode gelernt, bis auch ich mit jedem Finger schreiben konnte.
 
-Mit der Zeit war ich daran gewohnt, aber ich musste immer noch oft auf die
+Mit der Zeit bin ich daran gewöhnt, aber ich musste immer noch oft auf die
 Tastatur schauen um die richtige Taste zu tippen, die Nummern und
 Zeichen waren besonders schwierig.
 
