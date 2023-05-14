@@ -31,7 +31,7 @@ Tastatur-Reise und jetzt benutze ich eine getrennte Tastatur (Split
 Keyboard) und benutze auch ein personalisiertes Layout.
 
 Mein nächstes Ziel ist nun, minimal Fingerbewegung zu
-erfolgen. Dafür habe ich mein Layout geändert, um nur mit 34 Tasten
+meistern. Dafür habe ich mein Layout geändert, um nur mit 34 Tasten
 zu arbeiten. Um andere Zeichen zu tippen, benutze ich Layers. Jede Layer hat 
 eine bestimmte Funktion, z.B., es gibt ein Layer für Nummern, Bewegung mit den Pfeilen, 
 Symbole wie `{}`, `()`, usw.  
