@@ -4,12 +4,12 @@ $medium-breakpoint: 42em !default;
 
 // Headers
 $header-heading-color: #fff !default;
-$header-bg-color: #159957 !default;
-$header-bg-color-secondary: #155799 !default;
+$header-bg-color-secondary: rgba(147, 147, 147, 0.56) !default;
+$header-bg-color: rgba(241, 241, 241, 0.5) !default;
 
 // Text
-$section-headings-color: #159957 !default;
-$body-text-color: #606c71 !default;
+$section-headings-color: #00007c !default;
+$body-text-color: #373d3f !default;
 $body-link-color: #1e6bb8 !default;
 $blockquote-text-color: #819198 !default;
 
