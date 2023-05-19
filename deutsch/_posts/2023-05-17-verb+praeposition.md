@@ -5,7 +5,7 @@ date: 2023-05-18 19:50
 last_updated: 2023-05-18 19:50
 tags: deutsch tagebuch verb präposition
 categories: [deutsch, tagebuch, verb, präposition]
-# permalink: /2023-05-17
+permalink: /2023-05-18-verb+praeposition
 toc: false
 ---
 > Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now) 
