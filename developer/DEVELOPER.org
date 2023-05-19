@@ -35,6 +35,21 @@
         This Github action is the key ingredient that allows the use of
         any Gem, and not just the ones whitelisted by Github.
 
+        + *GOTCHA*: currently I have a fork of this action since that
+          was the fastest way to fix an error
+
+          * error was reported in [[https://github.com/jeffreytse/jekyll-deploy-action/issues/64][jekyll-deploy-action#64]]
+
+          * the fix was proposed in: [[https://github.com/jeffreytse/jekyll-deploy-action/issues/64#issuecomment-1554834692][jekyll-deploy-action#64#issuecomment]]
+
+          * I have forked [[https://github.com/malachi-constant/jekyll-deploy-action][malachi-constant/jekyll-deploy-action]] into
+            [[https://github.com/pgpbpadilla/jekyll-deploy-action][pgpbpadilla/jekyll-deploy-action]] without changes
+
+            - I had to create a tag in my fork: [[https://github.com/pgpbpadilla/jekyll-deploy-action/tags][jekyll-deploy-action/tags]]
+
+            - then I updated my workflow definition to call my forked
+              action in [[https://github.com/pgpbpadilla/pgpbpadilla.github.io/blob/master/.github/workflows/jekyll.yml#L23][pgpbpadilla.github.io#jekyll.yml#L23]] 
+
       
 
 ** Other Tools used
