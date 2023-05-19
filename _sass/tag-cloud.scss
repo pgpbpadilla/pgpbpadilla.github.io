@@ -1,0 +1,19 @@
+div#tag-cloud {
+  a {
+    &.set-1 {
+      font-size: small;
+    }
+
+    &.set-3 {
+      font-size: large;
+    }
+
+    &.set-4 {
+      font-size: larger;
+    }
+
+    &.set-5 {
+      font-size: x-large;
+    }
+  }
+}

@@ -44,6 +44,8 @@ $on-laptop:        54em !default;
 // Import partials.
 @import
   "blog/base",
-  "blog/layout"
+  "blog/layout",
+  "toc",
+  "tag-cloud"
 ;
 
