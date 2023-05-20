@@ -2,7 +2,7 @@
 layout: page.liquid
 title: Now
 tagline: What I'm doing now
-permalink: /now.html
+permalink: /now
 ref: now
 order: 2
 ---
@@ -19,7 +19,7 @@ to explain them to the peoples in teh interweb.
 
 Ich möchte dieses Jahr (2023) das Niveau B2 erreichen.
 
-Um eine meine Posts auf Deutsch zu lesen, click hier: [deutsch](/categories/#deutsch)
+Um eine meine Posts auf Deutsch zu lesen, click hier: [deutsch](/tag/deutsch)
 
 ## Learn more about Artificial Intelligence
 
