@@ -20,7 +20,7 @@ jobs:
             ${{ runner.os }}-gems-
 
       # Use GitHub Deploy Action to build and deploy to Github
-      - uses: pgpbpadilla/jekyll-deploy-action@v0.1.0
+      - uses: jeffreytse/jekyll-deploy-action@master
         with:
           provider: 'github'
           token: ${{ secrets.GITHUB_TOKEN }} # It's your Personal Access Token(PAT)
@@ -32,4 +32,5 @@ jobs:
           bundler_ver: '>=0'         # Default is latest bundler version
           cname: ''                  # Default is to not use a cname
           actor: ''                  # Default is the GITHUB_ACTOR
-          pre_build_commands: ''     # Installing additional dependencies (Arch Linux)
+          # Fix for: https://github.com/jeffreytse/jekyll-deploy-action/issues/64
+          pre_build_commands: git config --global http.version HTTP/1.1; git config --global http.postBuffer 524288000;
