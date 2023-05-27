@@ -3,7 +3,7 @@ layout: post.liquid
 title:  "Mit Emacs Org Mode ein Blog Eintrag schreiben"
 date: 2023-05-25 22:50
 last_updated: 2023-05-25 22:50
-tags: deutsch tagebuch org-mode emacs
+tags: deutsch tagebuch org-mode emacs überprüfen
 categories: [deutsch, tagebuch]
 permalink: /2023-05-25-blog-mit-org
 toc: true
