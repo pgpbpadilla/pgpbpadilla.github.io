@@ -52,6 +52,7 @@ plugins:
 #
 exclude:
   - developer/
+  - "*.org"
   - topics/
   - .idea/
   - vendor
