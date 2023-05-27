@@ -3,7 +3,7 @@ layout: post.liquid
 title:  "Mit Emacs Org Mode ein Blog Eintrag schreiben"
 date: 2023-05-25 22:50
 last_updated: 2023-05-25 22:50
-tags: deutsch tagebuch org-mode emacs überprüfen
+tags: deutsch tagebuch org-mode emacs ueberpruefen
 categories: [deutsch, tagebuch]
 permalink: /2023-05-25-blog-mit-org
 toc: true
@@ -35,7 +35,7 @@ möglich, z.B., man kann Texte mit *italics*, **bold face**,
 
 Hier sagen wir etwas anderes als bisher, zum Beispiel, hier können
 wir [so ein Link](#org4c4f79f) erstellen. Der Ziel ist, die Eintrag von Org zu
-Markdown exportieren und die Links überprüfen.
+Markdown exportieren und die Links ueberpruefen.
 
 Ich muss noch ein paar andere Funktionen probieren, nämlich:
 

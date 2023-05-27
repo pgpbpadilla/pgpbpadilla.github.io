@@ -3,7 +3,7 @@ layout: post.liquid
 title:  "Wer zuerst kommt, mahlt zuerst!"
 date: 2023-05-10 21:03
 last_updated: 2023-05-10 21:04
-tags: deutsch tagebuch redewendung priorisierung überprüfen
+tags: deutsch tagebuch redewendung priorisierung ueberpruefen
 permalink: /2023-05-10-wer-zuerst-kommt
 categories: [deutsch, tagebuch, redewendung, priorisierung]
 toc: false

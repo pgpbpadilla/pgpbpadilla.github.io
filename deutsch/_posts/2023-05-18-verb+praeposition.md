@@ -3,7 +3,7 @@ layout: post.liquid
 title:  "Ich schreibe ein Tagebuch auf Deutsch"
 date: 2023-05-18 19:50
 last_updated: 2023-05-18 19:50
-tags: deutsch tagebuch verb präposition überprüfen
+tags: deutsch tagebuch verb präposition ueberpruefen
 categories: [deutsch, tagebuch, verb, präposition]
 permalink: /2023-05-18-verb+praeposition
 toc: false
