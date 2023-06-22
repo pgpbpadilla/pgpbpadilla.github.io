@@ -17,27 +17,32 @@ toc: false
 
 
 * To-do Listen mit Org mode für Emacs
-  
-  Seit vielen Jahren bin ich ein Fan von to-do Listen. Ich habe viele
-  unterschiedlichen varianten probiert, z.B., plain-text Files, Trello
+
+  Seit vielen Jahren bin ich ein Fan von To-Do Listen. Ich habe viele
+  unterschiedliche Varianten probiert, z.B., plain-text files, Trello
   Boards, Atlassian JIRA, Google Wave und andere.
 
-  Oft muss ich ein neues Tool finden und alle meine to-dos migrieren
-  und das finde ich so unangenehm und langweilig. Manchmal ist der
-  grund Kuriosität, ich möchte einfach neue Features, wie Farbige
-  Notizen, oder meine to-dos visuel zu manipulieren, manchmal möchte
-  ich eine neue Methode meine notizen zu organisieren, ich habe immer
-  ein guter Grund.
+  Oft muss ich ein neues Tool finden, um alle meine To-Do's zu
+  übertragen. Das finde ich so unangenehm und langweilig. Manchmal ist
+  der Grund Kuriosität. Ich möchte einfach neue Features, wie farbige
+  Notizen, oder meine to-dos visuell zu manipulieren. manchmal
+  versuche ich durch eine neue Methode meine Notizen zu
+  organisieren. Ich habe immer einen guten Grund.
 
-  In das letzte Jahr oder so bin ich zu faul und müde geworden und
-  möchte jetzt etwas die einfach funktioniert, dass schnell zu
-  bearbeiten ist und das flexible ist. Ich glaube, ich habe etwas mit
-  diesem eingenschaften gefunden, Org mode for Emacs.
+  Im letzten Jahr oder so bin ich zu faul und zu müde geworden und
+  suche jetzt etwas dass einfach funktioniert, dass schnell zu
+  bearbeiten ist und das flexible ist.
 
-  Org mode for Emacs ist ein plug-in für das Text-Editor Emacs und ich
-  habe es langsam und schrittweise adoptiert für alle meine neue to-do
-  Listen. Man muss viele neue Konzepte lernen, nicht nur über Org
-  mode, aber auch über der Emacs Text-Editor, es ist eine sehr
-  flexible un anpassbare Program, dass man kann Stundenlanges
-  herumspielen mit all den Optionen.
+  Ich glaube, ich habe etwas mit diesen Eigenschaften gefunden, Org
+  mode for Emacs.
 
+  Org mode for Emacs ist ein plug-in für den Text-Editor Emacs. Ich
+  habe es langsam und schrittweise für alle meine neuen to-do Listen
+  umgesetzt.
+
+  Man muss viele neue Konzepte lernen, nicht nur über Org mode,
+  sondern auch über den Emacs Text-Editor. Es ist ein sehr flexibles
+  und anpassbares Programm, mit dem man stundenlang mit all den
+  Optionen herumspielen kann.
+
+  
