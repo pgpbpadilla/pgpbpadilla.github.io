@@ -6,8 +6,8 @@
 layout: post.liquid
 title:  "To-do Listen mit Org mode für Emacs"
 date: 2023-05-14 21:35
-last_updated: 2023-05-14 21:36
-tags: deutsch tagebuch org-mode emacs todo ueberpruefen
+last_updated: 2023-06-22 21:51
+tags: deutsch tagebuch org-mode emacs todo
 categories: [deutsch, tagebuch, emacs, org-mode, todo]
 permalink: /2023-05-14-todos-org-mode
 toc: false
