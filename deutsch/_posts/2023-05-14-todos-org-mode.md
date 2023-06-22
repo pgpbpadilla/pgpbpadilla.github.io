@@ -20,19 +20,19 @@ Boards, Atlassian JIRA, Google Wave und andere.
 Oft muss ich ein neues Tool finden, um alle meine To-Do's zu
 übertragen. Das finde ich so unangenehm und langweilig. Manchmal ist
 der Grund Kuriosität. Ich möchte einfach neue Features, wie farbige
-Notizen, oder meine to-dos visuell zu manipulieren. manchmal
+Notizen, oder meine To-Do's visuell zu manipulieren. Manchmal
 versuche ich durch eine neue Methode meine Notizen zu
 organisieren. Ich habe immer einen guten Grund.
 
 Im letzten Jahr oder so bin ich zu faul und zu müde geworden und
-suche jetzt etwas dass einfach funktioniert, dass schnell zu
+suche jetzt etwas das einfach funktioniert, das schnell zu
 bearbeiten ist und das flexible ist.
 
 Ich glaube, ich habe etwas mit diesen Eigenschaften gefunden, Org
 mode for Emacs.
 
 Org mode for Emacs ist ein plug-in für den Text-Editor Emacs. Ich
-habe es langsam und schrittweise für alle meine neuen to-do Listen
+habe es langsam und schrittweise für alle meine neuen To-Do Listen
 umgesetzt.
 
 Man muss viele neue Konzepte lernen, nicht nur über Org mode,
