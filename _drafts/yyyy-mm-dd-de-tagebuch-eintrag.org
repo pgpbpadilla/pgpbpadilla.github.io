@@ -1,3 +1,7 @@
+#+LANGUAGE: de
+#+OPTIONS: toc:nil  broken-links:mark
+
+#+begin_export html
 ---
 layout: post.liquid
 title:  "xxx"
@@ -13,9 +17,10 @@ toc: false
 ---
 
 > Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now)
+#+end_export
 
 
-# Der Titel
-
-Hier ist ein Muster für meine Deutschtagebucheintrag.
+* Der Titel
+  
+  Hier ist ein Muster für meine Deutschtagebucheintrag.
 

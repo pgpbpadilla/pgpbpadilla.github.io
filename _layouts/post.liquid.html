@@ -44,16 +44,10 @@ comments: true
     <div class="post-tags">
         <span>Tags:</span>
         {% if post %}
-            {% assign tags = post.tags %}
+        {{ post | tags }}
         {% else %}
-            {% assign tags = page.tags %}
+        {{ page | tags }}
         {% endif %}
-        {% for tag in tags %}
-            <a href="{{ site.baseurl }}/tag/{{ tag | slugize }}.html">
-                {{ tag }}
-            </a>
-            {% unless forloop.last %}&nbsp;{% endunless %}
-        {% endfor %}
     </div>
 
     <div itemprop="articleBody" class="text-justify">
