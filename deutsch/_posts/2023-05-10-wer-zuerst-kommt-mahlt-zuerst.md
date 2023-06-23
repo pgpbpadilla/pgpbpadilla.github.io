@@ -1,28 +1,36 @@
 ---
 layout: post.liquid
-title:  "Wer zuerst kommt, mahlt zuerst!"
+title:  "Wer zuerst kommt, malt zuerst!"
 date: 2023-05-10 21:03
-last_updated: 2023-05-10 21:04
-tags: deutsch tagebuch redewendung priorisierung ueberpruefen
+last_updated: 2023-06-23 22:05
+tags: deutsch tagebuch redewendung priorisierung
 permalink: /2023-05-10-wer-zuerst-kommt
 categories: [deutsch, tagebuch, redewendung, priorisierung]
 toc: false
 ---
 > Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now) 
 
-Hier is noch ein Eintrag um mein Deutsch zu üben. So weit gibt es kein thema, und so 
-Ich schreibe einfach meine gedanken.
 
-Ich habe eine neue Redewendung gelernt: Wer zuerst kommt, mahlt zuerst!
-Wenn ich zu viel zu tun habe, und andere menschen warten auf mich, dann kann ich diese 
-Redewendung anwenden und meine Aufgaben erledigen, in dieselbe reihenfolge die sie zur 
-mir angekommen haben.
+# Wer zuerst kommt, malt zuerst!
 
-Natürlich gibt es Ausnahmen, weil es gibt bestimmte Aufgaben die wichtiger sind als 
-die andere. Manchmal ist est einfach zu entscheiden welche Aufgabe wichtiger ist, aber 
-manchmal nicht. In diesem Fall muss ich mit meinen Kollegen zusammen arbeiten um eine 
-sinnvolle Priorität für jede Aufgbe zu setzen.
+Hier ist noch ein Eintrag, um mein Deutsch zu üben. So weit gibt es
+kein Thema. Deshalb schreibe ich einfach meine Gedanken auf.
 
-Je mehr Aufgaben, desto wichtiger ist die Priorisierung. Manchmal ist es möglich 
-mehrere Aufgaben parallel auszuführen, man muss auf jeden Fall die Aufgaben analysieren 
-und entscheiden, ob sie Aufgaben unabhängig sind.
+Ich habe eine neue Redewendung gelernt: Wer zuerst kommt, malt
+zuerst!
+
+Wenn ich zu viel zu tun habe, und andere Menschen auf mich warten,
+dann kann ich diese Redewendung anwenden und meine Aufgaben in
+derselben Reihenfolge erledigen, wie ich sie bekommen habe.
+
+Natürlich gibt es Ausnahmen, weil es bestimmte Aufgaben gibt, die
+wichtiger sind als andere. Manchmal ist es einfach zu entscheiden
+welche Aufgabe wichtiger ist, aber manchmal nicht. In diesem Fall
+muss ich mit meinen Kollegen zusammen arbeiten, um eine sinnvolle
+Priorität für jede Aufgabe zu setzen.
+
+Je mehr Aufgaben, desto wichtiger die Priorisierung. Manchmal ist es
+möglich mehrere Aufgaben parallel auszuführen. Man muss auf jeden
+Fall die Aufgaben analysieren und entscheiden, ob sie voneinander
+unabhängig sind.
+
