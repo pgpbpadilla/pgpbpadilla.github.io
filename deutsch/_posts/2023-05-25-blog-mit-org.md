@@ -3,7 +3,7 @@ layout: post.liquid
 title:  "Mit Emacs Org Mode ein Blog Eintrag schreiben"
 date: 2023-05-25 22:50
 last_updated: 2023-05-25 22:50
-tags: deutsch tagebuch org-mode emacs ueberpruefen
+tags: deutsch tagebuch org-mode emacs überprüfen
 categories: [deutsch, tagebuch]
 permalink: /2023-05-25-blog-mit-org
 toc: true
@@ -16,7 +16,7 @@ toc: true
 
 In diesem Eintrag versuche ich ein paar Funktionen zu
 probieren. Normalaweise schreibe ich direkt im Markdown aber dieses
-Mal schreibe ich den Eintrag mit [Emacs Org Mode](#org8630ced) [target abc](#org8630ced) <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.
+Mal schreibe ich den Eintrag mit [Emacs Org Mode](#orge01eaac) [target abc](#orge01eaac) <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.
 
 
 <a id="abs1"></a>
@@ -153,7 +153,7 @@ style="color: blue">Blaue Text</span> schreiben.
 ## Hinweise
 
 1.  [Org Mode Website](https://orgmode.org/): die Offizielles website für Org Mode.
-    <a id="org8630ced"></a>
+    <a id="orge01eaac"></a>
     Es ist auch möglich Fußnoten zu erstellen<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
 
 
