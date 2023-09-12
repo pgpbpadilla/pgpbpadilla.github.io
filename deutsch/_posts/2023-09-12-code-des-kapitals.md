@@ -1,14 +1,14 @@
 ---
 layout: post.liquid
 title:  "Der Code des Kapitals"
-date: 2023-09-12 20:18
-last_updated: 2023-09-12 20:18
+date: 2023-09-11 20:18
+last_updated: 2023-09-11 20:18
 tags:
   - deutsch
   - tagebuch
   - überprüfen
 categories: [deutsch, tagebuch]
-permalink: /2023-09-12-code-des-kapitals
+permalink: /2023-09-11-code-des-kapitals
 toc: false
 ---
 
