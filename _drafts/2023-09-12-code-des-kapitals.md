@@ -17,25 +17,25 @@ toc: false
 
 # Der Code des Kapitals
 
-Ich höre gerade *[The Code of Capital](https://www.audible.com/pd/The-Code-of-Capital-Audiobook/1541431898)* von Katharina Pistor, der Buch
-handelt sich über wie Menschen der Gesetz benutzen haben, um
-viele Dinge als Kapital zu codieren.
+Ich höre gerade *[The Code of Capital](https://www.audible.com/pd/The-Code-of-Capital-Audiobook/1541431898)* von Katharina Pistor. Das Buch
+handelt davon, wie Menschen das Gesetz nutzen, um viele Dinge als
+Kapital zu codieren.
 
-Die legalische Module wurden über Jahrzehnte entwickelt und nach
-jede Hindernis verbessert. Diese Module sind immer wieder da, wenn
-neue Kategorien von Vermögenswerte erfinden sind.
+Die rechtlichen Module wurden über Jahrzehnte entwickelt und immer
+weiter verbessert. Diese Module sind immer dann präsent, wenn neue
+Kategorien von Vermögenswerten erfunden werden.
 
-Nach eine Erfindung haben die Erfindern eine große Motivation, um
-ihre Erfindung zu von andere zu schützen, und dann die Gewinne
+Nach einer Erfindung haben die Erfinder eine große Motivation, ihre
+Erfindung vor anderen zu schützen und dann die Gewinne zu
 realisieren.
 
-Uhrsprunglig war der Land der Hauptvermögenswerte die jemand als Kapital
-codieren konnte. Viel ist geändert und heutzutage kan mann auch
-Ideen, Methoden und andere abstrakte Ideen auch als Kapital
-kodieren.
+Ursprünglich war Land das Hauptvermögen, das jemand als Kapital
+codieren konnte. Vieles hat sich verändert, und heutzutage kann man
+auch Ideen, Methoden und andere abstrakte Konzepte als Kapital
+codieren.
 
-Damals, konnte man um das Land Zäune zu bauen und andere
-aussperren. Heute kann man das gleiche mit Ideen, z.B. mit
-Patenten. Die Patenteinhaber kann andere Menschen aussperren und die
-Vorteile ihre Idee allein zu genießen.
+Früher konnte man Zäune um das Land bauen und andere
+aussperren. Heute kann man dasselbe mit Ideen tun, zum Beispiel mit
+Patenten. Die Patentinhaber können andere Menschen aussperren und
+die Vorteile ihrer Idee allein genießen.
 
