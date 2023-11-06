@@ -5,16 +5,16 @@
 ---
 layout: post.liquid
 title:  "ZSA's Voyager, part 1"
-date: 2023-11-06 Mo 19:20
-last_updated: 2023-11-06 Mo 19:20
+date: 2023-11-05 Mo 19:20
+last_updated: 2023-11-05 Mo 19:20
 tags:
-  - kbd
-  - keyboard
   - journal
+  - kbd
   - zsa
   - voyager
-categories: [journal, kbd]
-#permalink: /2023-05-25-xxx
+  - hobby
+categories: [journal, hobby, kbd]
+permalink: /2023-11-05-zsa-voyager-pt1
 toc: false
 ---
 
