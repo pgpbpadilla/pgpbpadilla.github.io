@@ -1,6 +1,6 @@
 ---
 layout: post.liquid
-title:  "ZSA's Voyager, part 1"
+title:  "From ZSA's Moonlander to Voyager, part 1"
 date: 2023-11-05 Mo 19:20
 last_updated: 2023-11-05 Mo 19:20
 tags:
@@ -14,11 +14,11 @@ permalink: /2023-11-05-zsa-voyager-pt1
 toc: false
 ---
 
-
-# ZSA's Voyager, part 1
-
 I had only one goal, to replicate my Moonlander layout in the
 Voyager and it took longer than I had expected.
+
+
+# From ZSA's Moonlander to Voyager, part 1
 
 I already have a good setup for the Moonlander and I wanted to
 simply copy-paste my Moonlander layout in the Voyager. I use a 34
