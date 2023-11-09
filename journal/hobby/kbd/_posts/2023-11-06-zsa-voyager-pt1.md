@@ -26,13 +26,13 @@ key layout inspired by the Ferris Sweep. This layout fits perfectly
 into both the Moonlander and the Voyager and somehow I expected that
 it would be possible to just drag-and-drop my layout.
 
-Oryx lacks this ability to easly transfer a Moonlander layout into
+Oryx lacks this ability to easily transfer a Moonlander layout into
 the Voyager. In the end I had to configure the Voyager's entire
 layout by hand, key by key, slowly and painfully. 
 
 It could have been worse, I knew exactly what each key should do, so
 I was able to almost mindlessly replicate each key assignment
-withouth thinking too much.
+without thinking too much.
 
 I would summarize this experience as follows:
 
@@ -111,12 +111,12 @@ The sequence goes like this:
 3.  **Focus on task**
     1.  Clock in: `C-c C-x C-i`
     2.  Go to task: `RET`
-    3.  Narrow to subtree: `C-x n s`
+    3.  Narrow to sub tree: `C-x n s`
     4.  Delete other windows: `C-x 1`
 
 Now, the important part is **Focus on task**. I wanted to create a
 macro to capture this pattern but this would exceed the maximum
-lenght allowed in Oryx. 
+length allowed in Oryx. 
 
 I found a workaround, but I paid the price in time since I had to
 read some Lisp code and the Org mode docs, which was more
@@ -138,15 +138,15 @@ than I was willing to commit to at the beginning:
 ## Conclusions
 
 -   The Voyager looks amazing, feels amazing and is tiny, compared to
-    the moonlander
+    the Moonlander
 -   It's great that you don't need to carry an Allen key and a paper
-    clip everytime you change locations
+    clip every time you change locations
 -   I love not having to worry if this is the last time I can unfold
     the thumb clusters and have them still work
 -   I was skeptical about the lack of wrist support, however the
     Voyager is so thin that I don't miss them at all
 -   There is room for improvement in terms of:
-    -   layout reusability/transferability between size-compatible
+    -   layout re-usability/transferability between size-compatible
         keyboards
     -   less tedious and keyboard friendly ways to edit key assignments
 
