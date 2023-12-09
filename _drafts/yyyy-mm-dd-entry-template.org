@@ -1,17 +1,21 @@
 #+LANGUAGE: en
 
-#+begin_comment Explain: OPTIONS
-1) Do not generate Org TOC:
+#+begin_comment
+1) =toc:nil=: Do not generate Org TOC:
    https://orgmode.org/manual/Table-of-Contents.html
-2) Continue export even when there are broken links
+2) =broken-links=: Continue export even when there are broken links 
    https://orgmode.org/manual/Export-Settings.html
 #+end_comment
 #+OPTIONS: toc:nil  broken-links:mark
 
+#+begin_comment
+Jekyll front matter:
+https://jekyllrb.com/docs/front-matter/
+#+end_comment
 #+begin_export html
 ---
 layout: post.liquid
-title:  "REPLACEME"
+title:  "Template Post title"
 date: 2023-10-06 Mo 19:20
 last_updated: 2023-10-06 Mo 19:20
 tags:
@@ -25,7 +29,59 @@ toc: false
 #+end_export
 
 
-* REPLACEME
+Summary of the Post goes here. This will be shown as the teaser of the
+Post. 
+
+
+* Invisible heading: [[id:2945C2A7-5513-4C40-B49B-F11F3048F3EF][explanation]]
   
-  SOMETEXT
+  Here begins the content of the Post.
+
+  
+** Section 1
+
+   some more stuff
+   
+
+
+* INFO Level 1 heading is invisible                                :noexport:
+  CLOSED: [2023-12-09 Sa 23:07]
+  :PROPERTIES:
+  :ID:       2945C2A7-5513-4C40-B49B-F11F3048F3EF
+  :END:
+  :LOGBOOK:
+  - CLOSING NOTE [2023-12-09 Sa 23:07]
+  :END:
+
+  #+begin_comment
+  This heading will not be exported, because of the =noexport= tag.
+  #+end_comment
+
+  The title of the Post will be the Level 1 (H1) heading. In
+  Markdown, as well as in HTML sites there should be a single H1
+  element. Hence we hide the second onde.
+
+  The code that hides the level 1 heading (H1) is:
+   
+  #+begin_src bash :results verbatim
+    ack --group -A 4 --ignore-dir _site --ignore-dir _drafts "ref:hide:level1" ../
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+  ../_layouts/default.liquid.html
+  81:    <!-- ref:hide:level1: -->
+  82-    <h1 class="project-name">{{ page-title }}</h1>
+  83-    <h2 class="project-tagline">{{ page-tagline }}</h2>
+  84-    {% if page.layout == 'home' and site.github.is_project_page %}
+  85-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
+
+  ../_sass/jekyll-theme-cayman-blog.scss
+  242:  // ref:hide:level1:heading:
+  243-  // There should only be one h1 in visible in the page
+  244-  // In the current theme, the page-heading already contains
+  245-  // a h1, therefore we hide this one
+  246-  // see: _layouts/default.liquid.html:<section class="page-header">
+  #+end_example
+
 
