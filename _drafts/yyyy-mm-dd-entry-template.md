@@ -15,12 +15,7 @@ Summary of the Post goes here. This will be shown as the teaser of the
 Post. 
 
 
-# Invisible heading: [explanation](yyyy-mm-dd-entry-template.md)
+## abc
 
-Here begins the content of the Post.
-
-
-## Section 1
-
-some more stuff
+abc
 

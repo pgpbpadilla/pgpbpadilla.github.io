@@ -239,15 +239,6 @@ a {
     color: $section-headings-color;
   }
 
-  // ref:hide:level1:heading:
-  // There should only be one h1 in visible in the page
-  // In the current theme, the page-heading already contains
-  // a h1, therefore we hide this one
-  // see: _layouts/default.liquid.html:<section class="page-header">
-  h1 {
-    display: none;
-  }
-
   p {
     margin-bottom: 1em;
   }

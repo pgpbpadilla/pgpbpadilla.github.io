@@ -1,6 +1,5 @@
 #+LANGUAGE: en
 
-
 #+begin_comment
 1) Do not generate Org TOC:
    https://orgmode.org/manual/Table-of-Contents.html
@@ -37,61 +36,58 @@ blocking me from completing my current task. My [[https://github.com/pgpbpadilla
 saved the day recently, so it deserves a mention here.
 
 
-* Invisible heading
+I accidentally upgraded all my Homebrew packages with:
 
-  I accidentally upgraded all my Homebrew packages with:
+#+begin_example bash
+brew upgrade
+#+end_example
 
-  #+begin_example bash
-  brew upgrade
-  #+end_example
+Later I noticed that saving [[https://orgmode.org/worg/org-tutorials/encrypting-files.html][encrypted files in Emacs]] was [[https://dev.gnupg.org/T6481][not
+working]]. Anytime I tried saving changes Emacs would hang.
 
-  Later I noticed that saving [[https://orgmode.org/worg/org-tutorials/encrypting-files.html][encrypted files in Emacs]] was
-  [[https://dev.gnupg.org/T6481][not working]]. Anytime I tried saving
-  changes Emacs would hang.
+After googling I found that others were having the same issue after
+upgrading their [[https://www.gnupg.org/][GnuPG]] package.
 
-  After googling I found that others were having the same issue after
-  upgrading their [[https://www.gnupg.org/][GnuPG]] package.
+I was able to fix the problem after following [[https://stackoverflow.com/a/76404609/400544][instructions from
+StackOverflow]]. However, that didn't last, I ran into the same
+trouble with my work computer. This time it was different, I had
+updated my setup to pin the [[https://semver.org/][minor version]] of GnuPG to 2.2, so I was
+surprised that even though the /correct/ version was installed, Emacs
+would still hang during encryption.
 
-  I was able to fix the problem after following
-  [[https://stackoverflow.com/a/76404609/400544][instructions from
-  StackOverflow]]. However, that didn't last, I ran into the same
-  trouble with my work computer. This time it was different, I had
-  updated my setup to pin the [[https://semver.org/][minor version]] of GnuPG to 2.2, so I was
-  surprised that even though the /correct/ version was installed,
-  Emacs would still hang during encryption.
+The difference was that my personal and work computers were using
+different PATCH versions:
 
-  The difference was that my personal and work computers were using
-  different PATCH versions:
+- Work: *2.2.42*
+- Personal: *2.2.41*
 
-  - Work: *2.2.42*
-  - Personal: *2.2.41*
 
-  Homebrew does not provide [[https://docs.brew.sh/Versions][versioned formulas]] for different PATCH
-  versions of a package, so I couldn't use:
+Homebrew does not provide [[https://docs.brew.sh/Versions][versioned formulas]] for different PATCH
+versions of a package, so I couldn't use:
 
-  #+begin_example bash
+#+begin_example bash
+brew install gnupg@2.2.41
+#+end_example
+
+I once had a similar situation, I needed to pin the version of package
+with no versioned formula. To do that, I created a personal [[https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap][Homebrew
+tap]] and defined a formula for the desired package.
+
+To fix my configuration, I found the [[https://formulae.brew.sh/formula/gnupg@2.2][formula for gnupg@2.2]] and [[https://github.com/pgpbpadilla/homebrew-pgpb/blob/master/Formula/gnupg%402.2.41.rb][tweaked
+it]], so that it installed version 2.2.41. This worked fine, the main
+downside was that the install time got longer since the package is
+built from sources, no biggie.
+
+I decided to spend the time to write this since it's the second time
+my personal tap has saved the day. So if you're GnuPG is broken in the
+same way you can use it too!
+
+#+begin_src bash
+  brew tap pgpbpadilla/pgpb
   brew install gnupg@2.2.41
-  #+end_example
+#+end_src
 
-  I once had a similar situation, I needed to pin the version of
-  package with no versioned formula. To do that, I created a personal
-  [[https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap][Homebrew tap]] and defined a formula for the desired package.
-
-  To fix my configuration, I found the [[https://formulae.brew.sh/formula/gnupg@2.2][formula for gnupg@2.2]] and
-  [[https://github.com/pgpbpadilla/homebrew-pgpb/blob/master/Formula/gnupg%402.2.41.rb][tweaked it]], so that it installed version 2.2.41. This worked fine,
-  the main downside was that the install time got longer since the
-  package is built from sources, no biggie.
-
-  I decided to spend the time to write this since it's the second
-  time my personal tap has saved the day. So if you're GnuPG is broken
-  in the same way you can use it too!
-
-  #+begin_src bash
-    brew tap pgpbpadilla/pgpb
-    brew install gnupg@2.2.41
-  #+end_src
-
-  Sources are in Github: [[https://github.com/pgpbpadilla/homebrew-pgpb][pgpbpadilla/homebrew-pgpb]]. 
+Sources are in Github: [[https://github.com/pgpbpadilla/homebrew-pgpb][pgpbpadilla/homebrew-pgpb]].
 
 
 
