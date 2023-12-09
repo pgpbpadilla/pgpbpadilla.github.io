@@ -25,7 +25,7 @@ tags:
   - gnupg
   - emacs
 categories: [tech, journal]
-#permalink: /2023-12-08-personal-homebrew-tap
+permalink: /2023-12-08-personal-homebrew-tap
 toc: false
 ---
 
