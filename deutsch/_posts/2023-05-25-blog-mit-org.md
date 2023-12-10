@@ -11,12 +11,9 @@ toc: true
 
 > Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now)
 
-
-# Mit Emacs Org Mode ein Blog Eintrag schreiben
-
 In diesem Eintrag versuche ich ein paar Funktionen zu
 probieren. Normalaweise schreibe ich direkt im Markdown aber dieses
-Mal schreibe ich den Eintrag mit [Emacs Org Mode](#orge01eaac) [target abc](#orge01eaac) <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.
+Mal schreibe ich den Eintrag mit [Emacs Org Mode](#orgc540556) [target abc](#orgc540556) <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.
 
 
 <a id="abs1"></a>
@@ -153,11 +150,8 @@ style="color: blue">Blaue Text</span> schreiben.
 ## Hinweise
 
 1.  [Org Mode Website](https://orgmode.org/): die Offizielles website für Org Mode.
-    <a id="orge01eaac"></a>
+    <a id="orgc540556"></a>
     Es ist auch möglich Fußnoten zu erstellen<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
-
-
-## Fußnoten
 
 
 # Fu&szlig;noten

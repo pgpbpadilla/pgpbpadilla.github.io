@@ -1,4 +1,16 @@
 #+LANGUAGE: de
+
+#+begin_comment
+When exporting, do not promote level 2 headers to level 1.
+https://emacs.stackexchange.com/q/76544/11978
+
+This only works if the variable =org-export-allow-bind-keywords= is
+set to =t=. See Emacs config: [[https://github.com/pgpbpadilla/dotfiles/commit/8a78eb8330c74a0a883ad9b5b6cb8186890f028c][git:sha:8a78eb8]]
+=ack org-export-allow-bind-keywords ~/dotfiles=
+#+end_comment
+#+BIND: org-md-toplevel-hlevel 2
+
+
 #+OPTIONS: toc:nil  broken-links:mark
 
 #+begin_export html
@@ -16,18 +28,6 @@ toc: true
 > Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now)
 #+end_export
 
-* Mit Emacs Org Mode ein Blog Eintrag schreiben                     
-  CLOSED: [2023-05-26 Fr 22:54] SCHEDULED: <2023-05-26 Fr>
-  :LOGBOOK:
-  CLOCK: [2023-05-27 Sa 20:26]--[2023-05-27 Sa 21:12] =>  0:46
-  CLOCK: [2023-05-27 Sa 11:33]--[2023-05-27 Sa 20:26] =>  8:53
-  - CLOSING NOTE [2023-05-26 Fr 22:54]
-  CLOCK: [2023-05-26 Fr 22:25]--[2023-05-26 Fr 22:54] =>  0:29
-  CLOCK: [2023-05-26 Fr 21:54]--[2023-05-26 Fr 22:25] =>  0:31
-  CLOCK: [2023-05-26 Fr 21:44]--[2023-05-27 Sa 11:03] => 13:19
-  :END:
-  
-   
   In diesem Eintrag versuche ich ein paar Funktionen zu
   probieren. Normalaweise schreibe ich direkt im Markdown aber dieses
   Mal schreibe ich den Eintrag mit [[target][Emacs Org Mode]] [[target][target abc]] [fn:abc].
@@ -196,9 +196,6 @@ toc: true
       Es ist auch möglich Fußnoten zu erstellen[fn:test]
 
 
-
-   
-** Fußnoten
 
    
 [fn:abc] Ein Beispiel von ein Fußnote mit Org Mode. Leider ist der
