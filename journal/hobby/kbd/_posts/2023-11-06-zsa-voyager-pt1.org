@@ -1,5 +1,15 @@
 #+LANGUAGE: en
 
+#+begin_comment
+When exporting, do not promote level 2 headers to level 1.
+https://emacs.stackexchange.com/q/76544/11978
+
+This only works if the variable =org-export-allow-bind-keywords= is
+set to =t=. See Emacs config: [[https://github.com/pgpbpadilla/dotfiles/commit/8a78eb8330c74a0a883ad9b5b6cb8186890f028c][git:sha:8a78eb8]]
+=ack org-export-allow-bind-keywords ~/dotfiles=
+#+end_comment
+#+BIND: org-md-toplevel-hlevel 2
+
 #+begin_comment Explain: OPTIONS
 1) Do not generate Org TOC:
    https://orgmode.org/manual/Table-of-Contents.html
@@ -31,35 +41,33 @@ I had only one goal, to replicate my [[https://www.zsa.io/moonlander/][Moonlande
 [[https://www.zsa.io/voyager/][Voyager]] and it took longer than I had expected.
 
   
-* From ZSA's Moonlander to Voyager, part 1
+I already have a good setup for the [[https://www.zsa.io/moonlander/][Moonlander]] and I wanted to
+simply copy-paste my Moonlander layout in the [[https://www.zsa.io/voyager/][Voyager]]. I use a 34
+key [[id:D392DD6B-C39F-44D9-85FB-0B9FDC719C6F][layout]] inspired by the [[https://github.com/davidphilipbarr/Sweep][Ferris Sweep]]. It fits perfectly into both
+the Moonlander and the Voyager boards and I expected it would be
+possible to simply /transfer/ my layout from one board to the
+other, I was wrong.
+
+[[https://www.zsa.io/oryx/][Oryx]] lacks the ability to transfer a Moonlander layout to
+the Voyager. In ended up configuring my Voyager
+layout from scratch, key by key, slowly and painfully. 
+
+It could have been worse. I knew exactly what each key should do, so 
+I was able to almost mindlessly replicate each key assignment
+without thinking too much.
   
-  I already have a good setup for the [[https://www.zsa.io/moonlander/][Moonlander]] and I wanted to
-  simply copy-paste my Moonlander layout in the [[https://www.zsa.io/voyager/][Voyager]]. I use a 34
-  key [[id:D392DD6B-C39F-44D9-85FB-0B9FDC719C6F][layout]] inspired by the [[https://github.com/davidphilipbarr/Sweep][Ferris Sweep]]. It fits perfectly into both
-  the Moonlander and the Voyager boards and I expected it would be
-  possible to simply /transfer/ my layout from one board to the
-  other, I was wrong.
+I would summarize this experience as follows:
 
-  [[https://www.zsa.io/oryx/][Oryx]] lacks the ability to transfer a Moonlander layout to
-  the Voyager. In ended up configuring my Voyager
-  layout from scratch, key by key, slowly and painfully. 
+1. there is no keyboard friendly to use Oryx
+2. you cannot reuse a Moonlander layout for the Voyager
+   - this means that your layouts are bound to become out of
+     sync :'(
+3. you cannot duplicate a key using Oryx
+   - swapping keys is possible, so I'm guessing copying/duplicating
+     a key should be easy to add to Oryx
+4. I need macros that are longer than Oryx allows
 
-  It could have been worse. I knew exactly what each key should do, so 
-  I was able to almost mindlessly replicate each key assignment
-  without thinking too much.
-  
-  I would summarize this experience as follows:
 
-   1. there is no keyboard friendly to use Oryx
-   2. you cannot reuse a Moonlander layout for the Voyager
-      - this means that your layouts are bound to become out of
-        sync :'(
-   3. you cannot duplicate a key using Oryx
-      - swapping keys is possible, so I'm guessing copying/duplicating
-        a key should be easy to add to Oryx
-   4. I need macros that are longer than Oryx allows
-
-   
 ** Duplicating a layout: no can do
 
    I expected to be able to export my Moonlander layout and then
@@ -196,8 +204,6 @@ I had only one goal, to replicate my [[https://www.zsa.io/moonlander/][Moonlande
     #+end_export
 
 
-
-** Some footnotes
 
 
 [fn:2] [[https://www.reddit.com/r/Moonlander/comments/16avdb5/sharing_a_layout_between_different_zsa_models/][Sharing a layout between different ZSA models]]
