@@ -10,9 +10,6 @@ toc: false
 ---
 > Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now) 
 
-
-# To-do Listen mit Org mode für Emacs
-
 Seit vielen Jahren bin ich ein Fan von To-Do Listen. Ich habe viele
 unterschiedliche Varianten probiert, z.B., plain-text files, Trello
 Boards, Atlassian JIRA, Google Wave und andere.
