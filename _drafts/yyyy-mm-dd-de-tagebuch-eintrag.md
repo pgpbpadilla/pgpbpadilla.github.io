@@ -14,8 +14,5 @@ toc: false
 
 > Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now)
 
-
-# Der Titel
-
 Hier ist ein Muster für meine Deutschtagebucheintrag.
 

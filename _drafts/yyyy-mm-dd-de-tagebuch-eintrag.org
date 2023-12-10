@@ -20,7 +20,5 @@ toc: false
 #+end_export
 
 
-* Der Titel
-  
-  Hier ist ein Muster für meine Deutschtagebucheintrag.
+Hier ist ein Muster für meine Deutschtagebucheintrag.
 
