@@ -1,0 +1,17 @@
+#+BIND: org-md-toplevel-hlevel 2
+
+Post summary or tagline.
+
+** level 1
+
+   Post starts here. [fn:1]
+
+   
+*** level2
+
+    lorem ipsum
+
+
+** Footnotes
+
+[fn:1] a footnote 
