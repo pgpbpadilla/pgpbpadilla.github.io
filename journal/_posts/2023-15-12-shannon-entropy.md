@@ -8,11 +8,11 @@ tags:
   - math
   - information
 categories: [journal, math]
-#permalink: /2023-05-25-xxx
+permalink: /2023-15-12-shannon-entropy
 toc: false
 ---
 
-Shannon's entropy is relative to the receiver. Two distinct receivers
+[Shannon's entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)) is relative to the receiver. Two distinct receivers
 with different knowledge and expectations about the information source
 would calculate different probabilities for each message.
 
