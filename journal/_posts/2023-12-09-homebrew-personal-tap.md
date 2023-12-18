@@ -1,6 +1,6 @@
 ---
 layout: post.liquid
-title: "Homebrew package upgrade breaking stuff an how to deal with it"
+title: "Homebrew package upgrade breaking stuff and how to deal with it"
 date: 2023-12-08 Sa 11:01
 last_updated: 2023-12-09 Sa 17:15
 tags:
