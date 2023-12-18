@@ -12,7 +12,7 @@ tags:
   - computer
   - definition
 categories: [journal, computer]
-#permalink: /2023-05-25-xxx
+permalink: /2023-12-17-what-is-a-computer
 toc: true
 ---
 
@@ -20,9 +20,7 @@ toc: true
 
 
 Recently I have been asking colleagues and friends questions about how
-what they think a computer is. It's a bit strange that I can usually
-turn the answers into more questions to the point where a computer is
-not what they thought it was.
+what they think a computer is. It's not so simple to define.
 
 
 ** Programmability is optional
