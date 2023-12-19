@@ -1,16 +1,4 @@
 #+LANGUAGE: de
-
-#+begin_comment
-When exporting, do not promote level 2 headers to level 1.
-https://emacs.stackexchange.com/q/76544/11978
-
-This only works if the variable =org-export-allow-bind-keywords= is
-set to =t=. See Emacs config: [[https://github.com/pgpbpadilla/dotfiles/commit/8a78eb8330c74a0a883ad9b5b6cb8186890f028c][git:sha:8a78eb8]]
-=ack org-export-allow-bind-keywords ~/dotfiles=
-#+end_comment
-#+BIND: org-md-toplevel-hlevel 2
-
-
 #+OPTIONS: toc:nil  broken-links:mark
 
 #+begin_export html
@@ -25,176 +13,173 @@ permalink: /2023-05-25-blog-mit-org
 toc: true
 ---
 
-> Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now)
 #+end_export
 
-  In diesem Eintrag versuche ich ein paar Funktionen zu
-  probieren. Normalaweise schreibe ich direkt im Markdown aber dieses
-  Mal schreibe ich den Eintrag mit [[target][Emacs Org Mode]] [[target][target abc]] [fn:abc].
+In diesem Eintrag versuche ich ein paar Funktionen zu
+probieren. Normalaweise schreibe ich direkt im Markdown aber dieses
+Mal schreibe ich den Eintrag mit [[target][Emacs Org Mode]] [[target][target abc]] [fn:abc].
 
   
-** Hier is eine neue Abschnitt
-   :PROPERTIES:
-   :CUSTOM_ID: abs1
-   :END:
+* Hier is eine neue Abschnitt
+  :PROPERTIES:
+  :CUSTOM_ID: abs1
+  :END:
 
 
-   In dieser Abschnitt schreibe ich normales Text, es gibt nicht
-   besonderes hier.
+  In dieser Abschnitt schreibe ich normales Text, es gibt nicht
+  besonderes hier.
 
-   Leider ist nur ein Abschnitt reicht nicht, um genug vertikaler Raum
-   zu schaffen; deswegen muss ich noch mehr Sätze schreiben, obwohl
-   sie sagen nicht viel mehr als die bisherigen.
+  Leider ist nur ein Abschnitt reicht nicht, um genug vertikaler Raum
+  zu schaffen; deswegen muss ich noch mehr Sätze schreiben, obwohl
+  sie sagen nicht viel mehr als die bisherigen.
 
-   Alle andere normalle Textformatierung ist mit Org mode auch
-   möglich, z.B., man kann Texte mit /italics/, *bold face*,
-   _unterlinie_, =monospace=, +durchgestrichen+ schreiben.
+  Alle andere normalle Textformatierung ist mit Org mode auch
+  möglich, z.B., man kann Texte mit /italics/, *bold face*,
+  _unterlinie_, =monospace=, +durchgestrichen+ schreiben.
 
     
-** Noch ein Abschnitt
-   :PROPERTIES:
-   :CUSTOM_ID: abs2
-   :END:
+* Noch ein Abschnitt
+  :PROPERTIES:
+  :CUSTOM_ID: abs2
+  :END:
 
-   Hier sagen wir etwas anderes als bisher, zum Beispiel, hier können
-   wir [[#abs1][so ein Link]] erstellen, leider haben die generierte Ankern
-   zufällige Namen. Der Ziel ist, die Eintrag von Org zu
-   Markdown exportieren und die Links überprüfen.
+  Hier sagen wir etwas anderes als bisher, zum Beispiel, hier können
+  wir [[#abs1][so ein Link]] erstellen, leider haben die generierte Ankern
+  zufällige Namen. Der Ziel ist, die Eintrag von Org zu
+  Markdown exportieren und die Links überprüfen.
 
 
-   Ich muss noch ein paar andere Funktionen probieren, nämlich:
+  Ich muss noch ein paar andere Funktionen probieren, nämlich:
 
-   1. Bilder einzufügen [[[#bilder][Bilder]]]
-   2. Code-snipets [[[id:BA5C145E-E175-4539-8EE9-E97ABF846DAD][Code]]]
-      - Syntaxhervorhebung
-   3. Mathematische Symbole und Formeln [[[id:FBC41E78-5507-4FEA-B9BB-72DA8B15E742][Mathematik]]]
-   4. Textfarben ändern [[[id:3F1DAE14-2F08-439D-9F37-D43FF81EE2D6][Farbiges Text]]]
+  1. Bilder einzufügen [[[#bilder][Bilder]]]
+  2. Code-snipets [[[id:BA5C145E-E175-4539-8EE9-E97ABF846DAD][Code]]]
+     - Syntaxhervorhebung
+  3. Mathematische Symbole und Formeln [[[id:FBC41E78-5507-4FEA-B9BB-72DA8B15E742][Mathematik]]]
+  4. Textfarben ändern [[[id:3F1DAE14-2F08-439D-9F37-D43FF81EE2D6][Farbiges Text]]]
 
 
    
-** Abschnitt mit Anker
-   :PROPERTIES:
-   :CUSTOM_ID: anker-test
-   :ID:       FFCD8CD1-8708-4290-B02D-EDF1C3F36A32
-   :END:
+* Abschnitt mit Anker
+  :PROPERTIES:
+  :CUSTOM_ID: anker-test
+  :ID:       FFCD8CD1-8708-4290-B02D-EDF1C3F36A32
+  :END:
 
-   [[#anker-test][Abschnitt mit Anker]]
+  [[#anker-test][Abschnitt mit Anker]]
 
 
-** Bilder
-   :PROPERTIES:
-   :CUSTOM_ID: bilder
-   :END:
+* Bilder
+  :PROPERTIES:
+  :CUSTOM_ID: bilder
+  :END:
+
+  #+begin_export html
+  ![Sample graphs](../assets/images/ogdf-sample-graphs.png)
+  #+end_export
+   
+** Bilder mit Link
 
    #+begin_export html
-   ![Sample graphs](../assets/images/ogdf-sample-graphs.png)
+   [![Sample graphs](/assets/images/ogdf-sample-graphs.png)](/assets/images/ogdf-sample-graphs.png)  
+   #+end_export
+
+
+** Bilder mit Beschriftung
+    
+   #+begin_export html
+   <div style="text-align: center">
+     <img width="500" src="/assets/images/ogdf-sample-graphs.png">
+     <figcaption>Eine Abbildung mit Beschriftung.</figcaption>
+   </div>
    #+end_export
    
-*** Bilder mit Link
 
-    #+begin_export html
-    [![Sample graphs](/assets/images/ogdf-sample-graphs.png)](/assets/images/ogdf-sample-graphs.png)  
-    #+end_export
+* Code
+  :PROPERTIES:
+  :ID:       BA5C145E-E175-4539-8EE9-E97ABF846DAD
+  :CUSTOM_ID: code
+  :END:
 
-
-*** Bilder mit Beschriftung
-    
-    #+begin_export html
-    <div style="text-align: center">
-      <img width="500" src="/assets/images/ogdf-sample-graphs.png">
-      <figcaption>Eine Abbildung mit Beschriftung.</figcaption>
-    </div>
-    #+end_export
+  #+begin_export html
+  {% highlight java %}
+  @RunWith(SpringRunner.class)
+  @DataJpaTest
+  public class ExampleTransactionalTests {
+      @Autowired
+      private TestEntityManager entityManager;
    
-
-** Code
-   :PROPERTIES:
-   :ID:       BA5C145E-E175-4539-8EE9-E97ABF846DAD
-   :CUSTOM_ID: code
-   :END:
-
-   #+begin_export html
-   {% highlight java %}
-   @RunWith(SpringRunner.class)
-   @DataJpaTest
-   public class ExampleTransactionalTests {
-       @Autowired
-       private TestEntityManager entityManager;
+      @Autowired
+      private UserRepository repository;
    
-       @Autowired
-       private UserRepository repository;
+      @Test
+      public void testExample() throws Exception {
+          this.entityManager.persist(new User("sboot", "1234"));
+          User user = this.repository.findByUsername("sboot");
+          assertThat(user.getUsername()).isEqualTo("sboot");
+          assertThat(user.getVin()).isEqualTo("1234");
+      }
+  }
+  {% endhighlight %}
+  #+end_export
+
+
    
-       @Test
-       public void testExample() throws Exception {
-           this.entityManager.persist(new User("sboot", "1234"));
-           User user = this.repository.findByUsername("sboot");
-           assertThat(user.getUsername()).isEqualTo("sboot");
-           assertThat(user.getVin()).isEqualTo("1234");
-       }
+* Mathematik
+  :PROPERTIES:
+  :ID:       FBC41E78-5507-4FEA-B9BB-72DA8B15E742
+  :CUSTOM_ID: mathe
+  :END:
+
+  $$
+  \sum_{i=0}^N k^i
+  $$
+
+   
+** Formel: AIXI
+
+   $$
+   { \color{blue} AIXI }\quad
+   { \color{green} a_k } :=
+   { \color{green} \arg \max_{a_k} }
+   { \color{red} \sum_{ {\color{brightpink} o_k} {\color{purple} r_k} } }
+   ...
+   { \color{green} \max_{a_m} }
+   { \color{red} \sum_{
+       {\color{brightpink} o_m}
+       {\color{purple} r_m}
+     }
    }
-   {% endhighlight %}
-   #+end_export
+   {\color{purple} [r_k + ... + r_m]}
+   {\color{blue} \sum_{
+       {\color{goldenrod} q}
+       :U(
+       {\color{goldenrod} q},
+       {\color{green} a_1 ... a_m}
+       ) =
+       {\color{brightpink} o_1} {\color{purple} r_1}
+       ...
+       {\color{brightpink} o_m} {\color{purple} r_m}
+     }
+     2^{-\ell( {\color{goldenrod} q} )}
+   }
+   $$  
 
 
-   
-** Mathematik
-   :PROPERTIES:
-   :ID:       FBC41E78-5507-4FEA-B9BB-72DA8B15E742
-   :CUSTOM_ID: mathe
-   :END:
+* Farbiges Text
+  :PROPERTIES:
+  :ID:       3F1DAE14-2F08-439D-9F37-D43FF81EE2D6
+  :CUSTOM_ID: farb-texte
+  :END:
 
-   $$
-   \sum_{i=0}^N k^i
-   $$
+  Man kann <span style="color: green">Grüne Text</span> und <span
+  style="color: blue">Blaue Text</span> schreiben.
 
 
-   
-*** Formel: AIXI
+* Hinweise
 
-    $$
-    { \color{blue} AIXI }\quad
-    { \color{green} a_k } :=
-    { \color{green} \arg \max_{a_k} }
-    { \color{red} \sum_{ {\color{brightpink} o_k} {\color{purple} r_k} } }
-    ...
-    { \color{green} \max_{a_m} }
-    { \color{red} \sum_{
-    {\color{brightpink} o_m}
-    {\color{purple} r_m}
-    }
-    }
-    {\color{purple} [r_k + ... + r_m]}
-    {\color{blue} \sum_{
-    {\color{goldenrod} q}
-    :U(
-    {\color{goldenrod} q},
-    {\color{green} a_1 ... a_m}
-    ) =
-    {\color{brightpink} o_1} {\color{purple} r_1}
-    ...
-    {\color{brightpink} o_m} {\color{purple} r_m}
-    }
-    2^{-\ell( {\color{goldenrod} q} )}
-    }
-    $$
-
-
-** Farbiges Text
-   :PROPERTIES:
-   :ID:       3F1DAE14-2F08-439D-9F37-D43FF81EE2D6
-   :CUSTOM_ID: farb-texte
-   :END:
-
-   Man kann <span style="color: green">Grüne Text</span> und <span
-   style="color: blue">Blaue Text</span> schreiben.
-
-
-** Hinweise
-
-   1. [[https://orgmode.org/][Org Mode Website]]: die Offizielles website für Org Mode.
-      <<target>>
-      Es ist auch möglich Fußnoten zu erstellen[fn:test]
-
+  1. [[https://orgmode.org/][Org Mode Website]]: die Offizielles website für Org Mode.
+     <<target>>
+     Es ist auch möglich Fußnoten zu erstellen[fn:test]
 
 
    
@@ -207,4 +192,12 @@ Nicht nur das, die Einrückung der Fußnoten ist auch falsch.
 
 [fn:test] Andere Fußnote, nur zum probieren.
 
-   
+
+* COMMENT Local variables
+
+  Taken from: 
+  https://emacs.stackexchange.com/a/76549/11978
+  
+# Local Variables:
+# org-md-toplevel-hlevel: 2
+# End:

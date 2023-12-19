@@ -9,11 +9,9 @@ permalink: /2023-05-25-blog-mit-org
 toc: true
 ---
 
-> Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now)
-
 In diesem Eintrag versuche ich ein paar Funktionen zu
 probieren. Normalaweise schreibe ich direkt im Markdown aber dieses
-Mal schreibe ich den Eintrag mit [Emacs Org Mode](#orgc540556) [target abc](#orgc540556) <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.
+Mal schreibe ich den Eintrag mit [Emacs Org Mode](#org8fb4c23) [target abc](#org8fb4c23) <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.
 
 
 <a id="abs1"></a>
@@ -105,38 +103,38 @@ public class ExampleTransactionalTests {
 ## Mathematik
 
 $$
-   \sum_{i=0}^N k^i
-   $$
+  \sum_{i=0}^N k^i
+  $$
 
 
 ### Formel: AIXI
 
 $$
-    { \color{blue} AIXI }\quad
-    { \color{green} a_k } :=
-    { \color{green} \arg \max_{a_k} }
-    { \color{red} \sum_{ {\color{brightpink} o_k} {\color{purple} r_k} } }
-    ...
-    { \color{green} \max_{a_m} }
-    { \color{red} \sum_{
-    {\color{brightpink} o_m}
-    {\color{purple} r_m}
-    }
-    }
-    {\color{purple} [r_k + ... + r_m]}
-    {\color{blue} \sum_{
-    {\color{goldenrod} q}
-    :U(
-    {\color{goldenrod} q},
-    {\color{green} a_1 ... a_m}
-    ) =
-    {\color{brightpink} o_1} {\color{purple} r_1}
-    ...
-    {\color{brightpink} o_m} {\color{purple} r_m}
-    }
-    2^{-\ell( {\color{goldenrod} q} )}
-    }
-    $$
+   { \color{blue} AIXI }\quad
+   { \color{green} a_k } :=
+   { \color{green} \arg \max_{a_k} }
+   { \color{red} \sum_{ {\color{brightpink} o_k} {\color{purple} r_k} } }
+   ...
+   { \color{green} \max_{a_m} }
+   { \color{red} \sum_{
+       {\color{brightpink} o_m}
+       {\color{purple} r_m}
+     }
+   }
+   {\color{purple} [r_k + ... + r_m]}
+   {\color{blue} \sum_{
+       {\color{goldenrod} q}
+       :U(
+       {\color{goldenrod} q},
+       {\color{green} a_1 ... a_m}
+       ) =
+       {\color{brightpink} o_1} {\color{purple} r_1}
+       ...
+       {\color{brightpink} o_m} {\color{purple} r_m}
+     }
+     2^{-\ell( {\color{goldenrod} q} )}
+   }
+   $$  
 
 
 <a id="farb-texte"></a>
@@ -150,7 +148,7 @@ style="color: blue">Blaue Text</span> schreiben.
 ## Hinweise
 
 1.  [Org Mode Website](https://orgmode.org/): die Offizielles website für Org Mode.
-    <a id="orgc540556"></a>
+    <a id="org8fb4c23"></a>
     Es ist auch möglich Fußnoten zu erstellen<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
 
 
