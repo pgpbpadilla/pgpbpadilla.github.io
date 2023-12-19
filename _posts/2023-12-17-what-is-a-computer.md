@@ -35,21 +35,21 @@ So programmability seems to be an optional feature of computers.
 
 # Electronics are optional
 
-I was taught that anything that an algorithm is anything that takes
-inputs, processes them in some way and then produces an output.
-The computer is the thing that executes/runs the algorithm and a
+I was taught that an algorithm is anything that takes inputs,
+processes them in some way and then produces an output.  The
+computer is the thing that executes/runs the algorithm and a
 computer can be realized with non-electronic components.
 
 Before electronics became the main way to realize computers, there
-were other methods of manufacturing them. For a while
-humans were called computers and were in charge of solving tons of
-math problems which in some cases needed not a lot of deep thought
-or problem solving skills, but simply having the ability to follow
-a set of predefined instructions mindlessly.
+were other methods of manufacturing them. For a while humans were
+called computers and were in charge of solving tons of math
+problems which in some cases needed not a lot of deep thought or
+problem solving skills, but simply having the ability to follow a
+set of predefined instructions mechanically.
 
-Also, the abstract description of the [Turing Machine](https://en.wikipedia.org/wiki/Turing_machine) captures the
-essence of a computer, a computer program and computation, all that
-with just pen and paper, no need for fancy electronics.
+The description of the [Turing Machine](https://en.wikipedia.org/wiki/Turing_machine) captures the essence of a
+computer, a computer program and computation, all that with just
+pen and paper, no need for fancy electronics.
 
 
 # What is a computer program?
