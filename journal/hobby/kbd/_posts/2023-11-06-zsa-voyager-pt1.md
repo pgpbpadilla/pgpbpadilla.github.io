@@ -17,9 +17,12 @@ toc: true
 I had only one goal, to replicate my [Moonlander](https://www.zsa.io/moonlander/) layout in the
 [Voyager](https://www.zsa.io/voyager/) and it took longer than I had expected.
 
+
+## Installing my 34-key layout into the Voyager
+
 I already have a good setup for the [Moonlander](https://www.zsa.io/moonlander/) and I wanted to
 simply copy-paste my Moonlander layout in the [Voyager](https://www.zsa.io/voyager/). I use a 34
-key [layout](#org3f85f04) inspired by the [Ferris Sweep](https://github.com/davidphilipbarr/Sweep). It fits perfectly into both
+key [layout](#orgd168cf1) inspired by the [Ferris Sweep](https://github.com/davidphilipbarr/Sweep). It fits perfectly into both
 the Moonlander and the Voyager boards and I expected it would be
 possible to simply *transfer* my layout from one board to the
 other, I was wrong.
@@ -149,7 +152,7 @@ function to do the rest:
     -   Keyboard-friendly method to assign keys
 
 
-<a id="org3f85f04"></a>
+<a id="orgd168cf1"></a>
 
 ## My ZSA keyboard layouts
 

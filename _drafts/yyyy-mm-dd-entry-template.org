@@ -1,16 +1,6 @@
 #+LANGUAGE: en
 
 #+begin_comment
-When exporting, do not promote level 2 headers to level 1.
-https://emacs.stackexchange.com/q/76544/11978
-
-This only works if the variable =org-export-allow-bind-keywords= is
-set to =t=. See Emacs config: [[https://github.com/pgpbpadilla/dotfiles/commit/8a78eb8330c74a0a883ad9b5b6cb8186890f028c][git:sha:8a78eb8]]
-=ack org-export-allow-bind-keywords ~/dotfiles=
-#+end_comment
-#+BIND: org-md-toplevel-hlevel 2
-
-#+begin_comment
 1) =toc:nil=: Do not generate Org TOC:
    https://orgmode.org/manual/Table-of-Contents.html
 2) =broken-links=: Continue export even when there are broken links 
@@ -41,8 +31,17 @@ toc: false
 Summary of the Post goes here. This will be shown as the teaser of the
 Post. 
 
-** abc
+* abc
 
-   abc
+  abc
 
 
+* COMMENT Local variables
+
+  Taken from: 
+  https://emacs.stackexchange.com/a/76549/11978
+  
+# Local Variables:
+# org-md-toplevel-hlevel: 2
+# End:
+  

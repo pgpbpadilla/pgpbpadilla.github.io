@@ -1,0 +1,37 @@
+#+begin_comment
+Test file for https://emacs.stackexchange.com/q/79770/11978
+Alternative to =+BIND= using file-local variables:
+https://emacs.stackexchange.com/a/76549/11978 
+#+end_comment
+#+BIND: org-md-toplevel-hlevel 2
+
+Test file do demonstrate that =ox-md= does not honor the heading
+leavel for Footnotes. 
+
+* level 1
+
+  Given that this file sets:
+
+  #+begin_src org
+  #+BIND: org-md-toplevel-hlevel 2
+  #+end_src
+  
+  A Level 1 heading should be exported to Level 2. [fn:1]
+
+   
+** level2
+
+   And a Level 2 heading should be exported to Level 3
+
+
+* Footnotes
+
+  Footnotes should be exported to Level 2. However, they are always
+  exported as Level 1.
+
+  In, the whole body is igored!
+
+  
+[fn:1] a footnote 
+
+
