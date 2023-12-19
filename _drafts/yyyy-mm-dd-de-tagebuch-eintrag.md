@@ -12,7 +12,5 @@ categories: [deutsch, tagebuch]
 toc: false
 ---
 
-> Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now)
-
 Hier ist ein Muster für meine Deutschtagebucheintrag.
 

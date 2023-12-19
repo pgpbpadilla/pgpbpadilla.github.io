@@ -18,14 +18,13 @@ permalink: /2023-07-11-konfuzius-handeln
 toc: false
 ---
 
-> Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now)
 #+end_export
 
 
-* Konfuzius: erst handeln, dann reden
-  
-  Ich höre gerade ein Hörbuch über Konfuzius: Gespräche des
-  Konfuzius.
+Ich höre gerade ein Hörbuch über Konfuzius: Gespräche des
+Konfuzius.
+
+* Konfuzius muss man interpretieren
 
   Der Buch ist eine Liste von Sprüche zugeschriben zu Konfuzius. Die
   Originale Texte war auf Chineschish geschrieben. Konfuzius hat das
@@ -77,12 +76,23 @@ toc: false
   2. English: nobel
 
 
-** Edel (君子): der moralisch ideale Mensch
+* Edel (君子): der moralisch ideale Mensch
 
-   Edel ist die Übersetzung von das Chinesisches Wort: 君子 (junzi):
+  Edel ist die Übersetzung von das Chinesisches Wort: 君子 (junzi):
    
-   #+begin_quote
-   junzi; man of virtue; high-minded person; noble person; superior
-   person
-   -- [[https://en.wiktionary.org/wiki/%E5%90%9B%E5%AD%90][wiktionary.org]]
-   #+end_quote
+  #+begin_quote
+  junzi; man of virtue; high-minded person; noble person; superior
+  person
+  -- [[https://en.wiktionary.org/wiki/%E5%90%9B%E5%AD%90][wiktionary.org]]
+  #+end_quote
+
+
+* COMMENT Local variables
+
+  Taken from: 
+  https://emacs.stackexchange.com/a/76549/11978
+  
+# Local Variables:
+# org-md-toplevel-hlevel: 2
+# End:
+  

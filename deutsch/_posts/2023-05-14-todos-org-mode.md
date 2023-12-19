@@ -8,7 +8,6 @@ categories: [deutsch, tagebuch, emacs, org-mode, todo]
 permalink: /2023-05-14-todos-org-mode
 toc: false
 ---
-> Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now) 
 
 Seit vielen Jahren bin ich ein Fan von To-Do Listen. Ich habe viele
 unterschiedliche Varianten probiert, z.B., plain-text files, Trello

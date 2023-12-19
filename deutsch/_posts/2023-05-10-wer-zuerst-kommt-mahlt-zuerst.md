@@ -8,10 +8,6 @@ permalink: /2023-05-10-wer-zuerst-kommt
 categories: [deutsch, tagebuch, redewendung, priorisierung]
 toc: false
 ---
-> Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now) 
-
-
-# Wer zuerst kommt, malt zuerst!
 
 Hier ist noch ein Eintrag, um mein Deutsch zu üben. So weit gibt es
 kein Thema. Deshalb schreibe ich einfach meine Gedanken auf.

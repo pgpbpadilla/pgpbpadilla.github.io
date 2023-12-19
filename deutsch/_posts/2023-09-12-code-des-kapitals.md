@@ -12,11 +12,6 @@ permalink: /2023-09-11-code-des-kapitals
 toc: false
 ---
 
-> Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now)
-
-
-# Der Code des Kapitals
-
 Ich höre gerade *[The Code of Capital](https://www.audible.com/pd/The-Code-of-Capital-Audiobook/1541431898)* von Katharina Pistor. Das Buch
 handelt davon, wie Menschen das Gesetz nutzen, um viele Dinge als
 Kapital zu codieren.

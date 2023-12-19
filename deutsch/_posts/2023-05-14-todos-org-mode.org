@@ -12,7 +12,6 @@ categories: [deutsch, tagebuch, emacs, org-mode, todo]
 permalink: /2023-05-14-todos-org-mode
 toc: false
 ---
-> Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now) 
 #+end_export
 
 

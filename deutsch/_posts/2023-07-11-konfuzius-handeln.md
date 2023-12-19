@@ -14,13 +14,11 @@ permalink: /2023-07-11-konfuzius-handeln
 toc: false
 ---
 
-> Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now)
-
-
-# Konfuzius: erst handeln, dann reden
-
 Ich höre gerade ein Hörbuch über Konfuzius: Gespräche des
 Konfuzius.
+
+
+## Konfuzius muss man interpretieren
 
 Der Buch ist eine Liste von Sprüche zugeschriben zu Konfuzius. Die
 Originale Texte war auf Chineschish geschrieben. Konfuzius hat das

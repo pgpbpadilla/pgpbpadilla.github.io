@@ -15,8 +15,6 @@ categories: [deutsch, tagebuch]
 #permalink: /2023-05-25-xxx
 toc: false
 ---
-
-> Dieser Eintrag ist Teil meines Ziels: [Mein Deutsch verbessern](/now)
 #+end_export
 
 
