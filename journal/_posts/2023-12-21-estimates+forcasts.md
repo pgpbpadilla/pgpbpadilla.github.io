@@ -10,8 +10,8 @@ tags:
   - software
   - project
 categories: [journal, software, project]
-#permalink: /2023-05-25-xxx
-toc: false
+permalink: /2023-12-21-estimation+forecast
+toc: true
 ---
 
 During my career in Software, the problem of estimating the time,
