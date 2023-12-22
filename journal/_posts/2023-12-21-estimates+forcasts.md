@@ -46,14 +46,14 @@ of time.
 ## Forecasts
 
 While looking for alternatives I found the [#NoEstimates video](https://www.youtube.com/watch?v=QVBlnCTu9Ms) from
-Allen Hub and I was hooked. The idea of using past performance to
+[Allen Holub](https://holub.com/) and I was hooked. The idea of using past performance to
 make projections about the future was already present in Scrum and I
 was more or less comfortable taking it for granted. Calculating
 velocity never really made much sense to me, given what I said about
-doing arithmetic with Fibonacci number, can you imagine doing it
+doing arithmetic with Fibonacci numbers, can you imagine doing it
 with T-Shirt sizes?
 
-Hub proposes instead to do away with all the time used for trying to
+Holub proposes instead to do away with all the time used for trying to
 estimate a task and instead ensure that tasks are as small as
 possible.
 
@@ -61,6 +61,24 @@ Measuring actual time it takes to complete enables you to stop using
 guesstimates. Making tasks as small as possible means you have more
 data points (measurements) that can be used to use a forecast of how
 long would it take to complete a list of tasks.
+
+
+## Priorities
+
+With agile estimation, you don't know when a particular item in the
+backlog will be completed. This gets more difficult as more stories
+are dropped in order to make the deadline.
+
+A forecast will tell you the likelihood of completing a specific
+task at a given time and it can be recalculated as you rearrange
+items in the backlog.
+
+The ease and speed of calculating a forecast can be a stronger
+motivator for decision makers to try and rearrange the backlog with
+confidence in order to visualise different scenarios. This is harder
+to do with agile estimation methods since it's difficult to
+anticipate the impact that rearranging the backlog will have on the
+completion date of a task.
 
 
 ## Challenges
@@ -74,9 +92,14 @@ can get the money to start the project.
 
 Another difficulty is that once a project is started, it's difficult
 to gain mind share about using a forecast instead of
-estimates. People are alredy struggling to make sense of Agile
+estimates. People are already struggling to make sense of Agile
 estimation methods given all of their obvious pitfalls. Convincing
 them to use something like a Monte-Carlo simulation to forecast the
 likelihood of a task being done at a particular point in time can be
 challenging at best.
+
+
+## Further reading
+
+1.  [#NoEstimates, an introduction @ Allen Holub' Blog](https://holub.com/noestimates-an-introduction/)
 
