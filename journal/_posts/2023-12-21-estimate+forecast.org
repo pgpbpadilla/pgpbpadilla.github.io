@@ -60,14 +60,16 @@ effort and cost of a software project has been one of the hardest.
   doing arithmetic with Fibonacci numbers, can you imagine doing it
   with T-Shirt sizes?
 
-  Holub proposes instead to do away with all the time used for trying to
-  estimate a task and instead ensure that tasks are as small as
-  possible.
+  Holub proposes instead to do away with all the time used for trying
+  to estimate a task and instead ensure that tasks are as small and
+  that they are prioritised. Nobody wants to spend time doing stuff
+  that does not matter.
 
   Measuring actual time it takes to complete enables you to stop using
-  guesstimates. Making tasks as small as possible means you have more
-  data points (measurements) that can be used to use a forecast of how
-  long would it take to complete a list of tasks.
+  guesstimates, it's faster and easier to do. Making tasks small means
+  there are more data points (measurements) available to create a
+  forecast/projection of how long it may take to complete a list of
+  tasks.
 
 
 * Priorities
