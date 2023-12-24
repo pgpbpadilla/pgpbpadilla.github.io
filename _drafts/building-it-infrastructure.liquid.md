@@ -241,11 +241,12 @@ building the next copy of a standard component.
 
 ### Reuse is not always cheap
 
-Automating processes and standardising components is expensive, but it  
-pays off when the frequency of usage is high. Components that are used 
-rarely and obscure processes may not always have cost benefits due to 
-standardisation or automation. However, a complex process can still benefit from use 
-of standards and automation if mistakes are frequent and expensive.
+Automating processes and standardising components is expensive, but it
+pays off when the frequency of usage is high. Components that are used
+rarely and obscure processes may not always benefit from
+standardisation or automation. However, a complex process can still
+benefit from use of standards and automation if mistakes are frequent
+and expensive.
 
 
 ## Autonomy
