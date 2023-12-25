@@ -1,0 +1,9 @@
+#+begin_src plantuml :file ../assets/svg/org+plantuml.svg :exports code
+  Alice -> Bob:  synchrone Nachricht
+  Alice ->> Bob: asynchrone Nachricht
+#+end_src
+
+#+RESULTS:
+[[file:../assets/svg/org+plantuml.svg]]
+
+

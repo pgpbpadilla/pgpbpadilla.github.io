@@ -1,0 +1,68 @@
+#+LANGUAGE: de
+#+OPTIONS: toc:nil  broken-links:mark
+
+#+begin_export html
+---
+layout: post.liquid
+title:  "Org-mode + PlantUML + Jekyll"
+date: 2023-12-23 So 12:34
+last_updated: 2023-12-23 So 12:34
+tags:
+  - journal
+  - tagebuch
+  - deutsch
+  - org-mode
+  - plantuml
+  - jekyll
+categories: [journal, tagebuch]
+#permalink: /2023-05-25-xxx
+toc: false
+---
+
+#+end_export
+
+Heute möchte ich zeigen wie man ein PlantUML Diagramm mit Org-mode
+erstellt und in ein Jekyll Blog veröffentlicht.
+
+Der Quellcode des Diagramm ist:
+
+#+include: opj-plantuml.org
+
+
+Man kann der PlantUML-Quellcode in Org Codeblöcke einbetten[fn:1]: 
+
+#+begin_src shell :exports results :results verbatim
+  cat ./opj-plantuml.org
+#+end_src
+
+
+Das Argument =:file= gibt den Speicherort des Diagramms an.
+
+
+Wenn wir das Diagramm anzeigen wollen, können wir so machen:
+
+#+begin_src shell :results verbatim :exports results
+  cat opj-diagram.org
+#+end_src
+
+
+Das Diagramm sieht so aus:
+
+#+include: opj-diagram.org
+
+
+
+[fn:1] [[https://eschulte.github.io/babel-dev/DONE-integrate-plantuml-support.html][Org-babel PlantUML-Unterstützung]] 
+
+
+
+* COMMENT Local variables
+
+  Taken from: 
+  https://emacs.stackexchange.com/a/76549/11978
+  
+  # Local Variables:
+  # org-md-toplevel-hlevel: 2
+  # End:
+  
+
