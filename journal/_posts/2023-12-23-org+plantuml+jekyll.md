@@ -5,7 +5,6 @@ date: 2023-12-23 So 12:34
 last_updated: 2023-12-23 So 12:34
 tags:
   - journal
-  - tagebuch
   - deutsch
   - org-mode
   - plantuml
