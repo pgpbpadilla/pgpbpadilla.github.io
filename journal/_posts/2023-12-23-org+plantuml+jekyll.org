@@ -14,7 +14,7 @@ tags:
   - org-mode
   - plantuml
   - jekyll
-categories: [journal, tagebuch]
+categories: [journal]
 permalink: /2023-12-23-org+plantuml+jekyll
 toc: false
 ---
