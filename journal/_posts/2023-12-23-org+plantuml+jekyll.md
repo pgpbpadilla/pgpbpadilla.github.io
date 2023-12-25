@@ -11,7 +11,7 @@ tags:
   - plantuml
   - jekyll
 categories: [journal, tagebuch]
-#permalink: /2023-05-25-xxx
+permalink: /2023-12-23-org+plantuml+jekyll
 toc: false
 ---
 
