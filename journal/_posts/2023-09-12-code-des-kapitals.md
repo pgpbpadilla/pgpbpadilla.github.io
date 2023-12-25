@@ -1,7 +1,3 @@
-#+LANGUAGE: de
-#+OPTIONS: toc:nil  broken-links:mark
-
-#+begin_export html
 ---
 layout: post.liquid
 title:  "Der Code des Kapitals"
@@ -9,17 +5,14 @@ date: 2023-09-11 20:18
 last_updated: 2023-09-11 20:18
 tags:
   - deutsch
-  - tagebuch
+  - journal
   - überprüfen
-categories: [deutsch, tagebuch]
+categories: [deutsch, journal]
 permalink: /2023-09-11-code-des-kapitals
 toc: false
 ---
 
-#+end_export
-
-
-Ich höre gerade /[[https://www.audible.com/pd/The-Code-of-Capital-Audiobook/1541431898][The Code of Capital]]/ von Katharina Pistor. Das Buch
+Ich höre gerade *[The Code of Capital](https://www.audible.com/pd/The-Code-of-Capital-Audiobook/1541431898)* von Katharina Pistor. Das Buch
 handelt davon, wie Menschen das Gesetz nutzen, um viele Dinge als
 Kapital zu codieren.
 

@@ -1,19 +1,13 @@
-#+LANGUAGE: de
-#+OPTIONS: toc:nil  broken-links:mark
-
-#+begin_export html
 ---
 layout: post.liquid
 title:  "Wer zuerst kommt, malt zuerst!"
 date: 2023-05-10 21:03
 last_updated: 2023-06-23 22:05
-tags: deutsch tagebuch redewendung priorisierung
+tags: deutsch journal redewendung priorisierung
 permalink: /2023-05-10-wer-zuerst-kommt
-categories: [deutsch, tagebuch, redewendung, priorisierung]
+categories: [deutsch, journal]
 toc: false
 ---
-#+end_export
-
 
 Hier ist noch ein Eintrag, um mein Deutsch zu üben. So weit gibt es
 kein Thema. Deshalb schreibe ich einfach meine Gedanken auf.

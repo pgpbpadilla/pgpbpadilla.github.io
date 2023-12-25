@@ -9,11 +9,11 @@ date: 2023-07-11 21:55
 last_updated: 2023-07-11 21:55
 tags:
   - deutsch
-  - tagebuch
+  - journal
   - konfuzius
   - handeln
   - überprüfen
-categories: [deutsch, tagebuch]
+categories: [deutsch, journal]
 permalink: /2023-07-11-konfuzius-handeln
 toc: false
 ---
