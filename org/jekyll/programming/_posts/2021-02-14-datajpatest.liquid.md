@@ -3,8 +3,8 @@ layout: post.liquid
 title:  "Test independence using application slices"
 date:   2021-02-14 19:55
 permalink: datajpatest
-tags: java spring-framework spring jpa test @DataJpaTest
-categories: [programming, java, spring-framework, jpa, test]
+tags: programming java spring-framework jpa test @DataJpaTest
+categories: [programming]
 ---
 With the Spring Framework you can configure which Beans (components) are loaded
 into the Application Context in different ways.

@@ -3,8 +3,8 @@ layout: post.liquid
 title:  "Spring Repositories"
 date: 2021-02-20 12:54
 last_udpated_date: 2021-02-20 12:54
-tags: spring repository ddd dao
-categories: [programming, java, spring-framework]
+tags: programming java spring-framework repository ddd dao
+categories: [programming]
 permalink: /spring-repository
 ---
 The Spring framework provides the `@Repository` annotation and the `Repository` interface.
