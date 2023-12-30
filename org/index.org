@@ -1,0 +1,7 @@
+#+begin_export html
+---
+layout: home.liquid
+---
+#+end_export
+
+Index file.

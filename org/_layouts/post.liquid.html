@@ -1,0 +1,73 @@
+---
+layout: default.liquid
+comments: true
+---
+<!--https://www.bryanbraun.com/anchorjs/-->
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+    (function () {
+        window.addEventListener("DOMContentLoaded", (_) => {
+            let tocTitle = document.querySelector('nav.toc h2');
+            let toc = document.querySelector('nav.toc ul');
+            // hide TOC contents by default
+            toc.style.display = 'none';
+
+            // toggle TOC contents visibility when the title is clicked
+            tocTitle.addEventListener("click", (_) => {
+                if (toc.style.display === 'block') {
+                    toc.style.display = 'none';
+                } else {
+                    toc.style.display = 'block';
+                }
+            });
+            // make section titles copy deep link
+            // https://www.bryanbraun.com/anchorjs/
+            anchors.add();
+        });
+
+    })();
+</script>
+<article itemscope itemtype="http://schema.org/BlogPosting">
+
+  <!-- <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
+        {{ page.date | date: date_format }}
+      </time>
+      {% if page.author %}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+      {% endif %}</p>
+  </header> -->
+
+    <div class="post-tags">
+        <span>Tags:</span>
+        {% if post %}
+        {{ post | tags }}
+        {% else %}
+        {{ page | tags }}
+        {% endif %}
+    </div>
+
+    <div itemprop="articleBody" class="text-justify">
+        <div>
+            {% if page.toc %}
+                <nav id="table-of-contents" class="toc">
+                    <h2>Table of contents</h2>
+                    {% toc %}
+                </nav>
+            {% endif %}
+            <div id="markdown-content">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+
+
+    {% if site.disqus.shortname %}
+        {% include disqus_comments.html %}
+    {% endif %}
+
+
+</article>
