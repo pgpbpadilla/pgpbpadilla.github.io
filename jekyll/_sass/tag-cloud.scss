@@ -1,0 +1,25 @@
+div#tag-cloud {
+  a {
+    &.set-1 {
+      font-size: small;
+      opacity: .6;
+    }
+    &.set-2 {
+      opacity: .7;
+    }
+
+    &.set-3 {
+      font-size: large;
+      opacity: .8;
+    }
+
+    &.set-4 {
+      font-size: larger;
+      opacity: .9;
+    }
+
+    &.set-5 {
+      font-size: x-large;
+    }
+  }
+}
