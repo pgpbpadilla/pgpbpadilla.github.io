@@ -1,3 +1,8 @@
+;; How this file works:
+;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html
+
+;; Adapted from:
+;; https://librephoenix.com/2023-11-19-my-blog-setup-with-jekyll-org-mode-and-gitlab-pages
 ((nil . (
   (org-publish-project-alist .
    (("html"
