@@ -11,7 +11,7 @@
           :base-extension "org"
 
           ;; Path to your Jekyll project.
-          :publishing-directory "~/blog/jekyll/"
+          :publishing-directory "~/blog/org/jekyll/"
           :recursive t
           :publishing-function org-html-publish-to-html
           :headline-levels 4
@@ -19,13 +19,14 @@
           :body-only t ;; Only export section between <body> </body>
     )
 
-    ("assets"
-          :base-directory "~/blog/org/"
-          :base-extension "svg\\|css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|php"
-          :publishing-directory "~/blog/jekyll/"
-          :recursive t
-          :publishing-function org-publish-attachment)
+    ;; No need to duplicate assets, keep a single copy in org/jekyll/assets
+    ;; ("assets"
+    ;;       :base-directory "~/blog/org/"
+    ;;       :base-extension "svg\\|css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|php"
+    ;;       :publishing-directory "~/blog/jekyll/"
+    ;;       :recursive t
+    ;;       :publishing-function org-publish-attachment)
 
-    ("site" :components ("html" "assets"))))
+    ("site" :components ("html"))))
   )
 ))
