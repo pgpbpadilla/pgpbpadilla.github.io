@@ -25,14 +25,21 @@ erstellt und in ein Jekyll Blog veröffentlicht.
 
 Der Quellcode des Diagramm ist:
 
-#+include: opj-plantuml.org
+
+#+include: ../../jekyll/assets/org/opj-plantuml.org
 
 
 Man kann der PlantUML-Quellcode in Org Codeblöcke einbetten[fn:1]: 
 
-#+begin_src shell :exports results :results verbatim
+#+begin_src shell :exports results :results verbatim :dir ../../jekyll/assets/org
   cat ./opj-plantuml.org
 #+end_src
+
+#+RESULTS:
+: #+begin_src plantuml :file ../svg/org+plantuml.svg :exports code
+:   Alice -> Bob:  synchrone Nachricht
+:   Alice ->> Bob: asynchrone Nachricht
+: #+end_src
 
 
 Das Argument =:file= gibt den Speicherort des Diagramms an.
@@ -40,14 +47,22 @@ Das Argument =:file= gibt den Speicherort des Diagramms an.
 
 Wenn wir das Diagramm anzeigen wollen, können wir so machen:
 
-#+begin_src shell :results verbatim :exports results
+#+begin_src shell :results verbatim :exports results :dir ../../jekyll/assets/org
   cat opj-diagram.org
 #+end_src
+
+#+RESULTS:
+: #+begin_export html
+: <div style="text-align: center">
+:   <img src="/assets/svg/org+plantuml.svg">
+:   <figcaption>PlantUML diagram.</figcaption>
+: </div>
+: #+end_export
 
 
 Das Diagramm sieht so aus:
 
-#+include: opj-diagram.org
+#+include: ../../jekyll/assets/org/opj-diagram.org
 
 
 

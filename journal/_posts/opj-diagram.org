@@ -1,3 +1,0 @@
-#+begin_export html
-![Diagram](/assets/svg/org+plantuml.svg)
-#+end_export

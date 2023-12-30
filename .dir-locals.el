@@ -9,9 +9,10 @@
           ;; Path to your org files.
           :base-directory "~/blog/org/"
           :base-extension "org"
-
           ;; Path to your Jekyll project.
           :publishing-directory "~/blog/org/jekyll/"
+          ;; Path is relative to :base-directory
+          :exclude "jekyll/assets/org/.*$" ;; exclude all Org assets
           :recursive t
           :publishing-function org-html-publish-to-html
           :headline-levels 4
