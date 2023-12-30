@@ -74,21 +74,29 @@ Mal schreibe ich den Eintrag mit [[target][Emacs Org Mode]] [[target][target abc
   :END:
 
   #+begin_export html
-  ![Sample graphs](../assets/images/ogdf-sample-graphs.png)
+  <div style="text-align: center">
+    <img src="/assets/images/ogdf-sample-graphs.png">
+  </div>
   #+end_export
-   
+
+  
 ** Bilder mit Link
 
    #+begin_export html
-   [![Sample graphs](/assets/images/ogdf-sample-graphs.png)](/assets/images/ogdf-sample-graphs.png)  
-   #+end_export
+   <div style="text-align: center">
+     <a href="assets/images/ogdf-sample-graphs.png">
+       <img src="assets/images/ogdf-sample-graphs.png"
+            alt="Sample OGDF graphs">
+     </a>
+   </div>
+   #+end_export   
 
 
 ** Bilder mit Beschriftung
-    
+
    #+begin_export html
    <div style="text-align: center">
-     <img width="500" src="/assets/images/ogdf-sample-graphs.png">
+     <img src="/assets/images/ogdf-sample-graphs.png">
      <figcaption>Eine Abbildung mit Beschriftung.</figcaption>
    </div>
    #+end_export
@@ -171,8 +179,31 @@ Mal schreibe ich den Eintrag mit [[target][Emacs Org Mode]] [[target][target abc
   :CUSTOM_ID: farb-texte
   :END:
 
-  Man kann <span style="color: green">Grüne Text</span> und <span
-  style="color: blue">Blaue Text</span> schreiben.
+  #+begin_export html
+  Man kann <span style="color: green">Grüne Text</span> und
+  <span style="color: blue">Blaue Text</span> schreiben in
+  ein HTML-export Block.  
+  #+end_export
+
+  #+begin_src org
+    #+begin_export html
+    Man kann <span style="color: green">Grüne Text</span> und
+    <span style="color: blue">Blaue Text</span> schreiben in
+    ein HTML-export Block.  
+    #+end_export
+  #+end_src
+  
+  Man kan auch @@html:<span style="color: red">@@die
+  Textfarbe@@html:</span>@@ mit /[[https://orgmode.org/manual/Quoting-HTML-tags.html][Inline-Syntax]]/, e.g.,
+  =@@html:<html>@@=
+  @@html:<span style="color: orange">@@schreiben@@html:</span>@@.
+
+  #+begin_src org
+    Man kan auch
+    @@html:<span style="color: red">@@die Textfarbe@@html:</span>@@
+    mit /inline/ =@@html:<html>@@=
+    @@html:<span style="color: orange">@@schreiben@@html:</span>@@.
+  #+end_src
 
 
 * Hinweise
