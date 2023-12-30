@@ -1,5 +1,5 @@
 #+LANGUAGE: en
-#+OPTIONS: toc:nil  broken-links:mark
+#+OPTIONS: toc:nil num:nil broken-links:mark
 
 #+begin_export html
 ---

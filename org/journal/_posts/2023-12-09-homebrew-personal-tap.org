@@ -7,7 +7,7 @@
 2) Continue export even when there are broken links
    https://orgmode.org/manual/Export-Settings.html
 #+end_comment
-#+OPTIONS: toc:nil broken-links:mark
+#+OPTIONS: toc:nil num:nil broken-links:mark
 
 #+begin_export html
 ---
