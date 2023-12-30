@@ -4,13 +4,13 @@
 #+begin_export html
 ---
 layout: post.liquid
-title:  "Org+Jekyll via org-publish"
+title:  "My Org publish workflow to generate a Jekyll site"
 date: 2023-12-29
 last_updated: 2023-12-29
 tags:
   - journal
 categories: [journal]
-#permalink: /2023-12-29-title
+#permalink: /2023-12-29-org-publish-jekyll
 toc: false
 ---
 
@@ -18,4 +18,10 @@ toc: false
 
 
 A short post to test this guide:
-https://orgmode.org/worg/org-tutorials/org-jekyll.html 
+https://orgmode.org/worg/org-tutorials/org-jekyll.html
+
+1. [ ] It should focus on how I removed the need to export Org files to
+   Markdown.
+2. [ ] review blog ideas, there already one realted to this
+   [[id:142C652D-E552-453C-900A-76E760F209CC][org-publish: skip Markdown  [5/7]​]]
+
