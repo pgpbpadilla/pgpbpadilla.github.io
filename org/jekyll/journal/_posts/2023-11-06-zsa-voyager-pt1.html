@@ -1,0 +1,272 @@
+---
+layout: post.liquid
+title:  "From ZSA's Moonlander to Voyager, part 1"
+date: 2023-11-05 Mo 19:20
+last_updated: 2023-11-10 Fr 22:16
+tags:
+  - journal
+  - kbd
+  - zsa
+  - voyager
+  - hobby
+categories: [journal, hobby, kbd]
+permalink: /2023-11-05-zsa-voyager-pt1
+toc: true
+---
+
+<p>
+I had only one goal, to replicate my <a href="https://www.zsa.io/moonlander/">Moonlander</a> layout in the
+<a href="https://www.zsa.io/voyager/">Voyager</a> and it took longer than I had expected.
+</p>
+
+
+<div id="outline-container-org7cf137d" class="outline-2">
+<h2 id="org7cf137d"><span class="section-number-2">1.</span> Installing my 34-key layout into the Voyager</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+I already have a good setup for the <a href="https://www.zsa.io/moonlander/">Moonlander</a> and I wanted to
+simply copy-paste my Moonlander layout in the <a href="https://www.zsa.io/voyager/">Voyager</a>. I use a 34
+key <a href="#orgee9b105">layout</a> inspired by the <a href="https://github.com/davidphilipbarr/Sweep">Ferris Sweep</a>. It fits perfectly into both
+the Moonlander and the Voyager boards and I expected it would be
+possible to simply <i>transfer</i> my layout from one board to the
+other, I was wrong.
+</p>
+
+<p>
+<a href="https://www.zsa.io/oryx/">Oryx</a> lacks the ability to transfer a Moonlander layout to
+the Voyager. In ended up configuring my Voyager
+layout from scratch, key by key, slowly and painfully. 
+</p>
+
+<p>
+It could have been worse. I knew exactly what each key should do, so 
+I was able to almost mindlessly replicate each key assignment
+without thinking too much.
+</p>
+
+<p>
+I would summarize this experience as follows:
+</p>
+
+<ol class="org-ol">
+<li>there is no keyboard friendly to use Oryx</li>
+<li>you cannot reuse a Moonlander layout for the Voyager
+<ul class="org-ul">
+<li>this means that your layouts are bound to become out of
+sync :'(</li>
+</ul></li>
+<li>you cannot duplicate a key using Oryx
+<ul class="org-ul">
+<li>swapping keys is possible, so I'm guessing copying/duplicating
+a key should be easy to add to Oryx</li>
+</ul></li>
+<li>I need macros that are longer than Oryx allows</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org5f4dac3" class="outline-2">
+<h2 id="org5f4dac3"><span class="section-number-2">2.</span> Duplicating a layout: no can do</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+I expected to be able to export my Moonlander layout and then
+import it into the Voyagers'. This is not supported out of the
+box. Some people <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup><sup>, </sup><sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup> have been able to achieve reuse by
+managing their layouts in code but that's above my level of
+commitment for the moment.
+</p>
+
+<p>
+It took me a couple of days to replicate the important parts of my
+layout, I have a small child so I could only work here and there
+when I was free of my parental duties.
+</p>
+
+<p>
+The experience is improved compared to the Moonlander where I
+constantly need to poke my board with a paperclip, having a real
+button is nice.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org6a6fac6" class="outline-2">
+<h2 id="org6a6fac6"><span class="section-number-2">3.</span> Duplicating a key: no can do</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+You cannot duplicate a key and there is no keyboard friendly way to
+edit a key assignment, which is ironic.
+</p>
+
+<p>
+While trying to mindlessly replicate my Moonlander layout I came
+across some problematic layers; layers that are full of macros,
+which can be long and tedious to configure.
+</p>
+
+<p>
+I use <a href="https://orgmode.org/">Emacs Org mode</a> and I have groups of macros mapped to Org mode
+commands. Commands that are part of a group, typically have the
+same prefix, e.g.,
+</p>
+
+<ol class="org-ol">
+<li><code>C-c C-x C-i</code>: clock in</li>
+<li><code>C-c C-x C-o</code>: clock out</li>
+<li><code>C-c o</code>: open link</li>
+<li><code>C-c l</code>: create link</li>
+<li><code>C-c a a v c</code>: view clocked time</li>
+</ol>
+
+
+<p>
+Many Org commands start with <code>C-c</code> and after configuring a few in
+Oryx, I wished there was a way to duplicate a key assignment, so
+that I would only need to work on the differences.
+</p>
+
+<p>
+I also wished there was a faster way to assign macros, too many
+clicks are required to configure just one macro.
+</p>
+
+<p>
+I use <a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb">Vimium</a>, a Chrome extension that allows you to reduce mouse
+use when interacting with websites. Using it to set up macros
+helped but the experience was not optimal.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org31ffb4c" class="outline-2">
+<h2 id="org31ffb4c"><span class="section-number-2">4.</span> Long macros</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Over time I have accumulated patterns &#x2013; common keybinding
+sequences &#x2013; for Org mode. One of them is to look at the agenda,
+find an item, clock-in, open the item and close all other Emacs
+windows, I call this pattern: <b>Start</b>. It allows me to focus on the
+task at hand and start tracking time on it.
+</p>
+
+<p>
+The sequence goes like this:
+</p>
+
+<ol class="org-ol">
+<li>Open my agenda</li>
+<li>Find a task</li>
+<li>Go to task: <code>RET</code></li>
+<li><b>Start:</b>
+<ol class="org-ol">
+<li>Narrow to sub tree: <code>C-x n s</code></li>
+<li>Delete other windows: <code>C-x 1</code></li>
+<li>Clock in: <code>C-c C-x C-i</code></li>
+</ol></li>
+</ol>
+
+
+<p>
+The important part is <b>Start</b> and I wanted a macro for it. However,
+such macro exceeds the maximum length allowed in Oryx.
+</p>
+
+<p>
+I found a workaround, but I paid the price in time. I had to
+read some Lisp code and the Org mode docs, which was more
+than I was willing to commit before I started.
+</p>
+
+<p>
+The result was a short macro for the global keybinding: <code>C-u u</code>,
+which fits within the Oryx limits. The macro in turn calls an elisp
+function to do the rest:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">zsa-start</span> ()
+  <span style="color: #8b2252;">"Focus on task and clock in"</span>
+  (<span style="color: #a020f0;">interactive</span>)
+  (org-narrow-to-subtree)
+  (delete-other-windows)
+  (org-clock-in)
+  )
+
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">set global keybinding</span>
+(global-set-key (kbd <span style="color: #8b2252;">"C-c u"</span>) 'zsa-start)
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org52a2986" class="outline-2">
+<h2 id="org52a2986"><span class="section-number-2">5.</span> Conclusions</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li>The Voyager looks amazing, feels amazing and is tiny, compared to
+the Moonlander</li>
+<li>It's great that you don't need to carry an Allen key and a paper
+clip every time you change locations</li>
+<li>I love not having to worry if this is the last time I can unfold
+the thumb clusters and have them still work</li>
+<li>I was skeptical about the lack of wrist support but the
+Voyager is so thin that I don't miss them at all, same goes for
+tenting</li>
+<li>There is room for improvement in terms of:
+<ul class="org-ul">
+<li>Layout re-use across board models</li>
+<li>Keyboard-friendly method to assign keys</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgee9b105" class="outline-2">
+<h2 id="orgee9b105"><span class="section-number-2">6.</span> My ZSA keyboard layouts</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+I'm just going to put these here, you know, just to show off a
+little bit =P &#x2026; and also 'cause they look cool.
+</p>
+</div>
+
+<div id="outline-container-orgb988526" class="outline-3">
+<h3 id="orgb988526"><span class="section-number-3">6.1.</span> Moonlander</h3>
+<div class="outline-text-3" id="text-6-1">
+<div style="padding-top: 60%; position: relative;">
+  <iframe src="https://configure.zsa.io/embed/moonlander/layouts/M440N/latest/0" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%"></iframe>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org6cd912b" class="outline-3">
+<h3 id="org6cd912b"><span class="section-number-3">6.2.</span> Voyager</h3>
+<div class="outline-text-3" id="text-6-2">
+<div style="padding-top: 60%; position: relative;">
+  <iframe src="https://configure.zsa.io/embed/voyager/layouts/XYwOW/latest/0" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://www.reddit.com/r/Moonlander/comments/zmoztx/how_to_duplicate_a_layout_in_oryx/">How to duplicate a layout in Oryx</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://www.reddit.com/r/Moonlander/comments/16avdb5/sharing_a_layout_between_different_zsa_models/">Sharing a layout between different ZSA models</a>
+</p></div></div>
+
+
+</div>
+</div>
