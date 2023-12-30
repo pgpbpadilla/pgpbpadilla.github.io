@@ -20,7 +20,7 @@
     )
 
     ("assets"
-          :base-directory "~/Projects/librephoenix.com/org/"
+          :base-directory "~/blog/org/"
           :base-extension "svg\\|css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|php"
           :publishing-directory "~/org/jekyll/"
           :recursive t
