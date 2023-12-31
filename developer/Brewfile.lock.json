@@ -1,0 +1,46 @@
+{
+  "entries": {
+    "tap": {
+      "homebrew/bundle": {
+        "revision": "e4798d8075e1a793f065be3e5e1674ec09193d17"
+      },
+      "homebrew/cask": {
+        "revision": "5bb286851823b6b7af3f1536d2b839e2ad2aa22c"
+      },
+      "homebrew/core": {
+        "revision": "14faf1f370d9d6771f02fe46f40bcccc40530aeb"
+      },
+      "homebrew/services": {
+        "revision": "6819359f72a8e0001370790685bf86c9897d9757"
+      }
+    },
+    "brew": {
+      "linklint": {
+        "version": "2.3.5",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "all": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/linklint/blobs/sha256:ef392eb8173eedd8caad7b9ac1d3aa0354fe9aeec2c6fe902b02bf1e9966518a",
+              "sha256": "ef392eb8173eedd8caad7b9ac1d3aa0354fe9aeec2c6fe902b02bf1e9966518a"
+            }
+          }
+        }
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "sonoma": {
+        "HOMEBREW_VERSION": "4.2.1-32-g04d8ae2",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "api",
+        "CLT": "15.0.0.0.1.1694021235",
+        "Xcode": "15.1",
+        "macOS": "14.0"
+      }
+    }
+  }
+}
