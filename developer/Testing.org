@@ -1,38 +1,49 @@
 #+property: header-args :results verbatim
 
-* Linklint: [[http://linklint.org]]
+* Testing for broken links
 
-  Used to find/test for broken links in the Blog.
+** localhost: [[http://linklint.org]]
+
+   Used to find/test for broken links in the Blog.
   
 
-** Install dependencies
+*** Install dependencies
 
-   #+begin_src bash
-     brew bundle install --quiet --file Brewfile
-   #+end_src
-
-   #+RESULTS:
-   : Using homebrew/bundle
-   : Using homebrew/cask
-   : Using homebrew/core
-   : Using homebrew/services
-   : Using linklint
-   : Homebrew Bundle complete! 5 Brewfile dependencies now installed.
-
-  
-*** Scan local Blog for broken links
-  
-    #+begin_src bash 
-      linklint -http -host localhost:4000 -limit 5000 -doc linklint /@
-    #+end_src
-
-    #+RESULTS:
-
-  
-*** View report
-  
     #+begin_src bash
-      open linklint/index.html
+      brew bundle install --quiet --file Brewfile
     #+end_src
 
     #+RESULTS:
+    : Using homebrew/bundle
+    : Using homebrew/cask
+    : Using homebrew/core
+    : Using homebrew/services
+    : Using linklint
+    : Homebrew Bundle complete! 5 Brewfile dependencies now installed.
+
+  
+**** Scan local Blog for broken links
+  
+     #+begin_src bash 
+       linklint -http -host localhost:4000 -limit 5000 -doc linklint/local /@
+       open linklint/local/index.html
+     #+end_src
+
+     #+RESULTS:
+
+
+**** Scan live Blog for broken links
+  
+     #+begin_src bash 
+       linklint -http -host https://pgpbpadilla.github.io -limit 5000 -doc linklint/live /@
+       open linklint/live/index.html
+     #+end_src
+
+     #+RESULTS:
+
+    
+** Live site: [[https://dnschecker.org/website-broken-link-checker.php][dnschecker.org]]
+
+   Will also check for broken links in your live site.
+  
+
