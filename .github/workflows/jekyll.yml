@@ -4,7 +4,7 @@ name: Build and Deploy to Github Pages
 on:
   push:
     branches:
-      - master  # Here source code branch is `master`, it could be other branch
+      - skip-markdown  # Run when changes are pushed to this branch
 
 jobs:
   build_and_deploy:
@@ -26,9 +26,9 @@ jobs:
           provider: 'github'
           token: ${{ secrets.GITHUB_TOKEN }} # It's your Personal Access Token(PAT)
           repository: ''             # Default is current repository
-          branch: 'gh-pages'         # Default is gh-pages for github provider
-          jekyll_src: './jekyll'           # Default is root directory
-          jekyll_cfg: './jekyll/_config.yml'  # Default is _config.yml
+          branch: 'new-gh-pages'         # Default is gh-pages for github provider
+          jekyll_src: './org/jekyll'           # Default is root directory
+          jekyll_cfg: './org/jekyll/_config.yml'  # Default is _config.yml
           jekyll_baseurl: ''         # Default is according to _config.yml
           bundler_ver: '>=0'         # Default is latest bundler version
           cname: ''                  # Default is to not use a cname
