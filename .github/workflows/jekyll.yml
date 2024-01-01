@@ -23,7 +23,7 @@ jobs:
       # Use GitHub Deploy Action to build and deploy to Github
       - uses: jeffreytse/jekyll-deploy-action@v0.5.1
         with:
-          provider: 'github'
+          provider: 'test'
           token: ${{ secrets.GITHUB_TOKEN }} # It's your Personal Access Token(PAT)
           repository: ''             # Default is current repository
           branch: 'new-gh-pages'         # Default is gh-pages for github provider
