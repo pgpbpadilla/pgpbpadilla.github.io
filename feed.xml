@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://pgpbpadilla.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://pgpbpadilla.github.io/" rel="alternate" type="text/html" /><updated>2024-01-01T20:35:02+00:00</updated><id>https://pgpbpadilla.github.io/feed.xml</id><title type="html">Pablo Padilla’s Blog</title><subtitle>Personal blog, mainly about programming computers.</subtitle><entry><title type="html">Org-mode + PlantUML + Jekyll</title><link href="https://pgpbpadilla.github.io/2023-12-23-org+plantuml+jekyll" rel="alternate" type="text/html" title="Org-mode + PlantUML + Jekyll" /><published>2023-12-23T12:34:00+00:00</published><updated>2023-12-23T12:34:00+00:00</updated><id>https://pgpbpadilla.github.io/org+plantuml+jekyll</id><content type="html" xml:base="https://pgpbpadilla.github.io/2023-12-23-org+plantuml+jekyll"><![CDATA[<p>
+Heute möchte ich zeigen wie man ein PlantUML Diagramm mit Org-mode
+erstellt und in ein Jekyll Blog veröffentlicht.
+</p>
+
+<p>
+Der Quellcode des Diagramm ist:
+</p>
+
+
+<div class="org-src-container">
+<pre class="src src-plantuml">Alice <span style="color: #a020f0;">-&gt;</span> Bob:  synchrone Nachricht
+Alice <span style="color: #a020f0;">-&gt;</span>&gt; Bob: asynchrone Nachricht
+</pre>
+</div>
+
+
+<p>
+Man kann der PlantUML-Quellcode in Org Codeblöcke einbetten<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>: 
+</p>
+
+<pre class="example">
+#+begin_src plantuml :file ../svg/org+plantuml.svg :exports code
+  Alice -&gt; Bob:  synchrone Nachricht
+  Alice -&gt;&gt; Bob: asynchrone Nachricht
+#+end_src
+</pre>
+
+
+
+<p>
+Das Argument <code>:file</code> gibt den Speicherort des Diagramms an.
+</p>
+
+
+<p>
+Wenn wir das Diagramm anzeigen wollen, können wir so machen:
+</p>
+
+<pre class="example">
+#+begin_export html
+&lt;div style="text-align: center"&gt;
+  &lt;img src="/assets/svg/org+plantuml.svg"&gt;
+  &lt;figcaption&gt;PlantUML diagram.&lt;/figcaption&gt;
+&lt;/div&gt;
+#+end_export
+</pre>
+
+
+
+<p>
+Das Diagramm sieht so aus:
+</p>
+
+<div style="text-align: center">
+  <img src="/assets/svg/org+plantuml.svg">
+  <figcaption>PlantUML diagram.</figcaption>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Fu&szlig;noten: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://eschulte.github.io/babel-dev/DONE-integrate-plantuml-support.html">Org-babel PlantUML-Unterstützung</a> 
+</p></div></div>
+
+
+</div>
+</div>]]></content><author><name></name></author><category term="journal" /><category term="journal" /><category term="deutsch" /><category term="org-mode" /><category term="plantuml" /><category term="jekyll" /><summary type="html"><![CDATA[Heute möchte ich zeigen wie man ein PlantUML Diagramm mit Org-mode erstellt und in ein Jekyll Blog veröffentlicht.]]></summary></entry><entry><title type="html">Estimation vs Forecast in Software projects</title><link href="https://pgpbpadilla.github.io/2023-12-21-estimation+forecast" rel="alternate" type="text/html" title="Estimation vs Forecast in Software projects" /><published>2023-12-21T20:59:00+00:00</published><updated>2023-12-21T20:59:00+00:00</updated><id>https://pgpbpadilla.github.io/estimate+forecast</id><content type="html" xml:base="https://pgpbpadilla.github.io/2023-12-21-estimation+forecast"><![CDATA[<p>
+During my career in Software, the problem of estimating the time,
+effort and cost of a software project has been one of the hardest.
+</p>
+
+
+<div id="outline-container-org1f35938" class="outline-2">
+<h2 id="org1f35938">Agile estimation</h2>
+<div class="outline-text-2" id="text-org1f35938">
+<p>
+When I learned about Scrum, I was totally convinced that estimation
+was legit. It bothered me that when estimating using Fibonacci
+numbers, people would try to do arithmetic with them like it meant
+something. It doesn't. Calculating <i>velocity</i> was more or less
+pointless.
+</p>
+
+<p>
+I still buy that relative estimation was better than absolute
+estimation, however, in order to get good at estimating, you have to
+have seen many similar items. In my career, I have been switching
+technologies and industries every couple of years so pretty much
+every task is, in some sense, different and it's hard to compare
+with the past.
+</p>
+
+<p>
+The time discussing whether something is an X, XL or XXL was almost
+too much for me. I wanted to get started building something small,
+then extend it a bit, then a bit more, you know, iterative and
+incremental progress instead of trying to nail down an accurate
+estimate the first time.
+</p>
+
+<p>
+Today I am convinced that estimation in this way is a complete waste
+of time.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org9aa764a" class="outline-2">
+<h2 id="org9aa764a">Forecasts</h2>
+<div class="outline-text-2" id="text-org9aa764a">
+<p>
+While looking for alternatives I found the <a href="https://www.youtube.com/watch?v=QVBlnCTu9Ms">#NoEstimates video</a> from
+<a href="https://holub.com/">Allen Holub</a> and I was hooked. The idea of using past performance to
+make projections about the future was already present in Scrum and I
+was more or less comfortable taking it for granted. Calculating
+velocity never really made much sense to me, given what I said about
+doing arithmetic with Fibonacci numbers, can you imagine doing it
+with T-Shirt sizes?
+</p>
+
+<p>
+Holub proposes instead to do away with all the time used for trying
+to estimate a task and instead ensure that tasks are as small and
+that they are prioritised. Nobody wants to spend time doing stuff
+that does not matter.
+</p>
+
+<p>
+Measuring actual time it takes to complete enables you to stop using
+guesstimates, it's faster and easier to do. Making tasks small means
+there are more data points (measurements) available to create a
+forecast/projection of how long it may take to complete a list of
+tasks.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org4afece7" class="outline-2">
+<h2 id="org4afece7">Priorities</h2>
+<div class="outline-text-2" id="text-org4afece7">
+<p>
+With agile estimation, you don't know when a particular item in the
+backlog will be completed. This gets more difficult as more stories
+are dropped in order to make the deadline.
+</p>
+
+<p>
+A forecast will tell you the likelihood of completing a specific
+task at a given time and it can be recalculated as you rearrange
+items in the backlog.
+</p>
+
+<p>
+The ease and speed of calculating a forecast can be a stronger
+motivator for decision makers to try and rearrange the backlog with
+confidence in order to visualise different scenarios. This is harder
+to do with agile estimation methods since it's difficult to
+anticipate the impact that rearranging the backlog will have on the
+completion date of a task.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgcf76ab7" class="outline-2">
+<h2 id="orgcf76ab7">Challenges</h2>
+<div class="outline-text-2" id="text-orgcf76ab7">
+<p>
+Measurements + forecasting seem to me like they should yield better
+results when used for project estimation. However, it's difficult to
+apply. Even if you manage to master all the concepts of how to
+properly use a forecasting technique, you still need to provide your
+estimate of the project's cost and effort and duration before you
+can get the money to start the project.
+</p>
+
+<p>
+Another difficulty is that once a project is started, it's difficult
+to gain mind share about using a forecast instead of
+estimates. People are already struggling to make sense of Agile
+estimation methods given all of their obvious pitfalls. Convincing
+them to use something like a Monte-Carlo simulation to forecast the
+likelihood of a task being done at a particular point in time can be
+challenging at best.
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-org553f485" class="outline-2">
+<h2 id="org553f485">Further reading</h2>
+<div class="outline-text-2" id="text-org553f485">
+<ol class="org-ol">
+<li><a href="https://holub.com/noestimates-an-introduction/">#NoEstimates, an introduction @ Allen Holub' Blog</a></li>
+</ol>
+</div>
+</div>]]></content><author><name></name></author><category term="journal" /><category term="software" /><category term="project" /><category term="journal" /><category term="estimation" /><category term="forecast" /><category term="software" /><category term="project" /><summary type="html"><![CDATA[During my career in Software, the problem of estimating the time, effort and cost of a software project has been one of the hardest.]]></summary></entry><entry><title type="html">What is a computer?</title><link href="https://pgpbpadilla.github.io/2023-12-17-what-is-a-computer" rel="alternate" type="text/html" title="What is a computer?" /><published>2023-12-17T19:36:00+00:00</published><updated>2023-12-17T19:36:00+00:00</updated><id>https://pgpbpadilla.github.io/what-is-a-computer</id><content type="html" xml:base="https://pgpbpadilla.github.io/2023-12-17-what-is-a-computer"><![CDATA[<p>
+Computers are everywhere but what are they?
+</p>
+
+
+<div id="outline-container-org6996251" class="outline-2">
+<h2 id="org6996251">Programmability is optional</h2>
+<div class="outline-text-2" id="text-org6996251">
+<p>
+Talking with an Robotics teacher &#x2013; teaches the basics about Robots to
+kids &#x2013; I asked: are Robots computers? The answer was a clear and
+confident, yes! The dialog then went on roughly as follows:
+</p>
+
+
+<ul class="org-ul">
+<li>P: if you have a Robot with a fixed program, is that still a
+computer?</li>
+<li>T: yes</li>
+<li>P: a computer is typically an electronic circuit that can run some
+sort of program. A calculator is an electronic gadget with a fixed
+program, one that can evaluate arithmetic expressions. Is a
+calculator a computer?</li>
+<li>T: hmmm&#x2026; I guess it is</li>
+</ul>
+
+
+<p>
+So programmability seems to be an optional feature of computers.
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-org32961fd" class="outline-2">
+<h2 id="org32961fd">Electronics are optional</h2>
+<div class="outline-text-2" id="text-org32961fd">
+<p>
+I was taught that an algorithm is anything that takes inputs,
+processes them in some way and then produces an output.  The
+computer is the thing that executes/runs the algorithm and a
+computer can be realized with non-electronic components.
+</p>
+
+<p>
+Before electronics became the main way to realize computers, there
+were other methods of manufacturing them. For a while humans were
+called computers and were in charge of solving tons of math
+problems which in some cases needed not a lot of deep thought or
+problem solving skills, but simply having the ability to follow a
+set of predefined instructions mechanically.
+</p>
+
+<p>
+The description of the <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing Machine</a> captures the essence of a
+computer, a computer program and computation, all that with just
+pen and paper, no need for fancy electronics.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgd352db5" class="outline-2">
+<h2 id="orgd352db5">What is a computer program?</h2>
+<div class="outline-text-2" id="text-orgd352db5">
+<p>
+In modern computers, a program is usually a text file written in
+using a special syntax stored somewhere in a disk. The program can
+be read any time by the computer and its instructions followed
+blindly.
+</p>
+
+<p>
+A program is composed of a sequence of basic instructions plus
+a few special ones that control the flow of the program. You
+could say that programming is nothing more than telling a computer
+how to:
+</p>
+
+<ol class="org-ol">
+<li>perform a series of dumb tasks,</li>
+<li>decide which instruction to execute next, and</li>
+<li>execute a series of steps repeatedly. <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup></li>
+</ol>
+
+
+<p>
+The computer program does not need to make use of all those
+possibilities, a simple program that outputs a fixed string of text
+once and then terminates is a perfectly respectable program.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgd0e712a" class="outline-2">
+<h2 id="orgd0e712a">Where is the program?</h2>
+<div class="outline-text-2" id="text-orgd0e712a">
+<p>
+Can programs be encoded in other ways? Think about a pair of
+sunglasses, the glass is manufactured so that certain types of
+light are filtered out; in some sense, filtering some light rays is
+a decision about what to let through. As light rays come through
+the glass the rules (program) encoded in the structure of the glass
+continuously decide which rays should be filtered out. Does that
+mean that sunglasses computers with a fixed program?
+</p>
+
+<p>
+What about other objects? A glass is built (programmed) so that it
+can contain liquids. The program is again encoded in the structure
+of the glass. This &#x2013; perhaps flawed &#x2013; thinking can be applied to
+pretty much any manufactured object and even to those that acquire
+a function that was not originally intended.
+</p>
+
+<p>
+If you agree that such objects are all computers in some sense, you
+might also agree that a computer program can be encoded in the
+structure of physical objects. Isn't this what we do when we build
+electronic circuits, we design and build them so that they behave
+the way we want.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgebc4a06" class="outline-2">
+<h2 id="orgebc4a06">Is everything a computer?</h2>
+<div class="outline-text-2" id="text-orgebc4a06">
+<p>
+Maybe, I don't know. You decide. I think that Thomas Kuhn would say
+that a Computer is <a href="https://en.wikipedia.org/wiki/Paradigm">a paradigm</a>.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://en.wikipedia.org/wiki/Structured_program_theorem">Structured Program Theorem</a>
+</p></div></div>
+
+
+</div>
+</div>]]></content><author><name></name></author><category term="journal" /><category term="computer" /><category term="journal" /><category term="computer" /><category term="definition" /><summary type="html"><![CDATA[Computers are everywhere but what are they?]]></summary></entry><entry><title type="html">Shannon’s entropy is relative to the receiver</title><link href="https://pgpbpadilla.github.io/2023-15-12-shannon-entropy" rel="alternate" type="text/html" title="Shannon’s entropy is relative to the receiver" /><published>2023-12-15T22:02:00+00:00</published><updated>2023-12-15T22:02:00+00:00</updated><id>https://pgpbpadilla.github.io/shannon-entropy</id><content type="html" xml:base="https://pgpbpadilla.github.io/2023-15-12-shannon-entropy"><![CDATA[<p>
+<a href="https://en.wikipedia.org/wiki/Entropy_(information_theory)">Shannon's entropy</a> is relative to the receiver. Two distinct receivers
+with different knowledge and expectations about the information source
+would calculate different probabilities for each message.
+</p>
+
+<p>
+To illustrate this, think of two observers, A and B, watching a coin being
+tossed, A knows that the coin is not fair, B does
+not.
+</p>
+
+<p>
+For A, the probability of observing heads is not 0.5, the coin is not
+fair. For B the probability is 0.5. The difference in the expectations
+from each observers results in them calculating different
+probabilities for each <b>message</b>, i.e., the result of a coin toss.
+</p>
+
+<p>
+The entropy quantifies how surprised is an observer to see a
+particular message:
+</p>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Observer</th>
+<th scope="col" class="org-left">Probability of the message</th>
+<th scope="col" class="org-left">Entropy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">A</td>
+<td class="org-left">\(P_A(Heads) \neq 0.5\)</td>
+<td class="org-left">\(H(Heads\vert A)=-log_2(P_A)\)</td>
+</tr>
+
+<tr>
+<td class="org-left">B</td>
+<td class="org-left">\(P_B(Heads) = 0.5\)</td>
+<td class="org-left">\(H(Heads\vert B)=-log_2(P_B)\)</td>
+</tr>
+</tbody>
+</table>]]></content><author><name></name></author><category term="journal" /><category term="math" /><category term="journal" /><category term="math" /><category term="information" /><summary type="html"><![CDATA[Shannon's entropy is relative to the receiver. Two distinct receivers with different knowledge and expectations about the information source would calculate different probabilities for each message.]]></summary></entry><entry><title type="html">Homebrew package upgrade breaking stuff and how to deal with it</title><link href="https://pgpbpadilla.github.io/2023-12-08-personal-homebrew-tap" rel="alternate" type="text/html" title="Homebrew package upgrade breaking stuff and how to deal with it" /><published>2023-12-08T11:01:00+00:00</published><updated>2023-12-08T11:01:00+00:00</updated><id>https://pgpbpadilla.github.io/homebrew-personal-tap</id><content type="html" xml:base="https://pgpbpadilla.github.io/2023-12-08-personal-homebrew-tap"><![CDATA[<p>
+<a href="https://brew.sh/">Homebrew</a> package upgrades have regularly broken my personal setup,
+blocking me from completing my current task. My <a href="https://github.com/pgpbpadilla/homebrew-pgpb">personal Homebrew tap</a>
+saved the day recently, so it deserves a mention here.
+</p>
+
+
+<p>
+I accidentally upgraded all my Homebrew packages with:
+</p>
+
+<pre class="example" id="orge164a1c">
+brew upgrade
+</pre>
+
+<p>
+Later I noticed that saving <a href="https://orgmode.org/worg/org-tutorials/encrypting-files.html">encrypted files in Emacs</a> was <a href="https://dev.gnupg.org/T6481">not
+working</a>. Anytime I tried saving changes Emacs would hang.
+</p>
+
+<p>
+After googling I found that others were having the same issue after
+upgrading their <a href="https://www.gnupg.org/">GnuPG</a> package.
+</p>
+
+<p>
+I was able to fix the problem after following <a href="https://stackoverflow.com/a/76404609/400544">instructions from
+StackOverflow</a>. However, that didn't last, I ran into the same
+trouble with my work computer. This time it was different, I had
+updated my setup to pin the <a href="https://semver.org/">minor version</a> of GnuPG to 2.2, so I was
+surprised that even though the <i>correct</i> version was installed, Emacs
+would still hang during encryption.
+</p>
+
+<p>
+The difference was that my personal and work computers were using
+different PATCH versions:
+</p>
+
+<ul class="org-ul">
+<li>Work: <b>2.2.42</b></li>
+<li>Personal: <b>2.2.41</b></li>
+</ul>
+
+
+<p>
+Homebrew does not provide <a href="https://docs.brew.sh/Versions">versioned formulas</a> for different PATCH
+versions of a package, so I couldn't use:
+</p>
+
+<pre class="example" id="org5c629f9">
+brew install gnupg@2.2.41
+</pre>
+
+<p>
+I once had a similar situation, I needed to pin the version of package
+with no versioned formula. To do that, I created a personal <a href="https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap">Homebrew
+tap</a> and defined a formula for the desired package.
+</p>
+
+<p>
+To fix my configuration, I found the <a href="https://formulae.brew.sh/formula/gnupg@2.2">formula for gnupg@2.2</a> and <a href="https://github.com/pgpbpadilla/homebrew-pgpb/blob/master/Formula/gnupg%402.2.41.rb">tweaked
+it</a>, so that it installed version 2.2.41. This worked fine, the main
+downside was that the install time got longer since the package is
+built from sources, no biggie.
+</p>
+
+<p>
+I decided to spend the time to write this since it's the second time
+my personal tap has saved the day. So if you're GnuPG is broken in the
+same way you can use it too!
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">brew tap pgpbpadilla/pgpb
+brew install gnupg@2.2.41
+</pre>
+</div>
+
+<p>
+Sources are in Github: <a href="https://github.com/pgpbpadilla/homebrew-pgpb">pgpbpadilla/homebrew-pgpb</a>.
+</p>]]></content><author><name></name></author><category term="journal" /><category term="tech" /><category term="journal" /><category term="tech" /><category term="homebrew" /><category term="macos" /><category term="package-management" /><category term="gnupg" /><category term="emacs" /><summary type="html"><![CDATA[Homebrew package upgrades have regularly broken my personal setup, blocking me from completing my current task. My personal Homebrew tap saved the day recently, so it deserves a mention here.]]></summary></entry><entry><title type="html">From ZSA’s Moonlander to Voyager, part 1</title><link href="https://pgpbpadilla.github.io/2023-11-05-zsa-voyager-pt1" rel="alternate" type="text/html" title="From ZSA’s Moonlander to Voyager, part 1" /><published>2023-11-05T19:20:00+00:00</published><updated>2023-11-05T19:20:00+00:00</updated><id>https://pgpbpadilla.github.io/zsa-voyager-pt1</id><content type="html" xml:base="https://pgpbpadilla.github.io/2023-11-05-zsa-voyager-pt1"><![CDATA[<p>
+I had only one goal, to replicate my <a href="https://www.zsa.io/moonlander/">Moonlander</a> layout in the
+<a href="https://www.zsa.io/voyager/">Voyager</a> and it took longer than I had expected.
+</p>
+
+
+<div id="outline-container-org7cf137d" class="outline-2">
+<h2 id="org7cf137d">Installing my 34-key layout into the Voyager</h2>
+<div class="outline-text-2" id="text-org7cf137d">
+<p>
+I already have a good setup for the <a href="https://www.zsa.io/moonlander/">Moonlander</a> and I wanted to
+simply copy-paste my Moonlander layout in the <a href="https://www.zsa.io/voyager/">Voyager</a>. I use a 34
+key <a href="#orgee9b105">layout</a> inspired by the <a href="https://github.com/davidphilipbarr/Sweep">Ferris Sweep</a>. It fits perfectly into both
+the Moonlander and the Voyager boards and I expected it would be
+possible to simply <i>transfer</i> my layout from one board to the
+other, I was wrong.
+</p>
+
+<p>
+<a href="https://www.zsa.io/oryx/">Oryx</a> lacks the ability to transfer a Moonlander layout to
+the Voyager. In ended up configuring my Voyager
+layout from scratch, key by key, slowly and painfully. 
+</p>
+
+<p>
+It could have been worse. I knew exactly what each key should do, so 
+I was able to almost mindlessly replicate each key assignment
+without thinking too much.
+</p>
+
+<p>
+I would summarize this experience as follows:
+</p>
+
+<ol class="org-ol">
+<li>there is no keyboard friendly to use Oryx</li>
+<li>you cannot reuse a Moonlander layout for the Voyager
+<ul class="org-ul">
+<li>this means that your layouts are bound to become out of
+sync :'(</li>
+</ul></li>
+<li>you cannot duplicate a key using Oryx
+<ul class="org-ul">
+<li>swapping keys is possible, so I'm guessing copying/duplicating
+a key should be easy to add to Oryx</li>
+</ul></li>
+<li>I need macros that are longer than Oryx allows</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org5f4dac3" class="outline-2">
+<h2 id="org5f4dac3">Duplicating a layout: no can do</h2>
+<div class="outline-text-2" id="text-org5f4dac3">
+<p>
+I expected to be able to export my Moonlander layout and then
+import it into the Voyagers'. This is not supported out of the
+box. Some people <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup><sup>, </sup><sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup> have been able to achieve reuse by
+managing their layouts in code but that's above my level of
+commitment for the moment.
+</p>
+
+<p>
+It took me a couple of days to replicate the important parts of my
+layout, I have a small child so I could only work here and there
+when I was free of my parental duties.
+</p>
+
+<p>
+The experience is improved compared to the Moonlander where I
+constantly need to poke my board with a paperclip, having a real
+button is nice.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org6a6fac6" class="outline-2">
+<h2 id="org6a6fac6">Duplicating a key: no can do</h2>
+<div class="outline-text-2" id="text-org6a6fac6">
+<p>
+You cannot duplicate a key and there is no keyboard friendly way to
+edit a key assignment, which is ironic.
+</p>
+
+<p>
+While trying to mindlessly replicate my Moonlander layout I came
+across some problematic layers; layers that are full of macros,
+which can be long and tedious to configure.
+</p>
+
+<p>
+I use <a href="https://orgmode.org/">Emacs Org mode</a> and I have groups of macros mapped to Org mode
+commands. Commands that are part of a group, typically have the
+same prefix, e.g.,
+</p>
+
+<ol class="org-ol">
+<li><code>C-c C-x C-i</code>: clock in</li>
+<li><code>C-c C-x C-o</code>: clock out</li>
+<li><code>C-c o</code>: open link</li>
+<li><code>C-c l</code>: create link</li>
+<li><code>C-c a a v c</code>: view clocked time</li>
+</ol>
+
+
+<p>
+Many Org commands start with <code>C-c</code> and after configuring a few in
+Oryx, I wished there was a way to duplicate a key assignment, so
+that I would only need to work on the differences.
+</p>
+
+<p>
+I also wished there was a faster way to assign macros, too many
+clicks are required to configure just one macro.
+</p>
+
+<p>
+I use <a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb">Vimium</a>, a Chrome extension that allows you to reduce mouse
+use when interacting with websites. Using it to set up macros
+helped but the experience was not optimal.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org31ffb4c" class="outline-2">
+<h2 id="org31ffb4c">Long macros</h2>
+<div class="outline-text-2" id="text-org31ffb4c">
+<p>
+Over time I have accumulated patterns &#x2013; common keybinding
+sequences &#x2013; for Org mode. One of them is to look at the agenda,
+find an item, clock-in, open the item and close all other Emacs
+windows, I call this pattern: <b>Start</b>. It allows me to focus on the
+task at hand and start tracking time on it.
+</p>
+
+<p>
+The sequence goes like this:
+</p>
+
+<ol class="org-ol">
+<li>Open my agenda</li>
+<li>Find a task</li>
+<li>Go to task: <code>RET</code></li>
+<li><b>Start:</b>
+<ol class="org-ol">
+<li>Narrow to sub tree: <code>C-x n s</code></li>
+<li>Delete other windows: <code>C-x 1</code></li>
+<li>Clock in: <code>C-c C-x C-i</code></li>
+</ol></li>
+</ol>
+
+
+<p>
+The important part is <b>Start</b> and I wanted a macro for it. However,
+such macro exceeds the maximum length allowed in Oryx.
+</p>
+
+<p>
+I found a workaround, but I paid the price in time. I had to
+read some Lisp code and the Org mode docs, which was more
+than I was willing to commit before I started.
+</p>
+
+<p>
+The result was a short macro for the global keybinding: <code>C-u u</code>,
+which fits within the Oryx limits. The macro in turn calls an elisp
+function to do the rest:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">zsa-start</span> ()
+  <span style="color: #8b2252;">"Focus on task and clock in"</span>
+  (<span style="color: #a020f0;">interactive</span>)
+  (org-narrow-to-subtree)
+  (delete-other-windows)
+  (org-clock-in)
+  )
+
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">set global keybinding</span>
+(global-set-key (kbd <span style="color: #8b2252;">"C-c u"</span>) 'zsa-start)
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org52a2986" class="outline-2">
+<h2 id="org52a2986">Conclusions</h2>
+<div class="outline-text-2" id="text-org52a2986">
+<ol class="org-ol">
+<li>The Voyager looks amazing, feels amazing and is tiny, compared to
+the Moonlander</li>
+<li>It's great that you don't need to carry an Allen key and a paper
+clip every time you change locations</li>
+<li>I love not having to worry if this is the last time I can unfold
+the thumb clusters and have them still work</li>
+<li>I was skeptical about the lack of wrist support but the
+Voyager is so thin that I don't miss them at all, same goes for
+tenting</li>
+<li>There is room for improvement in terms of:
+<ul class="org-ul">
+<li>Layout re-use across board models</li>
+<li>Keyboard-friendly method to assign keys</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgee9b105" class="outline-2">
+<h2 id="orgee9b105">My ZSA keyboard layouts</h2>
+<div class="outline-text-2" id="text-orgee9b105">
+<p>
+I'm just going to put these here, you know, just to show off a
+little bit =P &#x2026; and also 'cause they look cool.
+</p>
+</div>
+
+<div id="outline-container-orgb988526" class="outline-3">
+<h3 id="orgb988526">Moonlander</h3>
+<div class="outline-text-3" id="text-orgb988526">
+<div style="padding-top: 60%; position: relative;">
+  <iframe src="https://configure.zsa.io/embed/moonlander/layouts/M440N/latest/0" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%"></iframe>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org6cd912b" class="outline-3">
+<h3 id="org6cd912b">Voyager</h3>
+<div class="outline-text-3" id="text-org6cd912b">
+<div style="padding-top: 60%; position: relative;">
+  <iframe src="https://configure.zsa.io/embed/voyager/layouts/XYwOW/latest/0" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://www.reddit.com/r/Moonlander/comments/zmoztx/how_to_duplicate_a_layout_in_oryx/">How to duplicate a layout in Oryx</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://www.reddit.com/r/Moonlander/comments/16avdb5/sharing_a_layout_between_different_zsa_models/">Sharing a layout between different ZSA models</a>
+</p></div></div>
+
+
+</div>
+</div>]]></content><author><name></name></author><category term="journal" /><category term="hobby" /><category term="kbd" /><category term="journal" /><category term="kbd" /><category term="zsa" /><category term="voyager" /><category term="hobby" /><summary type="html"><![CDATA[I had only one goal, to replicate my Moonlander layout in the Voyager and it took longer than I had expected.]]></summary></entry><entry><title type="html">Der Code des Kapitals</title><link href="https://pgpbpadilla.github.io/2023-09-11-code-des-kapitals" rel="alternate" type="text/html" title="Der Code des Kapitals" /><published>2023-09-11T20:18:00+00:00</published><updated>2023-09-11T20:18:00+00:00</updated><id>https://pgpbpadilla.github.io/code-des-kapitals</id><content type="html" xml:base="https://pgpbpadilla.github.io/2023-09-11-code-des-kapitals"><![CDATA[<p>
+Ich höre gerade <i><a href="https://www.audible.com/pd/The-Code-of-Capital-Audiobook/1541431898">The Code of Capital</a></i> von Katharina Pistor. Das Buch
+handelt davon, wie Menschen das Gesetz nutzen, um viele Dinge als
+Kapital zu codieren.
+</p>
+
+<p>
+Die rechtlichen Module wurden über Jahrzehnte entwickelt und immer
+weiter verbessert. Diese Module sind immer dann präsent, wenn neue
+Kategorien von Vermögenswerten erfunden werden.
+</p>
+
+<p>
+Nach einer Erfindung haben die Erfinder eine große Motivation, ihre
+Erfindung vor anderen zu schützen und dann die Gewinne zu
+realisieren.
+</p>
+
+<p>
+Ursprünglich war Land das Hauptvermögen, das jemand als Kapital
+codieren konnte. Vieles hat sich verändert, und heutzutage kann man
+auch Ideen, Methoden und andere abstrakte Konzepte als Kapital
+codieren.
+</p>
+
+<p>
+Früher konnte man Zäune um das Land bauen und andere
+aussperren. Heute kann man dasselbe mit Ideen tun, zum Beispiel mit
+Patenten. Die Patentinhaber können andere Menschen aussperren und
+die Vorteile ihrer Idee allein genießen.
+</p>]]></content><author><name></name></author><category term="journal" /><category term="deutsch" /><category term="deutsch" /><category term="journal" /><category term="überprüfen" /><summary type="html"><![CDATA[Ich höre gerade The Code of Capital von Katharina Pistor. Das Buch handelt davon, wie Menschen das Gesetz nutzen, um viele Dinge als Kapital zu codieren.]]></summary></entry><entry><title type="html">Konfuzius: erst handeln, dann reden</title><link href="https://pgpbpadilla.github.io/2023-07-11-konfuzius-handeln" rel="alternate" type="text/html" title="Konfuzius: erst handeln, dann reden" /><published>2023-07-11T21:55:00+00:00</published><updated>2023-07-11T21:55:00+00:00</updated><id>https://pgpbpadilla.github.io/konfuzius-handeln</id><content type="html" xml:base="https://pgpbpadilla.github.io/2023-07-11-konfuzius-handeln"><![CDATA[<p>
+Ich höre gerade ein Hörbuch über Konfuzius: Gespräche des
+Konfuzius.
+</p>
+
+<div id="outline-container-orga2e8aba" class="outline-2">
+<h2 id="orga2e8aba">Konfuzius muss man interpretieren</h2>
+<div class="outline-text-2" id="text-orga2e8aba">
+<p>
+Der Buch ist eine Liste von Sprüche zugeschriben zu Konfuzius. Die
+Originale Texte war auf Chineschish geschrieben. Konfuzius hat das
+Buch nicht geschrieben, seine Schüler haben es getan.
+</p>
+
+<p>
+Auch wenn die Texte ist gut ubersetz, ist das Buch schwer zu
+verstehen. Man muss  die Bedeutung jede Sprüche interpretieren.
+</p>
+
+<p>
+Ich höre das Buch auf Englisch und in diese Übersetzung gibt es
+die folgende Sprüche: 
+</p>
+
+<blockquote>
+<p>
+The superior man acts before he speaks, and afterwards speaks
+according to his action.
+&#x2013; <a href="https://www.brainyquote.com/quotes/confucius_385565">brainyquote.com</a> 
+</p>
+</blockquote>
+
+<p>
+Für die aktuellen Beitrag habe ich eine Deutsche Übersetzung für die
+Sprüche gesucht und ich habe ein paar gefunden:
+</p>
+
+<blockquote>
+<ol class="org-ol">
+<li>Erst handeln und dann mit seinen Worten sich danach richten. 
+&#x2013; <a href="https://www.aphorismen.de/zitat/4075">aphorismen.de</a></li>
+
+<li>Erst handelt er, wie er denkt. Dann spricht er, wie er handelt.
+&#x2013; <a href="https://www.zitat-des-tages.de/zitate/erst-handelt-er-wie-er-denkt-dann-spricht-er-wie-er-handelt-konfuzius">zitat-des-tages.de</a></li>
+
+<li>Zi-gong fragte, was einen Edlen ausmache.
+Der Meister antwortete: »Erst handelt er, wie er
+denkt. Dann spricht er, wie er handelt.«
+&#x2013; <a href="https://www.reclam.de/data/media/978-3-15-011110-9.pdf">übersetzt und herausgegeben von Ralf Moritz</a></li>
+</ol>
+</blockquote>
+
+
+<p>
+Der Referenz zu ein <i>superior man</i> habe ich gewundert, also ich habe
+auch eine Spanische Übersetzung gesucht:
+</p>
+
+<blockquote>
+<p>
+El hombre superior actúa antes de hablar, y después habla de acuerdo
+a sus acciones. &#x2013; <a href="https://www.elciudadano.com/educacion/quien-fue-confucio-conocelo-por-su-pensamiento/09/28/">elciudadano.com</a>
+</p>
+</blockquote>
+
+
+<p>
+Alle Deutsche ubersetzungen nehmen keine Bezug auf einen höheren
+Menschen. Die 3. Zitat spricht über <i>Edlen</i>, und das hat
+verschiedene Bedeutungen/Übersetzungen:
+</p>
+
+<ol class="org-ol">
+<li>von hochwertige Qualität</li>
+<li>English: nobel</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org1ffc514" class="outline-2">
+<h2 id="org1ffc514">Edel (君子): der moralisch ideale Mensch</h2>
+<div class="outline-text-2" id="text-org1ffc514">
+<p>
+Edel ist die Übersetzung von das Chinesisches Wort: 君子 (junzi):
+</p>
+
+<blockquote>
+<p>
+junzi; man of virtue; high-minded person; noble person; superior
+person
+&#x2013; <a href="https://en.wiktionary.org/wiki/%E5%90%9B%E5%AD%90">wiktionary.org</a>
+</p>
+</blockquote>
+</div>
+</div>]]></content><author><name></name></author><category term="journal" /><category term="deutsch" /><category term="deutsch" /><category term="journal" /><category term="konfuzius" /><category term="handeln" /><category term="überprüfen" /><summary type="html"><![CDATA[Ich höre gerade ein Hörbuch über Konfuzius: Gespräche des Konfuzius.]]></summary></entry><entry><title type="html">Mit Emacs Org Mode ein Blog Eintrag schreiben</title><link href="https://pgpbpadilla.github.io/2023-05-25-blog-mit-org" rel="alternate" type="text/html" title="Mit Emacs Org Mode ein Blog Eintrag schreiben" /><published>2023-05-25T22:50:00+00:00</published><updated>2023-05-25T22:50:00+00:00</updated><id>https://pgpbpadilla.github.io/blog-mit-org</id><content type="html" xml:base="https://pgpbpadilla.github.io/2023-05-25-blog-mit-org"><![CDATA[<p>
+In diesem Eintrag versuche ich ein paar Funktionen zu
+probieren. Normalaweise schreibe ich direkt im Markdown aber dieses
+Mal schreibe ich den Eintrag mit <a href="#org8e9353f">Emacs Org Mode</a> <a href="#org8e9353f">target abc</a> <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.
+</p>
+
+
+<div id="outline-container-abs1" class="outline-2">
+<h2 id="abs1">Hier is eine neue Abschnitt</h2>
+<div class="outline-text-2" id="text-abs1">
+<p>
+In dieser Abschnitt schreibe ich normales Text, es gibt nicht
+besonderes hier.
+</p>
+
+<p>
+Leider ist nur ein Abschnitt reicht nicht, um genug vertikaler Raum
+zu schaffen; deswegen muss ich noch mehr Sätze schreiben, obwohl
+sie sagen nicht viel mehr als die bisherigen.
+</p>
+
+<p>
+Alle andere normalle Textformatierung ist mit Org mode auch
+möglich, z.B., man kann Texte mit <i>italics</i>, <b>bold face</b>,
+<span class="underline">unterlinie</span>, <code>monospace</code>, <del>durchgestrichen</del> schreiben.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-abs2" class="outline-2">
+<h2 id="abs2">Noch ein Abschnitt</h2>
+<div class="outline-text-2" id="text-abs2">
+<p>
+Hier sagen wir etwas anderes als bisher, zum Beispiel, hier können
+wir <a href="#abs1">so ein Link</a> erstellen, leider haben die generierte Ankern
+zufällige Namen. Der Ziel ist, die Eintrag von Org zu
+Markdown exportieren und die Links überprüfen.
+</p>
+
+
+<p>
+Ich muss noch ein paar andere Funktionen probieren, nämlich:
+</p>
+
+<ol class="org-ol">
+<li>Bilder einzufügen [<a href="#bilder">Bilder</a>]</li>
+<li>Code-snipets [<a href="#code">Code</a>]
+<ul class="org-ul">
+<li>Syntaxhervorhebung</li>
+</ul></li>
+<li>Mathematische Symbole und Formeln [<a href="#mathe">Mathematik</a>]</li>
+<li>Textfarben ändern [<a href="#farb-texte">Farbiges Text</a>]</li>
+</ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-anker-test" class="outline-2">
+<h2 id="anker-test">Abschnitt mit Anker</h2>
+<div class="outline-text-2" id="text-anker-test">
+<p>
+<a href="#anker-test">Abschnitt mit Anker</a>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-bilder" class="outline-2">
+<h2 id="bilder">Bilder</h2>
+<div class="outline-text-2" id="text-bilder">
+<div style="text-align: center">
+  <img src="/assets/images/ogdf-sample-graphs.png">
+</div>
+</div>
+
+
+<div id="outline-container-org19d95aa" class="outline-3">
+<h3 id="org19d95aa">Bilder mit Link</h3>
+<div class="outline-text-3" id="text-org19d95aa">
+<div style="text-align: center">
+  <a href="assets/images/ogdf-sample-graphs.png">
+    <img src="assets/images/ogdf-sample-graphs.png"
+         alt="Sample OGDF graphs">
+  </a>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org1c377a2" class="outline-3">
+<h3 id="org1c377a2">Bilder mit Beschriftung</h3>
+<div class="outline-text-3" id="text-org1c377a2">
+<div style="text-align: center">
+  <img src="/assets/images/ogdf-sample-graphs.png">
+  <figcaption>Eine Abbildung mit Beschriftung.</figcaption>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-code" class="outline-2">
+<h2 id="code">Code</h2>
+<div class="outline-text-2" id="text-code">
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@RunWith</span><span class="o">(</span><span class="nc">SpringRunner</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="nd">@DataJpaTest</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleTransactionalTests</span> <span class="o">{</span>
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="nc">TestEntityManager</span> <span class="n">entityManager</span><span class="o">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="nc">UserRepository</span> <span class="n">repository</span><span class="o">;</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testExample</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">entityManager</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="k">new</span> <span class="nc">User</span><span class="o">(</span><span class="s">"sboot"</span><span class="o">,</span> <span class="s">"1234"</span><span class="o">));</span>
+        <span class="nc">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">repository</span><span class="o">.</span><span class="na">findByUsername</span><span class="o">(</span><span class="s">"sboot"</span><span class="o">);</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getUsername</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="s">"sboot"</span><span class="o">);</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getVin</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="s">"1234"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+</div>
+</div>
+
+
+
+<div id="outline-container-mathe" class="outline-2">
+<h2 id="mathe">Mathematik</h2>
+<div class="outline-text-2" id="text-mathe">
+<p>
+\[
+  \sum_{i=0}^N k^i
+  \]
+</p>
+</div>
+
+
+<div id="outline-container-orgd176eb3" class="outline-3">
+<h3 id="orgd176eb3">Formel: AIXI</h3>
+<div class="outline-text-3" id="text-orgd176eb3">
+<p>
+\[
+   { \color{blue} AIXI }\quad
+   { \color{green} a_k } :=
+   { \color{green} \arg \max_{a_k} }
+   { \color{red} \sum_{ {\color{brightpink} o_k} {\color{purple} r_k} } }
+   ...
+   { \color{green} \max_{a_m} }
+   { \color{red} \sum_{
+       {\color{brightpink} o_m}
+       {\color{purple} r_m}
+     }
+   }
+   {\color{purple} [r_k + ... + r_m]}
+   {\color{blue} \sum_{
+       {\color{goldenrod} q}
+       :U(
+       {\color{goldenrod} q},
+       {\color{green} a_1 ... a_m}
+       ) =
+       {\color{brightpink} o_1} {\color{purple} r_1}
+       ...
+       {\color{brightpink} o_m} {\color{purple} r_m}
+     }
+     2^{-\ell( {\color{goldenrod} q} )}
+   }
+   \]  
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-farb-texte" class="outline-2">
+<h2 id="farb-texte">Farbiges Text</h2>
+<div class="outline-text-2" id="text-farb-texte">
+Man kann <span style="color: green">Grüne Text</span> und
+<span style="color: blue">Blaue Text</span> schreiben in
+ein HTML-export Block.  
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #b22222;">#+begin_export html</span>
+<span style="color: #7f7f7f;">Man kann &lt;</span><span style="color: #0000ff;">span</span><span style="color: #7f7f7f;"> </span><span style="color: #a0522d;">style</span><span style="color: #7f7f7f;">=</span><span style="color: #8b2252;">"color: green"</span><span style="color: #7f7f7f;">&gt;Gr&#252;ne Text&lt;/</span><span style="color: #0000ff;">span</span><span style="color: #7f7f7f;">&gt; und</span>
+<span style="color: #7f7f7f;">&lt;</span><span style="color: #0000ff;">span</span><span style="color: #7f7f7f;"> </span><span style="color: #a0522d;">style</span><span style="color: #7f7f7f;">=</span><span style="color: #8b2252;">"color: blue"</span><span style="color: #7f7f7f;">&gt;Blaue Text&lt;/</span><span style="color: #0000ff;">span</span><span style="color: #7f7f7f;">&gt; schreiben in</span>
+<span style="color: #7f7f7f;">ein HTML-export Block.  </span>
+<span style="color: #b22222;">#+end_export</span>
+</pre>
+</div>
+
+<p>
+Man kan auch <span style="color: red">die
+Textfarbe</span> mit <i><a href="https://orgmode.org/manual/Quoting-HTML-tags.html">Inline-Syntax</a></i>, e.g.,
+<code>@@html:&lt;html&gt;@@</code>
+<span style="color: orange">schreiben</span>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org">Man kan auch
+<span style="color: #b22222;">@@</span><span style="font-weight: bold;">html:</span>&lt;span style="color: red"&gt;<span style="color: #b22222;">@@</span>die Textfarbe<span style="color: #b22222;">@@</span><span style="font-weight: bold;">html:</span>&lt;/span&gt;<span style="color: #b22222;">@@</span>
+mit <span style="font-style: italic;">/inline/</span> <span style="color: #7f7f7f;">=</span><span style="color: #b22222;">@@</span><span style="font-weight: bold;">html:</span><span style="color: #7f7f7f;">&lt;html&gt;</span><span style="color: #b22222;">@@</span><span style="color: #7f7f7f;">=</span>
+<span style="color: #b22222;">@@</span><span style="font-weight: bold;">html:</span>&lt;span style="color: orange"&gt;<span style="color: #b22222;">@@</span>schreiben<span style="color: #b22222;">@@</span><span style="font-weight: bold;">html:</span>&lt;/span&gt;<span style="color: #b22222;">@@</span>.
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org25097ba" class="outline-2">
+<h2 id="org25097ba">Hinweise</h2>
+<div class="outline-text-2" id="text-org25097ba">
+<ol class="org-ol">
+<li><a href="https://orgmode.org/">Org Mode Website</a>: die Offizielles website für Org Mode.
+<a id="org8e9353f"></a>
+Es ist auch möglich Fußnoten zu erstellen<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup></li>
+</ol>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Fu&szlig;noten: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Ein Beispiel von ein Fußnote mit Org Mode. Leider ist der
+Standar sprache für Export Englisch, also ich muss auch erfinden wie
+die Fußnoten Abteilungstitel auf die richtige Sprache erstellen.
+</p>
+
+<p class="footpara">
+Nicht nur das, die Einrückung der Fußnoten ist auch falsch.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Andere Fußnote, nur zum probieren.
+</p></div></div>
+
+
+</div>
+</div>]]></content><author><name></name></author><category term="journal" /><category term="deutsch" /><category term="deutsch" /><category term="journal" /><category term="org-mode" /><category term="emacs" /><category term="überprüfen" /><summary type="html"><![CDATA[In diesem Eintrag versuche ich ein paar Funktionen zu probieren. Normalaweise schreibe ich direkt im Markdown aber dieses Mal schreibe ich den Eintrag mit Emacs Org Mode target abc 1.]]></summary></entry><entry><title type="html">Ich schreibe ein Tagebuch auf Deutsch</title><link href="https://pgpbpadilla.github.io/2023-05-18-verb+praeposition" rel="alternate" type="text/html" title="Ich schreibe ein Tagebuch auf Deutsch" /><published>2023-05-18T19:50:00+00:00</published><updated>2023-05-18T19:50:00+00:00</updated><id>https://pgpbpadilla.github.io/verb+praeposition</id><content type="html" xml:base="https://pgpbpadilla.github.io/2023-05-18-verb+praeposition"><![CDATA[<p>Ob ich ein neuer Eintrag in mein Tagebuch schreibe, <strong>hängt von</strong>
+meiner Laune und Niveau von Motivation <strong>ab</strong>, und auch wenn ich ein
+neuer Eintrag zu schreiben entschieden habe, dann muss ich noch
+<strong>auf</strong> die Korrektheit von den geschriebenes Wort <strong>achten</strong>.</p>
+
+<p>Normalweise <strong>fange</strong> ich <strong>an</strong> mit der Schreibung ohne Plan, und
+versuche einfach meine Gedanken auszudrucken. Das ist oft genug um die
+kreativen Säfte zu stimulieren und danach <strong>kommt auf</strong> den
+mechanische bewegungen <strong>an</strong>, die Texte zu tippen.</p>
+
+<p>Die Schreibung ein Tagebuch ist meine <strong>Antwort auf</strong> die Not, mein
+Deutsch zu üben.  Obwohl ich weiß Übung macht die Meister, ich <strong>ärger
+mich über</strong> wie langsam ich schreibe, weil Deutsch ist für mich immer
+noch schwer.</p>
+
+<p>Nach ein paar Paragrafen <strong>höre</strong> ich <strong>auf mit</strong> schreiben und geb
+mich eine kleine Belohnung, weil ich es verdient habe.</p>
+
+<p>Ich komme wieder zu den Text und versuche Fehler zu finden, also ich
+<strong>passe auf</strong> die syntaktische und grammatische regeln <strong>auf</strong>.</p>]]></content><author><name></name></author><category term="journal" /><category term="deutsch" /><category term="deutsch" /><category term="journal" /><category term="verb" /><category term="präposition" /><category term="überprüfen" /><summary type="html"><![CDATA[Ob ich ein neuer Eintrag in mein Tagebuch schreibe, hängt von meiner Laune und Niveau von Motivation ab, und auch wenn ich ein neuer Eintrag zu schreiben entschieden habe, dann muss ich noch auf die Korrektheit von den geschriebenes Wort achten.]]></summary></entry></feed>
