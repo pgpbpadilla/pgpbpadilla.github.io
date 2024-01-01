@@ -5,3 +5,5 @@ _site
 vendor
 .idea
 /developer/linklint/
+/build/
+/org/jekyll/.bundle/
