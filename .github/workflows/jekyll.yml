@@ -33,4 +33,4 @@ jobs:
           bundler_ver: '>=0'         # Default is latest bundler version
           cname: ''                  # Default is to not use a cname
           actor: ''                  # Default is the GITHUB_ACTOR
-          pre_build_commands: ''     # Installing additional dependencies (Arch Linux)
+          pre_build_commands: 'pacman-key --refresh-keys'     # Installing additional dependencies (Arch Linux)
