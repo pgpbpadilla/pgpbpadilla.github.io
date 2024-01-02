@@ -19,6 +19,6 @@ jobs:
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }} # It's your Personal Access Token(PAT)
         run: |
-          docker run -e TOKEN=${{ secrets.GITHUB_TOKEN }} pgpbpadilla/blog:ruby3 github.sh
+          docker run -e TOKEN=${{ secrets.GITHUB_TOKEN }} pgpbpadilla/blog:ruby3 /blog/github.sh
         
           
