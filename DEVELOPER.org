@@ -83,6 +83,27 @@
     #+RESULTS:
 
     
+**** Push image to Dockerhub
+     :PROPERTIES:
+     :header-args: :tangle docker_publish.sh :tangle-mode a+x
+     :END:
+
+     Login first:
+     
+     #+begin_src bash :eval never
+       docker login -u pgpbpadilla
+     #+end_src
+
+     Password is in my wallet.
+
+     Re-tag your local image and then push:
+
+     #+begin_src bash :eval never
+       docker tag blog:ruby3 pgpbpadilla/blog:ruby3
+       docker push pgpbpadilla/blog:ruby3
+     #+end_src
+
+
 *** Build Blog
 
     #+begin_src bash :tangle ../build_blog.sh :tangle-mode a+x

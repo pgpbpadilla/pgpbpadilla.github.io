@@ -1,0 +1,16 @@
+name: Build and Deploy to Github Pages
+
+on:
+  push:
+    branches:
+      - upgrade-ruby  # Run when changes are pushed to this branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build Blog with my custom Docker image
+        run: |
+          docker run pgpbpadilla/blog:ruby3 echo Hello

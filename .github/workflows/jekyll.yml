@@ -1,10 +1,10 @@
 # https://github.com/jeffreytse/jekyll-deploy-action
 name: Build and Deploy to Github Pages
-
+enabled: false
 on:
   push:
     branches:
-      - master  # Run when changes are pushed to this branch
+      - upgrade-ruby  # Run when changes are pushed to this branch
 
 jobs:
   build_and_deploy:
@@ -23,10 +23,10 @@ jobs:
       # Use GitHub Deploy Action to build and deploy to Github
       - uses: jeffreytse/jekyll-deploy-action@v0.5.1
         with:
-          provider: 'github'
+          provider: 'test'
           token: ${{ secrets.GITHUB_TOKEN }} # It's your Personal Access Token(PAT)
           repository: ''             # Default is current repository
-          branch: 'gh-pages'         # Default is gh-pages for github provider
+          branch: 'gh-pages-ruby3'         # Default is gh-pages for github provider
           jekyll_src: './org/jekyll'           # Default is root directory
           jekyll_cfg: '_config.yml'  # relative to jekyll_src
           jekyll_baseurl: ''         # Default is according to _config.yml
