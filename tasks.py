@@ -2,6 +2,7 @@ from invoke import task
 
 DOCKER_JEKYLL_CMD_PARTS = ['docker', 'run',
                            '-v', '`pwd`/org/jekyll:/blog',
+                           '-w', '/blog',
                            '-p', '"4000:4000"',
                            'blog:ruby3']
 
@@ -17,8 +18,8 @@ def update_gems(ctx):
     ctx.run('bundle update')
     ctx.run('bundle install')
 
-@task(pre=[update_gems])
-def build(ctx, docker=False, trace=False):
+@task
+def build(ctx, docker=True, trace=False):
     """Use Jekyll to build the Blog"""
     jekyll_build = ['jekyll', 'build']
     if trace:
@@ -32,7 +33,7 @@ def build(ctx, docker=False, trace=False):
 
 
 @task
-def serve(ctx, drafts=True, docker=False, trace=False):
+def serve(ctx, drafts=True, docker=True, trace=False):
     """Serves the Blog locally"""
     jekyll_serve = ['jekyll', 'serve', '--livereload']
     if drafts:
@@ -48,7 +49,7 @@ def serve(ctx, drafts=True, docker=False, trace=False):
 
 
 @task
-def run(ctx, docker=False, trace=False, drafts=True):
+def run(ctx, docker=True, trace=False, drafts=True):
     """Build+Run the Blog locally"""
     build(ctx, docker=docker, trace=trace)
     serve(ctx, drafts=drafts, docker=docker, trace=trace)

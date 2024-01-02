@@ -43,6 +43,7 @@
    #+begin_src python
      DOCKER_JEKYLL_CMD_PARTS = ['docker', 'run',
                                 '-v', '`pwd`/org/jekyll:/blog',
+                                '-w', '/blog',
                                 '-p', '"4000:4000"',
                                 'blog:ruby3']
 
@@ -75,8 +76,10 @@
    : echo Hello world!
 
    
-** Ruby Gem helper
+** *Deprecated*: Ruby Gem helper
 
+   *This task only works outside Docker, so it should be avoided.*
+   
    Helps keeping all Ruby dependencies up to date:
 
    #+begin_src python
@@ -92,8 +95,8 @@
 ** Jekyll helpers
    
    #+begin_src python
-     @task(pre=[update_gems])
-     def build(ctx, docker=False, trace=False):
+     @task
+     def build(ctx, docker=True, trace=False):
          """Use Jekyll to build the Blog"""
          jekyll_build = ['jekyll', 'build']
          if trace:
@@ -107,7 +110,7 @@
 
 
      @task
-     def serve(ctx, drafts=True, docker=False, trace=False):
+     def serve(ctx, drafts=True, docker=True, trace=False):
          """Serves the Blog locally"""
          jekyll_serve = ['jekyll', 'serve', '--livereload']
          if drafts:
@@ -123,7 +126,7 @@
 
 
      @task
-     def run(ctx, docker=False, trace=False, drafts=True):
+     def run(ctx, docker=True, trace=False, drafts=True):
          """Build+Run the Blog locally"""
          build(ctx, docker=docker, trace=trace)
          serve(ctx, drafts=drafts, docker=docker, trace=trace)
