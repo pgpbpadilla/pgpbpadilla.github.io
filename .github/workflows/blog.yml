@@ -13,4 +13,4 @@ jobs:
 
       - name: Build Blog with my custom Docker image
         run: |
-          docker run pgpbpadilla/blog:ruby3 echo Hello
+          docker run pgpbpadilla/blog:ruby3 jekyll build
