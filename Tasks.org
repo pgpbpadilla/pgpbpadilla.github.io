@@ -1,9 +1,31 @@
 #+property: header-args :session tasks :tangle tasks.py :eval noexport :results output
 
-
 * Developer tasks
+  :PROPERTIES:
+  :ID:       68AF78C2-846C-4703-8A49-C9042433E952
+  :END:
 
   Repetitive tasks needed while working on the blog.
+
+  This is meant to be used from your shell:
+  
+  #+begin_src bash :session none :tangle no :results verbatim
+    inv -l
+  #+end_src
+
+  #+RESULTS:
+  : Available tasks:
+  : 
+  :   build         Use Jekyll to build the Blog
+  :   run           Build+Run the Blog locally
+  :   serve         Serves the Blog locally
+  :   update-gems   Updates bundler and reinstall all Blog dependencies
+  :   view          Open live website in the default browser
+  : 
+  
+
+  To regenerate [[file:tasks.py]] file, simply tangle it with:
+  =C-c C-v t=. 
 
   
 ** Python Invoke: [[https://www.pyinvoke.org/][site]]
