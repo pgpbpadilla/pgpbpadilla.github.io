@@ -16,7 +16,6 @@ jobs:
           docker run pgpbpadilla/blog:ruby3 jekyll build
 
       - name: Push blog assets to branch for publishing
-        env:
         run: |
           docker run -e ACTOR=$GITHUB_ACTOR pgpbpadilla/blog:ruby3 /blog/github.sh
         
