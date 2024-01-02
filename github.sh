@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+REPOSITORY="pgpbpadilla/pgpbpadilla.github.io"
+ACTOR=${GITHUB_ACTOR}
+BRANCH="gh-pages-ruby3"
+
+
 # Check if deploy to same branch
 if [[ "${REPOSITORY}" = "${GITHUB_REPOSITORY}" ]]; then
   if [[ "${GITHUB_REF}" = "refs/heads/${BRANCH}" ]]; then
