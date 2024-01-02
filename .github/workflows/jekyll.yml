@@ -1,10 +1,10 @@
 # https://github.com/jeffreytse/jekyll-deploy-action
 name: Build and Deploy to Github Pages
-enabled: false
+
 on:
   push:
     branches:
-      - upgrade-ruby  # Run when changes are pushed to this branch
+      - neverrun  # Run when changes are pushed to this branch
 
 jobs:
   build_and_deploy:
