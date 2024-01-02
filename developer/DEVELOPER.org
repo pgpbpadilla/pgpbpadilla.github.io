@@ -85,7 +85,7 @@
     
 *** Build Blog
 
-    #+begin_src bash
+    #+begin_src bash :tangle ../build_blog.sh :tangle-mode a+x
       docker run \
              -v $(pwd):/blog \
              -w /blog \
@@ -93,4 +93,15 @@
     #+end_src
 
     #+RESULTS:
-    : Hello
+    : Updating installed gems
+    : Nothing to update
+    : Gems already up-to-date: bundler
+
+*** Installing Ruby dependencies
+
+    #+begin_src bash :tangle ~/blog/org/jekyll/install_deps.sh :tangle-mode a+x
+      #!/usr/bin/env bash
+      gem update bundler
+      bundle update
+      bundle install
+    #+end_src
