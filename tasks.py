@@ -1,17 +1,14 @@
 from invoke import task
 
-
-def build_cmd(parts):
-    return ' '.join(parts)
-
-
 DOCKER_JEKYLL_CMD_PARTS = ['docker', 'run',
-                           '-v', '`pwd`:/srv/jekyll',
+                           '-v', '`pwd`/org/jekyll:/blog',
                            '-p', '"4000:4000"',
-                           'jekyll/jekyll']
+                           'blog:ruby3']
 
 BUNDLE_EXEC = ['bundle', 'exec']
 
+def build_cmd(parts):
+    return ' '.join(parts)
 
 @task
 def update_gems(ctx):
@@ -19,7 +16,6 @@ def update_gems(ctx):
     ctx.run('gem update bundler')
     ctx.run('bundle update')
     ctx.run('bundle install')
-
 
 @task(pre=[update_gems])
 def build(ctx, docker=False, trace=False):
