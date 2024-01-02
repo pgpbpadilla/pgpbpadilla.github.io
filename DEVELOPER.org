@@ -74,7 +74,7 @@
 *** Build custom image
 
     #+name: build
-    #+begin_src bash :tangle ../build_image.sh :tangle-mode a+x
+    #+begin_src bash :tangle build_image.sh :tangle-mode a+x
       docker build -t blog:ruby3 .
     #+end_src
 
@@ -106,7 +106,7 @@
 
 *** Build Blog
 
-    #+begin_src bash :tangle ../build_blog.sh :tangle-mode a+x
+    #+begin_src bash :tangle build_blog.sh :tangle-mode a+x
       docker run \
              -v $(pwd)/org/jekyll:/blog \
              -w /blog \
@@ -122,10 +122,8 @@
     
 **** Debug container
 
-     #+begin_src bash :tangle ../debug_blog.sh :tangle-mode a+x
+     #+begin_src bash :tangle debug_blog.sh :tangle-mode a+x
        docker run -it \
-              -v $(pwd)/org/jekyll:/blog \
-              -w /blog \
               --entrypoint /bin/bash \
               blog:ruby3
     #+end_src
@@ -133,7 +131,7 @@
     
 *** Serve the blog
 
-    #+begin_src bash :tangle ../serve.sh :tangle-mode a+x
+    #+begin_src bash :tangle serve.sh :tangle-mode a+x
       set -x
       docker run \
              -v $(pwd)/org/jekyll:/blog \

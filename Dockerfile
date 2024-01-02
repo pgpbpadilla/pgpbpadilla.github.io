@@ -12,7 +12,7 @@ RUN gem update bundler \
 FROM cache
 
 COPY org/jekyll/ /blog/
-COPY github.sh /
+COPY github.sh /blog
 
 
 CMD ["bundle", "exec", "jekyll", "--help"]
