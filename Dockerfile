@@ -10,5 +10,7 @@ RUN gem update bundler \
 
 
 FROM cache
-COPY . /blog
-ENTRYPOINT ["./entrypoint.sh"]
+
+COPY org/jekyll/ /blog/
+
+CMD ["bundle", "exec", "jekyll", "--help"]
