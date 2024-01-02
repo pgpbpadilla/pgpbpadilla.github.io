@@ -63,3 +63,34 @@
       ```shell script
       $ rvm use 2.7.0
       ```
+
+** Ruby upgrade
+   :PROPERTIES:
+   :header-args: :dir ~/blog :results output
+   :END:
+   :LOGBOOK:
+   :END:
+
+*** Build custom image
+
+    #+name: build
+    #+begin_src bash
+      docker build -t blog:ruby3 .
+    #+end_src
+
+    #+RESULTS: build
+
+    #+RESULTS:
+
+    
+*** Build Blog
+
+    #+begin_src bash
+      docker run \
+             -v $(pwd):/blog \
+             -w /blog \
+             blog:ruby3
+    #+end_src
+
+    #+RESULTS:
+    : Hello
