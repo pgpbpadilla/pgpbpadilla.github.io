@@ -74,7 +74,7 @@
 *** Build custom image
 
     #+name: build
-    #+begin_src bash
+    #+begin_src bash :tangle ../build_image.sh :tangle-mode a+x
       docker build -t blog:ruby3 .
     #+end_src
 
