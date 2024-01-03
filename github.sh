@@ -6,15 +6,6 @@ ACTOR=$ACTOR
 TOKEN=$TOKEN
 BRANCH="gh-pages-ruby3"
 
-
-# Check if deploy to same branch
-if [[ "${REPOSITORY}" = "${GITHUB_REPOSITORY}" ]]; then
-  if [[ "${GITHUB_REF}" = "refs/heads/${BRANCH}" ]]; then
-    echo "It's conflicted to deploy on same branch ${BRANCH}"
-    exit 1
-  fi
-fi
-
 # Tell GitHub Pages not to run Jekyll
 touch .nojekyll
 [[ -n "$INPUT_CNAME" ]] && echo "$INPUT_CNAME" > CNAME
