@@ -17,6 +17,6 @@ jobs:
 
       - name: Push blog assets to branch for publishing
         run: |
-          docker run -e ACTOR=$GITHUB_ACTOR pgpbpadilla/blog:ruby3 /blog/github.sh
+          docker run -e GITHUB_ACTOR pgpbpadilla/blog:ruby3 /blog/github.sh
         
           

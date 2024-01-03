@@ -2,7 +2,7 @@
 set -e
 
 REPOSITORY="pgpbpadilla/pgpbpadilla.github.io"
-ACTOR=${GITHUB_ACTOR}
+ACTOR="pgpbpadilla"
 BRANCH="gh-pages-ruby3"
 
 
@@ -18,15 +18,7 @@ fi
 touch .nojekyll
 [[ -n "$INPUT_CNAME" ]] && echo "$INPUT_CNAME" > CNAME
 
-# Prefer to use SSH approach when SSH private key is provided
-if [[ -n "${SSH_PRIVATE_KEY}" ]]; then
-  export GIT_SSH_COMMAND="ssh -i ${SSH_PRIVATE_KEY_PATH} \
-    -o StrictHostKeyChecking=no \
-    -o UserKnownHostsFile=/dev/null"
-  REMOTE_REPO="git@github.com:${REPOSITORY}.git"
-else
-  REMOTE_REPO="https://${ACTOR}:${TOKEN}@github.com/${REPOSITORY}.git"
-fi
+REMOTE_REPO="https://${ACTOR}:${TOKEN}@github.com/${REPOSITORY}.git"
 
 echo "Deploying to ${REPOSITORY} on branch ${BRANCH}"
 echo "Deploying to ${REMOTE_REPO}"
