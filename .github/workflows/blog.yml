@@ -16,7 +16,11 @@ jobs:
           docker run pgpbpadilla/blog:ruby3 jekyll build
 
       - name: Push blog assets to branch for publishing
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTOR: $GITHUB_ACTOR
+          REPO: $GITHUB_REPOSITORY
         run: |
-          docker run -e GITHUB_ACTOR pgpbpadilla/blog:ruby3 /blog/github.sh
+          docker run -e REPO=$REPO -e ACTOR=$ACTOR -e TOKEN=$TOKEN pgpbpadilla/blog:ruby3 /blog/github.sh
         
           

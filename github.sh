@@ -1,8 +1,9 @@
 #!/bin/bash
 set -e
 
-REPOSITORY="pgpbpadilla/pgpbpadilla.github.io"
-ACTOR="pgpbpadilla"
+REPOSITORY=$REPO
+ACTOR=$ACTOR
+TOKEN=$TOKEN
 BRANCH="gh-pages-ruby3"
 
 
