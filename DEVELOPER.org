@@ -64,6 +64,7 @@
       $ rvm use 2.7.0
       ```
 
+
 ** Ruby upgrade
    :PROPERTIES:
    :header-args: :dir ~/blog :results output
@@ -71,82 +72,98 @@
    :LOGBOOK:
    :END:
 
-*** Build custom image
-
-    #+name: build
-    #+begin_src bash :tangle build_image.sh :tangle-mode a+x
-      docker build -t blog:ruby3 .
-    #+end_src
-
-    #+RESULTS: build
-
-    #+RESULTS:
-
+*** Github Actions
     
-**** Push image to Dockerhub
-     :PROPERTIES:
-     :header-args: :tangle docker_publish.sh :tangle-mode a+x
-     :END:
+**** Custom Docker image hosted in Dockerhub
 
-     Login first:
+     1) I am building a custom Docker image using this [[file:Dockerfile]]
      
-     #+begin_src bash :eval never
-       docker login -u pgpbpadilla
+     2) This means I have to ensure that the Docker image referenced
+        in the Gihtub action is up to date in Dockerhub
+
+     3) Eventually this docker image should be updated during the same
+        gh workflow, before trying to use it
+        
+
+*** Local development tasks
+
+**** Build custom image
+
+     #+name: build
+     #+begin_src bash :tangle build_image.sh :tangle-mode a+x
+       docker build -t blog:ruby3 .
      #+end_src
 
-     Password is in my wallet.
+     #+RESULTS: build
 
-     Re-tag your local image and then push:
+     #+RESULTS:
 
-     #+begin_src bash :eval never
-       docker tag blog:ruby3 pgpbpadilla/blog:ruby3
-       docker push pgpbpadilla/blog:ruby3
+    
+***** Push image to Dockerhub
+      :PROPERTIES:
+      :header-args: :tangle docker_publish.sh :tangle-mode a+x
+      :END:
+
+      Login first:
+     
+      #+begin_src bash :eval never
+        set -x
+        docker login -u pgpbpadilla
+      #+end_src
+
+      Password is in my wallet.
+
+      Re-tag your local image and then push:
+
+      #+begin_src bash :eval never
+        docker tag blog:ruby3 pgpbpadilla/blog:ruby3
+        docker push pgpbpadilla/blog:ruby3
+      #+end_src
+
+
+**** Build Blog
+
+     #+begin_src bash :tangle build_blog.sh :tangle-mode a+x
+       docker run \
+              -v $(pwd)/org/jekyll:/blog \
+              -w /blog \
+              blog:ruby3 \
+              bundle exec jekyll build 
      #+end_src
 
-
-*** Build Blog
-
-    #+begin_src bash :tangle build_blog.sh :tangle-mode a+x
-      docker run \
-             -v $(pwd)/org/jekyll:/blog \
-             -w /blog \
-             blog:ruby3 \
-             bundle exec jekyll build 
-    #+end_src
-
-    #+RESULTS:
-    : Updating installed gems
-    : Nothing to update
-    : Gems already up-to-date: bundler
+     #+RESULTS:
+     : Updating installed gems
+     : Nothing to update
+     : Gems already up-to-date: bundler
 
     
-**** Debug container
+***** Debug container
 
-     #+begin_src bash :tangle debug_blog.sh :tangle-mode a+x
-       docker run -it \
-              --entrypoint /bin/bash \
-              blog:ruby3
-    #+end_src
+      #+begin_src bash :tangle debug_blog.sh :tangle-mode a+x
+        docker run -it \
+               --entrypoint /bin/bash \
+               blog:ruby3
+     #+end_src
 
     
-*** Serve the blog
+**** Serve the blog
 
-    #+begin_src bash :tangle serve.sh :tangle-mode a+x
-      set -x
-      docker run \
-             -v $(pwd)/org/jekyll:/blog \
-             -w /blog \
-             -p 4000:4000 \
-             blog:ruby3 \
-             bundle exec jekyll serve --livereload
-    #+end_src
+     #+begin_src bash :tangle serve.sh :tangle-mode a+x
+       set -x
+       docker run \
+              -v $(pwd)/org/jekyll:/blog \
+              -w /blog \
+              -p 4000:4000 \
+              blog:ruby3 \
+              bundle exec jekyll serve --livereload
+     #+end_src
     
     
-*** Installing Ruby dependencies
+**** Installing Ruby dependencies
 
-    #+begin_src bash :tangle ~/blog/org/jekyll/install_deps.sh :tangle-mode a+x
-      #!/usr/bin/env bash
-      gem update bundler
-      bundle update
-      bundle install
-    #+end_src
+     #+begin_src bash :tangle ~/blog/org/jekyll/install_deps.sh :tangle-mode a+x
+       #!/usr/bin/env bash
+       gem update bundler
+       bundle update
+       bundle install
+     #+end_src

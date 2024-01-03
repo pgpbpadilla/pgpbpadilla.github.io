@@ -1,3 +1,4 @@
+set -x
 docker login -u pgpbpadilla
 
 docker tag blog:ruby3 pgpbpadilla/blog:ruby3
