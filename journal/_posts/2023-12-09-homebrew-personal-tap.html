@@ -1,0 +1,101 @@
+---
+layout: post.liquid
+title: "Homebrew package upgrade breaking stuff and how to deal with it"
+date: 2023-12-08 Sa 11:01
+last_updated: 2023-12-09 Sa 17:15
+tags:
+  - journal 
+  - tech 
+  - homebrew 
+  - macos 
+  - package-management 
+  - gnupg
+  - emacs
+categories: [tech, journal]
+permalink: /2023-12-08-personal-homebrew-tap
+toc: false
+---
+
+
+<p>
+<a href="https://brew.sh/">Homebrew</a> package upgrades have regularly broken my personal setup,
+blocking me from completing my current task. My <a href="https://github.com/pgpbpadilla/homebrew-pgpb">personal Homebrew tap</a>
+saved the day recently, so it deserves a mention here.
+</p>
+
+
+<p>
+I accidentally upgraded all my Homebrew packages with:
+</p>
+
+<pre class="example" id="orge164a1c">
+brew upgrade
+</pre>
+
+<p>
+Later I noticed that saving <a href="https://orgmode.org/worg/org-tutorials/encrypting-files.html">encrypted files in Emacs</a> was <a href="https://dev.gnupg.org/T6481">not
+working</a>. Anytime I tried saving changes Emacs would hang.
+</p>
+
+<p>
+After googling I found that others were having the same issue after
+upgrading their <a href="https://www.gnupg.org/">GnuPG</a> package.
+</p>
+
+<p>
+I was able to fix the problem after following <a href="https://stackoverflow.com/a/76404609/400544">instructions from
+StackOverflow</a>. However, that didn't last, I ran into the same
+trouble with my work computer. This time it was different, I had
+updated my setup to pin the <a href="https://semver.org/">minor version</a> of GnuPG to 2.2, so I was
+surprised that even though the <i>correct</i> version was installed, Emacs
+would still hang during encryption.
+</p>
+
+<p>
+The difference was that my personal and work computers were using
+different PATCH versions:
+</p>
+
+<ul class="org-ul">
+<li>Work: <b>2.2.42</b></li>
+<li>Personal: <b>2.2.41</b></li>
+</ul>
+
+
+<p>
+Homebrew does not provide <a href="https://docs.brew.sh/Versions">versioned formulas</a> for different PATCH
+versions of a package, so I couldn't use:
+</p>
+
+<pre class="example" id="org5c629f9">
+brew install gnupg@2.2.41
+</pre>
+
+<p>
+I once had a similar situation, I needed to pin the version of package
+with no versioned formula. To do that, I created a personal <a href="https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap">Homebrew
+tap</a> and defined a formula for the desired package.
+</p>
+
+<p>
+To fix my configuration, I found the <a href="https://formulae.brew.sh/formula/gnupg@2.2">formula for gnupg@2.2</a> and <a href="https://github.com/pgpbpadilla/homebrew-pgpb/blob/master/Formula/gnupg%402.2.41.rb">tweaked
+it</a>, so that it installed version 2.2.41. This worked fine, the main
+downside was that the install time got longer since the package is
+built from sources, no biggie.
+</p>
+
+<p>
+I decided to spend the time to write this since it's the second time
+my personal tap has saved the day. So if you're GnuPG is broken in the
+same way you can use it too!
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">brew tap pgpbpadilla/pgpb
+brew install gnupg@2.2.41
+</pre>
+</div>
+
+<p>
+Sources are in Github: <a href="https://github.com/pgpbpadilla/homebrew-pgpb">pgpbpadilla/homebrew-pgpb</a>.
+</p>

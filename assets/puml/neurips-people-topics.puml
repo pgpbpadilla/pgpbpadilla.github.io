@@ -1,0 +1,20 @@
+@startuml
+
+[AIXI] <-- [Hutter]: proposed
+[Hutter] <-- [Hochreiter]: studied with
+
+[LSTM] --> [Schmidhubber]: proposed
+[GoedelMachine] --> [Schmidhubber]: proposed
+[NNaissance] -- [Schmidhubber]: founded
+[Schmidhubber] <-- [Hutter]: studied with
+
+[NNs] -- [RNNs]
+[RNNs] -- [Schmidhubber]
+
+[NeurIPS] <-- [Sejnowski]: founded
+[NeurIPS] <-- [EdPosner]: founded
+[NeurIPS] <-- [Schmidhubber]: assisted
+
+[NeurIPS] <-- [InformationTheory]
+
+@enduml

@@ -1,0 +1,85 @@
+---
+layout: post.liquid
+title:  "Org-mode + PlantUML + Jekyll"
+date: 2023-12-23 So 12:34
+last_updated: 2023-12-23 So 12:34
+tags:
+  - journal
+  - deutsch
+  - org-mode
+  - plantuml
+  - jekyll
+categories: [journal]
+permalink: /2023-12-23-org+plantuml+jekyll
+toc: false
+---
+
+<p>
+Heute möchte ich zeigen wie man ein PlantUML Diagramm mit Org-mode
+erstellt und in ein Jekyll Blog veröffentlicht.
+</p>
+
+<p>
+Der Quellcode des Diagramm ist:
+</p>
+
+
+<div class="org-src-container">
+<pre class="src src-plantuml">Alice <span style="color: #a020f0;">-&gt;</span> Bob:  synchrone Nachricht
+Alice <span style="color: #a020f0;">-&gt;</span>&gt; Bob: asynchrone Nachricht
+</pre>
+</div>
+
+
+<p>
+Man kann der PlantUML-Quellcode in Org Codeblöcke einbetten<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>: 
+</p>
+
+<pre class="example">
+#+begin_src plantuml :file ../svg/org+plantuml.svg :exports code
+  Alice -&gt; Bob:  synchrone Nachricht
+  Alice -&gt;&gt; Bob: asynchrone Nachricht
+#+end_src
+</pre>
+
+
+
+<p>
+Das Argument <code>:file</code> gibt den Speicherort des Diagramms an.
+</p>
+
+
+<p>
+Wenn wir das Diagramm anzeigen wollen, können wir so machen:
+</p>
+
+<pre class="example">
+#+begin_export html
+&lt;div style="text-align: center"&gt;
+  &lt;img src="/assets/svg/org+plantuml.svg"&gt;
+  &lt;figcaption&gt;PlantUML diagram.&lt;/figcaption&gt;
+&lt;/div&gt;
+#+end_export
+</pre>
+
+
+
+<p>
+Das Diagramm sieht so aus:
+</p>
+
+<div style="text-align: center">
+  <img src="/assets/svg/org+plantuml.svg">
+  <figcaption>PlantUML diagram.</figcaption>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Fu&szlig;noten: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://eschulte.github.io/babel-dev/DONE-integrate-plantuml-support.html">Org-babel PlantUML-Unterstützung</a> 
+</p></div></div>
+
+
+</div>
+</div>

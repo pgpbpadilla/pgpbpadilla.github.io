@@ -1,0 +1,253 @@
+---
+layout: post.liquid
+title:  "Mit Emacs Org Mode ein Blog Eintrag schreiben"
+date: 2023-05-25 22:50
+last_updated: 2023-05-25 22:50
+tags: deutsch journal org-mode emacs überprüfen
+categories: [deutsch, journal]
+permalink: /2023-05-25-blog-mit-org
+toc: true
+---
+
+<p>
+In diesem Eintrag versuche ich ein paar Funktionen zu
+probieren. Normalaweise schreibe ich direkt im Markdown aber dieses
+Mal schreibe ich den Eintrag mit <a href="#org8e9353f">Emacs Org Mode</a> <a href="#org8e9353f">target abc</a> <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.
+</p>
+
+
+<div id="outline-container-abs1" class="outline-2">
+<h2 id="abs1">Hier is eine neue Abschnitt</h2>
+<div class="outline-text-2" id="text-abs1">
+<p>
+In dieser Abschnitt schreibe ich normales Text, es gibt nicht
+besonderes hier.
+</p>
+
+<p>
+Leider ist nur ein Abschnitt reicht nicht, um genug vertikaler Raum
+zu schaffen; deswegen muss ich noch mehr Sätze schreiben, obwohl
+sie sagen nicht viel mehr als die bisherigen.
+</p>
+
+<p>
+Alle andere normalle Textformatierung ist mit Org mode auch
+möglich, z.B., man kann Texte mit <i>italics</i>, <b>bold face</b>,
+<span class="underline">unterlinie</span>, <code>monospace</code>, <del>durchgestrichen</del> schreiben.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-abs2" class="outline-2">
+<h2 id="abs2">Noch ein Abschnitt</h2>
+<div class="outline-text-2" id="text-abs2">
+<p>
+Hier sagen wir etwas anderes als bisher, zum Beispiel, hier können
+wir <a href="#abs1">so ein Link</a> erstellen, leider haben die generierte Ankern
+zufällige Namen. Der Ziel ist, die Eintrag von Org zu
+Markdown exportieren und die Links überprüfen.
+</p>
+
+
+<p>
+Ich muss noch ein paar andere Funktionen probieren, nämlich:
+</p>
+
+<ol class="org-ol">
+<li>Bilder einzufügen [<a href="#bilder">Bilder</a>]</li>
+<li>Code-snipets [<a href="#code">Code</a>]
+<ul class="org-ul">
+<li>Syntaxhervorhebung</li>
+</ul></li>
+<li>Mathematische Symbole und Formeln [<a href="#mathe">Mathematik</a>]</li>
+<li>Textfarben ändern [<a href="#farb-texte">Farbiges Text</a>]</li>
+</ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-anker-test" class="outline-2">
+<h2 id="anker-test">Abschnitt mit Anker</h2>
+<div class="outline-text-2" id="text-anker-test">
+<p>
+<a href="#anker-test">Abschnitt mit Anker</a>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-bilder" class="outline-2">
+<h2 id="bilder">Bilder</h2>
+<div class="outline-text-2" id="text-bilder">
+<div style="text-align: center">
+  <img src="/assets/images/ogdf-sample-graphs.png">
+</div>
+</div>
+
+
+<div id="outline-container-org19d95aa" class="outline-3">
+<h3 id="org19d95aa">Bilder mit Link</h3>
+<div class="outline-text-3" id="text-org19d95aa">
+<div style="text-align: center">
+  <a href="assets/images/ogdf-sample-graphs.png">
+    <img src="assets/images/ogdf-sample-graphs.png"
+         alt="Sample OGDF graphs">
+  </a>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org1c377a2" class="outline-3">
+<h3 id="org1c377a2">Bilder mit Beschriftung</h3>
+<div class="outline-text-3" id="text-org1c377a2">
+<div style="text-align: center">
+  <img src="/assets/images/ogdf-sample-graphs.png">
+  <figcaption>Eine Abbildung mit Beschriftung.</figcaption>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-code" class="outline-2">
+<h2 id="code">Code</h2>
+<div class="outline-text-2" id="text-code">
+{% highlight java %}
+@RunWith(SpringRunner.class)
+@DataJpaTest
+public class ExampleTransactionalTests {
+    @Autowired
+    private TestEntityManager entityManager;
+
+    @Autowired
+    private UserRepository repository;
+
+    @Test
+    public void testExample() throws Exception {
+        this.entityManager.persist(new User("sboot", "1234"));
+        User user = this.repository.findByUsername("sboot");
+        assertThat(user.getUsername()).isEqualTo("sboot");
+        assertThat(user.getVin()).isEqualTo("1234");
+    }
+}
+{% endhighlight %}
+</div>
+</div>
+
+
+
+<div id="outline-container-mathe" class="outline-2">
+<h2 id="mathe">Mathematik</h2>
+<div class="outline-text-2" id="text-mathe">
+<p>
+\[
+  \sum_{i=0}^N k^i
+  \]
+</p>
+</div>
+
+
+<div id="outline-container-orgd176eb3" class="outline-3">
+<h3 id="orgd176eb3">Formel: AIXI</h3>
+<div class="outline-text-3" id="text-orgd176eb3">
+<p>
+\[
+   { \color{blue} AIXI }\quad
+   { \color{green} a_k } :=
+   { \color{green} \arg \max_{a_k} }
+   { \color{red} \sum_{ {\color{brightpink} o_k} {\color{purple} r_k} } }
+   ...
+   { \color{green} \max_{a_m} }
+   { \color{red} \sum_{
+       {\color{brightpink} o_m}
+       {\color{purple} r_m}
+     }
+   }
+   {\color{purple} [r_k + ... + r_m]}
+   {\color{blue} \sum_{
+       {\color{goldenrod} q}
+       :U(
+       {\color{goldenrod} q},
+       {\color{green} a_1 ... a_m}
+       ) =
+       {\color{brightpink} o_1} {\color{purple} r_1}
+       ...
+       {\color{brightpink} o_m} {\color{purple} r_m}
+     }
+     2^{-\ell( {\color{goldenrod} q} )}
+   }
+   \]  
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-farb-texte" class="outline-2">
+<h2 id="farb-texte">Farbiges Text</h2>
+<div class="outline-text-2" id="text-farb-texte">
+Man kann <span style="color: green">Grüne Text</span> und
+<span style="color: blue">Blaue Text</span> schreiben in
+ein HTML-export Block.  
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #b22222;">#+begin_export html</span>
+<span style="color: #7f7f7f;">Man kann &lt;</span><span style="color: #0000ff;">span</span><span style="color: #7f7f7f;"> </span><span style="color: #a0522d;">style</span><span style="color: #7f7f7f;">=</span><span style="color: #8b2252;">"color: green"</span><span style="color: #7f7f7f;">&gt;Gr&#252;ne Text&lt;/</span><span style="color: #0000ff;">span</span><span style="color: #7f7f7f;">&gt; und</span>
+<span style="color: #7f7f7f;">&lt;</span><span style="color: #0000ff;">span</span><span style="color: #7f7f7f;"> </span><span style="color: #a0522d;">style</span><span style="color: #7f7f7f;">=</span><span style="color: #8b2252;">"color: blue"</span><span style="color: #7f7f7f;">&gt;Blaue Text&lt;/</span><span style="color: #0000ff;">span</span><span style="color: #7f7f7f;">&gt; schreiben in</span>
+<span style="color: #7f7f7f;">ein HTML-export Block.  </span>
+<span style="color: #b22222;">#+end_export</span>
+</pre>
+</div>
+
+<p>
+Man kan auch <span style="color: red">die
+Textfarbe</span> mit <i><a href="https://orgmode.org/manual/Quoting-HTML-tags.html">Inline-Syntax</a></i>, e.g.,
+<code>@@html:&lt;html&gt;@@</code>
+<span style="color: orange">schreiben</span>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org">Man kan auch
+<span style="color: #b22222;">@@</span><span style="font-weight: bold;">html:</span>&lt;span style="color: red"&gt;<span style="color: #b22222;">@@</span>die Textfarbe<span style="color: #b22222;">@@</span><span style="font-weight: bold;">html:</span>&lt;/span&gt;<span style="color: #b22222;">@@</span>
+mit <span style="font-style: italic;">/inline/</span> <span style="color: #7f7f7f;">=</span><span style="color: #b22222;">@@</span><span style="font-weight: bold;">html:</span><span style="color: #7f7f7f;">&lt;html&gt;</span><span style="color: #b22222;">@@</span><span style="color: #7f7f7f;">=</span>
+<span style="color: #b22222;">@@</span><span style="font-weight: bold;">html:</span>&lt;span style="color: orange"&gt;<span style="color: #b22222;">@@</span>schreiben<span style="color: #b22222;">@@</span><span style="font-weight: bold;">html:</span>&lt;/span&gt;<span style="color: #b22222;">@@</span>.
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org25097ba" class="outline-2">
+<h2 id="org25097ba">Hinweise</h2>
+<div class="outline-text-2" id="text-org25097ba">
+<ol class="org-ol">
+<li><a href="https://orgmode.org/">Org Mode Website</a>: die Offizielles website für Org Mode.
+<a id="org8e9353f"></a>
+Es ist auch möglich Fußnoten zu erstellen<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup></li>
+</ol>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Fu&szlig;noten: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Ein Beispiel von ein Fußnote mit Org Mode. Leider ist der
+Standar sprache für Export Englisch, also ich muss auch erfinden wie
+die Fußnoten Abteilungstitel auf die richtige Sprache erstellen.
+</p>
+
+<p class="footpara">
+Nicht nur das, die Einrückung der Fußnoten ist auch falsch.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Andere Fußnote, nur zum probieren.
+</p></div></div>
+
+
+</div>
+</div>

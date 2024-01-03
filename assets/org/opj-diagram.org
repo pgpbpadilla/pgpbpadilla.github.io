@@ -1,0 +1,6 @@
+#+begin_export html
+<div style="text-align: center">
+  <img src="/assets/svg/org+plantuml.svg">
+  <figcaption>PlantUML diagram.</figcaption>
+</div>
+#+end_export
