@@ -12,7 +12,7 @@
 layout: post.liquid
 title:  "From ZSA's Moonlander to Voyager, part 1"
 date: 2023-11-05 Mo 19:20
-last_updated: 2023-11-10 Fr 22:16
+last_updated: 2024-01-04 Do 21:10
 tags:
   - journal
   - kbd
@@ -31,6 +31,9 @@ I had only one goal, to replicate my [[https://www.zsa.io/moonlander/][Moonlande
 
 
 * Installing my 34-key layout into the Voyager
+  :PROPERTIES:
+  :CUSTOM_ID: installation
+  :END:
   
   I already have a good setup for the [[https://www.zsa.io/moonlander/][Moonlander]] and I wanted to
   simply copy-paste my Moonlander layout in the [[https://www.zsa.io/voyager/][Voyager]]. I use a 34
@@ -60,6 +63,9 @@ I had only one goal, to replicate my [[https://www.zsa.io/moonlander/][Moonlande
 
 
 * Duplicating a layout: no can do
+  :PROPERTIES:
+  :CUSTOM_ID: copy-layout
+  :END:
 
   I expected to be able to export my Moonlander layout and then
   import it into the Voyagers'. This is not supported out of the
@@ -77,6 +83,9 @@ I had only one goal, to replicate my [[https://www.zsa.io/moonlander/][Moonlande
    
 
 * Duplicating a key: no can do
+  :PROPERTIES:
+  :CUSTOM_ID: copy-key
+  :END:
 
   You cannot duplicate a key and there is no keyboard friendly way to
   edit a key assignment, which is ironic.
@@ -109,6 +118,9 @@ I had only one goal, to replicate my [[https://www.zsa.io/moonlander/][Moonlande
    
    
 * Long macros
+  :PROPERTIES:
+  :CUSTOM_ID: long-macros
+  :END:
 
   Over time I have accumulated patterns -- common keybinding
   sequences -- for Org mode. One of them is to look at the agenda,
@@ -153,6 +165,9 @@ I had only one goal, to replicate my [[https://www.zsa.io/moonlander/][Moonlande
    
    
 * Conclusions
+  :PROPERTIES:
+  :CUSTOM_ID: conclusion
+  :END:
 
   1) The Voyager looks amazing, feels amazing and is tiny, compared to
      the Moonlander
@@ -172,12 +187,16 @@ I had only one goal, to replicate my [[https://www.zsa.io/moonlander/][Moonlande
 * My ZSA keyboard layouts
   :PROPERTIES:
   :ID:       D392DD6B-C39F-44D9-85FB-0B9FDC719C6F
+  :CUSTOM_ID: my-layouts
   :END:
 
   I'm just going to put these here, you know, just to show off a
   little bit =P ... and also 'cause they look cool.
    
 ** Moonlander 
+   :PROPERTIES:
+   :CUSTOM_ID: moonlander
+   :END:
 
    #+begin_export html
    <div style="padding-top: 60%; position: relative;">
@@ -187,6 +206,9 @@ I had only one goal, to replicate my [[https://www.zsa.io/moonlander/][Moonlande
 
 
 ** Voyager
+   :PROPERTIES:
+   :CUSTOM_ID: voyager
+   :END:
 
    #+begin_export html
    <div style="padding-top: 60%; position: relative;">
