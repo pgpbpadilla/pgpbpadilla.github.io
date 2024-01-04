@@ -8,6 +8,7 @@
    https://orgmode.org/manual/Export-Settings.html
 #+end_comment
 #+OPTIONS: toc:nil num:nil broken-links:mark
+#+property: header-args :eval noexport
 
 #+begin_export html
 ---
@@ -38,9 +39,10 @@ saved the day recently, so it deserves a mention here.
 
 I accidentally upgraded all my Homebrew packages with:
 
-#+begin_example bash
+#+begin_src bash 
 brew upgrade
-#+end_example
+#+end_src
+
 
 Later I noticed that saving [[https://orgmode.org/worg/org-tutorials/encrypting-files.html][encrypted files in Emacs]] was [[https://dev.gnupg.org/T6481][not
 working]]. Anytime I tried saving changes Emacs would hang.
@@ -65,9 +67,10 @@ different PATCH versions:
 Homebrew does not provide [[https://docs.brew.sh/Versions][versioned formulas]] for different PATCH
 versions of a package, so I couldn't use:
 
-#+begin_example bash
+#+begin_src bash
 brew install gnupg@2.2.41
-#+end_example
+#+end_src
+
 
 I once had a similar situation, I needed to pin the version of package
 with no versioned formula. To do that, I created a personal [[https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap][Homebrew
