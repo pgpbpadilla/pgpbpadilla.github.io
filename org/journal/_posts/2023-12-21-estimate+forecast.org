@@ -6,13 +6,14 @@
 layout: post.liquid
 title:  "Estimation vs Forecast in Software projects"
 date: 2023-12-21 Fr 20:59
-last_updated: 2023-12-21 Fr 20:59
+last_updated: 2024-01-27 So 21:37
 tags:
   - journal
   - estimation
   - forecast
   - software
   - project
+  - NoEstimates
 categories: [journal, software, project]
 permalink: /2023-12-21-estimation+forecast
 toc: true
@@ -112,6 +113,9 @@ effort and cost of a software project has been one of the hardest.
 * Further reading
 
   1. [[https://holub.com/noestimates-an-introduction/][#NoEstimates, an introduction @ Allen Holub' Blog]]
+  2. [[https://www.youtube.com/watch?v=juVYuh0S1hQ&ab_channel=ConfEngine][No estimates by Vasco Duarte @ YouTube]]: how you can predict the
+     release date of your project without estimating
+
 
 * COMMENT Local variables
 
