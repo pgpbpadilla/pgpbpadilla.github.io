@@ -18,7 +18,7 @@ toc: false
 ---
 #+end_export
 
-Ich höre gerade das Hörbuch von Richard Thaler, /Misbehaving/
+Ich höre gerade das Hörbuch von Richard Thaler, /[[https://w.wiki/98p9][Misbehaving]]/
 (Fehlverhalten). Im Kapitel 14: "What seems fair" (Was fair erscheint)
 beschreibt der Autor einige Situationen, in denen eine Firma
 Entscheidungen darüber trifft, wie Preise festgelegt werden sollen,
