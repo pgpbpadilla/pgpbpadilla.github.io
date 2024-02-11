@@ -5,15 +5,15 @@
 ---
 layout: post.liquid
 title:  "Der Anschein von Fairness"
-date: 2024-02-11 So 11:19
-last_updated: 2024-02-11 So 11:19
+date: 2024-02-10 So 11:19
+last_updated: 2024-02-10 So 11:19
 tags:
   - journal
   - deutsch
   - econ
   - thaler
 categories: [deutsch, journal]
-permalink: /2024-02-11-der-anschein-von-fairness
+permalink: /2024-02-10-der-anschein-von-fairness
 toc: false
 ---
 #+end_export
