@@ -1,0 +1,53 @@
+#+LANGUAGE: de
+#+OPTIONS: toc:nil  broken-links:mark
+
+#+begin_export html
+---
+layout: post.liquid
+title:  "Der Anschein von Fairness"
+date: 2024-02-11 So 11:19
+last_updated: 2024-02-11 So 11:19
+tags:
+  - journal
+  - deutsch
+  - econ
+  - thaler
+categories: [deutsch, journal]
+permalink: /2024-02-11-der-anschein-von-fairness
+toc: false
+---
+#+end_export
+
+Ich höre gerade das Hörbuch von Richard Thaler, /Misbehaving/
+(Fehlverhalten). Im Kapitel 14: "What seems fair" (Was fair erscheint)
+beschreibt der Autor einige Situationen, in denen eine Firma
+Entscheidungen darüber trifft, wie Preise festgelegt werden sollen,
+und wie die Kunden darauf reagiert haben.
+
+Das erste Beispiel bezieht sich auf die Preise für Schnee-schaufeln
+nach einem schweren Schneefall. Die Firma hat sich entschieden, die
+Preise zu erhöhen. Der Grund dafür war, dass bei höherer Nachfrage die
+Schaufeln knapp werden und es allgemein bekannt ist, dass Preise
+steigen, wenn die Nachfrage hoch und das Angebot niedrig ist.
+
+Die wiederkehrende Bemerkung im gesamten Buch ist, dass, wenn Menschen
+als rationale Agenten (Econs) betrachtet werden, Fehler im gesunden
+Menschenverstand auftreten können, z.B. würde der durchschnittliche
+Mensch die Entscheidung der Firma im obigen Beispiel als ungerecht
+beurteilen.
+
+
+* COMMENT Local variables
+
+  Taken from: 
+  https://emacs.stackexchange.com/a/76549/11978
+  
+  # Local Variables:
+  # org-md-toplevel-hlevel: 2
+  # End:
+  
+
+
+
+
+
