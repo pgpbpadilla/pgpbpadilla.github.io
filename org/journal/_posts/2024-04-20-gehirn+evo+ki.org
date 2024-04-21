@@ -28,7 +28,7 @@ Gedächtnis geblieben ist.
 #+begin_export html
 <div style="text-align: center">
   <img src="/assets/images/bhi-pyramid.png">
-  <figcaption>Ingelligence evolutionary breakthroughs.</figcaption>
+  <figcaption>Evolutionäre Durchbrüche der Intelligenz.</figcaption>
 </div>
 #+end_export
 
@@ -51,11 +51,12 @@ bei der Lernfähigkeit.
    unabhängig von Handlungen. 
 
 
-Das vollständige Video kannst du auf YouTube ansehen
+Das vollständige Video kannst du auf YouTube ansehen:
 
 #+begin_export html
 <iframe width="800" height="600"
-        src="https://www.youtube.com/embed/5EcQ1IcEMFQ" title="How Intelligence Evolved | A 600 Million Year Story"
+        src="https://www.youtube.com/embed/5EcQ1IcEMFQ"
+        title="How Intelligence Evolved | A 600 Million Year Story"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
