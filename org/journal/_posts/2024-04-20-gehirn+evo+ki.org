@@ -4,15 +4,16 @@
 #+begin_export html
 ---
 layout: post.liquid
-title:  "A brief history of intelligence"
-date: 2024-04-21
-last_updated: 2024-04-21
+title:  "Eine kurze Geschichte der Intelligenz"
+date: 2024-04-21 So 13:20
+last_updated: 2024-04-21 So 13:20
 tags:
   - journal
   - deutsch
   - ai
-  - intelligenz
+  - ki
   - intelligence
+  - intelligenz
   - überprüfen
 categories: [deutsch, journal]
 permalink: /2024-04-21-gehirn+evo+ki
@@ -20,9 +21,9 @@ toc: false
 ---
 #+end_export
 
-Gestern habe ich ein sehr cooles video geguckt, es geht um die
-Evolution der Intelligenz. Hier ist das Bild, das bei mir in
-Gedächtniss geblieben ist.
+Gestern habe ich ein sehr cooles Video geschaut. Es handelt von der
+Evolution der Intelligenz. Hier ist das Bild, das bei mir im
+Gedächtnis geblieben ist. 
 
 #+begin_export html
 <div style="text-align: center">
@@ -33,24 +34,24 @@ Gedächtniss geblieben ist.
 
 
 Der Erzähler spricht über die Geschichte der Intelligenz aus der
-Standpunkt die Entwicklung des Gehirns sowie die Größte Durchbrüche
-bei der Lernfähigkeit.
+Perspektive der Entwicklung des Gehirns sowie der größten Durchbrüche
+bei der Lernfähigkeit. 
 
-1. Behlonung suchen: Instinktverhalten, die einfaschte Form der
-   Intelligenz, kein Lernen
+1. Behlonung suchen: Instinktverhalten. Die einfaschte Form der
+   Intelligenz, kein Lernen.
 2. Aus Erfahrung lernen: empirische Erprobung mit Rückkopplung,
-   korrektes Verhalten behlonen, von Fehlern lernen, Bestärkendes
-   Lernen 
-3. Gedankenexperimente: Simulierung von eigenen handlungen, Planung
-   und Verlaten auf der Grundlage einer erwarteten (simulierte)
-   künftigen Behlonung 
-4. Theory des Mentalen: Simulierung der Gedanken eines Dritten, aus
-   den Fehlern der anderen lernen
-5. Sprache: Externalisierung von Gedanken oder Ideen, handlungsfreies
-   lernen 
+   Belohnung korrekten Verhaltens, Lernen aus Fehlern, Bestärkendes
+   Lernen. 
+3. Gedankenexperimente: Simulation eigener Handlungen, Planung und
+   Entscheidungen auf Basis erwarteter (simulierter) zukünftiger
+   Belohnungen.
+4. Theorie des Mentalen: Simulation der Gedanken einer anderen Person,
+   Lernen aus den Fehlern anderer. 
+5. Sprache: Externalisierung von Gedanken oder Ideen, Lernen
+   unabhängig von Handlungen. 
 
 
-Das vollständige Video kannst du im YouTube gucken:
+Das vollständige Video kannst du auf YouTube ansehen
 
 #+begin_export html
 <iframe width="800" height="600"
