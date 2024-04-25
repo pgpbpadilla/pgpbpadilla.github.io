@@ -1,0 +1,38 @@
+#+LANGUAGE: de
+#+OPTIONS: toc:nil  broken-links:mark
+
+#+begin_export html
+---
+layout: post.liquid
+title:  "Vorherbestimmt von Robert Sapolsky"
+date: 2024-04-24 Do 18:20
+last_updated: 2024-04-24 Do 18:20
+tags:
+  - buch
+  - sapolsky
+  - free-will
+  - bio
+  - journal
+  - deutsch
+  - überprüfen
+categories: [deutsch, journal]
+permalink: /2024-04-24-sapolsky-vorherbestimmt
+toc: false
+---
+#+end_export
+
+
+* COMMENT Local variables
+
+  Taken from: 
+  https://emacs.stackexchange.com/a/76549/11978
+  
+  # Local Variables:
+  # org-md-toplevel-hlevel: 2
+  # End:
+  
+
+
+
+
+
