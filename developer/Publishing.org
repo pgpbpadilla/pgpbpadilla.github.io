@@ -1,0 +1,60 @@
+#+property: header-args:bash :results verbatim
+
+
+* Publishing workflow
+  :LOGBOOK:
+  CLOCK: [2024-05-08 Mi 20:19]
+  :END:
+
+  1. assumption: your are using Org to create Blog posts
+
+  2. create your draft/post in the appropriate directory:
+
+     #+begin_src bash :dir ../org
+       tree -L 1 . 
+     #+end_src
+
+     #+RESULTS:
+     : .
+     : ├── _drafts
+     : ├── _posts
+     : ├── jekyll
+     : └── journal
+     : 
+     : 5 directories, 0 files
+
+  3. follow the Jekyll convention to naming files:
+
+     #+begin_src bash :dir ../org/
+       find . -name "*.org" -not -path "./jekyll/*" | head -5
+     #+end_src
+
+     #+RESULTS:
+     : ./journal/_posts/2023-12-23-org+plantuml+jekyll.org
+     : ./journal/_posts/2023-05-10-wer-zuerst-kommt-mahlt-zuerst.org
+     : ./journal/_posts/2024-04-20-gehirn+evo+ki.org
+     : ./journal/_posts/2023-07-11-konfuzius-handeln.org
+     : ./journal/_posts/2023-05-14-todos-org-mode.org
+
+  4. generate HTML from Org files
+
+     #+begin_src elisp
+       (org-publish "site")
+     #+end_src
+
+     #+RESULTS:
+
+     Configuration details: [[file:~/blog/.dir-locals.el]]
+
+  5. run Jekyll site locally:
+
+     #+begin_example bash
+     cd org/jekyll
+     pyenv activate blog
+     inv -l
+     inv run
+     #+end_example
+
+     Config details: [[file+emacs:~/blog/org/jekyll/_config.yml]]
+
+  6. visit local site: http://127.0.0.1:4000/
