@@ -3,7 +3,6 @@
 
 * Publishing workflow
   :LOGBOOK:
-  CLOCK: [2024-05-08 Mi 20:19]
   :END:
 
   1. assumption: your are using Org to create Blog posts

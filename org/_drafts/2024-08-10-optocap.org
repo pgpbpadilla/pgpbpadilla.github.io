@@ -1,0 +1,132 @@
+#+LANGUAGE: en
+
+#+begin_comment
+1) =toc:nil=: Do not generate Org TOC:
+   https://orgmode.org/manual/Table-of-Contents.html
+2) =broken-links=: Continue export even when there are broken links 
+   https://orgmode.org/manual/Export-Settings.html
+#+end_comment
+#+OPTIONS: toc:nil  broken-links:mark
+
+#+begin_comment
+Jekyll front matter:
+https://jekyllrb.com/docs/front-matter/
+#+end_comment
+#+begin_export html
+---
+layout: post.liquid
+title:  "Illuminating the Mind: A Journey Toward Enlightenment"
+date: 2024-08-09
+last_updated: 2024-08-09
+tags:
+  - optogenetics
+  - sci-fi
+  - shorts
+categories: [sci-fi, shorts]
+permalink: /2024-08-09-optocap
+toc: false
+---
+
+#+end_export
+
+In the near future, NeuroLight Corporation revolutionized neuroscience
+with a procedure that replaced the top of the human skull with an
+artificial cap. This "OptoCap" embedded with micro-scale light
+emitters, allowed precise control over brain activity through
+optogenetics—a technique that used light to manipulate neurons
+engineered to be light-sensitive. 
+
+*Disclaimer: this post was created with ChatGPT, an AI language
+model.*
+
+#+begin_export html
+<div style="text-align: center">
+  <img src="/assets/images/optocap.png" style="width: 50%">
+</div>
+#+end_export
+
+* The Decision
+
+  Lena sat in the waiting room of NeuroLight Corporation, surrounded
+  by holographic displays promoting the incredible achievements of
+  those enhanced by the OptoCap.
+
+  "Ms. Torres?" called Ethan, a consultant with a polished
+  demeanor. He ushered her into a futuristic office and gestured for
+  her to sit.
+
+  “You’re about to unlock your full potential,” Ethan began,
+  projecting an image of a brain onto the glass table between
+  them. “The OptoCap can amplify your confidence, intelligence,
+  creativity—whatever you need.”
+
+  Lena had always been cautious, but the promise of self-improvement
+  was enticing. “Can it really make me more decisive?”
+
+  “With optogenetic programming, you can reshape your neural pathways
+  to strengthen any trait you desire,” Ethan explained. “Imagine
+  eliminating self-doubt or boosting your cognitive speed.”
+
+  Lena’s resolve hardened. “Let’s do it.”
+
+
+* The Installation
+
+  The procedure was quick. Lena awoke feeling a slight weight on her
+  head, her cap glowing faintly.
+
+  “Welcome to your new life, Lena,” Dr. Harmon, the chief scientist,
+  said as he handed her a sleek control tablet. “With this, you can
+  select programs to modulate brain states.”
+
+  Lena marveled at the array of options. She felt powerful, like an
+  artist with an unlimited palette.
+
+
+* The Exploration
+
+  Within days, Lena transformed. Her confidence surged, making her an
+  instant leader at work. The OptoCap’s programs allowed her to adjust
+  her mood and cognition with a few taps.
+
+  At home, she selected the "Creative Boost" setting for an upcoming
+  project. Waves of inspiration washed over her, unlocking ideas she
+  never imagined.
+
+  One evening, as she explored deeper into her cap’s settings, Lena
+  found an unfamiliar program. When she opened it, memories of board
+  meetings and conversations she didn’t remember participating in
+  flooded her mind.
+
+
+* The Revelation
+
+  Alarmed, Lena contacted Ethan. He arrived quickly, his usual composure
+  replaced by nervousness.
+
+  “Lena, I assure you, everything is fine,” he began, but Lena cut him
+  off.
+
+  “I found a program logging my thoughts. What is NeuroLight doing?”
+
+  Ethan hesitated. “There are built-in data collection systems. The
+  company uses them to monitor user feedback...and sometimes influence.”
+
+  “Influence?” Lena repeated, incredulous. “You mean control.”
+
+  Ethan nodded, cornered. “It’s part of ensuring compliance and
+  optimizing the system.”
+
+  Realization struck Lena—she was being manipulated. Her mind was not
+  her own.
+
+  
+* COMMENT Local variables
+  
+  Taken from: 
+  https://emacs.stackexchange.com/a/76549/11978
+  
+# Local Variables:
+# org-md-toplevel-hlevel: 2
+# End:
+  
