@@ -34,6 +34,7 @@ disqus:
 # According to Github's Blog, now it's possible to use any theme
 # https://github.blog/2017-11-29-use-any-theme-with-github-pages/
 remote_theme: lorepirri/cayman-blog
+google_analytics: G-P9XEV7PSBE
 
 plugins:
   - jekyll-feed
