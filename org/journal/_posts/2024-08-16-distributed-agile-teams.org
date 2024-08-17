@@ -35,7 +35,7 @@ split their attention into multiple projects.
 #+end_export
 
 
-In my experience, as a software engineer, I have seen that the words
+In my experience as a software engineer, I have seen that the words
 Agile, Scrum, and Kanban are often used interchangeably. One reason
 for this is that the key ideas of each one fits really well with the
 others. These ways of work share some assumptions:
