@@ -57,3 +57,27 @@
      Config details: [[file+emacs:~/blog/org/jekyll/_config.yml]]
 
   6. visit local site: http://127.0.0.1:4000/
+
+  7. preview site without drafts
+     #+begin_example bash
+     inv -l
+     #+end_example
+
+     #+begin_src bash :dir ~/blog/org/jekyll
+       pyenv activate blog
+       inv run --help
+     #+end_src
+
+     #+RESULTS:
+     #+begin_example
+     Usage: inv[oke] [--core-opts] run [--options] [other tasks here ...]
+
+     Docstring:
+       Build+Run the Blog locally
+
+     Options:
+       -d, --docker
+       -r, --[no-]drafts
+       -t, --trace
+
+     #+end_example
