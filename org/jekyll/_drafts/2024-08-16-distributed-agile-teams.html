@@ -32,38 +32,30 @@ split their attention into multiple projects.
   <img src="/assets/images/jira-splash-agility.png" style="width: 50%">
 </div>
 
-<p>
-In my experience, as a software engineer, I have noticed that
-Agile, Scrum, and Kanban are used interchangeably. This
-post explorers how each has contributed to the way software projects
-are organized and whether or not they are a good fit when working with
-distributed teams.
-</p>
 
 <p>
-These ways of work share some assumptions:
+In my experience, as a software engineer, I have seen that the words
+Agile, Scrum, and Kanban are often used interchangeably. One reason
+for this is that the key ideas of each one fits really well with the
+others. These ways of work share some assumptions:
 </p>
 
 <ol class="org-ol">
-<li>Colocation: everybody is the same geographical location, building,
-or even room</li>
-<li>Undivided attention: each person belongs to a single team/project/product</li>
+<li>Team co-location: everybody is in the same geographical location,
+building, or room</li>
+<li>Undivided attention: each person contributes to a single
+team/project/product</li>
 </ol>
 
 
 <p>
-So how can distributed teams remain agile when these two assumptions
-are broken? 
-</p>
-
-<p>
-Before we go into the challenges that distributed teams face, let's
-take a quick look at key differences between Agile, Scrum and Kanban.
+How can distributed teams remain agile when these two assumptions are
+broken? Before we go into the challenges that distributed teams face,
+let's take a quick look at key differences between Agile, Scrum and
+Kanban.
 </p>
 
 <ol class="org-ol">
-<li>Origins and focus: 
-<ul class="org-ul">
 <li>Agile: originated in software development with a focus on
 delivery of value through close collaboration with customers and being
 flexible in responding to change</li>
@@ -71,65 +63,95 @@ flexible in responding to change</li>
 delivery cycles (iterations) with a fixed scope</li>
 <li>Kanban: originated in manufacturing with a focus on visualizing
 work, managing flow, and reducing waste</li>
-</ul></li>
-<li>Work in progress:
-<ul class="org-ul">
-<li>Agile offers no prescriptions</li>
-<li>Scrum offers no prescriptions</li>
-<li>Kanban explicitly sets limits for work in progress (WIP) to avoid
-overloading the team</li>
-</ul></li>
 </ol>
+
 
 <p>
 The fact that the terms are used interchangeably it's a reminder of
 how similar the philosophies are. These ways of working are
-complementary and software projects mix and match practices from all
+complementary and teams mix and match practices from all
 of them without batting an eyelash.
 </p>
 
 
 
-<div id="outline-container-org00ee513" class="outline-2">
-<h2 id="org00ee513"><span class="section-number-2">1.</span> Does Jira kill agility?</h2>
+<div id="outline-container-orgf473ae2" class="outline-2">
+<h2 id="orgf473ae2"><span class="section-number-2">1.</span> Documentation is communication is documentation</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-Tools don't kill agility, people kill agility.
+The distinction between communication and documentation can be
+blurry for distributed teams. Recorded communication can be seen as
+extended documentation, at the same time, documentation is a form of
+communication.
 </p>
 
 <p>
-I find it intriguing that people with technical IT skills
-have such a hard time using a web application like JIRA and at the
-same time they can deliver complex highly-available systems, such
-as what applications, computer networks, storage systems, etc.
+Distributed teams can use recorded communication like chat, email,
+comments, etc. to bridge the gap created by geography. As long as
+communication is given priority over the tools or processes, the use
+of documentation as communication seems to maintain the spirit of
+the age of manifesto.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org1ef0695" class="outline-2">
+<h2 id="org1ef0695"><span class="section-number-2">2.</span> Publishing through a central channel</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Some complex tasks require sharing context with multiple people.
+Consolidating context in a central location such as Jira/Wiki, makes
+it easier to onboard newcomers.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org11108b7" class="outline-2">
+<h2 id="org11108b7"><span class="section-number-2">3.</span> Documentation and context switching</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Distributed teams are often composed of individuals that participate
+in multiple projects simultaneously. Individuals who have to split
+their attention into multiple projects reduce the impact created by
+context switching by documenting useful details, such as the current
+status, and planned next steps.
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-org5896cd1" class="outline-2">
+<h2 id="org5896cd1"><span class="section-number-2">4.</span> Tools don't kill agility, people do</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+For distributed teams, systems like Jira serve as a central place
+for coordinating work. I find it intriguing that people with
+technical IT skills often forget the value of systems like JIRA and
+at the same time they can deliver complex systems, such as web
+applications, computer networks, storage systems, etc.
 </p>
 
 <p>
 Jira is bloated, complex, and not user-friendly. At the same time it
 does not impose any workflow or methodology.
 </p>
-
-<p>
-For distributed teams, systems like Jira serve as a central place for
-coordinating work. 
-</p>
+</div>
 </div>
 
 
-<div id="outline-container-org6485fc6" class="outline-3">
-<h3 id="org6485fc6"><span class="section-number-3">1.1.</span> Every project management tool wants to become like JIRA</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org6485fc6" class="outline-2">
+<h2 id="org6485fc6"><span class="section-number-2">5.</span> Every project management tool wants to become like JIRA</h2>
+<div class="outline-text-2" id="text-5">
 <p>
-In principle, e-mail is sufficient. However, once you get used to 
-the amenities of modern collaboration tools, it's hard to go
-back and use only e-mail.
-</p>
-
-<p>
-Most popular collaboration tools seem to be converging in terms of
-features, for example, creating a task from a chat conversation,
-tracking status, assigning, visualizing tasks and their
-relationships, linking to code or documentation, etc.
+In principle, e-mail is sufficient. However, once you get used to
+the amenities of modern collaboration tools, it's hard to go back
+and use only e-mail. Popular collaboration tools seem to be
+converging in terms of features, for example, creating a task from a
+chat conversation, tracking status, assigning, visualizing tasks and
+their relationships, linking to code or documentation, etc.
 </p>
 
 <p>
@@ -140,57 +162,9 @@ management only with email and PowerPoint.
 </p>
 
 <p>
-Many companies arrive to systems like JIRA by taking a
-wholistic/integrated approach. It's not perfect, but the available
+Companies arrive to systems like JIRA by taking a
+holistic/integrated approach. It's not perfect, but the available
 options are only a round of funding away from becoming like Jira.
 </p>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-orgf473ae2" class="outline-2">
-<h2 id="orgf473ae2"><span class="section-number-2">2.</span> Documentation is communication is documentation</h2>
-<div class="outline-text-2" id="text-2">
-<p>
-Recorded communications are documentation and documentation is
-communication. 
-</p>
-
-<p>
-For co-located teams, nothing beats face-to-face communication.
-Distributed teams can use documentation fill in the gap created by
-the lack of face-to-face communication.
-</p>
-</div>
-
-
-<div id="outline-container-org1ef0695" class="outline-3">
-<h3 id="org1ef0695"><span class="section-number-3">2.1.</span> Publishing through a central channel</h3>
-<div class="outline-text-3" id="text-2-1">
-<p>
-Some complex tasks require sharing context with multiple people.
-Consolidating context in a central location, such as Jira/Wiki makes
-it easier to onboard newcomers.
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-org11108b7" class="outline-3">
-<h3 id="org11108b7"><span class="section-number-3">2.2.</span> Documentation and context switching</h3>
-<div class="outline-text-3" id="text-2-2">
-<p>
-Distributed teams are often composed of individuals that
-participate in multiple projects simultaneously.
-</p>
-
-<p>
-Individuals who have to split their attention into multiple
-projects reduce the impact created by context switching by
-documenting useful details, such as the current status, and planned
-next steps.
-</p>
-</div>
 </div>
 </div>

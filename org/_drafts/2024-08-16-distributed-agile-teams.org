@@ -35,112 +35,101 @@ split their attention into multiple projects.
 </div>
 #+end_export
 
-In my experience, as a software engineer, I have noticed that
-Agile, Scrum, and Kanban are used interchangeably. This
-post explorers how each has contributed to the way software projects
-are organized and whether or not they are a good fit when working with
-distributed teams.
 
-These ways of work share some assumptions:
+In my experience, as a software engineer, I have seen that the words
+Agile, Scrum, and Kanban are often used interchangeably. One reason
+for this is that the key ideas of each one fits really well with the
+others. These ways of work share some assumptions:
 
-1. Colocation: everybody is the same geographical location, building,
-   or even room
-2. Undivided attention: each person belongs to a single team/project/product
+1. Team co-location: everybody is in the same geographical location,
+   building, or room
+2. Undivided attention: each person contributes to a single
+   team/project/product
 
 
-So how can distributed teams remain agile when these two assumptions
-are broken? 
+How can distributed teams remain agile when these two assumptions are
+broken? Before we go into the challenges that distributed teams face,
+let's take a quick look at key differences between Agile, Scrum and
+Kanban.
+  
+1. Agile: originated in software development with a focus on
+   delivery of value through close collaboration with customers and being
+   flexible in responding to change
+2. SCRUM: originated in software development with a focus on time-boxed
+   delivery cycles (iterations) with a fixed scope
+3. Kanban: originated in manufacturing with a focus on visualizing
+   work, managing flow, and reducing waste
 
-Before we go into the challenges that distributed teams face, let's
-take a quick look at key differences between Agile, Scrum and Kanban.
-
-1. Origins and focus: 
-   - Agile: originated in software development with a focus on
-     delivery of value through close collaboration with customers and being
-     flexible in responding to change
-   - SCRUM: originated in software development with a focus on time-boxed
-     delivery cycles (iterations) with a fixed scope
-   - Kanban: originated in manufacturing with a focus on visualizing
-     work, managing flow, and reducing waste
-2. Work in progress:
-   - Agile offers no prescriptions
-   - Scrum offers no prescriptions
-   - Kanban explicitly sets limits for work in progress (WIP) to avoid
-     overloading the team
 
 The fact that the terms are used interchangeably it's a reminder of
 how similar the philosophies are. These ways of working are
-complementary and software projects mix and match practices from all
+complementary and teams mix and match practices from all
 of them without batting an eyelash.
 
 
 
-* Does Jira kill agility?
+* Documentation is communication is documentation
 
-  Tools don't kill agility, people kill agility.
+  The distinction between communication and documentation can be
+  blurry for distributed teams. Recorded communication can be seen as
+  extended documentation, at the same time, documentation is a form of
+  communication.
+
+  Distributed teams can use recorded communication like chat, email,
+  comments, etc. to bridge the gap created by geography. As long as
+  communication is given priority over the tools or processes, the use
+  of documentation as communication seems to maintain the spirit of
+  the age of manifesto.
+
+
+* Publishing through a central channel
   
-  I find it intriguing that people with technical IT skills
-  have such a hard time using a web application like JIRA and at the
-  same time they can deliver complex highly-available systems, such
-  as what applications, computer networks, storage systems, etc.
+  Some complex tasks require sharing context with multiple people.
+  Consolidating context in a central location such as Jira/Wiki, makes
+  it easier to onboard newcomers.
+
+   
+* Documentation and context switching
+
+  Distributed teams are often composed of individuals that participate
+  in multiple projects simultaneously. Individuals who have to split
+  their attention into multiple projects reduce the impact created by
+  context switching by documenting useful details, such as the current
+  status, and planned next steps.
+
+
+  
+* Tools don't kill agility, people do
+
+  For distributed teams, systems like Jira serve as a central place
+  for coordinating work. I find it intriguing that people with
+  technical IT skills often forget the value of systems like JIRA and
+  at the same time they can deliver complex systems, such as web
+  applications, computer networks, storage systems, etc.
 
   Jira is bloated, complex, and not user-friendly. At the same time it
   does not impose any workflow or methodology.
-
-  For distributed teams, systems like Jira serve as a central place for
-  coordinating work. 
   
   
-** Every project management tool wants to become like JIRA
+* Every project management tool wants to become like JIRA
 
-   In principle, e-mail is sufficient. However, once you get used to 
-   the amenities of modern collaboration tools, it's hard to go
-   back and use only e-mail.
+  In principle, e-mail is sufficient. However, once you get used to
+  the amenities of modern collaboration tools, it's hard to go back
+  and use only e-mail. Popular collaboration tools seem to be
+  converging in terms of features, for example, creating a task from a
+  chat conversation, tracking status, assigning, visualizing tasks and
+  their relationships, linking to code or documentation, etc.
 
-   Most popular collaboration tools seem to be converging in terms of
-   features, for example, creating a task from a chat conversation,
-   tracking status, assigning, visualizing tasks and their
-   relationships, linking to code or documentation, etc.
+  Project management and collaboration is a complex domain, which
+  explains why most tools offer a terrible user experience. I always
+  remind myself that it could be worse, imagine doing project
+  management only with email and PowerPoint.
 
-   Project management and collaboration is a complex domain, which
-   explains why most tools offer a terrible user experience. I always
-   remind myself that it could be worse, imagine doing project
-   management only with email and PowerPoint.
-
-   Many companies arrive to systems like JIRA by taking a
-   wholistic/integrated approach. It's not perfect, but the available
-   options are only a round of funding away from becoming like Jira.
+  Companies arrive to systems like JIRA by taking a
+  holistic/integrated approach. It's not perfect, but the available
+  options are only a round of funding away from becoming like Jira.
 
 
-* Documentation is communication is documentation
-
-  Recorded communications are documentation and documentation is
-  communication. 
-
-  For co-located teams, nothing beats face-to-face communication.
-  Distributed teams can use documentation fill in the gap created by
-  the lack of face-to-face communication.
-
-
-** Publishing through a central channel
-
-   Some complex tasks require sharing context with multiple people.
-   Consolidating context in a central location, such as Jira/Wiki makes
-   it easier to onboard newcomers.
-
-   
-** Documentation and context switching
-
-   Distributed teams are often composed of individuals that
-   participate in multiple projects simultaneously.
-
-   Individuals who have to split their attention into multiple
-   projects reduce the impact created by context switching by
-   documenting useful details, such as the current status, and planned
-   next steps.
-
-
-  
 * COMMENT Local variables
 
   Taken from: 
