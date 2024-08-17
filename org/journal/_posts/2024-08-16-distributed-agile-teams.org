@@ -78,7 +78,7 @@ of them without batting an eyelash.
   comments, etc. to bridge the gap created by geography. As long as
   communication is given priority over the tools or processes, the use
   of documentation as communication seems to maintain the spirit of
-  the age of manifesto.
+  the agile manifesto.
 
 
 * Communication through a central channel
