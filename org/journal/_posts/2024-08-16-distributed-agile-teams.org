@@ -19,8 +19,7 @@ toc: false
 ---
 #+end_export
 
-Can distributed teams be agile? Does Jira kill agility? Here are my
-2 cents.
+Can distributed teams be agile? Does Jira kill agility? 
 
 I was scrolling LinkedIn when I saw a picture of Jira executing a
 wrestling splash on Agility. It triggered a train of thought about the
@@ -68,7 +67,7 @@ of them without batting an eyelash.
 
 
 
-* Documentation is communication is documentation
+* Documentation as communication
 
   The distinction between communication and documentation can be
   blurry for distributed teams. Recorded communication can be seen as
@@ -82,7 +81,7 @@ of them without batting an eyelash.
   the age of manifesto.
 
 
-* Publishing through a central channel
+* Communication through a central channel
   
   Some complex tasks require sharing context with multiple people.
   Consolidating context in a central location such as Jira/Wiki, makes
@@ -104,11 +103,9 @@ of them without batting an eyelash.
   For distributed teams, systems like Jira serve as a central place
   for coordinating work. I find it intriguing that people with
   technical IT skills often forget the value of systems like JIRA and
-  at the same time they can deliver complex systems, such as web
-  applications, computer networks, storage systems, etc.
-
-  Jira is bloated, complex, and not user-friendly. At the same time it
-  does not impose any workflow or methodology.
+  at the same time they can deliver complex systems. Jira is bloated
+  and could offer better user experience but it does not impose any
+  workflow or methodology.
   
   
 * Every project management tool wants to become like JIRA
@@ -116,19 +113,22 @@ of them without batting an eyelash.
   In principle, e-mail is sufficient. However, once you get used to
   the amenities of modern collaboration tools, it's hard to go back
   and use only e-mail. Popular collaboration tools seem to be
-  converging in terms of features, for example, creating a task from a
-  chat conversation, tracking status, assigning, visualizing tasks and
-  their relationships, linking to code or documentation, etc.
-
-  Project management and collaboration is a complex domain, which
-  explains why most tools offer a terrible user experience. I always
-  remind myself that it could be worse, imagine doing project
-  management only with email and PowerPoint.
+  converging in terms of features like creating a task from a chat
+  conversation, tracking status, assigning, visualizing tasks and
+  their relationships, linking to code or documentation, etc. Tools
+  that started with one of these features continue adding more
+  features until they cover all the basics of project management.
 
   Companies arrive to systems like JIRA by taking a
   holistic/integrated approach. It's not perfect, but the available
   options are only a round of funding away from becoming like Jira.
 
+  Project management and collaboration is a complex domain, which
+  explains why most tools offer a terrible user experience. I always
+  remind myself that it could be worse, imagine doing project
+  management only with email and PowerPoint. 
+
+  
 
 * COMMENT Local variables
 
