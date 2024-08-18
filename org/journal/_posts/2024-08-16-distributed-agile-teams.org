@@ -14,7 +14,7 @@ tags:
   - software
   - distributed
 categories: [journal, software]
-#permalink: /2024-08-16-distributed-agile-teams
+permalink: /2024-08-16-distributed-agile-teams
 toc: false
 ---
 #+end_export
