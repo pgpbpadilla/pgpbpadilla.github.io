@@ -9,10 +9,10 @@ date: 2023-12-21 Fr 20:59
 last_updated: 2024-01-27 So 21:37
 tags:
   - journal
+  - agile
+  - software
   - estimation
   - forecast
-  - software
-  - project
   - NoEstimates
 categories: [journal, software, project]
 permalink: /2023-12-21-estimation+forecast
