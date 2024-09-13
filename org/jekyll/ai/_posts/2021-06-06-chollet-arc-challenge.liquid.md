@@ -3,9 +3,9 @@ layout: post.liquid
 title:  "The Abstraction and Reasoning Challenge (ARC)"
 date:   2021-06-06 20:45
 last_updated: 2021-06-06 20:45
-tags: machine-intelligence chollet agi arc-challenge abstraction reasoning artificial-intelligence
+tags: ai benchmark chollet arc abstraction reasoning
 permalink: /chollet-arc-challenge
-categories: [ai, machine-intelligence, benchmark]
+categories: [ai]
 ---
 In 2019 François Chollet published the Abstraction and Reasoning challenge in the
 [Kaggle platform](#references) with the goal to provide a benchmark to measure

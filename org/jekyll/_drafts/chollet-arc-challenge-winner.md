@@ -3,9 +3,9 @@ layout: post.liquid
 title:  "The solution for the Abstraction and Reasoning Challenge"
 date:   2021-02-26 20:43
 last_updated: 2021-02-26 20:43
-tags: machine-intelligence chollet agi arc-challenge
+tags: ai chollet agi arc-challenge
 permalink: /chollet-arch-challenge-winner
-categories: [ai, machine-intelligence, benchmark]
+categories: [ai, benchmark]
 ---
 ## The winner from the challente
 

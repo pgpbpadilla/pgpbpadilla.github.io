@@ -3,9 +3,9 @@ layout: post.liquid
 title:  "François Chollet's general intelligence test"
 date: 2021-03-20 19:29
 last_updated: 2021-03-20 19:29
-tags: machine-intelligence chollet agi test
+tags: ai intelligence test chollet arc challenge
 permalink: /chollet-general-intelligence-test
-categories: [ai, machine-intelligence, benchmark]
+categories: [ai]
 ---
 [François Chollet](#references) works in the field of Artificial Intelligence.
 He created the Keras library for machine learning and has

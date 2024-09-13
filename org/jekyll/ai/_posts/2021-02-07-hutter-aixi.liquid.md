@@ -3,8 +3,8 @@ layout: post.liquid
 title:  "Marcus Hutter's AIXI model for Universal Artificial Intelligence"
 date:   2021-02-07 16:37
 last_updated: 2021-02-16 22:22
-tags: machine-intelligence hutter aixi agi universal
 permalink: /hutter-aixi
+tags: ai hutter intelligence aixi uai agi
 categories: [ai, aixi]
 ---
 Marcus Hutter proposes a definition of Universal Intelligence and offers a mathematical
