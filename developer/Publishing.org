@@ -37,6 +37,8 @@
 
   4. generate HTML from Org files
 
+     Available through =C-c p=:
+     
      #+begin_src elisp
        (org-publish "site")
      #+end_src

@@ -1,3 +1,5 @@
+#+property: header-args:bash :results verbatim
+
 * Developer tools required to edit the Blog
 
   This repository contains all sources necessary to publish
@@ -19,7 +21,23 @@
 ** Quick Start
 
    1) Install development tools: `./setup.sh`
-   2) List available tasks: `inv -l` 
+   2) List available tasks: `inv -l`
+      #+begin_src bash
+        pyenv activate blog
+        inv -l
+      #+end_src
+
+      #+RESULTS:
+      : Available tasks:
+      : 
+      :   build         Use Jekyll to build the Blog
+      :   run           Build+Run the Blog locally
+      :   serve         Serves the Blog locally
+      :   update-gems   Updates bundler and reinstall all Blog dependencies
+      :   view          Open live website in the default browser
+      :
+   3) [[file:Testing.org]]: general testing advice
+
 
 
 ** Publishing to Github Pages
@@ -35,22 +53,17 @@
         This Github action is the key ingredient that allows the use of
         any Gem, and not just the ones whitelisted by Github.
 
-        + *GOTCHA*: currently I have a fork of this action since that
-          was the fastest way to fix an error
+      - [[id:80B4799E-19A7-4AED-86AF-294C94F353D2][Issues with jekyll-deploy-action]]
 
-          * error was reported in [[https://github.com/jeffreytse/jekyll-deploy-action/issues/64][jekyll-deploy-action#64]]
+      - SSH private key:
 
-          * the fix was proposed in: [[https://github.com/jeffreytse/jekyll-deploy-action/issues/64#issuecomment-1554834692][jekyll-deploy-action#64#issuecomment]]
+        + is passed to the workflow as a secret =SSH_PRIVATE_KEY= as
+          described in the [[https://github.com/search?q=repo%3Ajeffreytse%2Fjekyll-deploy-action%20SSH_PRIVATE_KEY&type=code][docs]]: [[github.com/secrets/actions]] 
 
-          * I have forked [[https://github.com/malachi-constant/jekyll-deploy-action][malachi-constant/jekyll-deploy-action]] into
-            [[https://github.com/pgpbpadilla/jekyll-deploy-action][pgpbpadilla/jekyll-deploy-action]] without changes
+        + was also registered as =blog_gh_actions= in my SSH keys:
+          [[https://github.com/settings/keys]] 
+          
 
-            - I had to create a tag in my fork: [[https://github.com/pgpbpadilla/jekyll-deploy-action/tags][jekyll-deploy-action/tags]]
-
-            - then I updated my workflow definition to call my forked
-              action in [[https://github.com/pgpbpadilla/pgpbpadilla.github.io/blob/master/.github/workflows/jekyll.yml#L23][pgpbpadilla.github.io#jekyll.yml#L23]] 
-
-      
 
 ** Other Tools used
 
@@ -63,3 +76,30 @@
       ```shell script
       $ rvm use 2.7.0
       ```
+
+
+** 4.2023: Issues with jekyll-deploy-action
+   :PROPERTIES:
+   :ID:       80B4799E-19A7-4AED-86AF-294C94F353D2
+   :END:
+
+   The issues have been resolved as of [2024-09-13 Fr 21:30]
+   *My personal fork is no longer used.*
+   
+   1) *GOTCHA*: currently I have a fork of this action since that
+      was the fastest way to fix an error
+
+      * error was reported in [[https://github.com/jeffreytse/jekyll-deploy-action/issues/64][jekyll-deploy-action#64]]
+
+      * the fix was proposed in: [[https://github.com/jeffreytse/jekyll-deploy-action/issues/64#issuecomment-1554834692][jekyll-deploy-action#64#issuecomment]]
+
+      * I have forked [[https://github.com/malachi-constant/jekyll-deploy-action][malachi-constant/jekyll-deploy-action]] into
+        [[https://github.com/pgpbpadilla/jekyll-deploy-action][pgpbpadilla/jekyll-deploy-action]] without changes
+
+        - I had to create a tag in my fork: [[https://github.com/pgpbpadilla/jekyll-deploy-action/tags][jekyll-deploy-action/tags]]
+
+        - then I updated my workflow definition to call my forked
+          action in [[https://github.com/pgpbpadilla/pgpbpadilla.github.io/blob/master/.github/workflows/jekyll.yml#L23][pgpbpadilla.github.io#jekyll.yml#L23]] 
+
+      
+
