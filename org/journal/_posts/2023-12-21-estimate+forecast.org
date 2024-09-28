@@ -25,6 +25,11 @@ toc: true
 During my career in Software, the problem of estimating the time,
 effort and cost of a software project has been one of the hardest.
 
+#+begin_export html
+{% include amzn_affiliate_disclaimer.html %}
+#+end_export
+
+
 
 * Agile estimation
   
@@ -115,6 +120,12 @@ effort and cost of a software project has been one of the hardest.
   1. [[https://holub.com/noestimates-an-introduction/][#NoEstimates, an introduction @ Allen Holub' Blog]]
   2. [[https://www.youtube.com/watch?v=juVYuh0S1hQ&ab_channel=ConfEngine][No estimates by Vasco Duarte @ YouTube]]: how you can predict the
      release date of your project without estimating
+  3. No estimates: How to measure project progress without estimating
+     by Vasco Duarte.
+     @@html:<a href="https://amzn.to/4enAgHP"
+               target="_blank">
+              Buy on amazon.
+            </a>@@
 
 
 * COMMENT Local variables

@@ -24,9 +24,18 @@ toc: false
 Ich höre gerade ein Hörbuch über Konfuzius: Gespräche des
 Konfuzius.
 
+#+begin_export html
+{% include amzn_affiliate_disclaimer.html %}
+#+end_export
+
+
 * Konfuzius muss man interpretieren
 
-  Der Buch ist eine Liste von Sprüche zugeschriben zu Konfuzius. Die
+  @@html:<a target="_blank"
+            href="https://amzn.to/4elWwBM">
+           Das Buch
+         </a>@@
+  ist eine Liste von Sprüche zugeschriben zu Konfuzius. Die
   Originale Texte war auf Chineschish geschrieben. Konfuzius hat das
   Buch nicht geschrieben, seine Schüler haben es getan.
 

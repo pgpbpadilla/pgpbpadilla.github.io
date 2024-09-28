@@ -7,8 +7,11 @@ permalink: /bodmer-lol-pronouns
 tags: language loom-of-language pronouns
 categories: [language, pronouns]
 ---
-In his book, [The Loom of Language](bodmer-lol-pronouns#references) -- LOL from now onwards --
-Bodmer gives advice on strategies for learning a modern language.
+In his book, [The Loom of Language](bodmer-lol-pronouns#references),
+LOL from now onwards, Bodmer gives advice on strategies for learning
+a modern language.
+
+{% include amzn_affiliate_disclaimer.html %}
 
 Here's what Bodmer has to say about learning a modern language:
 
@@ -61,7 +64,7 @@ For the **How many** dimension, I have used the labels:
 ## References
 
 - Bodmer, F., & Hogben, L. T. _The Loom of Language_. 1985.
-  ISBN-10: 039330034X, ISBN-13: 978-0393300345
+  ISBN-10: 039330034X, ISBN-13: 978-0393300345. [Buy on Amazon](https://amzn.to/3zBy6VX)
 - [What is the difference between “thee” and “thou”?](https://english.stackexchange.com/a/326299/228945)
 
 

@@ -23,6 +23,11 @@ Ich höre gerade /[[https://www.audible.com/pd/The-Code-of-Capital-Audiobook/154
 handelt davon, wie Menschen das Gesetz nutzen, um viele Dinge als
 Kapital zu codieren.
 
+#+begin_export html
+{% include amzn_affiliate_disclaimer.html %}
+#+end_export
+
+
 Die rechtlichen Module wurden über Jahrzehnte entwickelt und immer
 weiter verbessert. Diese Module sind immer dann präsent, wenn neue
 Kategorien von Vermögenswerten erfunden werden.
@@ -40,4 +45,15 @@ Früher konnte man Zäune um das Land bauen und andere
 aussperren. Heute kann man dasselbe mit Ideen tun, zum Beispiel mit
 Patenten. Die Patentinhaber können andere Menschen aussperren und
 die Vorteile ihrer Idee allein genießen.
+
+@@html:<a href="https://amzn.to/4eKrSC9"
+          target="_blank">
+        Kaufe das Buch bei Amazon.
+       </a>@@
+@@html:<a href="https://amzn.to/3N4MdGr"
+          target="_blank">
+         Auch als Hörbuch erhältlich.
+       </a>@@
+
+
 

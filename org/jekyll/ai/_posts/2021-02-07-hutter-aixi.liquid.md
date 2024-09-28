@@ -15,6 +15,10 @@ Artificial Intelligence. The approach he and others -- [Schmidhuber](#related),
 [Hochreiter](#related) -- have taken is different from the other modern and not so
 modern approaches to AI.
 
+
+{% include amzn_affiliate_disclaimer.html %}
+
+
 ## A top-down mathematical theory
 
 Hutter takes a top-down approach, he proposes a mathematical definition
@@ -77,6 +81,7 @@ next <span style="color: green">action</span>.
 
 - [arXiv:0712.3329v1](https://arxiv.org/abs/0712.3329v1) - Shane Legg, Marcus Hutter, Universal Intelligence: A Definition of Machine Intelligence
 - [Universal Artificial Intelligence](http://www.hutter1.net/ai/uaibook.htm) on Hutter's website.
+  - [Hutter's book on Amazon](https://amzn.to/4dr6y3B)
 - Can Intelligence Explode? - Video lecture at the Singularity Summit Australia 2012
     - [@YouTube](https://youtu.be/I-vx5zbOOXI)
     - [@Hutter's website](http://www.hutter1.net/official/lectures.htm)
