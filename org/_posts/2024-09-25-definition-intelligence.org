@@ -31,11 +31,7 @@ entirely different topics.
 
 
 #+begin_export html
-<p style="font-size: 0.9em; color: #555;">
-  <strong>Disclosure:</strong> Some of the links below are affiliate
-  links. This means that if you click through and make a purchase, I
-  may earn a small commission at no extra cost to you.
-</p>
+{% include amzn_affiliate_disclaimer.html %}
 #+end_export
 
 

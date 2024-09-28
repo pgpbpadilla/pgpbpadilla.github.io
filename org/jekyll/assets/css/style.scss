@@ -4,13 +4,15 @@
 @import 'text';
 @import 'jekyll-theme-cayman-blog';
 @import 'solarized-light.css';
+@import 'amzn-disclaimer';
 
 .post-tags {
-  font-size: large;
-  display: flex;
-  justify-content: flex-end;
-  span {
-    font-weight: 600;
-    margin: 10px;
-  }
+    font-size: large;
+    display: flex;
+    justify-content: flex-end;
+    span {
+        font-weight: 600;
+        margin: 10px;
+    }
 }
+
