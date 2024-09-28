@@ -10,11 +10,8 @@ order: 3
 ---
 #+end_export
 
-If you enjoy the content, you can show your appreciation buy
-sustaining my caffeine addiction.
-
-
 #+begin_export html
+{% include appreciation.html %}
 {% include buyme_coffee.html %}
 #+end_export
 

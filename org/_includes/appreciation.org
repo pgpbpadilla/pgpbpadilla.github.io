@@ -1,0 +1,2 @@
+If you enjoy the content, you can show your appreciation by
+sustaining my @@html:<a href="/coffee">caffeine</a>@@ addiction.
