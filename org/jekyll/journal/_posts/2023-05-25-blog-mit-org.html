@@ -194,16 +194,16 @@ Man kann <span style="color: green">Grüne Text</span> und
 ein HTML-export Block.  
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #b22222;">#+begin_export html</span>
-<span style="color: #7f7f7f;">Man kann &lt;</span><span style="color: #0000ff;">span</span><span style="color: #7f7f7f;"> </span><span style="color: #a0522d;">style</span><span style="color: #7f7f7f;">=</span><span style="color: #8b2252;">"color: green"</span><span style="color: #7f7f7f;">&gt;Gr&#252;ne Text&lt;/</span><span style="color: #0000ff;">span</span><span style="color: #7f7f7f;">&gt; und</span>
-<span style="color: #7f7f7f;">&lt;</span><span style="color: #0000ff;">span</span><span style="color: #7f7f7f;"> </span><span style="color: #a0522d;">style</span><span style="color: #7f7f7f;">=</span><span style="color: #8b2252;">"color: blue"</span><span style="color: #7f7f7f;">&gt;Blaue Text&lt;/</span><span style="color: #0000ff;">span</span><span style="color: #7f7f7f;">&gt; schreiben in</span>
-<span style="color: #7f7f7f;">ein HTML-export Block.  </span>
-<span style="color: #b22222;">#+end_export</span>
+<pre class="src src-org">#+begin_export html
+Man kann &lt;span style="color: green"&gt;Grüne Text&lt;/span&gt; und
+&lt;span style="color: blue"&gt;Blaue Text&lt;/span&gt; schreiben in
+ein HTML-export Block.  
+#+end_export
 </pre>
 </div>
 
 <p>
-Man kan auch <span style="color: red">die
+Man kann auch <span style="color: red">die
 Textfarbe</span> mit <i><a href="https://orgmode.org/manual/Quoting-HTML-tags.html">Inline-Syntax</a></i>, e.g.,
 <code>@@html:&lt;html&gt;@@</code>
 <span style="color: orange">schreiben</span>.
@@ -211,9 +211,9 @@ Textfarbe</span> mit <i><a href="https://orgmode.org/manual/Quoting-HTML-tags.ht
 
 <div class="org-src-container">
 <pre class="src src-org">Man kan auch
-<span style="color: #b22222;">@@</span><span style="font-weight: bold;">html:</span>&lt;span style="color: red"&gt;<span style="color: #b22222;">@@</span>die Textfarbe<span style="color: #b22222;">@@</span><span style="font-weight: bold;">html:</span>&lt;/span&gt;<span style="color: #b22222;">@@</span>
-mit <span style="font-style: italic;">/inline/</span> <span style="color: #7f7f7f;">=</span><span style="color: #b22222;">@@</span><span style="font-weight: bold;">html:</span><span style="color: #7f7f7f;">&lt;html&gt;</span><span style="color: #b22222;">@@</span><span style="color: #7f7f7f;">=</span>
-<span style="color: #b22222;">@@</span><span style="font-weight: bold;">html:</span>&lt;span style="color: orange"&gt;<span style="color: #b22222;">@@</span>schreiben<span style="color: #b22222;">@@</span><span style="font-weight: bold;">html:</span>&lt;/span&gt;<span style="color: #b22222;">@@</span>.
+@@html:&lt;span style="color: red"&gt;@@die Textfarbe@@html:&lt;/span&gt;@@
+mit /Inline-Syntax/, e.g., =@@html:&lt;html&gt;@@=
+@@html:&lt;span style="color: orange"&gt;@@schreiben@@html:&lt;/span&gt;@@.
 </pre>
 </div>
 </div>

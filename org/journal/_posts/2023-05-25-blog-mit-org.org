@@ -193,7 +193,7 @@ Mal schreibe ich den Eintrag mit [[target][Emacs Org Mode]] [[target][target abc
     #+end_export
   #+end_src
   
-  Man kan auch @@html:<span style="color: red">@@die
+  Man kann auch @@html:<span style="color: red">@@die
   Textfarbe@@html:</span>@@ mit /[[https://orgmode.org/manual/Quoting-HTML-tags.html][Inline-Syntax]]/, e.g.,
   =@@html:<html>@@=
   @@html:<span style="color: orange">@@schreiben@@html:</span>@@.
@@ -201,7 +201,7 @@ Mal schreibe ich den Eintrag mit [[target][Emacs Org Mode]] [[target][target abc
   #+begin_src org
     Man kan auch
     @@html:<span style="color: red">@@die Textfarbe@@html:</span>@@
-    mit /inline/ =@@html:<html>@@=
+    mit /Inline-Syntax/, e.g., =@@html:<html>@@=
     @@html:<span style="color: orange">@@schreiben@@html:</span>@@.
   #+end_src
 
