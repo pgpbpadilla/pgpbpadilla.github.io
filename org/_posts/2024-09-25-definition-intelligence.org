@@ -19,6 +19,7 @@ toc: true
 
 #+end_export
 
+
 A reference card for definitions of intelligence.
 
 This entry attempts to summarize the definitions of intelligence that
@@ -29,156 +30,236 @@ differ. Sometimes, it even seems as though they are discussing
 entirely different topics.
 
 
+#+begin_export html
+<p style="font-size: 0.9em; color: #555;">
+  <strong>Disclosure:</strong> Some of the links below are affiliate
+  links. This means that if you click through and make a purchase, I
+  may earn a small commission at no extra cost to you.
+</p>
+#+end_export
 
-* Chollet: Intelligence as learning efficiency
 
-  *Definition:* Intelligence is the efficiency with which a learning
-  system turns experience and priors into general skill at previously
-  unseen tasks
+** Chollet: Intelligence as learning efficiency
+   :PROPERTIES:
+   :ID:       2D6B03D9-09BF-46F9-960B-CEC2AD977D14
+   :END:
+
+   *Definition:* Intelligence is the efficiency with which a learning
+   system turns experience and priors into general skill at previously
+   unseen tasks
   
-  *Proponent*: François Chollet
+   *Proponent*: François Chollet
 
-  *Proposed metrics*: Skill Acquisition Efficiency (SAE)
+   *Proposed metrics*: Skill Acquisition Efficiency (SAE)
 
-  *Perspective*: Emphasizes generalization and the ability to learn
-   new tasks quickly from limited data. 
+   *Perspective*: Emphasizes generalization and the ability to learn
+    new tasks quickly from limited data. 
 
+*** References
 
+   1. @@html:<a name="chollet"
+      href="/tag/chollet.html"
+      target="_blank">Chollet</a>:
+      proposes a benchmark for intelligence, the ARC challenge@@
 
-* Hutter: Universal Artificial Intelligence
-
-  *Definition:* Intelligence measures the ability of an agent to
-  achieve goals in a wide range of environments
-
-  *Proponent:* Marcus Hutter
-
-  *Proposed metrics:* Universal Intelligence Measure (UIM); a formal
-  mathematical definition summing over all computable reward functions
-  weighted by their simplicity. 
-
-  *Perspective:* Provides a formal, mathematical framework based on
-  algorithmic information theory to define and measure intelligence. 
-
-
-
-* Schmidhuber: Compression progress
-
-  *Definition:* Intelligence is the ability to generate novel,
-  interesting actions or data by maximizing future expected reward or
-  compression progress
-
-  *Proponent:* Jürgen Schmidhuber
-
-  *Proposed metrics:* Measures based on Compression Progress;
-  improvement in predictive models driven by intrinsic motivation and
-  curiosity
-
-  *Perspective:* Highlights the role of intrinsic motivation,
-  curiosity, and data compression in discovering new patterns and
-  behaviors.
-
-
-* Mainstream AI: Task-specific metrics                                            
-
-  *Definition:* Intelligence is often operationally defined by
-  performance on specific tasks or benchmarks without a unified
-  overarching definition
-
-  *Proponent:* N/A
-
-  *Proposed metrics:* Task-specific metrics such as Accuracy, F1
-  Score, BLEU Score, etc., depending on the task
-
-  *Perspective:* Focuses on empirical performance in narrow
-  domains, emphasizing results on established benchmarks over a
-  holistic definition of intelligence 
 
   
-* Psychometrics: Intelligence Quotient (IQ)                        
+** Hutter: Universal Artificial Intelligence
 
-  *Definition:* Intelligence is the capacity for reasoning,
-  problem-solving, planning, abstract thinking, understanding complex
-  ideas, and learning from experience
+   *Definition:* Intelligence measures the ability of an agent to
+   achieve goals in a wide range of environments
 
-  *Proponent:* Psychometrics
+   *Proponent:* Marcus Hutter
 
-  *Proposed metrics:* Intelligence Quotient (IQ); standardized tests
-  measuring various cognitive abilities
+   *Proposed metrics:* Universal Intelligence Measure (UIM); a formal
+   mathematical definition summing over all computable reward functions
+   weighted by their simplicity. 
 
-  *Perspective:* Emphasizes quantifiable cognitive abilities and
-  compares individuals to population norms, focusing on human
-  intelligence assessment 
+   *Perspective:* Provides a formal, mathematical framework based on
+   algorithmic information theory to define and measure intelligence. 
+
+*** References
+
+   1. @@html:<a name="hutter"
+      target="_blank"
+      href="/tag/hutter.html">AIXI</a>:
+      Marcus Hutter's AIXI model for Universal Artificial Intelligence@@
+   2. @@html:<a name="amzn-hutter-uai"
+      target="_blank"
+      href="https://amzn.to/3Y3Pa0l">Hutter</a>:
+      Books by Marcus Hutter on Amazon@@
+
+
+** Schmidhuber: Compression progress
+
+   *Definition:* Intelligence is the ability to generate novel,
+   interesting actions or data by maximizing future expected reward or
+   compression progress
+
+   *Proponent:* Jürgen Schmidhuber
+
+   *Proposed metrics:* Measures based on Compression Progress;
+   improvement in predictive models driven by intrinsic motivation and
+   curiosity
+
+   *Perspective:* Highlights the role of intrinsic motivation,
+   curiosity, and data compression in discovering new patterns and
+   behaviors.
+
+*** References
+
+   1. @@html:<a name="schmidhuber"
+      target="_blank"
+      href="https://youtu.be/q4fFuZgOZn8?si=Da1V2AUcpl5WorUH">Schmidhuber
+      on consciousness</a>:
+      intelligence [and conciousness] is a byproduct of data
+      compression@@
+   2. @@html:<a name="schmidhubber-blog"
+      target="_blank"
+      href="https://people.idsia.ch/~juergen/blog.html">AI Blog</a>:
+      Schmidhuber's AI Blog@@
+
+
+** Mainstream AI: Task-specific metrics                                            
+
+   *Definition:* Intelligence is often operationally defined by
+   performance on specific tasks or benchmarks without a unified
+   overarching definition
+
+   *Proponent:* Various
+
+   *Proposed metrics:* Task-specific metrics such as Accuracy, F1
+   Score, BLEU Score, etc., depending on the task
+
+   *Perspective:* Focuses on empirical performance in narrow
+   domains, emphasizing results on established benchmarks over a
+   holistic definition of intelligence
+
+
+*** References
+
+   1. @@html:<a name="amzn-ai-russel-norvig"
+      target="_blank"
+      href="https://amzn.to/3Y1D9Z8">Russel, Norvig</a>:
+      Artificial Intelligence: a modern approach@@
+
+  
+** Psychometrics: Intelligence Quotient (IQ)                        
+
+   *Definition:* Intelligence is the capacity for reasoning,
+   problem-solving, planning, abstract thinking, understanding complex
+   ideas, and learning from experience
+
+   *Proponent:* Psychometrics
+
+   *Proposed metrics:* Intelligence Quotient (IQ); standardized tests
+   measuring various cognitive abilities
+
+   *Perspective:* Emphasizes quantifiable cognitive abilities and
+   compares individuals to population norms, focusing on human
+   intelligence assessment 
+  
+  
+*** References
+
+   1. @@html:<a name="g-factor"
+      target="_blank"
+      href="https://en.wikipedia.org/wiki/G_factor_(psychometrics)">g factor</a>:
+      a variable that summarizes positive correlations among different cognitive tasks@@
+   2. @@html:<a name="iq"
+      target="_blank"
+      href="https://en.wikipedia.org/wiki/Intelligence_quotient">IQ</a>:
+      Intelligence Quotient@@
+     
+  
+** Bostrom: Superintelligence                                       
+
+   *Definition:* Superintelligence refers to an intellect that greatly
+   surpasses the cognitive performance of humans in virtually all
+   domains of interest
+
+   *Proponent:* Nick Bostrom
+
+   *Proposed metrics:* No specific metric; concept explores potential
+   capabilities beyond human levels 
+
+   *Perspective:* Focuses on the implications, risks, and ethics
+   associated with creating intelligences that far exceed human
+   cognitive abilities 
+  
+
+*** References
+
+    1. @@html:<a name="amzn-bostrom"
+       target="_blank"
+       href="https://amzn.to/4eJOB1d">Superintelligence</a>:
+       Paths, Dangers, and Strategies@@
+
+  
+
+** Ethology: Animal intelligence                                            
+
+   *Definition:* Intelligence is the ability of an animal to adapt to
+   its environment, learn from experiences, solve problems, and use
+   tools 
+
+   *Proponent:* Ethology
+
+   *Proposed metrics:* Behavioral tests assessing problem-solving, tool
+   use, social learning, and communication abilities 
+
+   *Perspective:* Studies intelligence across different species,
+   emphasizing evolutionary adaptations and ecological contexts 
   
   
 
-* Bostrom: Superintelligence                                       
+*** References
 
-  *Definition:* Superintelligence refers to an intellect that greatly
-  surpasses the cognitive performance of humans in virtually all
-  domains of interest
+    1. @@html:<a name="wiki-animal-cog"
+       target="_blank"
+       href="https://en.wikipedia.org/wiki/Animal_cognition">Wikipedia</a>:
+       Animal cognition@@
+       
 
-  *Proponent:* Nick Bostrom
+** Human-like AI: Artificial General Intelligence (AGI)                                            
 
-  *Proposed metrics:* No specific metric; concept explores potential
-  capabilities beyond human levels 
+   *Definition:* Intelligence is the ability of an artificial agent to
+   understand, learn, and apply knowledge in a general, human-like way
+   across a wide range of tasks and domains 
 
-  *Perspective:* Focuses on the implications, risks, and ethics
-  associated with creating intelligences that far exceed human
-  cognitive abilities 
-  
-  
-* Ethology: Animal intelligence                                            
+   *Proponent:* Various
 
-  *Definition:* Intelligence is the ability of an animal to adapt to
-  its environment, learn from experiences, solve problems, and use
-  tools 
+   *Proposed metrics:* No standardized metric yet; Turing Test, general
+   AI benchmarks, and evaluations across diverse tasks are used 
 
-  *Proponent:* Ethology
-
-  *Proposed metrics:* Behavioral tests assessing problem-solving, tool
-  use, social learning, and communication abilities 
-
-  *Perspective:* Studies intelligence across different species,
-  emphasizing evolutionary adaptations and ecological contexts 
-  
+   *Perspective:* Aims to develop machines with general cognitive
+   abilities comparable to humans, capable of understanding and
+   reasoning across various contexts 
   
 
-* Human-like AI: Artificial General Intelligence (AGI)                                            
+*** References
 
-  *Definition:* Intelligence is the ability of an artificial agent to
-  understand, learn, and apply knowledge in a general, human-like way
-  across a wide range of tasks and domains 
-
-  *Proponent:* Various
-
-  *Proposed metrics:* No standardized metric yet; Turing Test, general
-  AI benchmarks, and evaluations across diverse tasks are used 
-
-  *Perspective:* Aims to develop machines with general cognitive
-  abilities comparable to humans, capable of understanding and
-  reasoning across various contexts 
-  
-  
-
-  
+    1. @@html:<a name="wiki-agi"
+       target="_blank"
+       href="https://en.wikipedia.org/wiki/Artificial_general_intelligence">Wikipedia</a>:
+       Artificial General Intelligence@@
   
 
   
 
-  
-  
+** COMMENT author: title                                            
 
-  
+   *Definition:* 
 
-* COMMENT author: title                                            
+   *Proponent:* 
 
-  *Definition:* 
+   *Proposed metrics:* 
 
-  *Proponent:* 
+   *Perspective:* 
 
-  *Proposed metrics:* 
+*** References
 
-  *Perspective:* 
+    1. abc
   
   
 
