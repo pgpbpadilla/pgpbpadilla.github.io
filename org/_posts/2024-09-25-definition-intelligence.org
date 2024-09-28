@@ -42,6 +42,7 @@ entirely different topics.
 ** Chollet: Intelligence as learning efficiency
    :PROPERTIES:
    :ID:       2D6B03D9-09BF-46F9-960B-CEC2AD977D14
+   :CUSTOM_ID: chollet
    :END:
 
    *Definition:* Intelligence is the efficiency with which a learning
@@ -65,6 +66,9 @@ entirely different topics.
 
   
 ** Hutter: Universal Artificial Intelligence
+   :PROPERTIES:
+   :CUSTOM_ID: hutter
+   :END:
 
    *Definition:* Intelligence measures the ability of an agent to
    achieve goals in a wide range of environments
@@ -91,6 +95,9 @@ entirely different topics.
 
 
 ** Schmidhuber: Compression progress
+   :PROPERTIES:
+   :CUSTOM_ID: schmidhuber
+   :END:
 
    *Definition:* Intelligence is the ability to generate novel,
    interesting actions or data by maximizing future expected reward or
@@ -121,6 +128,9 @@ entirely different topics.
 
 
 ** Mainstream AI: Task-specific metrics                                            
+   :PROPERTIES:
+   :CUSTOM_ID: mainstream
+   :END:
 
    *Definition:* Intelligence is often operationally defined by
    performance on specific tasks or benchmarks without a unified
@@ -145,6 +155,9 @@ entirely different topics.
 
   
 ** Psychometrics: Intelligence Quotient (IQ)                        
+   :PROPERTIES:
+   :CUSTOM_ID: psychometrics
+   :END:
 
    *Definition:* Intelligence is the capacity for reasoning,
    problem-solving, planning, abstract thinking, understanding complex
@@ -173,6 +186,9 @@ entirely different topics.
      
   
 ** Bostrom: Superintelligence                                       
+   :PROPERTIES:
+   :CUSTOM_ID: superintelligence
+   :END:
 
    *Definition:* Superintelligence refers to an intellect that greatly
    surpasses the cognitive performance of humans in virtually all
@@ -198,6 +214,9 @@ entirely different topics.
   
 
 ** Ethology: Animal intelligence                                            
+   :PROPERTIES:
+   :CUSTOM_ID: ethology
+   :END:
 
    *Definition:* Intelligence is the ability of an animal to adapt to
    its environment, learn from experiences, solve problems, and use
@@ -222,6 +241,9 @@ entirely different topics.
        
 
 ** Human-like AI: Artificial General Intelligence (AGI)                                            
+   :PROPERTIES:
+   :CUSTOM_ID: agi
+   :END:
 
    *Definition:* Intelligence is the ability of an artificial agent to
    understand, learn, and apply knowledge in a general, human-like way
