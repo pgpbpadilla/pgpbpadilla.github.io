@@ -4,6 +4,7 @@ title: About
 permalink: /about.html
 ref: about
 order: 0
+adsense: true
 ---
 Hi, my name is Pablo!
 
