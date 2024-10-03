@@ -35,6 +35,7 @@ disqus:
 # https://github.blog/2017-11-29-use-any-theme-with-github-pages/
 remote_theme: lorepirri/cayman-blog
 google_analytics: G-P9XEV7PSBE
+google_tag_manager: GTM-PMDH4JF7
 
 plugins:
   - jekyll-feed
