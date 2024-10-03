@@ -28,10 +28,9 @@ mercenary mode I was ready for a change ...
 * Act I
 
   Working as a software engineer can be stressful. The pace of
-  modern/agile software teams is fast, bi-weekly sprints,
-  continuous delivery, you build it ... you run it, etc.. On top of
-  that, having to learning next programming tool/technique is very
-  demanding.
+  modern/agile software teams is fast, bi-weekly sprints, continuous
+  delivery, you build it ... you run it, etc.. On top of that, having
+  to learning next programming tool/technique is very demanding.
 
   I have always been more of a thinker than a tinkerer; I like to look
   at at topic from different angles, do some research, try a few
@@ -73,61 +72,52 @@ mercenary mode I was ready for a change ...
   working on infrastructure automation tasks and was scolded for
   working on non value added tasks.
 
-  This was very sad to experience
-  because not attending to those tasks was one of the top reasons
-  deliveries were unreliable and slow. To me it was like apartment
-  mates living together and complaining that the apartment stinks but
-  no one has any time to take the garbage out.
+  This was very sad to experience because not attending to those tasks
+  was one of the top reasons deliveries were unreliable and slow. To
+  me it was like apartment mates living together and complaining that
+  the apartment stinks but no one has any time to take the garbage
+  out.
 
   AI/ML was attractive to me both because it constantly generated
-  headlines, and aligns well with
-  personal interest in the automation of knowledge organization and discovery.
-  It was also a change that would allow me to bring some of my 
-  transferable skills and not start from scratch.
+  headlines, and aligns well with personal interest in the automation
+  of knowledge organization and discovery.  It was also a change that
+  would allow me to bring some of my transferable skills and not start
+  from scratch.
 
-  During my research, there were two main resources that I relied
-  upon to Learn about what AI projects might look like in the
-  industry:
+  During my research, there were two main resources that I relied upon
+  to Learn about what AI projects might look like in the industry:
 
-  1. @@html:<a href="/tag/chollet.html">Chollet</a>@@'s
-     book:
-     @@html:<a href="https://amzn.to/3BsKjwK"
-               target="_blank">
-               Deep Learning with Python.
-            </a>@@
-     the Universal Machine Learning workflow was exactly what I was
-     looking for at the time, a high-level overview of the lifecycle
-     of an ML Project
+  1. @@html:<a href="/tag/chollet.html">Chollet</a>@@'s book:
+     @@html:<a href="https://amzn.to/3BsKjwK" target="_blank"> Deep
+     Learning with Python.  </a>@@ the Universal Machine Learning
+     workflow was exactly what I was looking for at the time, a
+     high-level overview of the lifecycle of an ML Project
 
-  2. Andrew Ng's AI career guide: he breaks down the different roles
-     required to run successful AI projects in the enterprise
+  2. Andrew Ng's AI [[https://www.deeplearning.ai/][deeplearning.ai]]: he breaks down the different
+     roles required to run successful AI projects in the enterprise
      world. His site also has tools to asses your readiness for a
      given role
 
 
-  Once a software engineer, always a software engineer
-
-  I found both resources, super useful, and at the same time I was
-  disheartened to learn that machine learning projects for commercial
-  companies look almost the same as software projects. I started to
-  de-prioritize, learning more about Machine Learning in the industry,
-  and decided to learn more about infrastructure.
+  I found both resources above useful, and at the same time I was
+  disheartened to learn that machine learning projects look almost the
+  same as software projects.
   
-  Data, scientist, machine, learning, engineers, and other people with
-  specialized skills that make them very valuable for ML projects
-  typically lack the practical experience in delivering scalable,
-  reliable systems to production environments. To me that meant that
-  were I to join such projects, I would end up exactly in the same
-  role that I was trying to escape, namely, thinking about the
-  infrastructure, reliability and automation to achieve repeatable
-  deployment to production environment.
-
+  Data scientist, machine learning engineers, and other people with
+  specialized skills for ML projects typically lack the practical
+  experience in delivering scalable, reliable systems to production
+  environments. To me that meant that were I to join such projects, I
+  would end up exactly in the same role that I was trying to escape.
+  
+  I started to de-prioritize learning more about Machine Learning in
+  the industry and decided to learn more about infrastructure.
+  
   
 * Act III
 
   During my vacation I made the resolution to double down and continue
-  working as a software engineer and become even more proficient writing
-  code for applications and release automation.
+  working as a software engineer and become even more proficient
+  writing code for applications and release automation.
   
   My resolution lasted less than 4 hours after my return to work. On
   my first day after vacation, all it took was to read my mailbox and
