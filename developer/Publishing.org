@@ -2,6 +2,9 @@
 
 
 * Publishing workflow
+  :PROPERTIES:
+  :ID:       BF7D1A4F-226D-4B69-8E28-359CD5690A19
+  :END:
   :LOGBOOK:
   :END:
 
