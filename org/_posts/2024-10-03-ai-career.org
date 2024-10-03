@@ -1,0 +1,195 @@
+#+LANGUAGE: en
+#+OPTIONS: toc:nil  broken-links:mark
+
+#+begin_export html
+---
+layout: post.liquid
+title:  "AI career"
+date: 2024-10-02
+last_updated: 2024-10-02
+tags:
+  - journal
+categories: [journal]
+#permalink: /2024-10-02-ai-career
+toc: false
+---
+
+#+end_export
+
+
+At the end of 2022, after 14 years as a software engineer working in
+mercenary mode I was ready to change roles. I had a choice to make,
+focus on infrastructure or jump on the AI train.
+
+#+begin_export html
+{% include amzn_affiliate_disclaimer.html %}
+#+end_export
+
+@@html:<a href="https://amzn.to/3XTboAQ"
+target="_blank">
+Deep Learning with Python
+</a>@@
+
+Around the end of 2021 I was on vacation and going over my life
+choices and my career prospects. I had worked most of my career
+jumping to the next position as soon as I found something that was new
+enough or attractive enough to get me out of my boredom and
+frustration.
+
+I would summarize my career as writing network clients for the first
+half and then writing application servers and release automation for
+the other half. I was ready to stop writing error handling code for
+the nth time.
+
+
+There was a problem though, writing software is the only thing I had
+more than 10 years of practical experience. Also I am not a big risk
+taker so I only considered alternative paths that could benefit from
+my professional background.
+
+On most of my projects I would spend most of my thinking time on how
+to improve the state of our underlying infrastructure, which in many
+cases was in such a shape that it became a bottleneck to release
+software in an repeatable way. I would typically use half of my time
+working on non-value add tasks like configuring artifact caching to
+our CI/CI servers, optimizing cache layers for our Docker containers
+or instrumenting our aplications so that we could reduce the time to
+debug issues without having to jump into vms or containers when
+something broke.
+
+During my vacation I made the resolution to double down and continue
+working as a software engineer and become even more proficient writing
+code for applications and release automation.
+My resolution lasted less than 4 hours on my first day after vacation,
+all it took was to read my mailbox and chat messages to remind me why
+I was considering a change in the first place: broken pipelines, a
+long queue of pull requests on which most feedback is brushed off as
+nitpicking, pull requests that are 2000 loc long, non-stop merging to
+the mainline even after it has been broken for 2 weeks, team
+retrospectives that do not produce any value, aggressive deadlines but
+no compromises on scope, the need to reinvent the wheel on every small
+module just because developers are not familiar enough with the
+programming framework we use and them not feeling like they can invest
+any time learning since they have a tight dealine, the constant churn
+of external consultant that need to be onboarded and that only makes
+late projects even later, etc, etc, etc.
+
+
+I have always found it very hard to reconcile my training as an engineer
+where your are indoctrinated to not compromise on quality and real
+life as a software engineer where you are pushed to compromise on
+quality on every corner because the delivery is late or there is no
+more funding to continue or everyong in your team has had enough and
+they move on to something else.
+
+
+In any case, I narrowed down my options to infrastructure architecture
+since it seemed like a good fit for someone who want to escape the
+bi-weekly pace of modern /agile software delivery/ or machine learning
+engineering since it's the new hotness and I could probably benefit
+from many transferable skills.
+
+
+I had a fair idea of the tasks of a software architect being
+surrounded by them over the course of the years, they just seems like
+other more experienced software engineers that could connect the dots
+and see the bigger picture. I didn't have that much contact with
+anyone working on AI except a couple of Data Scientists and Data
+Engineers so I found a couple of books online that would help me
+understand what machine learning looks like in practice.
+
+Chollet's book on Deep Learning with Python came up in the list and it
+had really good reviews so I got a copy and started consuming it,
+trying to imagine what it would be like to work as a machine learning
+engineer.
+
+Specially his description of the Universal Machine Learning workflow,
+.It was exactly what I was looking for at the time, a high-level overview of the
+lifecycle of an ML Project. 
+
+I also found Andrew Ng's courses and his AI career guide on
+which he breaks down the different roles required to run successful AI
+projects in the enterprise world.
+
+It took me a while to complete Chollet's book and although the content
+was very interesting my fear that the daily work looks almost as
+boring and frustrating to that of a software engineer was the main
+reason I deprioritised getting deeper into the machine learning
+engineering and started to try to learn more about what the world of
+infrastructure would be like.
+
+Data, scientist, machine, learning, engineers, and other people with
+specialized skills that make them very valuable to build a. I systems
+typically typically lack the practical experience in delivering
+scalable, reliable systems to production environments. In my mind, the
+only role I could fulfill in such a project or team would be exactly
+the same role that I had at the time, namely, thinking about the
+infrastructure, reliability and automation to achieve repeatable
+deployment to production environment.
+
+As it usually happens in life, reality has always the last
+laugh. After a couple of years of switching to focus on IT
+infrastructure architecture, I'm out of it again, now focusing on
+learning more about cloud architecture.
+
+On the one after returning from my vacation, I started looking for a
+change, I found a couple of open positions in different areas on the
+same company specifically in the area of IT infra.
+
+My exposure to IT infrastructure coming to eat as a software engineer
+that started his career in 2008 did not prepare me for what I was
+about to encounter. The company was large and more than 100 years old,
+it has Deployed pretty much any technology worth mentioning in the
+last 50 years, My universe went from delivery, pipelines, NCIC, the
+servers to anything from robots, used in logistics, warehouses, to
+temperature control systems, To HR systems, to telephony, and all
+other kinds of IT related projects, of which I would have never known.
+Before transitioning to this role, I already thought that
+infrastructure was a huge Maine, but I could see the end of the
+observable IT universe. After the transition, I have never felt that way
+ever again the IT universe keeps expanding, and its boundaries are
+unknown to me.
+
+
+Just because something is new, it doesn't mean that it will be
+interesting forever. And so after a couple of years, I was again a
+bit, bored and disappointed with my daily tasks, and everything else
+it has to do with advancing your career in a large corporation. So the
+idea of trying something new was attractive enough, but I decided to
+take the opportunity to learn more about the cloud.
+
+
+Zooming in projects, still look very much the same but my present role
+allows me the time to think ahead and not be constrained by the
+biweekly delivery cycle of typical software engineering teams. In
+fact, that was one of the reasons I was attracted to working on
+infrastructure topics need me that the feedback loop tends to be
+longer than that of a software engineer, working on a front end
+website or a backend engineer, working on an application server.
+
+
+Over the past few years I have met with colleagues who are attestation
+on their careers, where they are not sure whether they want to
+continue on the current path, or take a different one. Many of them,
+like me find the field of artificial intelligence, very attractive,
+but they also haven't had any practical experience machine learning
+engineer any project. So if you are Considering such a move, I can
+highly recommend Solis book. I see window into the world of machine,
+learning engineer, and project, directly from one of the core
+contributors to the most popular programming framework for machine
+learning, Keras a high-level API for building and training neural
+networks. 
+
+
+
+* COMMENT Local variables
+
+  Taken from: 
+  https://emacs.stackexchange.com/a/76549/11978
+  
+  # Local Variables:
+  # org-md-toplevel-hlevel: 2
+  # End:
+  
+
+
