@@ -5,7 +5,7 @@ https://emacs.stackexchange.com/a/76549/11978
 #+end_comment
 #+BIND: org-md-toplevel-hlevel 2
 
-Test file do demonstrate that =ox-md= does not honor the heading
+Test file to demonstrate that =ox-md= does not honor the heading
 leavel for Footnotes. 
 
 * level 1

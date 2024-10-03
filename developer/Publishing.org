@@ -60,7 +60,9 @@
 
   6. visit local site: http://127.0.0.1:4000/
 
-  7. preview site without drafts
+  7. test for broken links: [[file:Testing.org][Testing]]
+
+  8. preview site without drafts
      #+begin_example bash
      inv -l
      #+end_example
