@@ -22,16 +22,19 @@ toc: false
 #+end_export
 
 
-After 14 years as a software engineer I decided to
-switch roles to work on IT infrastructure and discarded the the idea
-to pursue roles for AI projects. 
+In 2022, after 14 years as a software engineer, I found myself
+reconsidering my career path. The fast-paced software world was no
+longer compatible with my preference for deep thinking and
+exploration. This post outlines my journey, ultimately leading me to
+choose IT infrastructure over AI roles, and how that decision aligned
+better with my interests and work style.
 
 #+begin_export html
 {% include amzn_affiliate_disclaimer.html %}
 #+end_export
 
 
-* Act I
+* Act I: Can Thinkers tinker?
 
   Working as a software engineer can be stressful. The pace of
   modern/agile software teams is fast, bi-weekly sprints, continuous
@@ -52,7 +55,7 @@ to pursue roles for AI projects.
 
   
   
-* Act II
+* Act II: Educated Guessing
 
   The first half of my career has been writing network clients and
   then writing application servers and release automation for the
@@ -69,7 +72,7 @@ to pursue roles for AI projects.
   artificial intelligence.
 
   In recent projects, my interest was often to get a glimpse of
-  the the high-level architecture and I would approach it by studying
+  the high-level architecture and I would approach it by studying
   the delivery pipelines; when available, they describe the process
   each code change goes through to make it to a production
   environment.
@@ -82,8 +85,8 @@ to pursue roles for AI projects.
   might look like in the industry:
 
   1. Chollet's book:
-     @@html:<a href="https://amzn.to/3BsKjwK" target="_blank">
-     Deep Learning with Python:</a>@@
+     @@html:<a name="chollet-dlwp" href="https://amzn.to/3BsKjwK"
+     target="_blank">Deep Learning with Python</a>@@:
      the Universal Machine Learning workflow was exactly what I was
      looking for at the time, a high-level overview of the life cycle
      of an ML Project.
@@ -94,7 +97,7 @@ to pursue roles for AI projects.
      asses your readiness for specific roles.
 
 
-  I was dissapointed but not very suprised to learn that machine
+  I was disappointed but not very surprised to learn that machine
   learning projects look very similar to other software projects.
   
   AI/ML engineers bring their specialized skills to a project and were
@@ -103,7 +106,7 @@ to pursue roles for AI projects.
   of AI-powered software to production environments.
   
   
-* Act III
+* Act III: non-committal commitment
 
   During my vacation I made the resolution to double down and continue
   working as a software engineer and become even more proficient
@@ -121,9 +124,28 @@ to pursue roles for AI projects.
   about not pursing AI/ML.
 
   If you are considering a career in AI/ML, I highly recommend
-  Chollet's book; it's a window into the world of machine learning
-  engineering in the industry, directly from a very influential
-  software engineer and AI researcher.
+  @@html:<a href="#chollet-dlwp">Chollet's book</a>@@; it's a
+  window into the world of machine learning engineering in the
+  industry, directly from a very influential software engineer and AI
+  researcher.
+
+
+* Related links
+
+  1. @@html:<a href="https://amzn.to/3BsKjwK" target="_blank">
+     Deep Learning with Python</a>@@
+
+  2. [[https://www.deeplearning.ai/][deeplearning.ai]]
+
+  3. [[https://en.wikipedia.org/wiki/Fran%C3%A7ois_Chollet][François Chollet]] (Wikipedia)
+
+  4. posts with labels
+
+     - @@html:<a href="/tag/ai">#ai</a>@@
+
+     - @@html:<a href="/tag/chollet">#chollet</a>@@
+
+     - @@html:<a href="/tag/software">#software</a>@@
 
 
 
