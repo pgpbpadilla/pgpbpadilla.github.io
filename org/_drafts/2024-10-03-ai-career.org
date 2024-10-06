@@ -108,60 +108,29 @@ to pursue roles for AI projects.
   working as a software engineer and become even more proficient
   writing code for applications and release automation.
   
-  My resolution lasted less than 4 hours after my return to work. On
-  my first day after vacation, all it took was to read my mailbox and
-  chat messages to remind me why I was considering a change in the
-  first place: broken pipelines, a long queue of pull requests on
-  which most feedback is brushed off as nitpicking, pull requests that
-  are 2000 LOC long, non-stop merging to the mainline even after it
-  has been broken for 2 weeks, team retrospectives that do not produce
-  any value, aggressive deadlines but no compromises on scope, the
-  need to reinvent the wheel on every small module just because
-  developers are not familiar enough with the programming framework we
-  use and them not feeling like they can invest any time toe learn on
-  the job since they have a tight deadlines, the constant churn of
-  external consultants that need to be onboarded and that only makes
-  late projects even later, etc, etc, etc.
+  My resolution lasted about 4 hours after my return to work. On my
+  first day after vacation, all it took was to read my mailbox and
+  chat messages to remind me the many reasons why I was considering a
+  change in the first place.
 
-  I started looking for a change on the same day and that would lead
-  me into the world of IT infrastructure architecture.
+  I started looking for a new role and that lead me into the world of
+  IT infrastructure architecture. The company is large and for the
+  past 50 years has deployed pretty much every piece of technology
+  worth mentioning; my IT universe expanded and I felt quite good
+  about not pursing AI/ML.
 
-  The company is large and more than 100 years old, it has deployed
-  pretty much any technology worth mentioning in the last 50 years. My
-  IT universe expanded from delivery pipelines, and infrastructure
-  automation to anything from robots used in logistics warehouses,
-  temperature control systems, HR systems, telephony/fax/printing
-  hardware, and all other kinds of IT related projects, of which I
-  would have never known.
-
-  Before my role as infrastructure architect, I already thought that
-  infrastructure was a huge domain, but I could still see the edges of
-  my IT universe. It's 2024, two years on the new role I can say that
-  I have never felt that way again; the IT universe keeps expanding,
-  and its boundaries are unknown to me.
-
-  After a couple of years of switching to focus on IT infrastructure
-  architecture, I'm out of it again, now focusing on learning more
-  about cloud architecture a small subset of IT infrastructure, maybe
-  this time it will last longer, let's just hope that Cloud is not
-  just another fad.
-
-
-* Finding your own path
-  
-  Over the past few years I have met with colleagues and friends who
-  are at stage on their careers, where they are not sure whether they
-  want to continue on the current path or take a different one. Many
-  of them, like me find the field of artificial intelligence, very
-  attractive, but they also haven't had any practical experience
-  machine learning engineer any project. So if you are considering
-  such a move, I can highly recommend Chollet's book. It's a window
-  into the world of machine learning engineering in the industry,
-  directly from an influential software engineer and AI researcher.
+  If you are considering a career in AI/ML, I highly recommend
+  Chollet's book; it's a window into the world of machine learning
+  engineering in the industry, directly from a very influential
+  software engineer and AI researcher.
 
 
 
-* TODO Story structure checklist: [[https://chatgpt.com/share/66fea7f2-cdf4-800f-ada1-cc9b8a748c57][chat]]                             :noexport:
+* DONE Story structure checklist: [[https://chatgpt.com/share/66fea7f2-cdf4-800f-ada1-cc9b8a748c57][chat]]                             :noexport:
+  CLOSED: [2024-10-06 So 21:19]
+  :LOGBOOK:
+  - CLOSING NOTE [2024-10-06 So 21:19]
+  :END:
   
 * COMMENT Local variables
 
