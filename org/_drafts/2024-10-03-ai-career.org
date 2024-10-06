@@ -10,6 +10,7 @@ last_updated: 2024-10-02
 tags:
   - journal
   - ai
+  - job
   - career
   - chollet
   - software
@@ -44,10 +45,10 @@ to pursue roles for AI projects.
   level of interest or curiosity. My working preferences were not
   compatible with my programming job.
 
-  During my vacation around the end of 2021 I was going over my life
-  choices and career prospects; I thought that I was ready to commit
-  to a role long-term but I needed to do some research to understand
-  my options and compare them somehow.  
+  During my vacation around the end of 2021 I was going over my career
+  prospects; I thought that I was ready to commit to a role long-term
+  but I needed to do some research to understand my options and
+  compare them somehow.
 
   
   
