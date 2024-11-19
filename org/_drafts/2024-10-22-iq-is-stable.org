@@ -1,0 +1,77 @@
+#+LANGUAGE: en
+#+OPTIONS: toc:nil  broken-links:mark
+
+#+begin_export html
+---
+layout: post.liquid
+title:  "Human intelligence (IQ) is stable"
+date: 2024-10-22
+last_updated: 2024-10-22
+tags:
+  - journal
+  - intelligence
+  - stable
+  - iq
+  - ai
+categories: [journal, ai]
+permalink: /2024-10-22-iq-is-stable
+toc: false
+---
+
+#+end_export
+
+Humans learn new skills all the time but we don't say they are smarter
+because of it; why do we consider AI systems smarter when they acquire
+new skills?
+
+Intelligence is a very hot topic these days and I just cannot grasp
+what it really means. I wonder if anybody does.
+
+
+** Human intelligence on adults is stable over time
+
+   1. adult humans can learn new skills that allow us to solve more
+      tasks:
+
+      - even after learning new things, it is expected that
+        intelligence will remain stable and not increase in proportion
+        to the number of skills/tasks that we have mastered
+
+      - for artificially intelligent systems, it seems that acquiring
+        new skills or being able to solve more take effectively
+        increases the system's rank in the relevant benchmarks; in a
+        way for AI systems it's ok to believe that more skills/tasks
+        means higher intelligence
+
+      - intelligence tests for humans and machines differ in the sense
+        that those that measure human intelligence have the criteria
+        that they should not test for acquired knowledge
+
+        + IQ tests focus on nonverbal reasoning
+
+   2. In the ARC challenge, the intelligence of a given system depends
+      on the task
+
+      A system may seem more or less intelligent depending on the
+      difficulty of the task and on whether the task falls within the
+      scope of the system.
+
+      - intuitively this also makes sense for humans, if the task is
+        outside of the scope of tasks that we can solve, it may seems
+        that we are not very intelligence; conversely if a task is
+        very easy it may give the impression that we're very smart if
+        we use the level of effort as a proxy for intelligence,
+        namely, if the effort required is small it must be cause our
+        intellect is large
+
+* COMMENT Local variables
+
+  Taken from: 
+  https://emacs.stackexchange.com/a/76549/11978
+  
+  # Local Variables:
+  # org-md-toplevel-hlevel: 2
+  # End:
+  
+
+
