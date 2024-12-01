@@ -20,12 +20,9 @@ toc: false
 
 #+end_export
 
-Humans learn new skills all the time but we don't say they are smarter
+Humans learn new skills all the time but we don't think they are smarter
 because of it; why do we consider AI systems smarter when they acquire
 new skills?
-
-Intelligence is a very hot topic these days and I just cannot grasp
-what it really means. I wonder if anybody does.
 
 
 ** Human intelligence on adults is stable over time
@@ -43,11 +40,17 @@ what it really means. I wonder if anybody does.
         way for AI systems it's ok to believe that more skills/tasks
         means higher intelligence
 
-      - intelligence tests for humans and machines differ in the sense
-        that those that measure human intelligence have the criteria
-        that they should not test for acquired knowledge
+      - intelligence tests for humans and machines are different:
 
-        + IQ tests focus on nonverbal reasoning
+        + IQ and g-factor are measures of an individual's variance in
+          performance with respect to a population
+
+        + Typical AI benchmarks typically measure performance on
+          specific tasks.
+
+
+   A notable exception is [[https://pgpbpadilla.github.io/chollet-general-intelligence-test][Chollet's proposed measure for intelligence]],
+   which tries to measure skill acquisition efficiency.          
 
    2. In the ARC challenge, the intelligence of a given system depends
       on the task
@@ -64,6 +67,43 @@ what it really means. I wonder if anybody does.
         namely, if the effort required is small it must be cause our
         intellect is large
 
+
+
+** TODO What does IQ measure?
+
+   1. IQ operationalize the g-factor
+
+
+** TODO relationship to g-factor
+
+   The [[https://en.wikipedia.org/wiki/G_factor_(psychometrics)][g-factor]] tries to measure the variance in intelligence amongst
+   individuals.
+
+   Intelligence tests measure various domains of intelligence, e.g.,
+   visual, logical, verbal, etc.  By measuring distinct aspects of
+   intelligence, we can find correlations between them and identify
+   the common factor -- the g-factor -- that /connects/ them all.
+
+
+** TODO IQ and g-factor are an oversimplification
+
+   
+** TODO Artificial General Intelligence
+
+   There are two ways that I can interpret the goal of trying to build
+   /general/ intelligence:
+
+   1. trying to recreate the kind of intelligence that the g-factor
+      tries to measure
+   2. trying to recreate the kind of intelligence that can be used to
+      solve any kind of problem
+
+
+   Improving the performance on any of the two interpretations above
+   would make our artificial agents capable to solve problems that
+   have not seen during training.
+   
+   
 * COMMENT Local variables
 
   Taken from: 
