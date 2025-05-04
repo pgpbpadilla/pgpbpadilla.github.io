@@ -1,0 +1,65 @@
+#+LANGUAGE: en
+
+#+begin_comment
+1) =toc:nil=: Do not generate Org TOC:
+   https://orgmode.org/manual/Table-of-Contents.html
+2) =broken-links=: Continue export even when there are broken links 
+   https://orgmode.org/manual/Export-Settings.html
+#+end_comment
+#+OPTIONS: toc:nil  broken-links:mark
+
+#+begin_comment
+Jekyll front matter:
+https://jekyllrb.com/docs/front-matter/
+#+end_comment
+#+begin_export html
+---
+layout: post.liquid
+title:  "Salsa practice ideas"
+date: 2025-05-03
+last_updated: 2025-05-03
+tags:
+  - salsa
+  - dancing
+categories: [salsa, dancing]
+#TODO: add permalink
+#permalink: /2025-05-03-title
+toc: false
+---
+
+#+end_export
+
+ Tagline.
+
+* First heading
+
+  Lorep ipsum.
+
+
+  #+begin_export html
+  <div style="text-align: center">
+    <a href="assets/images/salsa-on1-basic.svg">
+      <img src="assets/images/salsa-on1-basic.svg"
+           alt="On 1 Basic step">
+    </a>
+  </div>
+  #+end_export
+
+  #+begin_export html
+  <div style="text-align: center">
+  <img src="/assets/images/inherit-the-ledger.png" style="width: 50%">
+  </div>
+ #+end_export
+
+  
+
+
+* COMMENT Local variables
+  
+  Taken from: 
+  https://emacs.stackexchange.com/a/76549/11978
+  
+# Local Variables:
+# org-md-toplevel-hlevel: 2
+# End:
+  
