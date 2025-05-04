@@ -22,37 +22,93 @@ tags:
   - salsa
   - dancing
 categories: [salsa, dancing]
-#TODO: add permalink
-#permalink: /2025-05-03-title
-toc: false
+permalink: /2025-05-03-salsa-practice
+toc: true
 ---
 
 #+end_export
 
- Tagline.
+Here are some ideas for salsa dance practice, the main goals are to
+train the ability to emphasize the pause at different times, as well
+as to vary the sequence of steps and try all combinations. Have fun!
 
-* First heading
 
-  Lorep ipsum.
+I started learning Salsa back in 2017 while I was living and working
+in the Greater Seattle area. The class was taught at the [[https://centuryballroom.com][Century
+Ballroom]], there I started my Salsa journey with the Basic step On 1,
+LA Style.  
 
+
+* The Basic step On 1
 
   #+begin_export html
   <div style="text-align: center">
-    <a href="assets/images/salsa-on1-basic.svg">
-      <img src="assets/images/salsa-on1-basic.svg"
+    <a href="assets/svg/salsa-on1-basic.svg">
+      <img src="assets/svg/salsa-on1-basic.svg"
            alt="On 1 Basic step">
     </a>
   </div>
   #+end_export
 
-  #+begin_export html
-  <div style="text-align: center">
-  <img src="/assets/images/inherit-the-ledger.png" style="width: 50%">
-  </div>
- #+end_export
 
+** Remarks on symbols
+
+   1. the beat: the first row shows the beat, in Salsa music there are
+      2 sets of 4 beats, 8 in total
+   2. home position: the beat 0 shows the initial position, some
+      people also call this the home position
+   3. transfer of weight: the red color in the steps indicates where
+      your body weight is supposed to be
+   4. only toes: the footprints without the heel mean that you are
+      only stepping with your toes
+   5. traveling foot: an arrow instead of a step shows the direction
+      your foot is traveling
+   6. step on the beat: the X in the last row mean that you need to
+      step on the beat
+   7. pause: the Ps in the last row tell you where the pause is
+      supposed to be
+
+
+* Changing the timing of the Pause
+
+  For reference, in the On 1 Basic, the pause is on beats 4 and 8.
+
+  To simplify, let's divide the eight beats on 2 sets of 4. This would
+  mean that the Pause is on beat 4 for the On 1 Basic.
+
+  The goal is now to deliberately pause on a different beat, e.g.,
+  1, 2, or 3.
+  
+  
+** Pause on beat 1
+
+** Pause on beat 2
+
+** Pause on beat 3
+
+
+* TODO Change the Pause while dancing On 2
+
+  The same idea can be used to train the Pause when dancing On 2.
+
+
+* TODO Stepping on the Clave beats
   
 
+* Takeaways
+
+  1. now you have not only 2 ways to dance (On 1 and On 2); you have 8
+     ways to dance by choosing when to pause
+  2. you also have 2 additional ways to emphasize the Pause by steping
+     stricly on the clave beats, so that's 10 ways to dance already!
+  3. when making a Pause, you can do it softly or forcefully; during
+     practice anything goes but when dancing with a partner let the
+     music tell you if you should use soft long moves or short fast
+     ones 
+
+
+
+      
 
 * COMMENT Local variables
   
