@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       0FDC0050-C9D0-4382-BAF6-8434AF05B619
+:END:
 #+LANGUAGE: en
 #+OPTIONS: toc:nil  broken-links:mark
 
@@ -6,11 +9,13 @@
 layout: post.liquid
 title:  "Inherit the Ledger"
 date: 2025-04-05
-last_updated: 2025-04-05
+last_updated: 2025-05-04
 tags:
   - rag
   - ai
   - llm
+  - law
+  - plato
   - ledger
   - blockchain
   - shorts
@@ -29,6 +34,14 @@ held accountable.
 
 *Disclaimer: this post was created with ChatGPT, an AI language
 model.*
+
+#+begin_export html
+<div style="text-align: center">
+  <img src="/assets/images/inherit-the-ledger.png" style="width: 50%">
+</div>
+#+end_export
+
+
 
 In 2043, the world finally had peace—but no one could agree on what it
 meant.
