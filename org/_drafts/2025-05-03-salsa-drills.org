@@ -29,27 +29,28 @@ toc: true
 #+end_export
 
 Here are some ideas for salsa dance practice, the main goals are to
-train the ability to emphasize the pause at different times, as well
-as to vary the sequence of steps and try all combinations. Have fun!
+train the ability to place the pause at different times deliberately. 
 
+During the COVID pandemic I started to get bored of practicing only
+the On 1 basic step for inline Salsa. I was trying to come up with
+some ideas to spice up my practice sessions and also understand more
+about the different ways of dancing inline Salsa.
 
-I started learning Salsa back in 2017 while I was living and working
-in the Greater Seattle area. The class was taught at the [[https://centuryballroom.com][Century
-Ballroom]], there I started my Salsa journey with the Basic step On 1,
-LA Style.  
+One of the key concepts in Salsa is the pause. My goal was to
+see how placing the pause in different beats changes the feel of
+the dance. 
 
 
 * The Basic step On 1
 
   For the Basic steps On 1, start by taking a step forward with the
-  left foot and stepping with your toe on beat 1 and the pause comes in
-  beat 4. Read on for an explanation of the following diagram.
-
+  left foot and stepping with the ball of your foot on beat 1 and the
+  pause comes in beats 4 and 8. 
   
   #+begin_export html
   <div style="text-align: center">
     <a href="assets/svg/salsa-on1-basic.svg">
-      <img src="assets/svg/salsa-on1-basic.svg"
+      <img src="assets/svg/salsa-on1-basic-pause-on-4-8.svg"
            alt="On 1 Basic step">
     </a>
   </div>
@@ -61,24 +62,27 @@ LA Style.
    :CUSTOM_ID: symbols
    :END:
 
-   1. the beat: the first row shows the beat, in Salsa music there are
+   1. *the beat*: the first row shows the beat, in Salsa music there are
       2 sets of 4 beats, 8 in total
-   2. home position: the beat 0 shows the initial position, some
+   2. *home position*: the beat 0 shows the initial position, some
       people also call this the home position
-   3. transfer of weight: the red color in the steps indicates where
+   3. *transfer of weight*: the red color in the steps indicates where
       your body weight is supposed to be
-   4. only toes: the footprints without the heel mean that you are
-      only stepping with your toes
-   5. traveling foot: an arrow instead of a step shows the direction
-      your foot is traveling
-   6. step on the beat: the X in the last row mean that you need to
-      step on the beat
-   7. pause: the Ps in the last row tell you where the pause is
-      supposed to be
+   4. only the *ball of your feet* touch the ground: the footprints
+      without the heel mean that you are only stepping with the ball
+      of your feet
+   5. *traveling foot*: an arrow instead of a step shows the direction
+      your foot is traveling and not touching the ground
+   6. *step on the beat*: the X in the last row mean that foot touches
+      the ground on that beat
+   7. *pause*: the Ps in the last row tell you where the pause is
 
 
 
-* TODO Changing the timing of the Pause
+* Changing the timing of the Pause
+  :LOGBOOK:
+  - CLOSING NOTE [2025-05-08 Do 23:27]
+  :END:
 
   For reference, in the On 1 Basic, the pause is on beats 4 and 8. The
   goal is now to move the Pause to a different beat. To simplify,
@@ -88,35 +92,68 @@ LA Style.
   Let's now deliberately pause on a different beat, e.g., 1, 2, or 3.
   
   
-** TODO Pause on beat 1
+** Pause on beats 1 and 5
 
-** TODO Pause on beat 2
+   #+begin_export html
+   <div style="text-align: center">
+     <a href="assets/svg/salsa-on1-basic.svg">
+       <img src="assets/svg/salsa-on1-basic-pause-on-1-5.svg"
+            alt="On 1 Basic step">
+     </a>
+   </div>
+   #+end_export
 
-** TODO Pause on beat 3
+
+** Pause on beats 2 and 6
+
+   #+begin_export html
+   <div style="text-align: center">
+     <a href="assets/svg/salsa-on1-basic.svg">
+       <img src="assets/svg/salsa-on1-basic-pause-on-2-6.svg"
+            alt="On 1 Basic step">
+     </a>
+   </div>
+   #+end_export
 
 
-* TODO Change the Pause while dancing On 2
+** Pause on beats 3 and 7
 
-  The same idea can be used to train the Pause when dancing On 2.
+   #+begin_export html
+   <div style="text-align: center">
+     <a href="assets/svg/salsa-on1-basic.svg">
+       <img src="assets/svg/salsa-on1-basic-pause-on-3-7.svg"
+            alt="On 1 Basic step">
+     </a>
+   </div>
+   #+end_export
 
 
-* TODO Stepping on the Clave beats
+
+* Other ways to change the location of the Pause
+
+  1. you can use the same ideas of placing the pause on different
+     beats when dancing On 2
+  2. one more way to change the location of the pause is to step on
+     the Clave beats
+
+
+* TODO Dancing on the Clave beats
+
+** TODO Clave 2-3
+
+** TODO Clave 3-2
+
+   
+* Conclusion
+
+  Now you have 6 ways to practice placing the pause:
   
-
-* Takeaways
-
-  1. now you have not only 2 ways to dance (On 1 and On 2); you have 8
-     ways to dance by choosing when to pause
-  2. you also have 2 additional ways to emphasize the Pause by steping
-     stricly on the clave beats, so that's 10 ways to dance already!
-  3. when making a Pause, you can do it softly or forcefully; during
-     practice anything goes but when dancing with a partner let the
-     music tell you if you should use soft long moves or short fast
-     ones 
+  1) 4 positions of the pause on the basic and
+  2) 2 positions when dancing on the clave beats (clave 2-3 and 3-2)
 
 
 
-      
+
 
 * COMMENT Local variables
   
