@@ -42,6 +42,9 @@ the dance.
 
   
 * The Basic step On 1
+  :PROPERTIES:
+  :CUSTOM_ID: basic-on1
+  :END:
 
   For the Basic steps On 1, start by taking a step forward with the
   left foot and stepping with the ball of your foot on beat 1 and the
@@ -57,9 +60,9 @@ the dance.
   #+end_export
 
 
-** Remarks on symbols
+** Diagram notes
    :PROPERTIES:
-   :CUSTOM_ID: symbols
+   :CUSTOM_ID: basic-on1-diagram-notes
    :END:
 
    1. *the beat*: the first row shows the beat, in Salsa music there are
@@ -81,6 +84,9 @@ the dance.
 
 
 * Changing the timing of the Pause
+  :PROPERTIES:
+  :CUSTOM_ID: placing-the-pause
+  :END:
   :LOGBOOK:
   - CLOSING NOTE [2025-05-08 Do 23:27]
   :END:
@@ -91,12 +97,17 @@ the dance.
 
   I the following sections I will make the case that placing the
   pauses on different beats allows you to get a better feel of
-  different instrumental rythms; for that I will be using the song [[https://www.youtube.com/watch?v=Nd78Pt6nWb8][Ay
-  Mi Maria by Bloque53]] as reference for the Tumba, Bass and Piano
-  rythms.  
+  different instrumental rythms; for that I will be using the song
+  @@html:<a href="https://www.youtube.com/watch?v=Nd78Pt6nWb8" target="_blank">@@
+  Ay Mi Maria by Bloque53
+  @@html:</a>@@
+  as reference for the Tumba, Bass and Piano rythms.
   
   
 ** Pause on beats 1 and 5: feel the Tumbao
+   :PROPERTIES:
+   :CUSTOM_ID: pause-on-1+5
+   :END:
 
    #+begin_export html
    <div style="text-align: center">
@@ -112,6 +123,9 @@ the dance.
    
 
 ** Pause on beats 2 and 6: feel the Bass
+   :PROPERTIES:
+   :CUSTOM_ID: pause-on-2+6
+   :END:
 
    #+begin_export html
    <div style="text-align: center">
@@ -129,6 +143,9 @@ the dance.
 
 
 ** Pause on beats 3 and 7: feel the slap
+   :PROPERTIES:
+   :CUSTOM_ID: pause-on-3+7
+   :END:
 
    #+begin_export html
    <div style="text-align: center">
@@ -144,6 +161,9 @@ the dance.
    
 
 * Other ways to change the location of the Pause
+  :PROPERTIES:
+  :CUSTOM_ID: other-variations
+  :END:
 
   1. you can use the same ideas of placing the pause on different
      beats when dancing On 2 and try to feel which instrument is
@@ -155,10 +175,20 @@ the dance.
 
 
 * TODO Dancing on the Clave beats
+  :PROPERTIES:
+  :CUSTOM_ID: clave-beats
+  :END:
 
-** TODO Clave 2-3
+** TODO Clave 2-3: Steps diagram
+   :PROPERTIES:
+   :CUSTOM_ID: clave-2-3
+   :END:
 
-** TODO Clave 3-2
+
+** TODO Clave 3-2: Steps diagram
+   :PROPERTIES:
+   :CUSTOM_ID: clave-3-2
+   :END:
 
    
 * Practice, practice, practice
@@ -172,12 +202,15 @@ the dance.
   are easy to hear. I like to use Ay Mi Maria! by Bloque53.
 
   #+begin_export html
-  <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/Nd78Pt6nWb8?si=q80DPZhByyAnjyhv"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
+  <div style="text-align: center">
+    <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/Nd78Pt6nWb8?si=q80DPZhByyAnjyhv"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+  </div>
   #+end_export
 
 
@@ -188,6 +221,9 @@ the dance.
   
 
 * Conclusion
+  :PROPERTIES:
+  :CUSTOM_ID: conclusion
+  :END:
 
   Now you have 6 ways to practice placing the pause:
   
@@ -198,6 +234,17 @@ the dance.
 
 
 
+
+* References
+  :PROPERTIES:
+  :CUSTOM_ID: refs
+  :END:
+
+  1. The step icons were taken from [[https://www.onlinewebfonts.com/icon][svg icons]] and are licensed by CC
+     BY 4.0 
+
+
+  
 * COMMENT Local variables
   
   Taken from: 
