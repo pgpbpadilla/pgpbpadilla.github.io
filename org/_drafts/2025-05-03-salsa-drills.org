@@ -40,7 +40,7 @@ One of the key concepts in Salsa is the pause. My goal was to
 see how placing the pause in different beats changes the feel of
 the dance. 
 
-
+  
 * The Basic step On 1
 
   For the Basic steps On 1, start by taking a step forward with the
@@ -79,20 +79,24 @@ the dance.
 
 
 
+
 * Changing the timing of the Pause
   :LOGBOOK:
   - CLOSING NOTE [2025-05-08 Do 23:27]
   :END:
 
   For reference, in the On 1 Basic, the pause is on beats 4 and 8. The
-  goal is now to move the Pause to a different beat. To simplify,
-  let's divide the eight beats into 2 sets of 4. This means that
-  the Pause is on beat 4 for each set of 4 beats.
+  goal is now to place the Pause in different beats, e.g., 1+5, 2+6,
+  or 3+7. 
 
-  Let's now deliberately pause on a different beat, e.g., 1, 2, or 3.
+  I the following sections I will make the case that placing the
+  pauses on different beats allows you to get a better feel of
+  different instrumental rythms; for that I will be using the song [[https://www.youtube.com/watch?v=Nd78Pt6nWb8][Ay
+  Mi Maria by Bloque53]] as reference for the Tumba, Bass and Piano
+  rythms.  
   
   
-** Pause on beats 1 and 5
+** Pause on beats 1 and 5: feel the Tumbao
 
    #+begin_export html
    <div style="text-align: center">
@@ -103,8 +107,11 @@ the dance.
    </div>
    #+end_export
 
+   When dancing in this style, the forward and backward motions align
+   well with the TUM TUM of the simple Tumba rythm.
+   
 
-** Pause on beats 2 and 6
+** Pause on beats 2 and 6: feel the Bass
 
    #+begin_export html
    <div style="text-align: center">
@@ -115,8 +122,13 @@ the dance.
    </div>
    #+end_export
 
+   You can hear the /doom/ of the base on beats 1, 3, 5 and 7. When I
+   practice this style I imagine that I'm dancing on the fret of the
+   Bass; when the pause on beat 2/6 comes, it feels like it's me
+   sutaining the Bass /doom/.
 
-** Pause on beats 3 and 7
+
+** Pause on beats 3 and 7: feel the slap
 
    #+begin_export html
    <div style="text-align: center">
@@ -127,14 +139,19 @@ the dance.
    </div>
    #+end_export
 
-
+   When dancing this variation, it feels like I need to emphasize the
+   Tumba slap (the PA on TUM TUM PA) on beats 2 and 6.
+   
 
 * Other ways to change the location of the Pause
 
   1. you can use the same ideas of placing the pause on different
-     beats when dancing On 2
-  2. one more way to change the location of the pause is to step on
-     the Clave beats
+     beats when dancing On 2 and try to feel which instrument is
+     emphasized for each given variation
+  2. two more ways to change the location of the pause is to step on
+     the Clave beats; for this I typcally need additional
+     technological aids to be able to hear the Clave, more info in
+     [[#practice-tools][Practice, practice, practice]]
 
 
 * TODO Dancing on the Clave beats
@@ -144,6 +161,32 @@ the dance.
 ** TODO Clave 3-2
 
    
+* Practice, practice, practice
+  :PROPERTIES:
+  :CUSTOM_ID: practice-tools
+  :ID:       A5AD808A-74DB-407B-A0DD-979630C7ECC6
+  :END:
+  
+  You will need some good tunes to practice, I suggest you use music that is
+  not too fast and song on which the the piano, bass, and Tumba rythms
+  are easy to hear. I like to use Ay Mi Maria! by Bloque53.
+
+  #+begin_export html
+  <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/Nd78Pt6nWb8?si=q80DPZhByyAnjyhv"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+  #+end_export
+
+
+  For the Clave rythm I like to use an app like [[https://apps.apple.com/de/app/salsa-rhythm/id379868541][Salsa Rythm]] or [[https://salsabeatmachine.org][The
+  Salsa Beat Machine]], you can control the speed and volume of each
+  instrument! That has helped me a lot connect each timing of the
+  pause to different instruments. 
+  
+
 * Conclusion
 
   Now you have 6 ways to practice placing the pause:
