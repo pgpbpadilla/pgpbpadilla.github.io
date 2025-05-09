@@ -1,0 +1,111 @@
+#+property: header-args:bash :results verbatim
+
+* Migration to Ruby 3
+  
+** Ruby environments are managed by [[https://github.com/rbenv/rbenv][rbenv]]
+   #+begin_src bash
+     ack rbenv ~/dotfiles/homebrew
+   #+end_src
+
+   #+RESULTS:
+   : /Users/pgpb.padilla/dotfiles/homebrew/Brewfile.extras:44:brew "rbenv"
+
+
+   Interesting: [[#rvm-vs-rbenv][rvm vs rbenv]]
+
+   
+** Check which versions are already installed
+   #+begin_src bash
+     rbenv versions
+   #+end_src
+
+   #+RESULTS:
+   : * system
+   :   3.3.0
+
+   
+** List available versions
+   #+begin_src bash
+     rbenv install -l
+   #+end_src
+
+   #+RESULTS:
+   : 3.1.6
+   : 3.2.6
+   : 3.3.7
+   : 3.4.1
+   : jruby-9.4.9.0
+   : mruby-3.3.0
+   : picoruby-3.0.0
+   : truffleruby-24.1.1
+   : truffleruby+graalvm-24.1.1
+   
+
+
+** Install Ruby 3
+   #+begin_src bash :eval no
+     rbenv install 3.4.1
+   #+end_src
+
+
+** Update .ruby-version
+   #+begin_src bash
+     cat ../org/jekyll/.ruby-version 
+   #+end_src
+
+   #+RESULTS:
+   : 3.4.1
+   
+
+** Activate Python environment so that I can use Invoke:
+   #+begin_src bash :session pyenv
+     eval "$(pyenv init -)"
+     eval "$(pyenv virtualenv-init -)"
+
+     pyenv activate blog
+     inv -l
+   #+end_src
+
+   #+RESULTS:
+   : Available tasks:
+   : 
+   :   build         Use Jekyll to build the Blog
+   :   run           Build+Run the Blog locally
+   :   serve         Serves the Blog locally
+   :   update-gems   Updates bundler and reinstall all Blog dependencies
+   :   view          Open live website in the default browser
+   : 
+
+
+** Update Ruby Gems
+   #+begin_src bash :dir ../org/jekyll :eval no
+     inv update-gems
+   #+end_src
+   
+
+** Test Jekyl blog
+   #+begin_quote bash :eval no
+   inv run
+   #+end_quote
+
+   
+** rvm vs rbenv
+   :PROPERTIES:
+   :CUSTOM_ID: rvm-vs-rbenv
+   :ID:       DD4B5BDB-C760-47AB-A696-8A178A2A23BB
+   :END:
+
+   ChatGPT recommends:
+
+   #+begin_quote
+   Recommendation:
+  
+   - Use rbenv if you prefer simplicity, compatibility with UNIX
+     tooling, and clean environment separation (especially in
+     devops/infra workflows). 
+   - Use rvm if you want an all-in-one tool with gemset management and
+     you're okay with more shell integration.
+
+
+   Chat: https://chatgpt.com/g/g-8kI007QK0-it-gist-generator/c/681e60fd-a5bc-800f-ba66-766dc31bcb40
+   #+end_quote
