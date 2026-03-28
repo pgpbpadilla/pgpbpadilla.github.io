@@ -18,8 +18,6 @@ toc: true
 I had only one goal, to replicate my <a href="https://www.zsa.io/moonlander/">Moonlander</a> layout in the
 <a href="https://www.zsa.io/voyager/">Voyager</a> and it took longer than I had expected.
 </p>
-
-
 <div id="outline-container-installation" class="outline-2">
 <h2 id="installation">Installing my 34-key layout into the Voyager</h2>
 <div class="outline-text-2" id="text-installation">
@@ -64,8 +62,6 @@ a key should be easy to add to Oryx</li>
 </ol>
 </div>
 </div>
-
-
 <div id="outline-container-copy-layout" class="outline-2">
 <h2 id="copy-layout">Duplicating a layout: no can do</h2>
 <div class="outline-text-2" id="text-copy-layout">
@@ -90,8 +86,6 @@ button is nice.
 </p>
 </div>
 </div>
-
-
 <div id="outline-container-copy-key" class="outline-2">
 <h2 id="copy-key">Duplicating a key: no can do</h2>
 <div class="outline-text-2" id="text-copy-key">
@@ -139,8 +133,6 @@ helped but the experience was not optimal.
 </p>
 </div>
 </div>
-
-
 <div id="outline-container-long-macros" class="outline-2">
 <h2 id="long-macros">Long macros</h2>
 <div class="outline-text-2" id="text-long-macros">
@@ -187,22 +179,20 @@ function to do the rest:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">zsa-start</span> ()
-  <span style="color: #8b2252;">"Focus on task and clock in"</span>
-  (<span style="color: #a020f0;">interactive</span>)
+<pre class="src src-elisp">(defun zsa-start ()
+  "Focus on task and clock in"
+  (interactive)
   (org-narrow-to-subtree)
   (delete-other-windows)
   (org-clock-in)
   )
 
-<span style="color: #b22222;">;; </span><span style="color: #b22222;">set global keybinding</span>
-(global-set-key (kbd <span style="color: #8b2252;">"C-c u"</span>) 'zsa-start)
+;; set global keybinding
+(global-set-key (kbd "C-c u") 'zsa-start)
 </pre>
 </div>
 </div>
 </div>
-
-
 <div id="outline-container-conclusion" class="outline-2">
 <h2 id="conclusion">Conclusions</h2>
 <div class="outline-text-2" id="text-conclusion">
@@ -224,9 +214,6 @@ tenting</li>
 </ol>
 </div>
 </div>
-
-
-
 <div id="outline-container-my-layouts" class="outline-2">
 <h2 id="my-layouts">My ZSA keyboard layouts</h2>
 <div class="outline-text-2" id="text-my-layouts">
@@ -235,7 +222,6 @@ I'm just going to put these here, you know, just to show off a
 little bit =P &#x2026; and also 'cause they look cool.
 </p>
 </div>
-
 <div id="outline-container-moonlander" class="outline-3">
 <h3 id="moonlander">Moonlander</h3>
 <div class="outline-text-3" id="text-moonlander">
@@ -244,8 +230,6 @@ little bit =P &#x2026; and also 'cause they look cool.
 </div>
 </div>
 </div>
-
-
 <div id="outline-container-voyager" class="outline-3">
 <h3 id="voyager">Voyager</h3>
 <div class="outline-text-3" id="text-voyager">
