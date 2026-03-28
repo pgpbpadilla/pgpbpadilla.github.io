@@ -1,0 +1,246 @@
+#+LANGUAGE: en
+#+OPTIONS: toc:nil  broken-links:mark
+
+#+begin_export html
+---
+layout: post.liquid
+title:  "Software Malpractice: The Fallacy of Self-Documenting Code"
+date: 2026-03-27
+last_updated: 2026-03-27
+tags:
+  - software
+  - malpractice
+  - documentation
+  - intent
+categories: [software]
+permalink: /2026-03-27-self-documenting-code
+toc: true
+---
+
+#+end_export
+
+There is a belief among software engineers that code can document
+itself. The idea is comforting: if you name things well, keep
+functions short, and structure your logic clearly, the code will speak
+for itself. No comments needed. No external documentation. The code is
+the documentation.
+
+I used to find this convincing. I don't anymore.
+
+
+* The belief
+  :PROPERTIES:
+  :CUSTOM_ID: the-belief
+  :END:
+
+  When engineers say "self-documenting code," they usually mean
+  something like this: readable code with good naming conventions,
+  small functions with clear responsibilities, and minimal or no
+  comments. The reasoning is that comments go stale, but code is
+  always up to date. So the code should be the single source of
+  truth.
+
+  There is real value in this. Readable code is easier to work with
+  than unreadable code. Good naming helps. Small functions help. None
+  of that is wrong.
+
+  But there is a quiet assumption hiding underneath: that if you can
+  read what the code does, you also know what it is supposed to do.
+  That assumption is where things fall apart.
+
+
+* What code can and cannot tell you
+  :PROPERTIES:
+  :CUSTOM_ID: what-code-tells-you
+  :END:
+
+  Code describes what it does. It can tell you that a function takes
+  two numbers and returns their sum. It can tell you that a loop
+  iterates over a list and filters out entries matching some
+  condition. It can tell you the exact sequence of operations that
+  will execute at runtime.
+
+  What it cannot tell you is whether any of that is correct.
+
+  Correctness is not a property of code in isolation. It is a
+  relationship between the code and something external to it: the
+  intent. What was this supposed to do? What problem was it meant to
+  solve? For whom? Under what circumstances?
+
+  Code is an interpretation of intent. It is not the intent itself.
+
+
+* The car
+  :PROPERTIES:
+  :CUSTOM_ID: the-car
+  :END:
+
+  Consider the requirement: "write a program that models a car."
+
+  One engineer builds a model with parts: engine, wheels, chassis,
+  doors. The model captures the structure of a car. It would work well
+  for a sales catalog or a parts inventory system.
+
+  Another engineer builds a model with behaviors: accelerate, brake,
+  steer, shift gears. This model captures what a car does. It would
+  work well for a driving simulation.
+
+  Both implementations are clean. Both have good names, clear
+  structure, small functions. Both are, by any reasonable standard,
+  "self-documenting." And both are completely correct — for different
+  intents.
+
+  If you only have the code, you cannot tell which one is right. You
+  might not even realize there is a question to ask. A confident
+  engineer could build the wrong system and never notice, because the
+  code reads perfectly well.
+
+
+* The missing piece
+  :PROPERTIES:
+  :CUSTOM_ID: the-missing-piece
+  :END:
+
+  Intent is the purpose behind the code. It answers questions like:
+  what problem are we solving, who has this problem, and how will we
+  know we solved it?
+
+  You cannot derive intent from code. You can read the code and
+  understand what it does, but you cannot reconstruct why it was
+  written that way, or whether the approach was the right one. The
+  code is a finished product. The reasoning that led to it is not
+  embedded in the artifact.
+
+  This is the core of the fallacy: treating the artifact as if it
+  contains the reasoning. It doesn't.
+
+
+* The fallacy spreads
+  :PROPERTIES:
+  :CUSTOM_ID: the-fallacy-spreads
+  :END:
+
+  The same pattern shows up in other places.
+
+  Tests written after the implementation tend to mirror the code they
+  are testing. They verify that the code does what the code does. This
+  is circular. A test that says "the function returns 42" is only
+  useful if you know that 42 is the right answer. Without intent, the
+  test is a tautology.
+
+  Commit messages often describe what changed but not why. "Refactored
+  user service" or "updated validation logic" tells you what happened
+  in the code. It does not tell you what motivated the change, what
+  problem it addressed, or what trade-offs were considered. Six months
+  later, the commit is a fact without context.
+
+  Code reviews suffer from the same gap. A reviewer can check whether
+  the code is clean, whether it follows conventions, whether there are
+  obvious bugs. But without knowing the intent, the reviewer cannot
+  assess whether the code solves the right problem. The review becomes
+  a style check.
+
+
+* Specifications are not immune
+  :PROPERTIES:
+  :CUSTOM_ID: specifications
+  :END:
+
+  You might think that specifications capture intent. Sometimes they
+  do. But in practice, specifications often describe solutions rather
+  than problems.
+
+  "Implement a car model with the following attributes: engine, wheels,
+  chassis, doors." That is not intent. That is a design decision
+  already made. The specification has absorbed the interpretation and
+  presents it as if it were the requirement.
+
+  The same fallacy applies: the artifact is mistaken for the
+  reasoning. A specification that describes a solution without
+  explaining the problem it solves is just code written in prose.
+
+
+* Requirements without intent
+  :PROPERTIES:
+  :CUSTOM_ID: requirements-without-intent
+  :END:
+
+  In larger organizations, there are often several layers between the
+  people who have the problem and the people who write the code.
+  Product managers talk to stakeholders, write requirements, hand them
+  to architects, who produce designs, which are passed to development
+  teams.
+
+  At each step, the original problem gets translated. And at each
+  translation, some intent is lost and some interpretation is added.
+  By the time the requirements reach the engineers, they often look
+  like solutions. The engineers implement them faithfully. The code is
+  clean. The tests pass. The system ships.
+
+  And sometimes nobody uses it. Or it solves a problem that nobody
+  actually had. Not because the engineers were incompetent, but
+  because the intent was lost somewhere in the chain.
+
+
+* Why this persists
+  :PROPERTIES:
+  :CUSTOM_ID: why-this-persists
+  :END:
+
+  Software practices vary widely. Not every team has the luxury of
+  direct access to users. Not every organization enforces clear
+  documentation of intent. Under time pressure, the artifact becomes
+  the deliverable and the reasoning behind it is treated as overhead.
+
+  Writing down intent takes effort. It requires understanding the
+  problem well enough to articulate it, which is harder than it
+  sounds. It is easier to write code that works than to explain why it
+  should work that way.
+
+  So the fallacy persists not because people are careless, but because
+  the conditions make it easy to skip the hard part.
+
+
+* What to do about it
+  :PROPERTIES:
+  :CUSTOM_ID: what-to-do
+  :END:
+
+  Code is not the source of truth for intent. It never was. Readable
+  code is valuable, but it is not sufficient. The artifacts we produce
+  — code, tests, commits, specs — need to be complemented by explicit
+  explanations of why they exist.
+
+  This does not mean writing novels in comments. It means answering a
+  few questions and making the answers visible: what problem are we
+  solving, for whom, and how will we know it worked?
+
+  The format matters less than the habit. A sentence in a commit
+  message. A paragraph at the top of a specification. A comment that
+  explains a non-obvious decision. These small acts of documentation
+  are what connect the artifact to its purpose.
+
+
+* Closing thought
+  :PROPERTIES:
+  :CUSTOM_ID: closing
+  :END:
+
+  Code can explain itself. It cannot justify itself.
+
+  Without intent, correctness is undefined. And if correctness is
+  undefined, it does not matter how clean the code is.
+
+  This is the first entry in what I am calling Software
+  Malpractice. Not because I think engineers are negligent, but
+  because some of our most cherished practices deserve a closer look.
+
+
+* COMMENT Local variables
+
+  Taken from: 
+  https://emacs.stackexchange.com/a/76549/11978
+  
+  # Local Variables:
+  # org-md-toplevel-hlevel: 2
+  # End:
