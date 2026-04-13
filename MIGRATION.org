@@ -1,0 +1,41 @@
+#+TITLE: Migration to blog.pgpadilla.com
+#+STARTUP: overview
+
+* Migration to blog.pgpadilla.com
+
+** Goal
+Migrate this blog from =pgpbpadilla.github.io= to =blog.pgpadilla.com= and set up redirects so all existing links continue to work.
+
+** Status: Investigation
+
+*** Open Questions
+- [ ] Which redirect strategy? (GitHub Pages custom domain vs S3 redirect vs DNS CNAME)
+- [ ] Which hosting strategy? (Keep GitHub Pages with custom domain vs S3 + CloudFront)
+- [ ] URL path preservation — verify permalink structure transfers cleanly
+
+*** Options Under Evaluation
+
+**** Option A: GitHub Pages Custom Domain (least effort)
+- Configure =blog.pgpadilla.com= as a custom domain in GitHub Pages settings
+- Add CNAME record in Route 53 pointing to =pgpbpadilla.github.io=
+- GitHub automatically redirects the old domain to the custom domain
+- Pros: minimal changes, GitHub handles TLS and redirects
+- Cons: still dependent on GitHub Pages hosting
+
+**** Option B: S3 + CloudFront (consistent with cv.pgpadilla.com)
+- Deploy blog to S3 bucket =blog.pgpadilla.com=
+- Set up CloudFront distribution + ACM cert
+- Route 53 alias record to CloudFront
+- Replace gh-pages content with redirect pages pointing to new domain
+- Pros: consistent infrastructure, full control
+- Cons: more migration work, need to set up redirect on old domain separately
+
+**** Option C: Hybrid (GitHub Pages now, S3 later)
+- Start with Option A for quick migration
+- Move to Option B later when CI/CD is established
+- Pros: fast initial migration, deferred complexity
+- Cons: two migrations instead of one
+
+** Related
+- Orchestrator user story: =pgpadilla.com/user-stories/user-story-blog-migration-to-custom-domain.org=
+- CV subdomain reference: =cv.pgpadilla.com= (S3 + CloudFront pattern)
