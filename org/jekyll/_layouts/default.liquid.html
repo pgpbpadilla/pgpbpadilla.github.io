@@ -76,6 +76,8 @@
 </head>
 <body>
 
+  {% include deprecation-banner.html %}
+
   {% if site.google_tag_manager %}
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
