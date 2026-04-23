@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PMDH4JF7');
+    </script>
+    <!-- End Google Tag Manager -->
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-P9XEV7PSBE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+            gtag('config', 'G-P9XEV7PSBE');
+        </script>
+    
+
+    <!-- Non social metatags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    
+
+    <title>Software Malpractice: The Fallacy of Self-Documenting Code</title>
+
+    
+        <!-- SEO -->
+        <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Software Malpractice: The Fallacy of Self-Documenting Code | Pablo Padilla’s Blog</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Software Malpractice: The Fallacy of Self-Documenting Code" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="There is a belief among software engineers that code can document itself. The idea is comforting: if you name things well, keep functions short, and structure your logic clearly, the code will speak for itself. No comments needed. No external documentation. The code is the documentation." />
+<meta property="og:description" content="There is a belief among software engineers that code can document itself. The idea is comforting: if you name things well, keep functions short, and structure your logic clearly, the code will speak for itself. No comments needed. No external documentation. The code is the documentation." />
+<link rel="canonical" href="https://pgpbpadilla.github.io/2026-03-27-self-documenting-code" />
+<meta property="og:url" content="https://pgpbpadilla.github.io/2026-03-27-self-documenting-code" />
+<meta property="og:site_name" content="Pablo Padilla’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Software Malpractice: The Fallacy of Self-Documenting Code" />
+<meta name="twitter:site" content="@pgpbpadilla" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-03-27T00:00:00+00:00","datePublished":"2026-03-27T00:00:00+00:00","description":"There is a belief among software engineers that code can document itself. The idea is comforting: if you name things well, keep functions short, and structure your logic clearly, the code will speak for itself. No comments needed. No external documentation. The code is the documentation.","headline":"Software Malpractice: The Fallacy of Self-Documenting Code","mainEntityOfPage":{"@type":"WebPage","@id":"https://pgpbpadilla.github.io/2026-03-27-self-documenting-code"},"url":"https://pgpbpadilla.github.io/2026-03-27-self-documenting-code"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+
+    <link rel="canonical" href="https://pgpbpadilla.github.io/2026-03-27-self-documenting-code">
+
+    
+        <link rel="alternate" type="application/rss+xml" title="Pablo Padilla&#39;s Blog"
+              href="https://pgpbpadilla.github.io/feed.xml">
+    
+
+    <link rel="shortcut icon" href="https://pgpbpadilla.github.io/favicon.ico">
+
+    <meta name="robots" content="noarchive">
+
+    <!-- <link rel="alternate" media="only screen and (max-width: 640px)" href="">
+        <link rel="alternate" media="handheld" href=""> -->
+
+
+    <link rel="stylesheet"
+          href="https://pgpbpadilla.github.io/assets/css/style.css?v=f73d0a7c886145c7b75d7d9737e981af5231cd1b">
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script"
+            async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+
+  <div style="background-color: #d4380d; color: #fff; text-align: center; padding: 12px 16px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 15px;">
+  ⚠️ This site is no longer updated. New content is at
+  <a href="https://blog.pgpadilla.com" style="color: #fff; font-weight: bold; text-decoration: underline;">blog.pgpadilla.com</a>
+</div>
+
+
+  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMDH4JF7"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+  
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+
+    
+      <a class="site-title" href="https://pgpbpadilla.github.io/">Pablo Padilla&#39;s Blog</a>
+    
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+                <a class="page-link" href="https://pgpbpadilla.github.io/about.html">About</a>
+              
+            
+          
+            
+            
+              
+                <a class="page-link" href="https://pgpbpadilla.github.io/now">Now</a>
+              
+            
+          
+            
+            
+              
+                <a class="page-link" href="https://pgpbpadilla.github.io/coffee">Coffee?</a>
+              
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+
+
+
+
+<section class="page-header">
+    <h1 class="project-name">Software Malpractice: The Fallacy of Self-Documenting Code</h1>
+    <h2 class="project-tagline"></h2>
+    
+    <!-- Post tagline -->
+    
+    <!-- End: Post tagline -->
+</section>
+
+<section class="main-content">
+
+    <!--https://www.bryanbraun.com/anchorjs/-->
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+    (function () {
+        window.addEventListener("DOMContentLoaded", (_) => {
+            let tocTitle = document.querySelector('nav.toc h2');
+            let toc = document.querySelector('nav.toc ul');
+            // hide TOC contents by default
+            toc.style.display = 'none';
+
+            // toggle TOC contents visibility when the title is clicked
+            tocTitle.addEventListener("click", (_) => {
+                if (toc.style.display === 'block') {
+                    toc.style.display = 'none';
+                } else {
+                    toc.style.display = 'block';
+                }
+            });
+            // make section titles copy deep link
+            // https://www.bryanbraun.com/anchorjs/
+            anchors.add();
+        });
+
+    })();
+</script>
+<article itemscope itemtype="http://schema.org/BlogPosting">
+
+  <!-- <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Software Malpractice: The Fallacy of Self-Documenting Code</h1>
+    <p class="post-meta">
+      <time datetime="2026-03-27T00:00:00+00:00" itemprop="datePublished">
+        
+        Mar 27, 2026
+      </time>
+      </p>
+  </header> -->
+
+    <div class="post-tags">
+        <span>Tags:</span>
+        
+        <a href="/tag/software.html" rel="tag">software</a>, <a href="/tag/malpractice.html" rel="tag">malpractice</a>, <a href="/tag/documentation.html" rel="tag">documentation</a>, <a href="/tag/intent.html" rel="tag">intent</a>
+        
+    </div>
+
+    <div itemprop="articleBody" class="text-justify">
+        <div>
+            
+                <nav id="table-of-contents" class="toc">
+                    <h2>Table of contents</h2>
+                    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#the-belief">1. The belief</a></li>
+<li class="toc-entry toc-h2"><a href="#what-code-tells-you">2. What code can and cannot tell you</a></li>
+<li class="toc-entry toc-h2"><a href="#the-car">3. The car</a></li>
+<li class="toc-entry toc-h2"><a href="#the-missing-piece">4. The missing piece</a></li>
+<li class="toc-entry toc-h2"><a href="#the-fallacy-spreads">5. The fallacy spreads</a></li>
+<li class="toc-entry toc-h2"><a href="#specifications">6. Specifications are not immune</a></li>
+<li class="toc-entry toc-h2"><a href="#requirements-without-intent">7. Requirements without intent</a></li>
+<li class="toc-entry toc-h2"><a href="#why-this-persists">8. Why this persists</a></li>
+<li class="toc-entry toc-h2"><a href="#what-to-do">9. What to do about it</a></li>
+<li class="toc-entry toc-h2"><a href="#closing">10. Closing thought</a></li>
+</ul>
+                </nav>
+            
+            <div id="markdown-content">
+                <p>
+There is a belief among software engineers that code can document
+itself. The idea is comforting: if you name things well, keep
+functions short, and structure your logic clearly, the code will speak
+for itself. No comments needed. No external documentation. The code is
+the documentation.
+</p>
+
+<p>
+I used to find this convincing. I don't anymore.
+</p>
+<div id="outline-container-the-belief" class="outline-2">
+<h2 id="the-belief"><span class="section-number-2">1.</span> The belief</h2>
+<div class="outline-text-2" id="text-the-belief">
+<p>
+When engineers say "self-documenting code," they usually mean
+something like this: readable code with good naming conventions,
+small functions with clear responsibilities, and minimal or no
+comments. The reasoning is that comments go stale, but code is
+always up to date. So the code should be the single source of
+truth.
+</p>
+
+<p>
+There is real value in this. Readable code is easier to work with
+than unreadable code. Good naming helps. Small functions help. None
+of that is wrong.
+</p>
+
+<p>
+But there is a quiet assumption hiding underneath: that if you can
+read what the code does, you also know what it is supposed to do.
+That assumption is where things fall apart.
+</p>
+</div>
+</div>
+<div id="outline-container-what-code-tells-you" class="outline-2">
+<h2 id="what-code-tells-you"><span class="section-number-2">2.</span> What code can and cannot tell you</h2>
+<div class="outline-text-2" id="text-what-code-tells-you">
+<p>
+Code describes what it does. It can tell you that a function takes
+two numbers and returns their sum. It can tell you that a loop
+iterates over a list and filters out entries matching some
+condition. It can tell you the exact sequence of operations that
+will execute at runtime.
+</p>
+
+<p>
+What it cannot tell you is whether any of that is correct.
+</p>
+
+<p>
+Correctness is not a property of code in isolation. It is a
+relationship between the code and something external to it: the
+intent. What was this supposed to do? What problem was it meant to
+solve? For whom? Under what circumstances?
+</p>
+
+<p>
+Code is an interpretation of intent. It is not the intent itself.
+</p>
+</div>
+</div>
+<div id="outline-container-the-car" class="outline-2">
+<h2 id="the-car"><span class="section-number-2">3.</span> The car</h2>
+<div class="outline-text-2" id="text-the-car">
+<p>
+Consider the requirement: "write a program that models a car."
+</p>
+
+<p>
+One engineer builds a model with parts: engine, wheels, chassis,
+doors. The model captures the structure of a car. It would work well
+for a sales catalog or a parts inventory system.
+</p>
+
+<p>
+Another engineer builds a model with behaviors: accelerate, brake,
+steer, shift gears. This model captures what a car does. It would
+work well for a driving simulation.
+</p>
+
+<p>
+Both implementations are clean. Both have good names, clear
+structure, small functions. Both are, by any reasonable standard,
+"self-documenting." And both are completely correct — for different
+intents.
+</p>
+
+<p>
+If you only have the code, you cannot tell which one is right. You
+might not even realize there is a question to ask. A confident
+engineer could build the wrong system and never notice, because the
+code reads perfectly well.
+</p>
+</div>
+</div>
+<div id="outline-container-the-missing-piece" class="outline-2">
+<h2 id="the-missing-piece"><span class="section-number-2">4.</span> The missing piece</h2>
+<div class="outline-text-2" id="text-the-missing-piece">
+<p>
+Intent is the purpose behind the code. It answers questions like:
+what problem are we solving, who has this problem, and how will we
+know we solved it?
+</p>
+
+<p>
+You cannot derive intent from code. You can read the code and
+understand what it does, but you cannot reconstruct why it was
+written that way, or whether the approach was the right one. The
+code is a finished product. The reasoning that led to it is not
+embedded in the artifact.
+</p>
+
+<p>
+This is the core of the fallacy: treating the artifact as if it
+contains the reasoning. It doesn't.
+</p>
+</div>
+</div>
+<div id="outline-container-the-fallacy-spreads" class="outline-2">
+<h2 id="the-fallacy-spreads"><span class="section-number-2">5.</span> The fallacy spreads</h2>
+<div class="outline-text-2" id="text-the-fallacy-spreads">
+<p>
+The same pattern shows up in other places.
+</p>
+
+<p>
+Tests written after the implementation tend to mirror the code they
+are testing. They verify that the code does what the code does. This
+is circular. A test that says "the function returns 42" is only
+useful if you know that 42 is the right answer. Without intent, the
+test is a tautology.
+</p>
+
+<p>
+Commit messages often describe what changed but not why. "Refactored
+user service" or "updated validation logic" tells you what happened
+in the code. It does not tell you what motivated the change, what
+problem it addressed, or what trade-offs were considered. Six months
+later, the commit is a fact without context.
+</p>
+
+<p>
+Code reviews suffer from the same gap. A reviewer can check whether
+the code is clean, whether it follows conventions, whether there are
+obvious bugs. But without knowing the intent, the reviewer cannot
+assess whether the code solves the right problem. The review becomes
+a style check.
+</p>
+</div>
+</div>
+<div id="outline-container-specifications" class="outline-2">
+<h2 id="specifications"><span class="section-number-2">6.</span> Specifications are not immune</h2>
+<div class="outline-text-2" id="text-specifications">
+<p>
+You might think that specifications capture intent. Sometimes they
+do. But in practice, specifications often describe solutions rather
+than problems.
+</p>
+
+<p>
+"Implement a car model with the following attributes: engine, wheels,
+chassis, doors." That is not intent. That is a design decision
+already made. The specification has absorbed the interpretation and
+presents it as if it were the requirement.
+</p>
+
+<p>
+The same fallacy applies: the artifact is mistaken for the
+reasoning. A specification that describes a solution without
+explaining the problem it solves is just code written in prose.
+</p>
+</div>
+</div>
+<div id="outline-container-requirements-without-intent" class="outline-2">
+<h2 id="requirements-without-intent"><span class="section-number-2">7.</span> Requirements without intent</h2>
+<div class="outline-text-2" id="text-requirements-without-intent">
+<p>
+In larger organizations, there are often several layers between the
+people who have the problem and the people who write the code.
+Product managers talk to stakeholders, write requirements, hand them
+to architects, who produce designs, which are passed to development
+teams.
+</p>
+
+<p>
+At each step, the original problem gets translated. And at each
+translation, some intent is lost and some interpretation is added.
+By the time the requirements reach the engineers, they often look
+like solutions. The engineers implement them faithfully. The code is
+clean. The tests pass. The system ships.
+</p>
+
+<p>
+And sometimes nobody uses it. Or it solves a problem that nobody
+actually had. Not because the engineers were incompetent, but
+because the intent was lost somewhere in the chain.
+</p>
+</div>
+</div>
+<div id="outline-container-why-this-persists" class="outline-2">
+<h2 id="why-this-persists"><span class="section-number-2">8.</span> Why this persists</h2>
+<div class="outline-text-2" id="text-why-this-persists">
+<p>
+Software practices vary widely. Not every team has the luxury of
+direct access to users. Not every organization enforces clear
+documentation of intent. Under time pressure, the artifact becomes
+the deliverable and the reasoning behind it is treated as overhead.
+</p>
+
+<p>
+Writing down intent takes effort. It requires understanding the
+problem well enough to articulate it, which is harder than it
+sounds. It is easier to write code that works than to explain why it
+should work that way.
+</p>
+
+<p>
+So the fallacy persists not because people are careless, but because
+the conditions make it easy to skip the hard part.
+</p>
+</div>
+</div>
+<div id="outline-container-what-to-do" class="outline-2">
+<h2 id="what-to-do"><span class="section-number-2">9.</span> What to do about it</h2>
+<div class="outline-text-2" id="text-what-to-do">
+<p>
+Code is not the source of truth for intent. It never was. Readable
+code is valuable, but it is not sufficient. The artifacts we produce
+— code, tests, commits, specs — need to be complemented by explicit
+explanations of why they exist.
+</p>
+
+<p>
+This does not mean writing novels in comments. It means answering a
+few questions and making the answers visible: what problem are we
+solving, for whom, and how will we know it worked?
+</p>
+
+<p>
+The format matters less than the habit. A sentence in a commit
+message. A paragraph at the top of a specification. A comment that
+explains a non-obvious decision. These small acts of documentation
+are what connect the artifact to its purpose.
+</p>
+</div>
+</div>
+<div id="outline-container-closing" class="outline-2">
+<h2 id="closing"><span class="section-number-2">10.</span> Closing thought</h2>
+<div class="outline-text-2" id="text-closing">
+<p>
+Code can explain itself. It cannot justify itself.
+</p>
+
+<p>
+Without intent, correctness is undefined. And if correctness is
+undefined, it does not matter how clean the code is.
+</p>
+
+<p>
+This is the first entry in what I am calling Software
+Malpractice. Not because I think engineers are negligent, but
+because some of our most cherished practices deserve a closer look.
+</p>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+    <div style="display: flex; align-items: center; margin: 2em 0;">
+  <div style="flex-grow: 1; border-bottom: 2px solid gray;"></div>
+</div>
+
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center">
+  <div style="text-align: center; margin: 2em 0;">
+    <form action="https://www.paypal.com/donate"
+          method="post" target="_top">
+      <input type="hidden"
+             name="hosted_button_id"
+             value="P7QKTZT266QLE" />
+      <input type="image"
+             src="https://www.paypalobjects.com/en_US/DK/i/btn/btn_donateCC_LG.gif"
+             border="0"
+             name="submit"
+             title="PayPal - The safer, easier way to pay online!"
+             alt="Donate with PayPal button" />
+      <img alt=""
+           border="0"
+           src="https://www.paypal.com/en_DE/i/scr/pixel.gif"
+           width="1"
+           height="1" />
+    </form>
+  </div>
+
+  <div style="text-align: center; width: 150px">
+    <img src="/assets/images/alipay-code.jpg">
+    <figcaption>Alipay Code.</figcaption>
+  </div>
+  
+</div>
+
+
+<div style="display: flex; align-items: center; margin: 2em 0;">
+  <div style="flex-grow: 1; border-bottom: 2px solid gray;"></div>
+</div>
+
+
+    
+        <div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+    var disqus_config = function () {
+        this.page.url = 'https://pgpbpadilla.github.io/2026-03-27-self-documenting-code';
+        this.page.identifier = '/self-documenting-code';
+    };
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://pgpbpadilla.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+    
+
+
+</article>
+
+
+    <footer class="site-footer">
+        <!-- SVG icons from https://iconmonstr.com -->
+
+        <!-- Github icon -->
+        <span class="my-span-icon">
+                    <a href="https://github.com/pgpbpadilla/pgpbpadilla.github.io"
+                       aria-label="pgpbpadilla.github.io"
+                       title="pgpbpadilla.github.io">
+                        <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                             viewBox="0 0 24 24"><path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                </span>
+
+        <!-- Twitter icon -->
+        <span class="my-span-icon">
+                    <a href="https://twitter.com/pgpbpadilla"
+                       aria-label="pgpbpadilla's Twitter"
+                       title="pgpbpadilla's Twitter">
+                        <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                             viewBox="0 0 24 24"><path
+                                    d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg>
+                    </a>
+                </span>
+
+        <!-- RSS icon -->
+        
+            <span class="my-span-icon">
+                    <a href="https://pgpbpadilla.github.io/feed.xml" aria-label="RSS feed"
+                       title="pgpbpadilla's RSS feed">
+                        <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                             viewBox="0 0 24 24"><path
+                                    d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3.374 17c-.897 0-1.626-.727-1.626-1.624s.729-1.624 1.626-1.624 1.626.727 1.626 1.624-.729 1.624-1.626 1.624zm3.885 0c-.03-3.022-2.485-5.474-5.511-5.504v-2.406c4.361.03 7.889 3.555 7.92 7.91h-2.409zm4.081 0c-.016-5.297-4.303-9.571-9.592-9.594v-2.406c6.623.023 11.985 5.384 12 12h-2.408z"/></svg>
+                    </a>
+                </span>
+        
+
+        <!-- Contact icon -->
+        
+        
+
+    </footer>
+</section>
+
+<script>
+    var menu = document.querySelector("nav.site-nav");
+    var checkbox = document.getElementById("nav-trigger");
+
+    // close menu if click outside menu
+    document.addEventListener("click", function (e) {
+        if (menu != e.target &&
+            !isDescendant(menu, e.target)) {
+            checkbox.checked = false;
+        }
+    }, false);
+
+    function isDescendant(parent, child) {
+        var node = child.parentNode;
+        while (node != null) {
+            if (node == parent) {
+                return true;
+            }
+            node = node.parentNode;
+        }
+        return false;
+    }
+</script>
+
+</body>
+</html>
